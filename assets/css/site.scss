@@ -1,0 +1,18 @@
+$col-bg: #424852;
+$col-gradient-start: #29364B;
+$col-gradient-end: #05070A;
+$col-accent-grey: #B5B5B5;
+
+body {
+  background: $col-bg;
+}
+
+footer, header {
+  border-color: $col-accent-grey;
+  border-width: 6px;
+}
+
+main {
+  background-color: $col-gradient-start;
+  background-color: linear-gradient($col-gradient-start, $col-gradient-end);
+}
