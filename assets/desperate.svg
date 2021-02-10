@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg width="100%" height="100%" viewBox="0 0 3157 2500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>desperate</title>
     <g id="desperate" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <image id="illustration" x="0" y="0" width="3157" height="2500" href="./desperate.webp"/>
+        <image id="illustration" x="0" y="0" width="3157" height="2500" href="/img/illustration/desperate.webp"/>
         <g id="mass_vegetables">
             <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="2376 349 2376 523 2042.521 523 2049.28125 589.2851559999999 1951.913 523 1482 523 1482 349"/>
             <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="1430" y="297" width="1727" height="857"/>

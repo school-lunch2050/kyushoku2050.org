@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg width="100%" height="100%" viewBox="0 0 3157 2500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>garden</title>
     <g id="garden" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <image id="illustration" x="0" y="0" width="3157" height="2500" href="./garden.webp"/>
+        <image id="illustration" x="0" y="0" width="3157" height="2500" href="/img/illustration/garden.webp"/>
         <g id="public_food">
             <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="700" y="794" width="879" height="611"/>
             <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="1474 829 1474 1024 1174.914062 1024 1174.914062 1099.5 1121.164062 1024 820 1024 820 829"/>
