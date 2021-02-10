@@ -36,8 +36,35 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['nuxt-i18n', {
+      strategy: 'prefix',
+      vueI18nLoader: true
+    }]
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        file: 'messages.en.yaml'
+      },
+      {
+        code: 'ja',
+        file: 'messages.ja.yaml'
+      },
+      {
+        code: 'ja-simple',
+        file: 'messages.ja-simple.yaml'
+      }
+    ],
+    defaultLocale: 'ja',
+    lazy: true,
+    langDir: 'lang/',
+    vueI18n: {
+      fallbackLocale: 'en'
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -48,5 +75,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config) {
+      config.module.rules.push({
+        test: /\.ya?ml$/,
+        use: 'js-yaml-loader'
+      })
+    }
   }
 }

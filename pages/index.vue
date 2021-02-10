@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <span>{{ $t('test') }}</span>
       <Lunch type="cosmopolitan" />
     </div>
   </div>
