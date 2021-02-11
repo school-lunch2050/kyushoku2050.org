@@ -47,14 +47,17 @@ export default {
   i18n: {
     locales: [
       {
+        name: 'English',
         code: 'en',
         file: 'messages.en.yaml'
       },
       {
+        name: '日本語',
         code: 'ja',
         file: 'messages.ja.yaml'
       },
       {
+        name: 'にほんご',
         code: 'ja-simple',
         file: 'messages.ja-simple.yaml'
       }
