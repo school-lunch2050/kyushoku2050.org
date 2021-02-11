@@ -1,1 +1,3 @@
-test: "こんにちは世界"
+language: にほんご
+test: |
+  こんにちは<ruby>世界<rt>せかい</rt></ruby>
