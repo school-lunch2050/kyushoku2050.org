@@ -1,1 +1,477 @@
-test: "Hello World"
+weblate:
+  menu:
+    footer:
+      contact: Contact
+      about: About
+      feedback: Feedback
+      pp: Privacy Policy
+      feast: Feast - Enough is as good as a feast
+      rihn: Research Institute for Humanity and Nature
+    actions:
+      skip: skip
+      next: next
+  introduction:
+    start:
+      text: |
+        The earth will change<br/>
+        over the next<br/>
+        30 years!
+    lunch:
+      text: |
+        …<br/>
+        and so will the<br/>
+        school lunch!
+    introduction:
+      text: |
+        We, the {logo} team,<br/>
+        looked at the DATA and<br/>
+        identified ② factors<br/>
+        that will impact our lunch
+    weather:
+      title: |
+        Factor ①<br/>
+        Can we limit global warming?
+      less:
+        text: 1.5°?
+        links:
+          - https://google.com
+      more:
+        text: 2°+?
+        links:
+          - https://google.com
+    location:
+      title: |
+        Factor ②<br/>
+        Where will our food be from?
+      near:
+        text: nearby?
+      far:
+        text: far away?
+    scenario:
+      title: |
+        This means we have 4 scenarios:
+  main:
+    title: |
+      Click on each scenario to find out more!
+    hint: |
+      Click to learn more!
+    grid:
+      near: local
+      far: global
+      warm: warm
+      hot: hot
+  scenario:
+    actions:
+      notes: Notes
+      pdf: PDF
+      more: Learn more
+    progress:
+      active: |
+        {percent}% finished<br/>
+        reading
+      finished: |
+        Awesome!<br/>
+        You looked at<br/>
+        everything!
+      click:
+        (click) Let us know<br/>
+        what you think!
+  cosmopolitan:
+    title: Global Green Illusion
+    short: Illusion
+    ingredients:
+      milk:
+        name: animal rights milk
+        source: |
+          from New Zealand cow-free milk powder. Today’s flavor: Filipino Purple Yam
+      chicken:
+        name: Bali style satay chicken
+        source: |
+          plant-based meat made at a partner factory in California and sautéed in Fiji coconut sauce
+      chicken_veggies:
+        name: favorite idol vegetables
+        source: |
+          Frozen broccoli, carrot and string beans from chinese drama stars
+      fish_soup:
+        name: Spicy Korean fish soup
+        source: |
+          Tilapia from an ethical aquaculture farm in Brazil.
+      fish_soup_tofu:
+        name: Canadian smart Tofu
+        source: |
+          produced on human labor-free smart partner farms
+      fish_soup_onion:
+        name: Russian Green Onion
+        source: |
+          produced on human labor-free smart partner farms
+      rice:
+        name: Thai rice
+        source: |
+          School District directly imports rice from a partner farm in Thailand through Carbon Credit Scheme
+      coffee_jelly:
+        name: Coffee Jelly
+        source: |
+          Organic Fair Trade Coffee Beans from Congo
+    bubbles:
+      fruit:
+        text: |
+          High-end fruits (e.g. triangle melon, giant strawberry, etc.) are produced for export to high income Asian and African megacities.
+          Barring places with few specialized producers, rural farming communities are left abandoned, leading to a loss in biodiversity and culture.
+        links:
+          - https://www.affrc.maff.go.jp/docs/press/200527.html
+      agreements:
+        text: |
+          International trade agreements secure the basic nutritional needs and proteins are replaced by fungi-, algae-, and plant-based
+          ‘meats’ & ‘milks’, which causes Japanese domestic food production (rice, wheat, sugar, dairy, beef, pork, many vegetables) to fall,
+          and family farms are forced to close their operations.
+        links:
+          - https://www.perfectdayfoods.com/
+          - https://geltor.com/nutrition/
+          - https://www.clarafoods.com/
+          - https://www.sustainablebioproducts.com/
+      influencers:
+        text: |
+          Influencers introduce new food trends from different parts of the world, diversifying diets and moving farther away from seasonal food choices.
+        links:
+          - https://onezero.medium.com/how-google-got-its-employees-to-eat-their-vegetables-a2206820d90d
+          - https://www.brandwatch.com/blog/react-food-influencers-2017/
+          - https://www.fluentin3months.com/what-is-mukbang
+          - https://m.youtube.com/watch?v=4EXVrzOACv4
+          - https://www.forbes.com/sites/lizzysaxe/2018/12/07/are-food-influencers-the-restaurant-world/#4d6443f86ce1
+      fisheries:
+        text: |
+          Similarly coastal fisheries have been fully replaced by aquaculture or pelagic fisheries using high-tech to reduce labor intensity and environmental impacts. To increase supply chain efficiency, the catch is processed, frozen and distributed immediately offering consumers mainly fillets and blocks.
+        links:
+          - https://news.yahoo.co.jp/byline/kodamakatsuya/20151115-00051465/
+          - http://www.fao.org/3/i3640e/i3640e.pdf
+      social_businesses:
+        text: |
+          Agricultural social businesses use state of the art technologies (e.g. drones, AI, satellites) to optimize resource input, standardize product appearance and taste to suit the average consumer.
+        links:
+          - https://smallfarmfuture.org.uk/2021/01/automation-and-a-small-farm-future
+          - https://www.sciencedirect.com/science/article/pii/S0169204618300057?via%3Dihub
+      rice:
+        text: |
+          Rice is imported from (south-east) Asia under a carbon credit scheme.
+        links:
+          - https://rice-assoc.jp/for-famer/32-cultivation/137-2018-09-16-13-13-59.html
+          - https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Competitive%20Changes%20Expected%20in%20Japanese%20Rice%20Market_Tokyo_Japan_7-3-2018.pdf
+      ethical_consumption:
+        text: |
+          Ethical consumption grows, leading to the purchase of more certified products (e.g. fair trade, organic, etc.) based on direct online/SNS relations between consumers & producers.
+  desperate:
+    title: Domestic Desperation
+    short: Desperation
+    ingredients:
+      banana:
+        name: KyoBanana
+        source: |
+          Locally produced in Kyoto.
+      glaberrima_rice:
+        name: Glaberrima-Plus Rice
+        source: |
+          Africa's upland rice modified.
+      fruit_dumplings:
+        name: fruit mash dumplings with blueberry flavored sauce
+        source: |
+          from pollination-free fruits & berries
+      autonoma_soup:
+        name: |
+          "autonoma_soup" Fava beans, Tomato and fish filet
+        source: |
+          all ingredients from one automated hydroponic factory
+      cricket_tofu:
+        name: Engineering's finest Cricket-Tofu-Steak
+        source: |
+          produced with CRSPR cricket powder and GMO soybeans 
+      burdock_chips:
+        name: Burdock Chips
+        source: |
+          upload your data and start printing
+      soylent:
+        name: Soylent
+        source: |
+          Milk replacement with all the necessary nutrients
+    bubbles:
+      climate_change:
+        text: |
+          Climate change has shifted domestic food production zones inland and northward -> Tropical species such as avocados, bananas and coffee are now common in Kyoto and tropical fish can be caught around Tokyo.
+        links:
+          - https://www.env.go.jp/earth/ondanka/knowledge/Stop2017e.pdf
+          - https://www.maff.go.jp/j/kanbo/kankyo/seisaku/pdf/pdf/3_gaiyou.pdf
+          - https://www.env.go.jp/en/earth/cc/wacc_080618.pdf
+          - https://www.maff.go.jp/e/data/publish/attach/pdf/index-94.pdf
+          - https://www.env.go.jp/en/earth/cc/wacc_080618.pdf
+          - https://www.env.go.jp/en/earth/cc/wacc_080618.pdf
+          - http://www.nies.go.jp/s4_impact/pdf/S-4_outline_2009.pdf
+      weather_patterns:
+        text: |
+          Unpredictable weather patterns lead to abundant GMO crops that are fast growing, flood and drought resistant all at once.
+        links:
+          - https://www.sciencedirect.com/science/article/abs/pii/S1573521419301861
+          - https://www.bbc.com/future/article/20171106-the-disease-that-could-change-how-we-drink-coffee
+          - https://www.apsnet.org/edcenter/disandpath/fungalbasidio/pdlessons/Pages/SoybeanRust.aspx
+          - http://www.fao.org/agriculture/crops/core-themes/theme/pests/wrdgp/en/
+          - https://www.reuters.com/article/us-kenya-climate-locusts/climate-change-linked-to-african-locust-invasion-idUSKBN1ZS2HX
+          - https://www.cabi.org/isc/datasheet/2747
+          - https://blogs.cdfa.ca.gov/Section3162/?p=5843
+          - https://www.grain.org/en/article/6240-the-rise-of-the-superbugs-and-why-industrial-farming-is-to-blame¥
+          - https://en.wikipedia.org/wiki/Oryza_glaberrima
+      insect_pollination:
+        text: |
+          Insect pollinators (e.g. bees) have been wiped out by pesticides and climate change induced biodiversity loss reduced the variety of fruits and vegetables. While some crops are pollinated by robots, others have been replaced with gene edited self-pollinating species.
+        links:
+          - https://wired.jp/2018/05/29/robotic-pollinator/
+      mass_vegetables:
+        text: |
+          Vegetables are mass produced in hyper sanitary, pest-free, automated indoor and underground soil-less AI factories with integrated fish farms operated by the public administration.
+        links:
+          - https://goodanthropocenes.net/urban-office-urban-farm/
+          - https://aquaponics.co.jp/business/
+          - https://ideasforgood.jp/2019/10/04/data-center-aquaponics/
+          - https://www.isoe.de/en/news/news/news-all/news/bodenlos-nachhaltig-neuartige-landwirtschaftliche-pflanzenproduktion-mit-wasserwiederverwendung/
+          - https://www.bangkokpost.com/business/1951488/firm-converts-arabian-desert-air-into-bottled-water
+      ocean_acidification:
+        text: |
+          Due to ocean acidification and high seawater temperatures, sea corals have been wiped out, as have the marine species that relied upon them.
+        links:
+          - http://nrife.fra.affrc.go.jp/seika/H15/seika15_afped_hk.pdf
+          - https://www.nippon.com/en/in-depth/d00455/building-a-future-for-japan%E2%80%99s-fisheries-industry.html
+      pesticide_resistant:
+        text: |
+          Pesticide resistant CRISPR insects are the main protein source.
+        links:
+          - https://thisismold.com/space/farm-systems/aketta-business-case-for-crickets#.WR0_asaRUuU
+          - https://thisismold.com/?s=entomophogy
+          - http://mushi-sommelier.net/
+          - http://insectcuisine.jp/
+          - https://twitter.com/konenejapan
+          - https://entomo.jp/
+          - https://a-future-of-school-lunch.tumblr.com/
+          - https://www.researchgate.net/figure/Prediction-of-sales-of-insects-as-food-and-feed-from-open-data_fig1_319351283
+          - https://www.insectsforall.nl/en/projects/
+      printed_product:
+        text: |
+          Any food product is turned into flour and used in 3D printers to produce personalized, health foods. Printing parties are held at homes during the now extended typhoon season.
+        links:
+          - http://foodink.io/
+          - https://www.techrepublic.com/article/heres-how-3d-food-printers-are-changing-the-way-we-cook/
+          - https://www.beehex.com/decopod
+          - https://www.beehex.com/nutripo
+          - https://www.naturalmachines.com/
+          - https://english.matis.is/
+          - https://www.3dbyflow.com/
+          - https://www.3dsystems.com/
+      home_sprouts:
+        text: |
+          Home grown sprouts from various seeds add color, micro-nutrients and taste to the common ready meals with long shelf-life. 
+        links:
+          - https://futurefood.network/livinglabs/
+          - https://soylent.com/
+  gamble:
+    title: Global Gamble
+    short: Gamble
+    ingredients:
+      gu_gu_bread:
+        name: “Gu Gu bread" 
+        source: |
+          Special summer colors now with extra much flavor.
+      instant_soup:
+        name: Bacon-flavored CRISPR Bug Bits instant soup
+        source: |
+          CRISPR bug bits are also available with “Corn soup”, “Tomato” and “Consommé” flavor!
+      nutrition_noodle:
+        name: “Bear & Bull” Nutrition noodles
+        source: |
+          Made with the best blend of nutrients available on the market.
+      pudding:
+        name: Upside down pudding with one whole strawberry
+        source: |
+          ONE WHOLE strawberry today!
+      fish_sausage:
+        name: “Salmo-chan” fish sausage
+        source: |
+          Lab grown with the clean proteins.
+      milk_cube:
+        name: Soybean milk flavored medical cube
+        source: |
+          Dissolve the cube to dissolve the microplastics.
+      supplements:
+        name: Supplements
+        source: |
+          Don’t forget to take supplements to rebuild your microbiome.
+    bubbles:
+      food_marketers:
+        text: |
+          Food marketers promote highly-processed and addictive foods through inventing new and extreme tastes, shapes, and colors resulting in vast obesity across generations.
+        links:
+          - https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(18)31788-4.pdf?utm_campaign=tleat19&utm_source=HubPage
+          - https://www.worldobesitydata.org/map/overview-adults
+      stressed_conditions:
+        text: |
+          To grow food in changing ecologically stressed conditions with nutritional loss in depleted soils and to slow down the decomposition of foods CRISPR technology is promoted. With nutritional loss in depleted soils due to harsh ecological conditions and overuse food plants created by CRISPR technology are promoted. They are also using processing methods that delay the spoilage of food.
+        links:
+          - https://calyxt.com/food/
+          - https://pairwise.com/about-us/
+          - https://www.syngenta.com/
+          - https://www.memphismeats.com/
+          - https://www.newagemeats.com/
+          - http://plantedit.com/index.php/products/
+          - https://www.inari.com/
+          - https://cultiviansbx.com/about/
+          - https://bensonhill.com/design-better-crops-together-benson-hill/crop-improvement-platform-cropos/
+      controlled_market:
+        text: |
+          The food system is controlled by a handful of corporations and is fully commodified. Staple food prices fluctuate largely due speculative to investment manipulation, climate-related production losses, and higher risk for ships and planes traveling long distances.
+        links:
+          - https://www.oecd.org/agriculture/understanding-the-global-food-system/opportunities-and-threats-for-agriculture/
+          - https://www.grain.org/en/article/5957-top-e-commerce-companies-move-into-retail
+          - https://www.grain.org/en/article/5622-grow-ing-disaster-the-fortune-500-goes-farming
+          - https://www.weforum.org/projects/new-vision-for-agriculture/
+      plantation_farms:
+        text: |
+          Vertically-integrated transnational corporations run plantation farms across the world with climate refugees as cheap available labor.
+        links:
+          - https://www.tni.org/en/publication/the-global-land-grab
+          - https://www.grain.org/en/article/6282-rcep-trade-deal-will-intensify-land-grabbing-in-asia
+      rare_fresh_fruit:
+        text: |
+          Fresh fruits are rare and extremely expensive, while highly-processed foods are ubiquitous.
+        links:
+          - http://www.usdajapan.org/wpusda/wp-content/uploads/2018/05/FOOD-PROCESSING-SECTOR_Tokyo-ATO_Japan_4-13-2018.pdf
+          - https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Japanese%20Fresh%20Fruit%20Market%20Overview%202018_Osaka%20ATO_Japan_10-30-2018.pdf
+      lab_meat:
+        text: |
+          Lab-produced meat and lab seafood become the dominant protein source.
+        links:
+          - https://www.newagemeats.com/
+          - https://www.gfi.org/non-cms-pages/splash-sites/soi-reports/files/SOI-Report-Cell-Based.pdf
+          - https://www.cubiqfoods.com/en/home/
+          - https://www3.nhk.or.jp/news/html/20190304/k10011835101000.html
+          - https://www.future-meat.com/
+          - https://wildearth.com/pages/our-story
+          - https://www.bluenalu.com/
+          - https://www.thewildtype.com/
+          - https://finlessfoods.com/about/
+          - https://www.newwavefoods.com/
+          - https://shiokmeats.com/?fbclid=IwAR2-45WCsYM6jV1SnkBkCFD56vN60wzejSCcamfCmFPm18fFzx-Et8Rid1g
+      pesticide_regulations:
+        text: |
+          The last regulations for pesticide residues, radioactivity and microplastic loads are fully removed to allow more flexible food trade and achieve ‘food security’.
+      daily_medication:
+        text: |
+          Daily medication is standard to suppress the effects of microplastics, pesticides residues, and foodborne disease.
+      daily_supplements:
+        text: |
+          Daily supplement pills are a necessity to regulate a healthy gut-microbiome and to obtain rare micro-nutrients that have been depleted in the soils already. Supplements are also valuable during emergency supply chain collapses. 
+        links:
+          - https://www.bbc.com/future/article/20120221-food-pills-a-staple-of-sci-fi
+  garden:
+    title: Food Gardens
+    short: Gardens
+    ingredients:
+      potato_porridge:
+        name: Potato & beans porridge
+        source: |
+          School garden sweet potatos and beans.
+      proteins:
+        name: communal proteins 
+        source: |
+          Grilled ayu fish or wild venison or bean mix falafel/ paddy (vegetarian)
+      fresh_salad:
+        name: Fresh salad (buffet)
+        source: |
+          fine edible school yard vegetables grown with school's own humanure-/ night soil-compost and topped with nuts and pickels made during 'forage & ferment' class
+      satoyama_soup:
+        name: Satoyama soup
+        source: |
+          Locally harvested mushroom and wild vegetables in clear broth
+      chestnut:
+        name: Roasted chestnut
+        source: |
+          chestnut grown in an agro-forestry 
+      milk_bubble:
+        name: milk bubble
+        source: |
+          goat milk in agar-based, edible wrapping
+    bubbles:
+      domestic_soveirnty:
+        text: |
+          Countries consider their own domestic food sovereignty first. Almost everybody is directly involved in the food system through either growing, distributing, processing, or preparing food based on a 1/2 food-1/2 X lifestyle.
+      regionally_diverse:
+        text: |
+          The turn to regionally diverse staple foods like potatoes, sweet potatoes, yam, and taro are supported, while rice production is minimized to lower methane emissions.
+      seed_banks:
+        text: |
+          Seed banks, farmers markets, civic duties, and shares of wild harvest (e.g. deer, boar, fish, herbs, etc.) from the local forests, coastlines and rivers are managed through community councils.
+        links:
+          - http://patternsofcommoning.org/commons-in-the-pluriverse/
+          - https://www.oxfamamerica.org/static/media/files/GCA_REPORT_EN_FINAL.pdf
+      vegan_diets:
+        text: |
+          Diets are largely vegetarian and vegan. Protein source are diverse beans, millet, soba and seed products,
+        links:
+          - https://table.lifull.com/earthcuisine/
+          - https://news.globallandscapesforum.org/43337/12-alternative-proteins-for-climate-friendly-diets/
+      public_food:
+        text: |
+          Public spaces feature freely available nuts and fruit trees, local food production via urban-, school-, and community-gardens grows substantially
+        links:
+          - https://www.cambridge.org/core/services/aop-cambridge-core/content/view/86C5DEFE7F7266C125316CECB6762875/9781107196933c16_327-350.pdf/seeds_of_the_future_in_the_present.pdf
+          - https://goodanthropocenes.net/what-are-seeds
+          - https://www.edibleschoolyard.org/
+      wasting_food:
+        text: |
+          Wasting food is taboo and composting has become second nature.
+        links:
+          - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0228369
+          - https://daily.jstor.org/a-history-of-human-waste-as-fertilizer/
+          - https://iwaponline.com/wpt/article-abstract/5/4/wpt2010096/21292/History-and-Current-Situation-of-Night-Soil?redirectedFrom=fulltext
+          - http://jsanic.org/inasia/japanhistoryx.html
+          - https://humanurehandbook.com
+      preserving:
+        text: |
+          As refrigeration, storage, and transport are too carbon intensive, preserving (e.g. pickling, drying, fermenting, smoking) gains importance 
+      food_literacy:
+        text: |
+          Children’s food literacy about seasonality, foraging and preparation of local & wild foods is at 99%.
+        links:
+          - https://www.scientificamerican.com/article/what-conservation-efforts-can-learn-from-indigenous-communities/
+          - https://www.smithsonianmag.com/smithsonian-institution/new-way-stewardship-mother-earth-indigeneity-180952855/
+          - https://www.nature.com/articles/s41893-018-0100-6
+          - https://www.pref.kanagawa.jp/docs/ar3/cnt/f6656/documents/887381.pdf
+      permaculture:
+        text: |
+          Permaculture, agroecology, and agroforestry are mainstream practices. Small livestock (e.g. chickens) are integrated in farms as sources of fertilizer, pest control, pollination, and companionship.
+        links:
+          - https://theecologist.org/2020/jan/24/rewilding-food-rewilding-farming?fbclid=IwAR2NCkYvQpMBl-Kv9wOnDBquJAFthk8MndWiS42Z4y-eCo6I_0fUfxAgS6c
+          - https://reasonstobecheerful.world/permaculture-bec-hellouin-farm-france/?fbclid=IwAR1Lg8jiVTE2ORWWj3BoKinRFflB7CJa2ZEl7ofZCvpKctUZnjKhEMgR5Lw
+          - http://www.regenvillages.com
+          - https://alumni.columbia.edu/content/lo-tek-design-radical-indigenism
+          - https://www.youtube.com/watch?fbclid=IwAR0DFsCxX0l1rXtV_KuNbcqMoYPYtcEXseqmtDS7iBqjjwYs6w4AmydZ08k&v=y8RojQZbsB8&feature=youtu.be
+          - https://www.jircas.go.jp/sites/default/files/publication/jarq/27-1-008-012_0.pdf
+          - https://issuu.com/nzva/docs/vs_apr17_deathlysilence
+          - http://morethanhumanlab.org/blog/project/counting-sheep-nz-merino-in-an-internet-of-things/
+          - https://www.ciwf.org.uk/research/
+          - https://www.tandfonline.com/doi/pdf/10.1080/09712119.2008.9706911
+          - https://www.slowfood.com/what-we-do/themes/slow-meat/slow-meat-sustainable-livestock-farming/
+      limited_trade:
+        text: |
+          Use of fossil fuels is highly restricted, limiting international trade to a minimum. Synthetic fertilizer production is banned and biodegradable, algae-based food packaging, if not edible, becomes organic fertilizer for the agricultural production. 
+        links:
+          - http://www.oohowater.com/
+          - https://www.wikihow.com/Make-Edible-Water-Bubbles#Making-Japanese-Raindrop-Cake
+          - https://onezero.medium.com/kombucha-slime-is-an-edible-solution-to-the-worlds-plastic-problem-d1b87ce3085e
+          - https://www.core77.com/posts/103634/Materiom-Open-Source-Recipes-for-How-to-Make-Your-Own-Raw-Materials-Out-of-Natural-Ingredients
+          - https://www.globalcitizen.org/en/content/lucy-hughes-fish-waste-plastic-alternative-london
+      no_pesticides:
+        text: |
+          Only natural pesticides are allowed, GMOs are banned.
+  about: |
+    The illustrations use following references:
+      - Based on https://unsplash.com/photos/cGNCepznaV8 by Peter Gargiulo on Unsplash 
+      - Based on https://thenounproject.com/search/?q=arrow&i=593917
+      - Based on https://thenounproject.com/term/earth/2225388/ by Valeriy on the Noun Project
+      - Based on https://thenounproject.com/term/heat/689788/ "Heat" by kiddo from the Noun Project
+      - Based on https://thenounproject.com/term/heat/772882/ "Heat" by Kayla Valencia from the Noun Project
+      - Based on https://thenounproject.com/search/?q=heat&i=1224531 "Heat Lines" by Madeleine Bennett from the Noun Project

@@ -112,7 +112,7 @@ async function downloadFont (font) {
 
 function addToDict (allChars, obj) {
   if (typeof obj === 'string') {
-    for (const char of obj.replace(/<\/?\s*(ruby|rt|rp|rtc)\s*>/ig, '')) {
+    for (const char of obj.replace(/<\/?\s*(ruby|rt|rp|rtc|br)\s*\/?>/ig, '')) {
       allChars[char] = 1
     }
   } else if (typeof obj === 'object' && obj !== null) {
