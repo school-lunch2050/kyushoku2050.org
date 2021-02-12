@@ -9,7 +9,7 @@
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "font": "node scripts/fonts.js",
+    "font": "full-icu scripts/fonts.js",
     "postinstall": "npm run font"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@leichtgewicht/extract-zip": "^2.1.1",
+    "@leichtgewicht/full-icu": "^1.3.3",
     "@nuxt/types": "^2.14.12",
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
