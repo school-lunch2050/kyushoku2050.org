@@ -1,6 +1,7 @@
 const { createHash } = require('crypto')
 const { createWriteStream, promises: { readFile, writeFile, mkdir, stat, unlink }, createReadStream } = require('fs')
-const { pipeline } = require('stream/promises')
+const { promisify } = require('util')
+const pipeline = promisify(require('stream').pipeline)
 const path = require('path')
 const { request } = require('undici')
 const extract = require('@leichtgewicht/extract-zip')
