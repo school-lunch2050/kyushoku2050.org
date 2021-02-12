@@ -8,7 +8,9 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
+    "lint": "npm run lint:js",
+    "font": "node scripts/fonts.js",
+    "postinstall": "npm run font"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.1",
@@ -20,18 +22,23 @@
     "vue-svg-inline-loader": "^2.1.2"
   },
   "devDependencies": {
+    "@leichtgewicht/extract-zip": "^2.1.1",
     "@nuxt/types": "^2.14.12",
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@types/js-yaml": "^4.0.0",
     "@types/sanitize-html": "^1.27.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.18.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.5.0",
     "fibers": "^5.0.0",
+    "js-yaml": "^3.14.1",
     "js-yaml-loader": "^1.2.2",
     "sass": "^1.32.6",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.1.1",
+    "subset-font": "^1.0.0",
+    "undici": "^3.3.1"
   }
 }
