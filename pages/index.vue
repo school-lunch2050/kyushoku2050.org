@@ -1,9 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <Illustration type="garden" />
-      <span v-tr="'test'" />
-      <Lunch type="garden" />
+      <Chalkboard page="start"/>
     </div>
   </div>
 </template>
@@ -14,3 +12,8 @@ import Vue from 'vue'
 export default Vue.extend({
 })
 </script>
+<style type="text/css">
+svg {
+  height: 100vh;
+}
+</style>

@@ -13,23 +13,23 @@ weblate:
   introduction:
     start:
       text: |
-        The earth will change<br/>
-        over the next<br/>
+        The earth will change
+        over the next
         30 years!
     lunch:
       text: |
-        …<br/>
-        and so will the<br/>
+        …
+        and so will the
         school lunch!
     introduction:
       text: |
-        We, the {logo} team,<br/>
-        looked at the DATA and<br/>
-        identified ② factors<br/>
+        We, the {logo} team,
+        looked at the DATA and
+        identified ② factors
         that will impact our lunch
     weather:
       title: |
-        Factor ①<br/>
+        Factor ①
         Can we limit global warming?
       less:
         text: 1.5°?
@@ -41,7 +41,7 @@ weblate:
           - https://google.com
     location:
       title: |
-        Factor ②<br/>
+        Factor ②
         Where will our food be from?
       near:
         text: nearby?
@@ -67,14 +67,14 @@ weblate:
       more: Learn more
     progress:
       active: |
-        {percent}% finished<br/>
+        {percent}% finished
         reading
       finished: |
-        Awesome!<br/>
-        You looked at<br/>
+        Awesome!
+        You looked at
         everything!
       click:
-        (click) Let us know<br/>
+        (click) Let us know
         what you think!
   cosmopolitan:
     title: Global Green Illusion
