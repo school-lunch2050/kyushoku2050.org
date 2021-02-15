@@ -2,6 +2,9 @@ $col-bg: #424852;
 $col-gradient-start: #29364B;
 $col-gradient-end: #05070A;
 $col-accent-grey: #B5B5B5;
+$col-nav-active: #fff;
+$col-nav-inactive: rgba(255, 255, 255, 0.6);
+$col-active-fill: rgba(255, 255, 255, 0.1);
 
 @font-face {
   font-family: "CaveatBrush";
@@ -20,10 +23,49 @@ $col-accent-grey: #B5B5B5;
 body {
   background: $col-bg;
 }
+body, html {
+  padding: 0;
+  margin: 0;
+}
 
 footer, header {
   border-color: $col-accent-grey;
-  border-width: 6px;
+  border-width: 5px;
+  width: 100%;
+}
+header {
+  border-bottom-style: solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.lang--link {
+  height: 2em;
+  display: flex;
+  padding: 0 1.2em;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px;
+  border-color: $col-accent-grey;
+  border-left-style: solid;
+}
+.lang--link:last-child {
+  border-right-style: solid;
+}
+.lang--button {
+  text-decoration: none;
+  color: $col-nav-inactive;
+}
+.lang--active,
+.lang--button:hover {
+  color: $col-nav-active;
+  background-color: $col-active-fill;
+}
+.lang--active {
+  cursor: default;
+}
+footer {
+  border-top-style: solid;
 }
 
 html[lang="en"] .font--nav, .font--nav--en {

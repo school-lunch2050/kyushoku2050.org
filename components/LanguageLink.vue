@@ -1,12 +1,12 @@
 <template>
   <Fragment>
-    <div v-if="active" :class="'font--nav--' + locale.code">
+    <div v-if="active" :class="`lang--active lang--link font--nav--${locale.code}`">
       {{ name }}
     </div>
     <nuxt-link
       v-else
       :to="switchLocalePath(locale.code)"
-      :class="'font--nav--' + locale.code"
+      :class="`lang--button lang--link font--nav--${locale.code}`"
     >
       {{ name }}
     </nuxt-link>
