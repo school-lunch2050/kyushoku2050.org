@@ -10,7 +10,7 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "font": "full-icu scripts/fonts.js",
-    "ci": "npm run build && npm run font",
+    "ci": "npm run font && npm run generate",
     "postinstall": "npm run font"
   },
   "dependencies": {
