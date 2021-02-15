@@ -8,8 +8,9 @@ weblate:
       feast: Feast - みんなで作る「いただきます」
       rihn: 大学共同利用機関法人　人間文化研究機構 総合地球環境学研究所
     actions:
-      skip: スキップ
-      next: 次へ
+      skip: スキップ >
+      next: 次へ >
+      prev: <
   introduction:
     start:
       text: |

@@ -8,8 +8,9 @@ weblate:
       feast: Feast - Enough is as good as a feast
       rihn: Research Institute for Humanity and Nature
     actions:
-      skip: skip
-      next: next
+      skip: skip >
+      next: next >
+      prev: <
   introduction:
     start:
       text: |

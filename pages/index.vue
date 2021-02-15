@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <Chalkboard page="start"/>
+      <Chalkboard page="start" next="lunch" />
     </div>
   </div>
 </template>

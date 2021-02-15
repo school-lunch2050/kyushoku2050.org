@@ -45,6 +45,52 @@ rect.debug {
   stroke: red;
 }
 
+.button--next,
+.button--prev {
+  & {
+    font-size: 90px;
+  }
+  & text {
+    fill: rgba(255, 255, 255, 0.8);
+    user-select: none;
+  }
+  &:hover text {
+    fill: white;
+  }
+  & rect {
+    // debug
+    // fill: rgba(255, 255, 255, 0.2);
+    fill: rgba(0, 0, 0, 0);
+  }
+}
+.cb {
+  fill: white;
+}
+.cb--page {
+  transform: translate(135px, 135px);
+  font-size: 150px;
+  user-select: none;
+}
+.cb--question--title {
+  font-size: 120px;
+}
+.cb--option--title {
+  font-size: 90px;
+}
+html[lang="ja"] .cb--menu--title,
+html[lang="ja-simple"] .cb--menu--title
+{
+  font-size: 100px;
+}
+.cb--menu--item {
+  font-size: 110px;
+}
+.button--prev {
+  & text {
+    fill: rgba(255, 255, 255, 0.1);
+  }
+}
+
 main {
   background-color: $col-gradient-start;
   background-color: linear-gradient($col-gradient-start, $col-gradient-end);

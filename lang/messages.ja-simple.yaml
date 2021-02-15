@@ -8,8 +8,9 @@ weblate:
       feast: Feast - みんなで作る「いただきます」
       rihn: 大学共同利用機関法人　人間文化研究機構 総合地球環境学研究所
     actions:
-      skip: スキップ
-      next: 次へ
+      skip: スキップ >
+      next: 次へ >
+      prev: <
   introduction:
     start:
       text: |
@@ -173,7 +174,8 @@ weblate:
   garden:
     title: |
       <ruby>食<rt>た</rt></ruby>べものでいっぱいの<ruby>庭<rt>にわ</rt></ruby>
-    short: 庭(にわ)
+    short: |
+      <ruby>庭<rt>にわ</rt></ruby>
     ingredients:
       # Filled by messages.ja.yml, you can override these if you like
     bubbles:
