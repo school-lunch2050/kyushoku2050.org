@@ -63,13 +63,16 @@ export default Vue.extend({
     }
   },
   mounted () {
-    const { main } = this.$refs
+    // @ts-ignore - The types of vue seem to be off when we have a computed element
+    const { main } = this.$refs as { [key: string]: Vue | Element | Vue[] | Element[] }
     if (!isElement(main)) {
       return
     }
     // TODO: find better way to do this...
-    if (main._added) return
-    main._added = true
+    if (main.getAttribute('has-ruby')) {
+      return
+    }
+    main.setAttribute('has-ruby', 'true')
     let parent = main.parentNode as Element
     let rootSvg
     while (parent !== document.body) {

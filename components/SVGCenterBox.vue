@@ -41,14 +41,18 @@ export default Vue.extend({
   },
   computed: {
     lines () {
+      // @ts-ignore - The types of vue seem to be off when we have a computed element
+      const { lineHeight: lineHeightRaw, height: heightRaw } = this.$props as Record<string, any>
+      const lineHeight = parseFloat(lineHeightRaw)
+      const height = parseFloat(heightRaw)
       const lines = this.$props.text.split('\n')
       if (lines[lines.length - 1] === '') {
         lines.pop()
       }
-      const height = lines.length * parseFloat(this.$props.lineHeight)
-      const yOffset = (parseFloat(this.$props.height) - height) / 2
-      return lines.map((text, index) => {
-        return { text, index, y: yOffset + (index * this.$props.lineHeight) }
+      const blockHeight = lines.length * lineHeight
+      const yOffset = (height - blockHeight) / 2
+      return lines.map((text: string, index: number) => {
+        return { text, index, y: yOffset + (index * lineHeight) }
       })
     }
   }
