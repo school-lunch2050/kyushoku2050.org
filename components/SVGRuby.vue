@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <text ref="main" :x="x" :y="y" text-anchor="middle" v-html="html" />
+  <text ref="main" :x="x" :y="y" :text-anchor="textAnchor" v-html="html" />
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -21,6 +21,11 @@ export default Vue.extend({
     },
     y: {
       type: [String, Number],
+      required: false,
+      default: null
+    },
+    textAnchor: {
+      type: String,
       required: false,
       default: null
     },
@@ -121,14 +126,21 @@ export default Vue.extend({
         width: bounds.width * scale,
         height: bounds.height * scale
       }
-      const text = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
+      const height = (rel.height * 0.3)
+      const container = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+      container.setAttribute('width', rel.width.toString())
+      container.setAttribute('height', (height * 2).toString())
+      container.setAttribute('x', rel.x.toString())
+      container.setAttribute('y', (rel.y - height).toString())
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text')
       text.innerHTML = ruby
-      text.classList.add('debug')
-      text.setAttribute('x', rel.x.toString())
-      text.setAttribute('y', rel.y.toString())
-      text.setAttribute('width', rel.width.toString())
-      text.setAttribute('height', rel.height.toString())
-      rootSvg.appendChild(text)
+      text.classList.add('font--ruby')
+      text.style.fontSize = `${height.toString()}px`
+      text.setAttribute('x', '50%')
+      text.setAttribute('y', '50%')
+      text.setAttribute('text-anchor', 'middle')
+      container.appendChild(text)
+      rootSvg.appendChild(container)
     }
   }
 })

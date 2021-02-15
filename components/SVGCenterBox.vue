@@ -1,5 +1,5 @@
 <template>
-  <g :x="x" :y="y" :width="width" :height="height">
+  <g :x="x" :y="y" :height="height">
     <svg
       v-for="line in lines"
       :key="line.index"

@@ -5,7 +5,6 @@
     height="100%"
     viewBox="0 0 2586 1770"
     version="1.1"
-    :alt="$t('weblate.introduction.start.text')"
   >
     <image width="2586" height="1770" href="/img/chalkboard.webp" />
     <g v-if="page === 'start'" class="cb_page">
@@ -30,9 +29,12 @@ export default Vue.extend({
 })
 </script>
 <style type="scss">
+svg {
+  fill: white;
+}
 .cb_page {
   transform: translate(135px, 135px);
   font-size: 150px;
-  fill: white;
 }
+
 </style>
