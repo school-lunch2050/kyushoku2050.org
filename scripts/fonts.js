@@ -7,6 +7,9 @@ const { request } = require('undici')
 const extract = require('@leichtgewicht/extract-zip')
 const yaml = require('js-yaml')
 const subFont = require('subset-font')
+
+// Using node_modules, this way its cached by the CI system
+const cacheHome = path.join('node_modules', '.font')
 const fonts = [
   {
     name: 'honya',
@@ -49,9 +52,9 @@ async function exists (path) {
 
 function cacheFile (font, name) {
   if (name) {
-    return path.join('.font', font.name, name)
+    return path.join(cacheHome, font.name, name)
   }
-  return path.join('.font', font.name)
+  return path.join(cacheHome, font.name)
 }
 
 async function compileSha (font) {
