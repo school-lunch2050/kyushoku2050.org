@@ -3,6 +3,7 @@
   <text ref="main" :x="x" :y="y" :text-anchor="textAnchor" v-html="html" />
 </template>
 <script lang="ts">
+import { encode } from 'html-entities'
 import Vue from 'vue'
 
 function isElement (elem: Vue | Element | Vue[] | Element[]): elem is Element {
@@ -64,7 +65,8 @@ export default Vue.extend({
       if (prev < text.length) {
         blocks.push({ text: text.substr(prev) })
       }
-      return blocks.map(({ text, ruby }) => `<tspan ${ruby ? `data-ruby="${ruby}"` : ''}>${text}</tspan>`).join('')
+      const htmlW = blocks.map(({ text, ruby }) => `<tspan${ruby ? ` data-ruby="${ruby}"` : ''}>${encode(text)}</tspan>`).join('')
+      return htmlW
     }
   },
   mounted () {
