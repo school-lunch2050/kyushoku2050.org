@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div id="layout">
     <LanguageHeader />
-    <Nuxt />
+    <Nuxt :nuxt-child-key="'default'" />
     <Footer />
   </div>
 </template>

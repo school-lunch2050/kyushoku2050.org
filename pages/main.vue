@@ -1,15 +1,17 @@
 <template>
-  <div class="container">
-    <div>
-      <Chalkboard page="scenarios" prev="/scenarios">
-        <CBMenu
-          :title="$t('weblate.main.title')"
-          :a="$t('weblate.garden.short')"
-          :b="$t('weblate.cosmopolitan.short')"
-          :c="$t('weblate.gamble.short')"
-          :d="$t('weblate.desperate.short')"
-        />
-      </Chalkboard>
-    </div>
-  </div>
+  <MainMenu
+    prev="/scenarios"
+    :title="$t('weblate.main.title')"
+    :a="$t('weblate.garden.short')"
+    :b="$t('weblate.cosmopolitan.short')"
+    :c="$t('weblate.gamble.short')"
+    :d="$t('weblate.desperate.short')"
+  />
 </template>
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  key: route => route.fullPath
+})
+</script>

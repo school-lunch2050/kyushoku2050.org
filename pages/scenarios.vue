@@ -1,9 +1,15 @@
 <template>
-  <div class="container">
-    <div>
-      <Chalkboard page="scenarios" prev="/location" next="/main">
-        <CBMenu :title="$t('weblate.introduction.scenario.title')" />
-      </Chalkboard>
-    </div>
-  </div>
+  <MainMenu
+    key="main"
+    prev="/location"
+    next="/main"
+    :title="$t('weblate.introduction.scenario.title')"
+  />
 </template>
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  key: route => route.fullPath
+})
+</script>

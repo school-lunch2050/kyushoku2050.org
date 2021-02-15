@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div key="layout">
     <LanguageHeader />
     <Nuxt />
   </div>

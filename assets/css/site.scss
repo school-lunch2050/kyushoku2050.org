@@ -108,7 +108,7 @@ rect.debug {
 .cb {
   fill: white;
 }
-.cb--page {
+.cb--content {
   transform: translate(135px, 135px);
   font-size: 150px;
   user-select: none;
@@ -132,7 +132,12 @@ html[lang="ja-simple"] .cb--menu--title
     fill: rgba(255, 255, 255, 0.1);
   }
 }
-
+.lunch--alert {
+  color: #000;
+  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 600px;
+  font-weight: bold;
+}
 main {
   background-color: $col-gradient-start;
   background-color: linear-gradient($col-gradient-start, $col-gradient-end);
