@@ -129,9 +129,21 @@ html[lang="ja-simple"] .cb--menu--title
 .cb--menu--item {
   font-size: 110px;
 }
+.cb--menu--item-bg {
+  fill: rgba(255, 255, 255, 0);
+}
+.cb--menu--item-active {
+  fill: rgba(255, 255, 255, 0.4);
+}
+.cb--menu--item-button {
+  cursor: pointer;
+}
+.cb--menu--item-button:hover {
+  fill: rgba(255, 255, 255, 0.15);
+}
 .button--prev {
   & text {
-    fill: rgba(255, 255, 255, 0.1);
+    fill: rgba(255, 255, 255, 0.5);
   }
 }
 .lunch--alert {

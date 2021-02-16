@@ -12,8 +12,7 @@
           version="1.1"
           style="max-width: 100vh; max-height: 100vw;"
         >
-          <g
-            class="lunch--box">
+          <g class="lunch--box">
             <lunch
               x="100"
               y="1850"

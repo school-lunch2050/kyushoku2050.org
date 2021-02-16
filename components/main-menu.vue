@@ -1,57 +1,51 @@
 <template>
-  <main-screen :prev="prev" :next="next" lunch-type="!">
-    <g class="cb--menu">
-      <svg-center-box
-        class="font--tex cb--menu--title"
-        width="2235"
-        height="400"
-        :y="padding"
-        line-height="220"
-        :text="title"
-      />
-      <svg-cross :width="width" :height="height" :x="x" :y="y" stroke="white" />
-      <image href="/img/weather_15.webp" :x="x - iconWidth - padding" :y="y + (height / 4 * 1) - (iconWidth / 2)" :width="iconWidth" :height="iconWidth" />
-      <image href="/img/weather_2p.webp" :x="x - iconWidth - padding" :y="y + (height / 4 * 3) - (iconWidth / 2)" :width="iconWidth" :height="iconWidth" />
-      <image href="/img/place_local.webp" :x="x + (width / 4 * 1) - (iconWidth / 2)" :y="y + height + padding" :width="iconWidth" :height="iconWidth" />
-      <image href="/img/place_global.webp" :x="x + (width / 4 * 3) - (iconWidth / 2)" :y="y + height + padding" :width="iconWidth" :height="iconWidth" />
-      <svg-center-box
-        class="cb--menu--item font--tex"
-        :line-height="lineHeight"
-        :x="x"
-        :y="y + lineHeight * 0.3"
-        :width="width / 2"
-        :height="height / 2"
-        :text="a"
-      />
-      <svg-center-box
-        class="cb--menu--item font--tex"
-        :line-height="lineHeight"
-        :x="x + (width / 2)"
-        :y="y + lineHeight * 0.3"
-        :width="width / 2"
-        :height="height / 2"
-        :text="b"
-      />
-      <svg-center-box
-        class="cb--menu--item font--tex"
-        :line-height="lineHeight"
-        :x="x"
-        :y="y + height / 2 + lineHeight * 0.3"
-        :width="width / 2"
-        :height="height / 2"
-        :text="c"
-      />
-      <svg-center-box
-        class="cb--menu--item font--tex"
-        :line-height="lineHeight"
-        :x="x + (width / 2)"
-        :y="y + height / 2 + lineHeight * 0.3"
-        :width="width / 2"
-        :height="height / 2"
-        :text="d"
-      />
-    </g>
-  </main-screen>
+  <keep-alive>
+    <main-screen :prev="prev" :next="next" :lunch-type="selected ? selected : '!'">
+      <g class="cb--menu">
+        <svg-center-box
+          class="font--tex cb--menu--title"
+          width="2235"
+          height="400"
+          :y="padding"
+          line-height="220"
+          :text="title ? title : $t('weblate.main.title')"
+        />
+        <svg-cross :width="width" :height="height" :x="x" :y="y" stroke="white" />
+        <image href="/img/weather_15.webp" :x="x - iconWidth - padding" :y="y + (height / 4 * 1) - (iconWidth / 2)" :width="iconWidth" :height="iconWidth" />
+        <image href="/img/weather_2p.webp" :x="x - iconWidth - padding" :y="y + (height / 4 * 3) - (iconWidth / 2)" :width="iconWidth" :height="iconWidth" />
+        <image href="/img/place_local.webp" :x="x + (width / 4 * 1) - (iconWidth / 2)" :y="y + height + padding" :width="iconWidth" :height="iconWidth" />
+        <image href="/img/place_global.webp" :x="x + (width / 4 * 3) - (iconWidth / 2)" :y="y + height + padding" :width="iconWidth" :height="iconWidth" />
+        <main-menu-item
+          num="1"
+          item="garden"
+          :active="active"
+          :selected="selected"
+          :place="{ x, y, ...item }"
+        />
+        <main-menu-item
+          num="2"
+          item="cosmopolitan"
+          :active="active"
+          :selected="selected"
+          :place="{ x: x + item.width, y, ...item }"
+        />
+        <main-menu-item
+          num="3"
+          item="gamble"
+          :active="active"
+          :selected="selected"
+          :place="{ x, y: y + item.height, ...item }"
+        />
+        <main-menu-item
+          num="4"
+          item="desperate"
+          :active="active"
+          :selected="selected"
+          :place="{ x: x + item.width, y: y + item.height, ...item }"
+        />
+      </g>
+    </main-screen>
+  </keep-alive>
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -70,32 +64,32 @@ export default Vue.extend({
       type: String,
       required: true
     },
-    a: {
+    selected: {
       type: String,
-      default: '1'
+      default: null
     },
-    b: {
-      type: String,
-      default: '2'
-    },
-    c: {
-      type: String,
-      default: '3'
-    },
-    d: {
-      type: String,
-      default: '4'
+    active: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
+    const x = 350
+    const y = 425
+    const width = 1850
+    const height = 600
     return {
-      x: 350,
-      y: 425,
-      lineHeight: 180,
-      width: 1850,
-      height: 600,
+      x,
+      y,
+      width,
+      height,
       iconWidth: 275,
-      padding: 20
+      padding: 20,
+      item: {
+        lineHeight: 180,
+        width: width / 2,
+        height: height / 2
+      }
     }
   }
 })

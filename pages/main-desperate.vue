@@ -1,5 +1,5 @@
 <template>
-  <main-menu prev="/scenarios" active />
+  <main-menu prev="/scenarios" active selected="desperate" />
 </template>
 <script>
 export default { key: route => route.fullPath }

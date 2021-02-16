@@ -12,10 +12,6 @@
     <cb-option :title="$t('weblate.introduction.location.far.text')" image="/img/place_global.webp" x="1300" y="600" />
   </main-screen>
 </template>
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  key: route => route.fullPath
-})
+<script>
+export default { key: route => route.fullPath }
 </script>
