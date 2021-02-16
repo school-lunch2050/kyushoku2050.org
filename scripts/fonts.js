@@ -1,5 +1,5 @@
 const { createHash } = require('crypto')
-const { createWriteStream, promises: { readFile, writeFile, mkdir, stat, unlink }, createReadStream } = require('fs')
+const { createWriteStream, promises: { readFile, writeFile, mkdir, stat, unlink, access }, createReadStream } = require('fs')
 const { promisify } = require('util')
 const pipeline = promisify(require('stream').pipeline)
 const path = require('path')
@@ -157,20 +157,51 @@ async function checkCharacters (font) {
     await mkdir(cacheFile(font), { recursive: true })
     const fontChanged = await downloadFont(font)
     const charsChanged = await checkCharacters(font)
-    if (!charsChanged && !fontChanged) {
-      console.log(`Neither Font nor charset for "${font.name}" has changed.`)
+    const force = charsChanged || fontChanged
+    const openEntries = (await Promise.all(
+      Object
+        .values(font.source.files)
+        .map((file) => {
+          const fileNoEnding = file.replace(/\.(ttf|woff|woff2|otf)$/, '')
+          const outfile = `static/font/${font.name}/${fileNoEnding}`
+          return {
+            file,
+            outFiles: [
+              { file: `${outfile}.truetype`, opts: { targetFormat: 'truetype' } },
+              { file: `${outfile}.woff`, opts: { targetFormat: 'woff' } },
+              { file: `${outfile}.woff2`, opts: { targetFormat: 'woff2' } }
+            ]
+          }
+        })
+        .map(async (entry) => {
+          if (force) {
+            return entry
+          }
+          let outFiles = []
+          for (const outFile of entry.outFiles) {
+            try {
+              await access(outFile.file)
+            } catch (err) {
+              outFiles = [...outFiles, outFile]
+            }
+          }
+          entry.outFiles = outFiles
+          return entry
+        })
+    )).filter(entry => entry.outFiles.length > 0)
+    if (openEntries.length === 0) {
+      console.log(`Nothing to do for "${font.name}".`)
       continue
     }
-    console.log(`Updating "${font.name}.`)
+    console.log(`Processing "${font.name}". (reason: ${fontChanged ? 'fonts changed. ' : ''}${charsChanged ? 'chars changed.' : ''}${!force ? 'fonts missing' : ''})`)
     const chars = await readFile(getCharsFile(font), 'utf-8')
-    await Promise.all(Object.values(font.source.files).map(async (file) => {
-      const fileNoEnding = file.replace(/\.(ttf|woff|woff2|otf)$/, '')
+    await Promise.all(openEntries.map(async ({ file, outFiles }) => {
       const inFont = await readFile(cacheFile(font, file))
-      const outFile = `static/font/${font.name}/${fileNoEnding}`
-      await mkdir(path.dirname(outFile), { recursive: true })
-      await writeFile(`${outFile}.ttf`, await subFont(inFont, chars, { targetFormat: 'truetype' }))
-      await writeFile(`${outFile}.woff`, await subFont(inFont, chars, { targetFormat: 'woff' }))
-      await writeFile(`${outFile}.woff2`, await subFont(inFont, chars, { targetFormat: 'woff2' }))
+      for (const { file, opts } of outFiles) {
+        console.log(`Writing ${file}`)
+        await mkdir(path.dirname(file), { recursive: true })
+        await writeFile(file, await subFont(inFont, chars, opts))
+      }
     }))
   }
 })()
