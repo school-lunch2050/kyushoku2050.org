@@ -21,6 +21,23 @@
 <script lang="ts">
 import Vue from 'vue'
 
+function internal (scope: Vue) {
+  const { main } = scope.$refs
+  if (typeof Node === 'undefined' || !(main instanceof Node)) {
+    return scope.$props.type || '?'
+  }
+  let type = scope.$props.type
+  if (type === null) {
+    type = main.getAttribute('data-type')
+  }
+  if (type === null) {
+    type = '?'
+  }
+  // Caching the data type so it stays with the last version when removed.
+  main.setAttribute('data-type', type)
+  return type
+}
+
 export default Vue.extend({
   props: {
     type: {
@@ -46,32 +63,12 @@ export default Vue.extend({
   },
   computed: {
     internal () {
-      // @ts-ignore
-      const { main } = this.$refs as { main: Element }
-      if (!main) {
-        return '?'
-      }
-      let type = this.type as string | null
-      if (type === null) {
-        type = main.getAttribute('data-type')
-      }
-      if (type === null) {
-        type = '?'
-      }
-      // Caching the data type so it stays with the last version when removed.
-      main.setAttribute('data-type', type)
-      return type
+      return internal(this)
     },
     image () {
-      // @ts-ignore
-      return this.internal === '?' || this.internal === '!' ? 'empty' : this.internal
+      const int = internal(this as any)
+      return int === '?' || int === '!' ? 'empty' : int
     }
   }
 })
 </script>
-
-<style>
-img {
-  width: 100%;
-}
-</style>
