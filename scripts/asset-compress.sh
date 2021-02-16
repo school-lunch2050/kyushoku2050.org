@@ -3,7 +3,7 @@
 # Make sure to execute in parent directory
 cd "`dirname "$0"`/.."
 
-for file in chalkboard logo place_global place_local weather_15 weather_2p; do
+for file in chalkboard logo place_global place_local weather_15 weather_2p header_bg; do
   cwebp static/img/${file}_3x.png -o static/img/${file}.webp
 done
 

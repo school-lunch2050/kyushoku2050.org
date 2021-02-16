@@ -12,7 +12,10 @@
           version="1.1"
           style="max-width: 100vh; max-height: 100vw;"
         >
-          <g class="lunch--box">
+          <nuxt-link
+            :to="lunchType && lunchType !== '!' ? localePath(`/${lunchType}`) : ''"
+            class="lunch--box"
+          >
             <lunch
               x="100"
               y="1850"
@@ -20,7 +23,7 @@
               :height="lun / 3874 * 1926"
               :type="lunchType"
             />
-          </g>
+          </nuxt-link>
           <g class="cb--box">
             <chalkboard
               :width="cb"

@@ -5,7 +5,7 @@ $col-gradient-end: #05070A;
 $col-accent-grey: #B5B5B5;
 $col-nav-active: #fff;
 $col-nav-inactive: rgba(255, 255, 255, 0.6);
-$col-active-fill: rgba(255, 255, 255, 0.1);
+$col-active-fill: rgba(255, 255, 255, 0.3);
 
 @font-face {
   font-family: "CaveatBrush";
@@ -31,15 +31,22 @@ body, html {
 
 footer, header {
   background: $col-bg;
-  border-color: $col-accent-grey;
-  border-width: 5px;
   width: 100%;
 }
 header {
-  border-bottom-style: solid;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+main {
+  background-color: $col-gradient-start;
+  background: linear-gradient($col-gradient-start, $col-gradient-end);
+  display: flex;
+  justify-content: center;
+}
+main,
+footer {
+  border-top: 5px solid $col-accent-grey;
 }
 .lang--link {
   height: 2em;
@@ -65,9 +72,6 @@ header {
 }
 .lang--active {
   cursor: default;
-}
-footer {
-  border-top-style: solid;
 }
 
 html[lang="en"] .font--nav, .font--nav--en {
@@ -141,6 +145,39 @@ html[lang="ja-simple"] .cb--menu--title
 .cb--menu--item-button:hover {
   fill: rgba(255, 255, 255, 0.15);
 }
+.detail-header {
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #0C1408;
+  background-image: url(/img/header_bg.webp);
+  background-size: cover;
+  height: 80px;
+  border-top: 2px solid $col-accent-grey;
+}
+.detail-header--back {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  color: $col-nav-inactive;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.detail-header--back:hover {
+  color: $col-nav-active;
+}
+.detail-header--title {
+  color: white;
+  display: flex;
+  width: 100%;
+  font-size: 1em;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 .button--prev {
   & text {
     fill: rgba(255, 255, 255, 0.5);
@@ -151,10 +188,4 @@ html[lang="ja-simple"] .cb--menu--title
   font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 600px;
   font-weight: bold;
-}
-main {
-  background-color: $col-gradient-start;
-  background: linear-gradient($col-gradient-start, $col-gradient-end);
-  display: flex;
-  justify-content: center;
 }

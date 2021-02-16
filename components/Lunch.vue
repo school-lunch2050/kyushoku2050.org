@@ -16,6 +16,7 @@
     </defs>
     <keep-alive><image :href="`/img/lunch/${image}.webp`" clip-path="url(#lunchMask)" /></keep-alive>
     <text v-if="internal === '?' || internal === '!'" class="lunch--alert" x="1850" y="600">{{ internal }}</text>
+    <slot />
   </svg>
 </template>
 <script lang="ts">
