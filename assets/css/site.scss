@@ -1,4 +1,5 @@
 $col-bg: #424852;
+$col-bg-dark: darken($col-bg, 10%);
 $col-gradient-start: #29364B;
 $col-gradient-end: #05070A;
 $col-accent-grey: #B5B5B5;
@@ -21,7 +22,7 @@ $col-active-fill: rgba(255, 255, 255, 0.1);
 }
 
 body {
-  background: $col-bg;
+  background: $col-bg-dark;
 }
 body, html {
   padding: 0;
@@ -29,6 +30,7 @@ body, html {
 }
 
 footer, header {
+  background: $col-bg;
   border-color: $col-accent-grey;
   border-width: 5px;
   width: 100%;
@@ -140,5 +142,7 @@ html[lang="ja-simple"] .cb--menu--title
 }
 main {
   background-color: $col-gradient-start;
-  background-color: linear-gradient($col-gradient-start, $col-gradient-end);
+  background: linear-gradient($col-gradient-start, $col-gradient-end);
+  display: flex;
+  justify-content: center;
 }

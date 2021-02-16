@@ -1,38 +1,42 @@
 <template>
   <keep-alive>
-    <svg
-      :class="`main ${lunchType === null ? 'main--cb-only' : 'main--cb-lunch'}`"
-      :x="x"
-      :y="y"
-      :width="width"
-      :height="height"
-      viewBox="0 0 2736 3200"
-      version="1.1"
-      style="max-width: 100vh; max-height: 100vw;"
-    >
-      <g
-        class="lunch--box">
-        <Lunch
-          x="100"
-          y="1850"
-          :width="lun"
-          :height="lun / 3874 * 1926"
-          :type="lunchType"
-        />
-      </g>
-      <g class="cb--box">
-        <Chalkboard
-          :width="cb"
-          :height="cb / 2586 * 1770"
-          x="150"
-          y="50"
-          :next="next"
-          :prev="prev"
+    <main>
+      <keep-alive>
+        <svg
+          :class="`main ${lunchType === null ? 'main--cb-only' : 'main--cb-lunch'}`"
+          :x="x"
+          :y="y"
+          :width="width"
+          :height="height"
+          viewBox="0 0 2736 3200"
+          version="1.1"
+          style="max-width: 100vh; max-height: 100vw;"
         >
-          <slot />
-        </Chalkboard>
-      </g>
-    </svg>
+          <g
+            class="lunch--box">
+            <Lunch
+              x="100"
+              y="1850"
+              :width="lun"
+              :height="lun / 3874 * 1926"
+              :type="lunchType"
+            />
+          </g>
+          <g class="cb--box">
+            <Chalkboard
+              :width="cb"
+              :height="cb / 2586 * 1770"
+              x="150"
+              y="50"
+              :next="next"
+              :prev="prev"
+            >
+              <slot />
+            </Chalkboard>
+          </g>
+        </svg>
+      </keep-alive>
+    </main>
   </keep-alive>
 </template>
 <script type="ts">
