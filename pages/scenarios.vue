@@ -7,5 +7,8 @@
   />
 </template>
 <script>
-export default { key: route => route.fullPath }
+export default {
+  name: 'PageScenarios',
+  key: route => route.fullPath
+}
 </script>

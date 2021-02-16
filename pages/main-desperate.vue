@@ -2,5 +2,8 @@
   <main-menu prev="/scenarios" active selected="desperate" />
 </template>
 <script>
-export default { key: route => route.fullPath }
+export default {
+  name: 'PageMainDesperate',
+  key: route => route.fullPath
+}
 </script>

@@ -4,5 +4,8 @@
   </main-screen>
 </template>
 <script>
-export default { key: route => route.fullPath }
+export default {
+  name: 'PageIntroduction',
+  key: route => route.fullPath
+}
 </script>
