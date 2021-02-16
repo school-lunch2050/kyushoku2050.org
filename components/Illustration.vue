@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="illustration">
     <img v-if="isCosmopolitan" ref="main" svg-inline src="../assets/cosmopolitan.svg">
     <img v-if="isDesperate" ref="main" svg-inline src="../assets/desperate.svg">
     <img v-if="isGamble" ref="main" svg-inline src="../assets/gamble.svg">

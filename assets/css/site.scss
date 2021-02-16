@@ -38,15 +38,13 @@ header {
   flex-direction: row;
   justify-content: center;
 }
-main {
-  background-color: $col-gradient-start;
-  background: linear-gradient($col-gradient-start, $col-gradient-end);
-  display: flex;
-  justify-content: center;
-}
 main,
 footer {
   border-top: 5px solid $col-accent-grey;
+}
+.main-screen {
+  max-width: 100vh;
+  max-height: 100vw;
 }
 .lang--link {
   height: 2em;
@@ -188,4 +186,16 @@ html[lang="ja-simple"] .cb--menu--title
   font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 600px;
   font-weight: bold;
+}
+.illustration {
+  width: 100vw;
+  height: 100vh;
+  background: #05070A;
+}
+.main--main-screen {
+  background-color: $col-gradient-start;
+  background: linear-gradient($col-gradient-start, $col-gradient-end);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

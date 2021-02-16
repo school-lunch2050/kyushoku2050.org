@@ -1,16 +1,15 @@
 <template>
   <keep-alive>
-    <main>
+    <main class="main--main-screen">
       <keep-alive>
         <svg
-          :class="`main ${lunchType === null ? 'main--cb-only' : 'main--cb-lunch'}`"
+          :class="`main-screen ${lunchType === null ? 'main-screen--cb-only' : 'main-screen--cb-lunch'}`"
           :x="x"
           :y="y"
           :width="width"
           :height="height"
           viewBox="0 0 2736 3200"
           version="1.1"
-          style="max-width: 100vh; max-height: 100vw;"
         >
           <nuxt-link
             :to="lunchType && lunchType !== '!' ? localePath(`/${lunchType}`) : ''"
@@ -88,16 +87,16 @@ export default Vue.extend({
 .cb--box {
   transition: all 2s;
 }
-.main--cb-only .lunch--box {
+.main-screen--cb-only .lunch--box {
   opacity: 0;
 }
-.main--cb-lunch .lunch--box {
+.main-screen--cb-lunch .lunch--box {
   opacity: 1;
 }
-.main--cb-only .cb--box {
+.main-screen--cb-only .cb--box {
   transform: translateY(620px);
 }
-.main--cb-lunch .cb--box {
+.main-screen--cb-lunch .cb--box {
   transform: translate(0px);
 }
 </style>
