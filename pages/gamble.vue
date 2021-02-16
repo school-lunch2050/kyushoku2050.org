@@ -1,6 +1,58 @@
 <template>
+  <!-- eslint-disable vue/max-attributes-per-line -->
   <div>
-    <lunch-detail type="gamble" />
+    <lunch-detail type="gamble">
+      <svg width="100%" height="100%" viewBox="0 0 3157 2500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="gamble" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <image id="illustration" x="0" y="0" width="3157" height="2500" href="/img/illustration/gamble.webp" />
+          <g id="plantation_farms">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="0" y="265" width="2020" height="759" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="1957 306 1957 580 1348.98437 580 1363.78125 654.8554690000001 1262.49219 580 1037 580 1037 306" />
+            <rect id="rect" fill="#FF0000" x="1037" y="306" width="920" height="274" />
+          </g>
+          <g id="daily_supplements">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="2021" y="400" width="1136" height="565" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="3024 441 3024 709 2687.804687 709 2687.804687 774.3828120000001 2643.5625 709 2176 709 2176 441" />
+            <rect id="rect" fill="#FF0000" x="2176" y="441" width="848" height="268" />
+          </g>
+          <g id="controlled_market">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="0" y="996" width="883" height="1504" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="771.53125 1019.5 771.53125 1507.455569 608.976562 1507.455569 510.867187 1645.65625 525.5625 1507.455569 58 1507.455569 58 1019.5" />
+            <rect id="rect" fill="#FF0000" x="58" y="1019" width="714" height="489" />
+          </g>
+          <g id="pesticide_regulations">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="840" y="996" width="1063" height="807" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="1603.4921869999998 1024 1603.4921869999998 1408.467891 1507.515625 1408.467891 1446.3359369999998 1492.023437 1422.875 1408.467891 945 1408.467891 945 1023.5" />
+            <rect id="rect" fill="#FF0000" x="945" y="1023" width="658" height="385" />
+          </g>
+          <g id="daily_medication">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="1710" y="963" width="1269" height="549" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="2471 1024 2470.492188 1215.5 2003.578125 1215.483946 2013.261719 1297.488281 1943.832031 1215.483946 1773.4921875 1215.483946 1773.4921875 1023" />
+            <rect id="rect" fill="#FF0000" x="1773.4921875" y="1023" width="697" height="193" />
+          </g>
+          <g id="lab_meat">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="2516" y="1303" width="641" height="605" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="3090.492188 1328.4882812 3090.492188 1484.488281 2780.367188 1484.488281 2751.367188 1547 2721.898438 1484.488281 2605.4921875 1484.488281 2605.4921875 1328.4882812" />
+            <rect id="rect" fill="#FF0000" x="2605.4921875" y="1328.4882812" width="485" height="156" />
+          </g>
+          <g id="food_marketers">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="1603" y="1435" width="1054" height="1065" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="2475.492187 1456.4882812 2475.492187 1730.488281 2378.742188 1730.488281 2260.039062 1829 2303.609375 1730.488281 1903 1730.488281 1903 1456.4882812" />
+            <rect id="rect" fill="#FF0000" x="1899.492187" y="1456.4882812" width="575.9999999999998" height="274" />
+          </g>
+          <g id="stressed_conditions">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="840" y="1776" width="807" height="724" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="1588.010622 1803.6079959 1588.010622 2026.607996 969.589844 2026.607996 945 2068.644531 930.6445313 2026.607996 883 2026.607996 883 1803.6079959" />
+            <rect id="rect" fill="#FF0000" x="885.0106217" y="1803.6079959" width="703" height="222.99999999999977" />
+          </g>
+          <g id="rare_fresh_fruit">
+            <rect id="viewrect" stroke="#FFFFFF" stroke-width="2" x="2434" y="1855" width="723" height="645" />
+            <polygon id="bubble" stroke="#720000" fill="#D8D8D8" points="3143 2190 3143 2338 2473 2338 2473 2190" />
+            <rect id="rect" fill="#FF0000" x="2473" y="2190" width="670" height="148" />
+          </g>
+        </g>
+      </svg>
+    </lunch-detail>
   </div>
 </template>
 <script lang="ts">

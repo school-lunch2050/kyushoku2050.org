@@ -3,7 +3,7 @@
     <detail-header :type="type" />
     <main class="main--lunch-detail">
       <lunch :type="type" />
-      <illustration :type="type" />
+      <slot />
     </main>
   </div>
 </template>
