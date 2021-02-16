@@ -1,5 +1,5 @@
 <template>
-  <Fragment>
+  <fragment>
     <div v-if="active" :class="`lang--active lang--link font--nav--${locale.code}`">
       {{ name }}
     </div>
@@ -10,7 +10,7 @@
     >
       {{ name }}
     </nuxt-link>
-  </Fragment>
+  </fragment>
 </template>
 <script lang="ts">
 import Vue from 'vue'

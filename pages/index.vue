@@ -1,8 +1,8 @@
 <template>
-  <MainScreen key="main" next="/lunch">
+  <main-screen key="main" next="/lunch">
     <image width="500" height="500" href="/img/logo.webp" />
-    <SVGCenterBox class="font--tex" width="2235" height="1401" line-height="270" :text="$t('weblate.introduction.start.text')" />
-  </MainScreen>
+    <svg-center-box class="font--tex" width="2235" height="1401" line-height="270" :text="$t('weblate.introduction.start.text')" />
+  </main-screen>
 </template>
 <script lang="ts">
 import Vue from 'vue'

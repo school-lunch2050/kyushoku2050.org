@@ -1,7 +1,7 @@
 <template>
-  <MainScreen :prev="prev" :next="next" lunch-type="!">
+  <main-screen :prev="prev" :next="next" lunch-type="!">
     <g class="cb--menu">
-      <SVGCenterBox
+      <svg-center-box
         class="font--tex cb--menu--title"
         width="2235"
         height="400"
@@ -9,12 +9,12 @@
         line-height="220"
         :text="title"
       />
-      <SVGCross :width="width" :height="height" :x="x" :y="y" stroke="white" />
+      <svg-cross :width="width" :height="height" :x="x" :y="y" stroke="white" />
       <image href="/img/weather_15.webp" :x="x - iconWidth - padding" :y="y + (height / 4 * 1) - (iconWidth / 2)" :width="iconWidth" :height="iconWidth" />
       <image href="/img/weather_2p.webp" :x="x - iconWidth - padding" :y="y + (height / 4 * 3) - (iconWidth / 2)" :width="iconWidth" :height="iconWidth" />
       <image href="/img/place_local.webp" :x="x + (width / 4 * 1) - (iconWidth / 2)" :y="y + height + padding" :width="iconWidth" :height="iconWidth" />
       <image href="/img/place_global.webp" :x="x + (width / 4 * 3) - (iconWidth / 2)" :y="y + height + padding" :width="iconWidth" :height="iconWidth" />
-      <SVGCenterBox
+      <svg-center-box
         class="cb--menu--item font--tex"
         :line-height="lineHeight"
         :x="x"
@@ -23,7 +23,7 @@
         :height="height / 2"
         :text="a"
       />
-      <SVGCenterBox
+      <svg-center-box
         class="cb--menu--item font--tex"
         :line-height="lineHeight"
         :x="x + (width / 2)"
@@ -32,7 +32,7 @@
         :height="height / 2"
         :text="b"
       />
-      <SVGCenterBox
+      <svg-center-box
         class="cb--menu--item font--tex"
         :line-height="lineHeight"
         :x="x"
@@ -41,7 +41,7 @@
         :height="height / 2"
         :text="c"
       />
-      <SVGCenterBox
+      <svg-center-box
         class="cb--menu--item font--tex"
         :line-height="lineHeight"
         :x="x + (width / 2)"
@@ -51,7 +51,7 @@
         :text="d"
       />
     </g>
-  </MainScreen>
+  </main-screen>
 </template>
 <script lang="ts">
 import Vue from 'vue'

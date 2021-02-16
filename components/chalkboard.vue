@@ -13,13 +13,13 @@
     </keep-alive>
     <NuxtLink v-if="prev" :to="localePath(prev)" class="button--prev font--tex" transform="translate(150, 1500)">
       <g>
-        <SVGRuby text-anchor="start" :text="`${$t('weblate.menu.actions.prev')}`" />
+        <svg-ruby text-anchor="start" :text="`${$t('weblate.menu.actions.prev')}`" />
         <rect width="400" x="-50" y="-125" height="200" />
       </g>
     </NuxtLink>
     <NuxtLink v-if="next" :to="localePath(next)" class="button--next font--tex" transform="translate(2400, 1500)">
       <g>
-        <SVGRuby text-anchor="end" :text="`${$t('weblate.menu.actions.next')}`" />
+        <svg-ruby text-anchor="end" :text="`${$t('weblate.menu.actions.next')}`" />
         <rect width="400" x="-350" y="-125" height="200" />
       </g>
     </NuxtLink>

@@ -1,6 +1,6 @@
 <template>
-  <MainScreen key="main" prev="/introduction" next="/location" lunch-type="!">
-    <SVGCenterBox
+  <main-screen key="main" prev="/introduction" next="/location" lunch-type="!">
+    <svg-center-box
       class="font--tex cb--question--title"
       width="2235"
       height="400"
@@ -8,9 +8,9 @@
       line-height="220"
       :text="$t('weblate.introduction.weather.title')"
     />
-    <CBOption :title="$t('weblate.introduction.weather.less.text')" image="/img/weather_15.webp" x="400" y="600" />
-    <CBOption :title="$t('weblate.introduction.weather.more.text')" image="/img/weather_2p.webp" x="1300" y="600" />
-  </MainScreen>
+    <cb-option :title="$t('weblate.introduction.weather.less.text')" image="/img/weather_15.webp" x="400" y="600" />
+    <cb-option :title="$t('weblate.introduction.weather.more.text')" image="/img/weather_2p.webp" x="1300" y="600" />
+  </main-screen>
 </template>
 <script lang="ts">
 import Vue from 'vue'

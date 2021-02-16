@@ -6,7 +6,7 @@
       :width="width"
       :height="lineHeight"
       :y="line.y"
-    ><SVGRuby x="50%" y="50%" text-anchor="middle" :text="line.text" /></svg>
+    ><svg-ruby x="50%" y="50%" text-anchor="middle" :text="line.text" /></svg>
   </g>
 </template>
 <script lang="ts">

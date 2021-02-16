@@ -1,6 +1,6 @@
 <template>
   <header>
-    <LanguageLink
+    <language-link
       v-for="locale in availableLocales"
       :key="locale.code"
       :locale="locale"

@@ -1,6 +1,6 @@
 <template>
   <g :transform="`translate(${x}, ${y})`">
-    <SVGCenterBox line-height="150" width="400" height="90" :text="title" class="cb--option--title font--tex" />
+    <svg-center-box line-height="150" width="400" height="90" :text="title" class="cb--option--title font--tex" />
     <image y="100" width="400" height="400" :href="image" />
   </g>
 </template>

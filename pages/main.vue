@@ -1,5 +1,5 @@
 <template>
-  <MainMenu
+  <main-menu
     prev="/scenarios"
     :title="$t('weblate.main.title')"
     :a="$t('weblate.garden.short')"

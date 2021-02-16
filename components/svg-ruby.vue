@@ -73,10 +73,12 @@ export default Vue.extend({
     // @ts-ignore - The types of vue seem to be off when we have a computed element
     const { main } = this.$refs as { [key: string]: Vue | Element | Vue[] | Element[] }
     if (!isElement(main)) {
+      console.log('> no main?')
       return
     }
     // TODO: find better way to do this...
     if (main.getAttribute('has-ruby')) {
+      console.log('> already rubied?')
       return
     }
     main.setAttribute('has-ruby', 'true')
@@ -85,6 +87,7 @@ export default Vue.extend({
     while (parent !== document.body) {
       if (parent.nodeName === 'svg') {
         rootSvg = parent
+        break
       }
       parent = parent.parentNode as Element
     }
@@ -96,6 +99,7 @@ export default Vue.extend({
       return
     }
     const nodes = Array.from(main.querySelectorAll('tspan[data-ruby]'))
+    console.log(nodes)
     if (nodes.length === 0) {
       return
     }

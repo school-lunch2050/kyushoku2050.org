@@ -1,5 +1,5 @@
 <template>
-  <MainMenu
+  <main-menu
     key="main"
     prev="/location"
     next="/main"

@@ -14,7 +14,7 @@
         >
           <g
             class="lunch--box">
-            <Lunch
+            <lunch
               x="100"
               y="1850"
               :width="lun"
@@ -23,7 +23,7 @@
             />
           </g>
           <g class="cb--box">
-            <Chalkboard
+            <chalkboard
               :width="cb"
               :height="cb / 2586 * 1770"
               x="150"
@@ -32,7 +32,7 @@
               :prev="prev"
             >
               <slot />
-            </Chalkboard>
+            </chalkboard>
           </g>
         </svg>
       </keep-alive>
