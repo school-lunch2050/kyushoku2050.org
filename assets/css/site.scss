@@ -183,13 +183,27 @@ html[lang="ja-simple"] .cb--menu--title
   font-size: 600px;
   font-weight: bold;
 }
-.lunch-detail--zoom-box {
-  display: flex;
-}
-.illustration {
+.lunch-detail--container {
+  position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background: #05070A;
+}
+.lunch-detail--canvas {
+  position: relative;
+  transform-origin: top left;
+}
+.i18n-box {
+  position: absolute;
+  display: flex;
+}
+.bubble-text--link {
+  position: absolute;
+  background: rgba(255, 0, 0, 0.5);
+  border: 2px solid white;
+  text-decoration: none;
+  user-select: none;
 }
 .main--main-screen {
   background-color: $col-gradient-start;

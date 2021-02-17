@@ -1,8 +1,8 @@
 <template>
   <div id="layout">
-    <LanguageHeader />
+    <language-header />
     <Nuxt :nuxt-child-key="'default'" />
-    <Footer />
+    <footer />
   </div>
 </template>
 <script>
