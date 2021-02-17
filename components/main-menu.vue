@@ -5,7 +5,7 @@
         <svg-center-box
           class="font--tex cb--menu--title"
           width="2235"
-          height="400"
+          height="300"
           :y="padding"
           line-height="220"
           :text="title ? title : $t('weblate.main.title')"
@@ -74,8 +74,8 @@ export default Vue.extend({
     }
   },
   data () {
-    const x = 350
-    const y = 425
+    const x = 300
+    const y = 350
     const width = 1850
     const height = 600
     return {
@@ -84,9 +84,8 @@ export default Vue.extend({
       width,
       height,
       iconWidth: 275,
-      padding: 20,
+      padding: 18,
       item: {
-        lineHeight: 180,
         width: width / 2,
         height: height / 2
       }

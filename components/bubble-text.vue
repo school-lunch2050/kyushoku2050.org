@@ -7,6 +7,7 @@
       :height="rect.height"
       line-height="20"
       :text="text"
+      class="font--tex"
     />
   </g>
 </template>

@@ -2,9 +2,8 @@
   <g :transform="`translate(${place.x}, ${place.y})`">
     <svg-center-box
       class="cb--menu--item font--tex"
-      :line-height="place.lineHeight"
       x="0"
-      :y="place.lineHeight * 0.3"
+      font-size="100"
       :width="place.width"
       :height="place.height"
       :text="text"

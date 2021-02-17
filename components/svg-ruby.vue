@@ -1,6 +1,13 @@
 <template>
-  <!-- eslint-disable-next-line vue/no-v-html -->
-  <text ref="main" :x="x" :y="y" :text-anchor="textAnchor" v-html="html" />
+  <!-- eslint-disable vue/no-v-html -->
+  <text
+    ref="main"
+    :x="x"
+    :y="y"
+    :text-anchor="textAnchor"
+    :font-size="fontSize"
+    v-html="html"
+  />
 </template>
 <script lang="ts">
 import { encode } from 'html-entities'
@@ -33,6 +40,10 @@ export default Vue.extend({
     text: {
       type: String,
       required: true
+    },
+    fontSize: {
+      type: [String, Number],
+      default: null
     }
   },
   computed: {

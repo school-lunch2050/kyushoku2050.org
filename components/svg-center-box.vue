@@ -4,9 +4,9 @@
       v-for="line in lines"
       :key="line.index"
       :width="width"
-      :height="lineHeight"
+      :height="realLineHeight"
       :y="line.y"
-    ><svg-ruby x="50%" y="50%" text-anchor="middle" :text="line.text" /></svg>
+    ><svg-ruby x="50%" y="70%" text-anchor="middle" :text="line.text" :font-size="fontSize" /></svg>
   </g>
 </template>
 <script lang="ts">
@@ -26,7 +26,11 @@ export default Vue.extend({
   props: {
     lineHeight: {
       type: [String, Number],
-      required: true
+      default: null
+    },
+    fontSize: {
+      type: [String, Number],
+      default: null
     },
     width: {
       type: [String, Number],
@@ -49,6 +53,13 @@ export default Vue.extend({
       required: true
     }
   },
+  data () {
+    const realFontSize = toNumber(this.$props.fontSize) ?? 20
+    return {
+      realFontSize,
+      realLineHeight: this.$props.lineHeight ? toNumber(this.$props.lineHeight) : (realFontSize * 1.4)
+    }
+  },
   computed: {
     transform () {
       // @ts-ignore
@@ -62,8 +73,8 @@ export default Vue.extend({
     },
     lines () {
       // @ts-ignore - The types of vue seem to be off when we have a computed element
-      const { lineHeight: lineHeightRaw, height: heightRaw } = this.$props as Record<string, any>
-      const lineHeight = toNumber(lineHeightRaw)
+      const { realLineHeight: lineHeight } = this
+      const { height: heightRaw } = this.$props as Record<string, any>
       const height = toNumber(heightRaw)
       const lines = String(this.$props.text).split('\n')
       if (lines[lines.length - 1] === '') {

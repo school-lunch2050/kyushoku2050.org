@@ -11,7 +11,7 @@
           viewBox="0 0 2736 3200"
           version="1.1"
         >
-          <nuxt-link
+          <nuxt-link-plus
             :to="lunchType && lunchType !== '!' ? localePath(`/${lunchType}`) : ''"
             class="lunch--box"
           >
@@ -22,7 +22,7 @@
               :height="lun / 3874 * 1926"
               :type="lunchType"
             />
-          </nuxt-link>
+          </nuxt-link-plus>
           <g class="cb--box">
             <chalkboard
               :width="cb"
@@ -59,11 +59,11 @@ export default Vue.extend({
     },
     width: {
       type: [String, Number],
-      default: '100%'
+      default: '100vmin'
     },
     height: {
       type: [String, Number],
-      default: '100%'
+      default: '100vmin'
     },
     x: {
       type: [String, Number],
