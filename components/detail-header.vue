@@ -4,7 +4,7 @@
       &lt;
     </nuxt-link>
     <h1 class="detail-header--title font--tex">
-      {{ $t(`weblate.${type}.short`) }}
+      <text-box :key="`weblate.${type}.short`" />
     </h1>
   </div>
 </template>

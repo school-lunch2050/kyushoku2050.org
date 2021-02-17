@@ -3,7 +3,7 @@
   <div>
     <lunch-detail type="gamble">
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/gamble.webp">
-      <text-box key="weblate.gamble.title" x="680" y="20" width="1915" height="180" font-size="100" fill="white" class="font--tex" />
+      <text-box key="weblate.gamble.title" x="680" y="20" width="1915" height="180" font-size="100" class="font--tex" align="center" vertical-align="center" />
       <bubble-text
         key="gamble.plantation_farms"
         bubble="1957 306 1957 580 1349 580 1363.78125 654 1262.49219 580 1037 580 1037 306"

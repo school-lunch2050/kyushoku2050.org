@@ -1,6 +1,7 @@
 <template>
-  <!-- eslint-disable-next-line vue/no-v-html -->
-  <div :key="this.$i18n.locale" :style="style" class="i18n-box"><span v-html="html" /></div>
+  <!-- eslint-disable vue/no-v-html -->
+  <div v-if="useDiv" :key="this.$i18n.locale" :style="style" class="i18n-box"><span v-html="html" /></div>
+  <span v-else :key="this.$i18n.locale" :style="style" class="i18n-box" v-html="html" />
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -40,18 +41,19 @@ export default Vue.extend({
     y: {
       type: [String, Number],
       default: null
-    },
-    text: {
-      type: String,
-      required: true
     }
   },
   data () {
     const { x, y, width, height, fontSize, lineHeight, align, verticalAlign } = this.$props
+    const alignContent = verticalAlign === 'center' ? 'center' : verticalAlign === 'right' ? 'end' : null
+    const justifyContent = align === 'center' ? 'center' : align === 'right' ? 'end' : null
+    const absolute = (x ?? y ?? null) !== null
     return {
+      useDiv: absolute || justifyContent !== null || alignContent !== null,
       style: toStyle({
-        alignContent: verticalAlign === 'center' ? 'center' : verticalAlign === 'right' ? 'end' : null,
-        justifyContent: align === 'center' ? 'center' : align === 'right' ? 'end' : null,
+        alignContent,
+        justifyContent,
+        position: absolute ? 'absolute' : null,
         left: x,
         top: y,
         fontSize,
