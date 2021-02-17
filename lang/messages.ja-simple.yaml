@@ -139,7 +139,7 @@ weblate:
           まだ。
   gamble:
     title: |
-      <ruby>地球<rt>ちきゅう</rt><ruby>を<ruby>賭<rt>か</rt></ruby>けていちかばちか
+      <ruby>地球<rt>ちきゅう</rt></ruby>を<ruby>賭<rt>か</rt></ruby>けていちかばちか
     short: いちかばちか
     ingredients:
       # Filled by messages.ja.yml, you can override these if you like
