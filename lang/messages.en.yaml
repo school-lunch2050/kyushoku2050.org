@@ -14,19 +14,19 @@ weblate:
   introduction:
     start:
       text: |
-        The earth will change
-        over the next
+        The earth will change<br/>
+        over the next<br/>
         30 years!
     lunch:
       text: |
-        …
-        and so will the
+        …<br/>
+        and so will the<br/>
         school lunch!
     introduction:
       text: |
-        We, the {logo} team,
-        looked at the DATA and
-        identified ② factors
+        We, the {logo} team,<br/>
+        looked at the DATA and<br/>
+        identified ② factors<br/>
         that will impact our lunch
     weather:
       title: |
@@ -196,7 +196,9 @@ weblate:
     bubbles:
       climate_change:
         text: |
-          Climate change has shifted domestic food production zones inland and northward -> Tropical species such as avocados, bananas and coffee are now common in Kyoto and tropical fish can be caught around Tokyo.
+          Climate change has shifted domestic food production zones inland and
+          northward -> Tropical species such as avocados, bananas and coffee
+          are now common in Kyoto and tropical fish can be caught around Tokyo.
         links:
           - https://www.env.go.jp/earth/ondanka/knowledge/Stop2017e.pdf
           - https://www.maff.go.jp/j/kanbo/kankyo/seisaku/pdf/pdf/3_gaiyou.pdf
@@ -304,13 +306,15 @@ weblate:
     bubbles:
       food_marketers:
         text: |
-          Food marketers promote highly-processed and addictive foods through inventing new and extreme tastes, shapes, and colors resulting in vast obesity across generations.
+          Food marketers promote highly-processed and addictive foods through inventing
+          new and extreme tastes, shapes, and colors resulting in vast obesity across generations.
         links:
           - https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(18)31788-4.pdf?utm_campaign=tleat19&utm_source=HubPage
           - https://www.worldobesitydata.org/map/overview-adults
       stressed_conditions:
         text: |
-          To grow food in changing ecologically stressed conditions with nutritional loss in depleted soils and to slow down the decomposition of foods CRISPR technology is promoted. With nutritional loss in depleted soils due to harsh ecological conditions and overuse food plants created by CRISPR technology are promoted. They are also using processing methods that delay the spoilage of food.
+          To grow food in changing ecologically stressed conditions with nutritional loss in depleted
+          soils and to slow down the decomposition of foods CRISPR technology is promoted. With nutritional loss in depleted soils due to harsh ecological conditions and overuse food plants created by CRISPR technology are promoted. They are also using processing methods that delay the spoilage of food.
         links:
           - https://calyxt.com/food/
           - https://pairwise.com/about-us/
@@ -398,7 +402,7 @@ weblate:
     bubbles:
       domestic_soveirnty:
         text: |
-          Countries consider their own domestic food sovereignty first. Almost everybody is directly involved in the food system through either growing, distributing, processing, or preparing food based on a 1/2 food-1/2 X lifestyle.
+          Countries consider their own domestic food sovereignty first.Almost everybody is directly involved in the food system through either growing, distributing, processing, or preparing food based on a 1/2 food-1/2 X lifestyle.
       regionally_diverse:
         text: |
           The turn to regionally diverse staple foods like potatoes, sweet potatoes, yam, and taro are supported, while rice production is minimized to lower methane emissions.

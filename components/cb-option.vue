@@ -1,8 +1,8 @@
 <template>
-  <g :transform="`translate(${x}, ${y})`">
-    <svg-center-box line-height="150" width="400" height="90" :text="title" class="cb--option--title font--tex" />
-    <image y="100" width="400" height="400" :href="image" />
-  </g>
+  <div class="cb-option">
+    <text-box :key="title" class="cb-option--title font--tex" />
+    <img :src="image" class="cb-option--image">
+  </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -14,14 +14,6 @@ export default Vue.extend({
       required: true
     },
     image: {
-      type: String,
-      required: true
-    },
-    x: {
-      type: String,
-      required: true
-    },
-    y: {
       type: String,
       required: true
     }

@@ -1,21 +1,13 @@
 <template>
-  <g :transform="`translate(${place.x}, ${place.y})`">
-    <svg-center-box
-      class="cb--menu--item font--tex"
-      x="0"
-      font-size="100"
-      :width="place.width"
-      :height="place.height"
-      :text="text"
-    />
-    <nuxt-link v-if="active" :to="link">
-      <rect
-        :width="place.width"
-        :height="place.height"
-        :class="`cb--menu--item-bg ${selected === item ? 'cb--menu--item-active' : 'cb--menu--item-button'}`"
+  <td :class="`cb--menu--item ${selected === item ? 'cb--menu--item--active' : active ? 'cb--menu--item--button' : ''}`">
+    <nuxt-link-plus :to="link">
+      <text-box
+        :key="text"
+        align="center center"
+        class="cb--menu--item font--tex"
       />
-    </nuxt-link>
-  </g>
+    </nuxt-link-plus>
+  </td>
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -28,10 +20,6 @@ export default Vue.extend({
     },
     item: {
       type: String,
-      required: true
-    },
-    place: {
-      type: Object,
       required: true
     },
     active: {
@@ -47,7 +35,7 @@ export default Vue.extend({
     text () {
       // @ts-ignore
       const { active, num, item } = this.$props as { active: boolean, item: string, num: string }
-      return active ? this.$t(`weblate.${item}.short`) : num
+      return active ? `weblate.${item}.short` : num
     },
     link () {
       // @ts-ignore

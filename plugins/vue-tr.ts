@@ -101,7 +101,7 @@ function t (el: EHTMlElement, binding: DirectiveBinding, vnode: VNode): void {
     : vm.$i18n.t(path, ...makeParams(locale, args)).toString()
 
   el._vtr = el.innerHTML = sanitizeHTML(text, {
-    allowedTags: ['ruby', 'rt', 'rp', 'rtc']
+    allowedTags: ['ruby', 'rt', 'rp', 'rtc', 'br']
   })
   el._locale = vm.$i18n.locale
   el._localeMessage = vm.$i18n.getLocaleMessage(vm.$i18n.locale)

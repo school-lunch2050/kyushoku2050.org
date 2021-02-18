@@ -1,12 +1,14 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
-  <div v-if="useDiv" :key="this.$i18n.locale" :style="style" class="i18n-box"><span v-html="html" /></div>
+  <div v-if="useDiv" :key="this.$i18n.locale" :style="style" class="i18n-box">
+    <span v-html="html" />
+  </div>
   <span v-else :key="this.$i18n.locale" :style="style" class="i18n-box" v-html="html" />
 </template>
 <script lang="ts">
 import Vue from 'vue'
 import sanitize from 'sanitize-html'
-import { toStyle } from '../lib'
+import { toStyle, toPx } from '../lib'
 
 export default Vue.extend({
   props: {
@@ -28,11 +30,11 @@ export default Vue.extend({
     },
     width: {
       type: [String, Number],
-      required: true
+      default: null
     },
     height: {
       type: [String, Number],
-      required: true
+      default: null
     },
     x: {
       type: [String, Number],
@@ -44,18 +46,26 @@ export default Vue.extend({
     }
   },
   data () {
-    const { x, y, width, height, fontSize, lineHeight, align, verticalAlign } = this.$props
-    const alignContent = verticalAlign === 'center' ? 'center' : verticalAlign === 'right' ? 'end' : null
+    const { x, y, width, height, fontSize, lineHeight } = this.$props
+    let { align, verticalAlign } = this.$props
+    if (/\w+\s+\w+/.test(align)) {
+      const parts = align.split(' ')
+      align = parts[0]
+      verticalAlign = verticalAlign ?? parts[1]
+    }
+    const alignItems = verticalAlign === 'center' ? 'center' : verticalAlign === 'right' ? 'end' : null
+    const textAlign = align === 'center' ? 'center' : align === 'right' ? 'right' : null
     const justifyContent = align === 'center' ? 'center' : align === 'right' ? 'end' : null
-    const absolute = (x ?? y ?? null) !== null
+    const absolute = (x ?? y ?? width ?? height ?? null) !== null
     return {
-      useDiv: absolute || justifyContent !== null || alignContent !== null,
+      useDiv: absolute || textAlign !== null || alignItems !== null,
       style: toStyle({
-        alignContent,
+        alignItems,
+        textAlign,
         justifyContent,
         position: absolute ? 'absolute' : null,
-        left: x,
-        top: y,
+        left: toPx(x),
+        top: toPx(y),
         fontSize,
         lineHeight,
         width,

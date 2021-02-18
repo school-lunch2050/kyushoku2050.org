@@ -14,23 +14,23 @@ weblate:
   introduction:
     start:
       text: |
-        ３０年後に
-        地球は
+        ３０年後に<br/>
+        地球は<br/>
         変わります。
     lunch:
       text: |
-        …
-        結果的にランチも
+        …<br/>
+        結果的にランチも<br/>
         変わります。
     introduction:
       text: |
-        私たち「{logo}」チーム。
-        データを見て
-        ②つの要因を特定
+        私たち「{logo}」チーム。<br/>
+        データを見て<br/>
+        ②つの要因を特定<br/>
         ランチに影響を与える
     weather:
       title: |
-        要因 ①
+        要因 ①<br/>
         地球温暖化を制限できるのか？
       less:
         text: 1.5°?
@@ -42,7 +42,7 @@ weblate:
           - https://google.com
     location:
       title: |
-        要因 ②
+        要因 ②<br/>
         私たちの食べ物はどこから来るのか？
       near:
         text: 国内?
@@ -55,7 +55,7 @@ weblate:
     title: |
       各シナリオをクリックすると詳細が表示されます
     hint: |
-      クリックすると
+      クリックすると<br/>
       もっと学ぶ
     grid:
       near: 国内
@@ -69,7 +69,7 @@ weblate:
       more: もっと学ぶ
     progress:
       active: |
-        {percent}% を読み
+        {percent}% を読み<br/>
         終わった
       finished: |
         素晴らしい！

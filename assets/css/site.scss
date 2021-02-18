@@ -68,10 +68,10 @@ footer {
   cursor: default;
 }
 
-html[lang="en"] .font--nav, .font--nav--en {
+.font--nav, .font--nav--en {
   font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
-html[lang="en"] .font--tex, .font--tex--en {
+.font--tex, .font--tex--en {
   font-family: CaveatBrush, serif;
 }
 html[lang="ja"] .font--tex, .font--tex--ja,
@@ -89,55 +89,108 @@ rect.debug {
 
 .button--next,
 .button--prev {
-  & {
-    font-size: 90px;
+  text-decoration: none;
+  font-size: 90px;
+  display: flex;
+  width: 50%;
+  color: $col-nav-inactive;
+  top: 0px;
+  position: absolute;
+  &:hover {
+    color: $col-nav-active;
   }
-  & text {
-    fill: rgba(255, 255, 255, 0.8);
+  & span {
+    padding: 20px;
     user-select: none;
   }
-  &:hover text {
-    fill: white;
-  }
-  & rect {
-    // debug
-    // fill: rgba(255, 255, 255, 0.2);
-    fill: rgba(0, 0, 0, 0);
-  }
+}
+.button--next {
+  right: 0;
+  justify-content: flex-end;
+}
+.cb--button-bar {
+  position: absolute;
+  left: 150px;
+  right: 200px;
+  bottom: 150px;
+  height: 200px;
 }
 .cb {
-  fill: white;
+  color: white;
+  width: 2586px;
+  height: 1770px;
+  position: relative;
 }
 .cb--content {
-  transform: translate(135px, 135px);
+  position: absolute;
+  left: 135px;
+  top: 135px;
   font-size: 150px;
+  line-height: 1.9em;
   user-select: none;
 }
 .cb--question--title {
   font-size: 120px;
+  line-height: 1.2em;
 }
-.cb--option--title {
+.cb-options {
+  display: flex;
+  flex-direction: row;
+  top: 450px;
+  width: 2200px;
+  justify-content: space-evenly;
+  position: absolute;
+}
+.cb-option {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.cb-option--image {
+  width: 400px;
+}
+.cb-option--title {
   font-size: 90px;
 }
-html[lang="ja"] .cb--menu--title,
-html[lang="ja-simple"] .cb--menu--title
-{
-  font-size: 100px;
+.cb--menu--table {
+  position: absolute;
+  top: 350px;
+  width: 2200px;
+}
+.cb--menu--table th img {
+  width: 175px;
+}
+.cb--menu--weather {
+  width: 200px;
+}
+.cb--menu--place {
+  padding-top: 20px;
+}
+.cb--menu--title {
+  font-size: 90px;
 }
 .cb--menu--item {
   font-size: 110px;
+  border-color: white;
+  border-width: 1px;
 }
-.cb--menu--item-bg {
-  fill: rgba(255, 255, 255, 0);
+.cb--menu tr:nth-child(1) td:nth-child(2),
+.cb--menu tr:nth-child(1) td:nth-child(3) {
+  border-bottom-style: solid;
 }
-.cb--menu--item-active {
-  fill: rgba(255, 255, 255, 0.4);
+.cb--menu tr:nth-child(1) td:nth-child(2),
+.cb--menu tr:nth-child(2) td:nth-child(2) {
+  border-right-style: solid;
 }
-.cb--menu--item-button {
-  cursor: pointer;
+.cb--menu--item a {
+  text-decoration: none;
+  color: white;
 }
-.cb--menu--item-button:hover {
-  fill: rgba(255, 255, 255, 0.15);
+.cb--menu--item--active {
+  background: rgba(255, 255, 255, 0.4);
+}
+.cb--menu--item--button:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 .detail-header {
   width: 100%;
@@ -172,25 +225,20 @@ html[lang="ja-simple"] .cb--menu--title
   align-items: center;
   align-content: center;
 }
-.button--prev {
-  & text {
-    fill: rgba(255, 255, 255, 0.5);
-  }
-}
 .lunch--alert {
   color: #000;
   font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 600px;
   font-weight: bold;
 }
-.lunch-detail--container {
+.view-box {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   background: #05070A;
 }
-.lunch-detail--canvas {
+.view-box--canvas {
   position: relative;
   transform-origin: top left;
 }

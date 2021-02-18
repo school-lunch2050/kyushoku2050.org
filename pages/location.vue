@@ -1,15 +1,17 @@
 <template>
   <main-screen key="main" prev="/weather" next="/scenarios" lunch-type="!">
-    <svg-center-box
+    <text-box
+      key="weblate.introduction.location.title"
       class="font--tex cb--question--title"
-      width="2235"
-      height="400"
+      align="center center"
       y="100"
-      line-height="220"
-      :text="$t('weblate.introduction.location.title')"
+      width="2235"
+      height="300"
     />
-    <cb-option :title="$t('weblate.introduction.location.near.text')" image="/img/place_local.webp" x="400" y="600" />
-    <cb-option :title="$t('weblate.introduction.location.far.text')" image="/img/place_global.webp" x="1300" y="600" />
+    <div class="cb-options">
+      <cb-option title="weblate.introduction.location.near.text" image="/img/place_local.webp" />
+      <cb-option title="weblate.introduction.location.far.text" image="/img/place_global.webp" />
+    </div>
   </main-screen>
 </template>
 <script>

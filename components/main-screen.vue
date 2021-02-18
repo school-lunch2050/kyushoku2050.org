@@ -2,15 +2,22 @@
   <keep-alive>
     <main class="main--main-screen">
       <keep-alive>
-        <svg
+        <view-box
           :class="`main-screen ${lunchType === null ? 'main-screen--cb-only' : 'main-screen--cb-lunch'}`"
-          :x="x"
-          :y="y"
-          :width="width"
-          :height="height"
-          viewBox="0 0 2736 3200"
-          version="1.1"
+          width="2736"
+          height="3200"
         >
+          <div class="cb--box">
+            <chalkboard
+              :width="cb"
+              :height="cb / 2586 * 1770"
+              style="left: 150px; top: 50px"
+              :next="next"
+              :prev="prev"
+            >
+              <slot />
+            </chalkboard>
+          </div>
           <nuxt-link-plus
             :to="lunchType && lunchType !== '!' ? localePath(`/${lunchType}`) : ''"
             class="lunch--box"
@@ -23,19 +30,7 @@
               :type="lunchType"
             />
           </nuxt-link-plus>
-          <g class="cb--box">
-            <chalkboard
-              :width="cb"
-              :height="cb / 2586 * 1770"
-              x="150"
-              y="50"
-              :next="next"
-              :prev="prev"
-            >
-              <slot />
-            </chalkboard>
-          </g>
-        </svg>
+        </view-box>
       </keep-alive>
     </main>
   </keep-alive>
@@ -83,6 +78,10 @@ export default Vue.extend({
 })
 </script>
 <style scoped>
+.cb--box {
+  position: relative;
+  z-index: 1;
+}
 .lunch--box,
 .cb--box {
   transition: all 2s;
