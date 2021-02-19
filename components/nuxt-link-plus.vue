@@ -15,11 +15,11 @@ export default Vue.extend({
       default: null
     },
     append: {
-      type: Boolean,
+      type: [Boolean, String],
       default: false
     },
     replace: {
-      type: Boolean,
+      type: [Boolean, String],
       default: false
     }
   }

@@ -267,3 +267,34 @@ html[lang="ja-simple"] .font--nav, .font--nav--ja-simple,
   justify-content: center;
   width: 100%;
 }
+footer section {
+  display: flex;
+  & a {
+    padding: 25px;
+  }
+}
+.footer--partner {
+  & a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  & a:first-child {
+    border-right: 1px solid $col-accent-grey;
+  }
+  & img {
+    height: 80px;
+  }
+}
+.footer--common {
+  border-top: 1px solid $col-accent-grey;
+  justify-content: center;
+  & a {
+    color: $col-nav-inactive;
+    text-decoration: none;
+    &:hover {
+      color: $col-nav-active;
+    }
+  }
+}

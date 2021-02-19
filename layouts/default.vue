@@ -2,7 +2,7 @@
   <div id="layout">
     <language-header />
     <Nuxt :nuxt-child-key="'default'" />
-    <footer />
+    <kyushoku-footer />
   </div>
 </template>
 <script>
