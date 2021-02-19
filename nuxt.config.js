@@ -45,7 +45,8 @@ export default {
     ['nuxt-i18n', {
       strategy: 'prefix',
       vueI18nLoader: true
-    }]
+    }],
+    '@nuxt/content'
   ],
 
   i18n: {
