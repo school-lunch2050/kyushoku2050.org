@@ -1,16 +1,49 @@
 <template>
   <div ref="container" class="view-box">
-    <div ref="canvas" class="view-box--canvas" :style="size">
+    <div
+      ref="canvas"
+      :style="size"
+      :class="{
+        'view-box--canvas': true,
+        'view-box--canvas--focussed': viewbox() !== null,
+        'view-box--canvas--full': viewbox() === null
+      }"
+    >
       <slot />
     </div>
+    <nuxt-link
+      v-if="unfocus && viewbox()"
+      class="view-box--unfocus"
+      :to="typeof unfocus !== 'function' ? unfocus : '#'"
+      @click="typeof unfocus === 'function' ? unfocus : null"
+    >
+      &nbsp;
+    </nuxt-link>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { ActivityMap, styleRect, toStyle, toPx } from '../lib'
+import { ActivityMap, styleRect, toStyle, toPx, Rect } from '../lib'
 
 const activity = new ActivityMap()
 const updateMap = new WeakMap<any, Function>()
+interface Viewbox {
+  id: string | null
+  rect: Rect
+}
+type ViewboxFN = (elem: HTMLElement) => Viewbox | null
+
+function getViewbox (vue: Vue): Viewbox | null {
+  const { getViewbox } = vue.$props as { getViewbox?: ViewboxFN }
+  if (!getViewbox) {
+    return null
+  }
+  const { container } = vue.$refs as { container: HTMLElement }
+  if (!container) {
+    return null
+  }
+  return getViewbox(container)
+}
 
 function start (this: Vue) {
   const { container, canvas } = this.$refs
@@ -22,9 +55,12 @@ function start (this: Vue) {
     console.warn('canvas is missing!')
     return
   }
-  const full = styleRect(canvas)
+  const full = {
+    id: null,
+    rect: styleRect(canvas)
+  }
   const updateTarget = (smooth: boolean) => {
-    const target = (this.$props.getViewbox ? this.$props.getViewbox(container) : null) ?? full
+    const { id, rect: target } = getViewbox(this) ?? full
     const viewPort = {
       x: 0,
       y: 0,
@@ -33,9 +69,17 @@ function start (this: Vue) {
     }
     const vRatio = viewPort.width / viewPort.height
     const scale = vRatio < target.ratio
-      ? full.width / target.width * viewPort.width / full.width
-      : full.height / target.height * viewPort.height / full.height
+      ? full.rect.width / target.width * viewPort.width / full.rect.width
+      : full.rect.height / target.height * viewPort.height / full.rect.height
 
+    if ((canvas.dataset.id ?? null) !== id) {
+      if (!id) {
+        delete canvas.dataset.id
+      } else {
+        canvas.dataset.id = id
+      }
+      this.$forceUpdate()
+    }
     canvas.style.transition = smooth ? this.$props.transition : ''
     const transform = `scale(${scale}) translate(${-target.x - target.width / 2 + viewPort.width / (2 * scale)}px, ${-target.y - target.height / 2 + viewPort.height / (2 * scale)}px)`
     canvas.style.transform = transform
@@ -69,10 +113,15 @@ export default Vue.extend({
     getViewbox: {
       type: [Function],
       default: null
+    },
+    unfocus: {
+      type: [Object, String, Function, Boolean],
+      default: null
     }
   },
   data () {
     return {
+      viewbox: getViewbox.bind(null, this),
       size: toStyle({
         width: toPx(this.$props.width),
         height: toPx(this.$props.height)
@@ -80,10 +129,10 @@ export default Vue.extend({
     }
   },
   mounted () {
-    start.call(this)
+    start.call(this as Vue)
   },
   activated () {
-    start.call(this)
+    start.call(this as Vue)
   },
   updated () {
     const updateTarget = updateMap.get(this)

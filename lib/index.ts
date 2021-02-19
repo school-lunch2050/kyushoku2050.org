@@ -10,7 +10,7 @@ export function numberStyle (node: HTMLElement, attr: 'width' | 'height' | 'left
   return parseFloat(parts[1])
 }
 
-interface Rect {
+export interface Rect {
   x: number
   y: number
   width: number

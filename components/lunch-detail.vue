@@ -3,7 +3,7 @@
     <detail-header :type="type" />
     <main class="main--lunch-detail">
       <lunch :type="type" />
-      <view-box ref="viewbox" width="3157" height="2500" :get-viewbox="getViewbox">
+      <view-box ref="viewbox" width="3157" height="2500" :get-viewbox="getViewbox" :unfocus="gotoMain">
         <slot />
       </view-box>
     </main>
@@ -47,7 +47,12 @@ export default Vue.extend({
         }
         const id = (document.location.hash ?? '').substr(1)
         const elem = container.querySelector(`.box--${id}`)
-        return (elem instanceof HTMLElement) ? styleRect(elem) : null
+        return (elem instanceof HTMLElement)
+          ? {
+              id,
+              rect: styleRect(elem)
+            }
+          : null
       }
     }
   },
@@ -62,6 +67,12 @@ export default Vue.extend({
   },
   destroyed () {
     activity.stop(this)
+  },
+  methods: {
+    gotoMain () {
+      const { location } = this.$router.resolve({ hash: '#' }, this.$route)
+      this.$router.push(location)
+    }
   }
 })
 </script>

@@ -82,11 +82,6 @@ html[lang="ja-simple"] .font--nav, .font--nav--ja-simple,
   font-family: HonyaJi, sans-serif;
 }
 
-rect.debug {
-  fill: none;
-  stroke: red;
-}
-
 .button--next,
 .button--prev {
   text-decoration: none;
@@ -238,17 +233,30 @@ rect.debug {
   overflow: hidden;
   background: #05070A;
 }
+.view-box--unfocus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .view-box--canvas {
   position: relative;
   transform-origin: top left;
+}
+.view-box--canvas--focussed {
+  cursor: pointer;
+
+  & .bubble-text--link {
+    display: none;
+  }
 }
 .i18n-box {
   display: flex;
 }
 .bubble-text--link {
   position: absolute;
-  background: rgba(255, 0, 0, 0.5);
-  border: 2px solid white;
+  background: rgba(0, 0, 0, 0);
   text-decoration: none;
   user-select: none;
 }

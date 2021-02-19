@@ -1,6 +1,6 @@
 <template>
   <td :class="`cb--menu--item ${selected === item ? 'cb--menu--item--active' : active ? 'cb--menu--item--button' : ''}`">
-    <nuxt-link-plus :to="link">
+    <nuxt-link-plus :to="link" replace="true">
       <text-box
         :key="text"
         align="center center"
