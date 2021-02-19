@@ -1,3 +1,8 @@
+import { Context } from '@nuxt/types'
+// Next line is to make sure that the $content declaration is set.
+/* eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars */
+import { IContentOptions } from '@nuxt/content'
+
 export function numberStyle (node: HTMLElement, attr: 'width' | 'height' | 'left' | 'top'): number {
   const value = node.style[attr]
   if (value === null || value === undefined || value === '') {
@@ -66,5 +71,26 @@ export class ActivityMap {
     if (prev) {
       prev()
     }
+  }
+}
+
+export async function i18nContent (options: string | { name: string, map: { [from: string]: string }}, context: Context): Promise<{ page: { [key: string]: any } }> {
+  const { $content, app: { i18n: { locales } } } = context
+  const page: { [key: string]: any } = {}
+  const pageName = typeof options === 'string' ? options : options.name
+  const map = typeof options === 'string' ? {} : options.map
+  const list: Array<Promise<{ code: string, data: any }>> = (locales as Array<{ code: string}>)
+    .map(async ({ code }: { code: string }): Promise<{ code: string, data: any }> => {
+      const actualCode = map[code] ?? code
+      return {
+        code: actualCode,
+        data: await $content(`${pageName}_${actualCode}`).fetch()
+      }
+    })
+  for (const { code, data } of await Promise.all(list)) {
+    page[code] = data
+  }
+  return {
+    page
   }
 }

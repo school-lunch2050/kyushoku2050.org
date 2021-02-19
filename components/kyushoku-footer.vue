@@ -10,7 +10,7 @@
     </section>
     <section class="footer--common">
       <nuxt-link v-t="'weblate.menu.footer.about'" :to="localePath('/about')" />
-      <nuxt-link v-t="'weblate.menu.footer.contact'" to="mailto:feast@chikyu.ac.jp" />
+      <a v-t="'weblate.menu.footer.contact'" href="mailto:feast@chikyu.ac.jp" target="_blank" />
       <nuxt-link v-t="'weblate.menu.footer.pp'" :to="localePath('/privacy-policy')" />
       <nuxt-link v-t="'weblate.menu.footer.feedback'" :to="localePath('/feedback')" />
     </section>

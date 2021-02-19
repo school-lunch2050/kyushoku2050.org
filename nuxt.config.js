@@ -49,6 +49,10 @@ export default {
     '@nuxt/content'
   ],
 
+  content: {
+    // https://content.nuxtjs.org/configuration
+  },
+
   i18n: {
     locales: [
       {
