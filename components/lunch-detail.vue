@@ -30,6 +30,7 @@ function start (this: Vue) {
 }
 
 export default Vue.extend({
+  name: 'LunchDetail',
   props: {
     type: {
       type: String,

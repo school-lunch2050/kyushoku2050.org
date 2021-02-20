@@ -252,6 +252,8 @@ html[lang="ja-simple"] {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+}
+.lunch-detail .view-box {
   background: #05070A;
 }
 .view-box--unfocus {
@@ -287,7 +289,6 @@ html[lang="ja-simple"] {
 .bubble-text--content {
   position: absolute;
   display: flex;
-  align-items: center;
 
   span {
     padding: 0.3em 0.7em;

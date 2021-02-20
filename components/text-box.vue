@@ -1,9 +1,9 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
-  <div v-if="useDiv" :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box">
+  <div v-if="useDiv" :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--center">
     <span v-html="html" />
   </div>
-  <span v-else :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box" v-html="html" />
+  <span v-else :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--span" v-html="html" />
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -20,6 +20,7 @@ interface Options {
   lineHeight: any | null
   align: string | null
   verticalAlign: string | null
+  padding: string | null
 }
 
 const i18nLookups: { [key: string]: string[] } = {}
@@ -49,7 +50,7 @@ function getI18nSize (input: { [locale: string]: number }, i18n: IVueI18n): numb
 }
 
 function createStyle (options: Options, i18n: IVueI18n): { isDynamic: boolean, style: string, useDiv: boolean } {
-  const { x, y, width, height } = options
+  const { x, y, width, height, padding } = options
   let { align, verticalAlign, fontSize, lineHeight } = options
   if (align && /\w+\s+\w+/.test(align)) {
     const parts = align.split(' ')
@@ -81,6 +82,7 @@ function createStyle (options: Options, i18n: IVueI18n): { isDynamic: boolean, s
       top: toPx(y),
       fontSize,
       lineHeight,
+      padding,
       width,
       height
     })
@@ -119,6 +121,10 @@ export default Vue.extend({
     },
     y: {
       type: [String, Number],
+      default: null
+    },
+    padding: {
+      type: String,
       default: null
     }
   },
