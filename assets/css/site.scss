@@ -6,6 +6,8 @@ $col-accent-grey: #B5B5B5;
 $col-nav-active: #fff;
 $col-nav-inactive: rgba(255, 255, 255, 0.6);
 $col-active-fill: rgba(255, 255, 255, 0.3);
+$col-content-side: #f0f0f0;
+$col-content-bg: #fff;
 
 @font-face {
   font-family: "CaveatBrush";
@@ -68,7 +70,8 @@ footer {
   cursor: default;
 }
 
-.font--nav, .font--nav--en {
+.font--nav, .font--nav--en,
+.font--article, .font--article--en {
   font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 .font--tex, .font--tex--en {
@@ -80,6 +83,10 @@ html[lang="ja"] .font--nav, .font--nav--ja,
 html[lang="ja-simple"] .font--nav, .font--nav--ja-simple,
 .font--ruby {
   font-family: HonyaJi, sans-serif;
+}
+html[lang="ja"] .font--article, .font--article--ja,
+html[lang="ja-simple"] .font--article, .font--article--ja-simple {
+  font-family: 'ヒラギノ角ゴ ProN' , 'Hiragino Kaku Gothic ProN' , '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic' , 'メイリオ' , Meiryo , 'ＭＳ ゴシック' , 'MS Gothic' , HiraKakuProN-W3 , 'TakaoExゴシック' , TakaoExGothic , 'MotoyaLCedar' , 'Droid Sans Japanese' , sans-serif;
 }
 
 .button--next,
@@ -296,5 +303,20 @@ footer section {
     &:hover {
       color: $col-nav-active;
     }
+  }
+}
+article {
+  background: $col-content-side;
+  display: flex;
+  justify-content: center;
+}
+.nuxt-content-container {
+  max-width: 960px;
+  width: 100%;
+  background: $col-content-bg;
+  padding: 1em 1.5em 2.5em 4em;
+  h1 {
+    font-weight: normal;
+    font-size: 2em;
   }
 }

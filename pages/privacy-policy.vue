@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="font--article">
     <nuxt-content :document="page[$i18n.locale]" />
   </article>
 </template>
