@@ -1,14 +1,8 @@
 <template>
   <div class="bubble-text">
-    <text-box
-      :key="i18nkey"
-      :x="rect.x"
-      :y="rect.y"
-      :width="rect.width"
-      :height="rect.height"
-      line-height="20"
-      class="font--tex"
-    />
+    <div class="bubble-text--content font--tex" :style="textStyle">
+      <text-box :key="i18nkey" :line-height="lineHeight" :font-size="fontSize" />
+    </div>
     <nuxt-link :to="{ hash }" :style="boxStyle" :class="`bubble-text--link box--${hash}`">&nbsp;</nuxt-link>
   </div>
 </template>
@@ -29,13 +23,27 @@ export default Vue.extend({
     rect: {
       type: Object,
       required: true
+    },
+    fontSize: {
+      type: [String, Number, Object],
+      default: null
+    },
+    lineHeight: {
+      type: [String, Number, Object],
+      default: null
     }
   },
   data () {
-    const { viewRect } = this.$props
+    const { viewRect, rect } = this.$props
     const path = String(this.$vnode.key).split('.')
     path.splice(1, 0, 'bubbles')
     return {
+      textStyle: toStyle({
+        left: rect.x,
+        top: rect.y,
+        width: rect.width,
+        height: rect.height
+      }),
       boxStyle: toStyle({
         left: viewRect.x,
         top: viewRect.y,

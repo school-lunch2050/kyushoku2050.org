@@ -77,16 +77,30 @@ footer {
 .font--tex, .font--tex--en {
   font-family: CaveatBrush, serif;
 }
-html[lang="ja"] .font--tex, .font--tex--ja,
-html[lang="ja-simple"] .font--tex, .font--tex--ja-simple,
-html[lang="ja"] .font--nav, .font--nav--ja,
-html[lang="ja-simple"] .font--nav, .font--nav--ja-simple,
-.font--ruby {
+
+%font_ja {
   font-family: HonyaJi, sans-serif;
 }
-html[lang="ja"] .font--article, .font--article--ja,
-html[lang="ja-simple"] .font--article, .font--article--ja-simple {
+
+%font_ja_fallback {
   font-family: 'ヒラギノ角ゴ ProN' , 'Hiragino Kaku Gothic ProN' , '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic' , 'メイリオ' , Meiryo , 'ＭＳ ゴシック' , 'MS Gothic' , HiraKakuProN-W3 , 'TakaoExゴシック' , TakaoExGothic , 'MotoyaLCedar' , 'Droid Sans Japanese' , sans-serif;
+}
+
+html[lang="ja"],
+html[lang="ja-simple"] {
+  & .font--tex, & .font--nav {
+    @extend %font_ja;
+  }
+  & .font--article {
+    @extend %font_ja_fallback;
+  }
+}
+.font--tex--ja, .font--tex--ja-simple,
+.font--nav--ja, .font--nav--ja-simple {
+  @extend %font_ja;
+}
+.font--article--ja, .font--article--ja-simple {
+  @extend %font_ja_fallback;
 }
 
 .button--next,
@@ -260,6 +274,24 @@ html[lang="ja-simple"] .font--article, .font--article--ja-simple {
 }
 .i18n-box {
   display: flex;
+}
+.bubble-text--content span {
+  line-height: 1.5em;
+}
+html[lang="ja"],
+html[lang="ja-simple"] {
+  & .bubble-text--content span {
+    line-height: 1.7em;
+  }
+}
+.bubble-text--content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  span {
+    padding: 0.3em 0.7em;
+  }
 }
 .bubble-text--link {
   position: absolute;
