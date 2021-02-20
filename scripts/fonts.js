@@ -7,6 +7,7 @@ const { request } = require('undici')
 const extract = require('@leichtgewicht/extract-zip')
 const yaml = require('js-yaml')
 const subFont = require('subset-font')
+const globby = require('globby')
 
 // Using node_modules, this way its cached by the CI system
 const cacheHome = path.join('node_modules', '.font')
@@ -22,8 +23,7 @@ const fonts = [
       url: 'http://honya.nyanta.jp/1504/font_honyajire.zip'
     },
     chars: [
-      'lang/messages.ja.yaml',
-      'lang/messages.ja-simple.yaml'
+      'lang/messages.ja*.yaml'
     ]
   },
   {
@@ -37,7 +37,8 @@ const fonts = [
       url: 'https://fonts.google.com/download?family=Caveat+Brush'
     },
     chars: [
-      'lang/messages.en.yaml'
+      'lang/messages.*.yaml',
+      '!lang/messages.ja*.yaml'
     ]
   }
 ]
@@ -128,8 +129,12 @@ function addToDict (allChars, obj) {
 
 async function compileCharacters (font) {
   const allChars = {}
-  for (const charFile of font.chars) {
-    addToDict(allChars, yaml.load(await readFile(charFile, 'utf-8')))
+  const patterns = font.chars.filter(rule => !rule.startsWith('!'))
+  const ignore = font.chars.filter(rule => rule.startsWith('!'))
+  for (const charFile of await globby(patterns, { ignore })) {
+    if (/\.ya?ml$/i.test(charFile)) {
+      addToDict(allChars, yaml.load(await readFile(charFile, 'utf-8')))
+    }
   }
   delete allChars['\n']
   return Object.keys(allChars).sort().join('')
