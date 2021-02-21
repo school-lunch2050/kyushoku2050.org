@@ -254,7 +254,47 @@ html[lang="ja-simple"] {
   overflow: hidden;
 }
 .lunch-detail .view-box {
-  background: #05070A;
+  background: $col-gradient-end;
+}
+.lunch-detail--lunch {
+  @extend %gradient;
+  display: flex;
+  justify-content: center;
+  svg {
+    margin: 100px 20px;
+    max-width: 960px;
+  }
+}
+.lunch-detail--spacer {
+  background: $col-gradient-end;
+  color: white;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  &:before {
+    content: ' ';
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    width: 100%;
+    left: 0;
+    top: 27px;
+    position: absolute;
+  }
+  span {
+    &:before, &:after {
+      content: '>';
+      transform: rotate(90deg);
+      display: inline-block;
+      padding: 0 20px;
+    }
+    position: relative;
+    display: inline-block;
+    padding: 0.75em;
+    top: 0;
+    font-size: 20px;
+    background: $col-gradient-end;
+  }
 }
 .view-box--unfocus {
   position: absolute;
@@ -309,33 +349,44 @@ html[lang="ja-simple"] {
 }
 footer section {
   display: flex;
-  & a {
-    padding: 25px;
-  }
+  justify-content: center;
 }
 .footer--partner {
   & a {
     flex: 1;
+    max-width: 450px;
     display: flex;
     justify-content: center;
+    position: relative;
     align-content: center;
   }
   & a:first-child {
     border-right: 1px solid $col-accent-grey;
   }
   & img {
-    height: 80px;
+    display: block;
+    position: relative;
+    max-width: 250px;
+    width: 50%;
+    height: auto;
+    align-self: center;
+    padding: 25px;
   }
 }
 .footer--common {
   border-top: 1px solid $col-accent-grey;
   justify-content: center;
   & a {
+    padding: 25px 10px;
     color: $col-nav-inactive;
     text-decoration: none;
     &:hover {
       color: $col-nav-active;
     }
+  }
+  @media screen and (max-width: 620px) {
+    flex-direction: column;
+    text-align: center;
   }
 }
 article {
