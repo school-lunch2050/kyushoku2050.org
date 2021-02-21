@@ -126,6 +126,10 @@ export default Vue.extend({
     padding: {
       type: String,
       default: null
+    },
+    text: {
+      type: String,
+      default: null
     }
   },
   data () {
@@ -133,7 +137,7 @@ export default Vue.extend({
   },
   computed: {
     html () {
-      return sanitize(this.$i18n.t(String(this.$vnode.key)).toString(), {
+      return sanitize(this.$props.text ?? this.$i18n.t(String(this.$vnode.key)).toString(), {
         allowedTags: ['ruby', 'rt', 'rtc', 'br']
       })
     }
