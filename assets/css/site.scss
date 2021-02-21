@@ -8,6 +8,7 @@ $col-nav-inactive: rgba(255, 255, 255, 0.6);
 $col-active-fill: rgba(255, 255, 255, 0.3);
 $col-content-side: #f0f0f0;
 $col-content-bg: #fff;
+$col-accent: lighten(#1E281A, 60%);
 
 @font-face {
   font-family: "CaveatBrush";
@@ -340,9 +341,12 @@ html[lang="ja-simple"] {
   text-decoration: none;
   user-select: none;
 }
-.main--main-screen {
+%gradient {
   background-color: $col-gradient-start;
   background: linear-gradient($col-gradient-start, $col-gradient-end);
+}
+.main--main-screen {
+  @extend %gradient;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -394,7 +398,7 @@ article {
   display: flex;
   justify-content: center;
 }
-.nuxt-content-container {
+.nuxt-content {
   max-width: 960px;
   width: 100%;
   background: $col-content-bg;
@@ -402,5 +406,8 @@ article {
   h1 {
     font-weight: normal;
     font-size: 2em;
+    display: inline-block;
+    break-after: always;
+    border-bottom: 2px solid $col-accent;
   }
 }

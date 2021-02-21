@@ -2,7 +2,12 @@
   <div class="lunch-detail">
     <detail-header :type="type" />
     <main class="main--lunch-detail">
-      <lunch :type="type" />
+      <div class="lunch-detail--lunch">
+        <lunch :type="type" />
+      </div>
+      <div class="lunch-detail--spacer">
+        <text-box key="weblate.scenario.actions.more" class="font--tex" />
+      </div>
       <view-box ref="viewbox" width="3157" height="2500" :get-viewbox="getViewbox" :unfocus="gotoMain">
         <slot />
       </view-box>
