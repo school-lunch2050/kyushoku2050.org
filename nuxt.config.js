@@ -51,6 +51,7 @@ export default {
 
   content: {
     // https://content.nuxtjs.org/configuration
+    liveEdit: false
   },
 
   i18n: {
