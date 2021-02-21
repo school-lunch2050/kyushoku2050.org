@@ -30,7 +30,7 @@ weblate:
         that will impact our lunch
     weather:
       title: |
-        Factor ①
+        Factor ①<br/>
         Can we limit global warming?
       less:
         text: 1.5°?
@@ -42,7 +42,7 @@ weblate:
           - https://google.com
     location:
       title: |
-        Factor ②
+        Factor ②<br/>
         Where will our food be from?
       near:
         text: nearby?
