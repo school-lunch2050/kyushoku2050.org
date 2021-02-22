@@ -27,20 +27,18 @@
             />
           </tr>
           <tr>
-            <th class="cb--menu--place"><img src="/img/weather_2p.webp"></th>
+            <th class="cb--menu--weather"><img src="/img/weather_2p.webp"></th>
             <main-menu-item
               num="3"
               item="gamble"
               :active="active"
               :selected="selected"
-              :place="{ x, y: y + item.height, ...item }"
             />
             <main-menu-item
               num="4"
               item="desperate"
               :active="active"
               :selected="selected"
-              :place="{ x: x + item.width, y: y + item.height, ...item }"
             />
           </tr>
           <tr class="cb--menu--place">

@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
-  <div v-if="useDiv" :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--center">
+  <div v-if="useDiv" :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--placed">
     <span v-html="html" />
   </div>
   <span v-else :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--span" v-html="html" />

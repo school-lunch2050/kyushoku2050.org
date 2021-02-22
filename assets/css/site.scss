@@ -173,12 +173,13 @@ html[lang="ja-simple"] {
   position: absolute;
   top: 350px;
   width: 2200px;
+  border-collapse: collapse;
 }
 .cb--menu--table th img {
   width: 175px;
 }
 .cb--menu--weather {
-  width: 200px;
+  padding-right: 50px;
 }
 .cb--menu--place {
   padding-top: 20px;
@@ -189,19 +190,33 @@ html[lang="ja-simple"] {
 .cb--menu--item {
   font-size: 110px;
   border-color: white;
-  border-width: 1px;
+  border-width: 0.2vmax;
+  width: 50%;
+  position: relative;
+  a, span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  }
 }
-.cb--menu tr:nth-child(1) td:nth-child(2),
-.cb--menu tr:nth-child(1) td:nth-child(3) {
-  border-bottom-style: solid;
+.cb-option--image {
+  width: 400px;
 }
-.cb--menu tr:nth-child(1) td:nth-child(2),
-.cb--menu tr:nth-child(2) td:nth-child(2) {
-  border-right-style: solid;
-}
-.cb--menu--item a {
-  text-decoration: none;
-  color: white;
+.cb--menu {
+  tr:nth-child(1) {
+    td:nth-child(2),
+    td:nth-child(3) {
+      border-bottom-style: solid;
+    }
+  }
+  tr:nth-child(1) td:nth-child(2),
+  tr:nth-child(2) td:nth-child(2) {
+    border-right-style: solid;
+  }
 }
 .cb--menu--item--active {
   background: rgba(255, 255, 255, 0.4);
@@ -315,7 +330,7 @@ html[lang="ja-simple"] {
     display: none;
   }
 }
-.i18n-box {
+.i18n-box--placed {
   display: flex;
 }
 .bubble-text--content span {

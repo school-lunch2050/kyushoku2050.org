@@ -1,11 +1,7 @@
 <template>
-  <td :class="`cb--menu--item ${selected === item ? 'cb--menu--item--active' : active ? 'cb--menu--item--button' : ''}`">
+  <td :class="`cb--menu--item font--tex ${selected === item ? 'cb--menu--item--active' : active ? 'cb--menu--item--button' : ''}`">
     <nuxt-link-plus :to="link" replace="true">
-      <text-box
-        :key="text"
-        align="center center"
-        class="cb--menu--item font--tex"
-      />
+      <text-box :key="text" />
     </nuxt-link-plus>
   </td>
 </template>
