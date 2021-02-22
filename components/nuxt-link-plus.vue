@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link v-if="to" :to="to" :append="append" :replace="replace">
+  <nuxt-link v-if="to" :to="to" :append="append" :replace="Boolean(replace)">
     <slot />
   </nuxt-link>
   <fragment v-else>
