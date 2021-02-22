@@ -24,7 +24,7 @@ weblate:
         変わります。
     introduction:
       text: |
-        私たち「{logo}」チーム。<br/>
+        私たち「@[logo|/img/logo_feast_ja.webp|Feast]」チーム。<br/>
         データを見て<br/>
         ②つの要因を特定<br/>
         ランチに影響を与える

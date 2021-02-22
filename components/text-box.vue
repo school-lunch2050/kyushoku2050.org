@@ -137,8 +137,11 @@ export default Vue.extend({
   },
   computed: {
     html () {
-      return sanitize(this.$props.text ?? this.$i18n.t(String(this.$vnode.key)).toString(), {
+      const text = sanitize(this.$props.text ?? this.$i18n.t(String(this.$vnode.key)).toString(), {
         allowedTags: ['ruby', 'rt', 'rtc', 'br']
+      })
+      return text.replace(/@\[(.*?)\|(.*?)\|(.*?)\]/g, (_, name, src, alt) => {
+        return `<span class="i18n-img i18n-img--${name}"><img src="${src}" alt="${encodeURIComponent(alt)}" /></span>`
       })
     }
   },
