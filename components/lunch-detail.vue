@@ -16,23 +16,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { styleRect, ActivityMap } from '../lib'
-
-const activity = new ActivityMap()
-
-function start (this: Vue) {
-  let hash = document.location.hash
-  const interval = setInterval(() => {
-    const newHash = document.location.hash
-    if (newHash !== hash) {
-      hash = newHash
-      ;(this.$refs.viewbox as Vue).$forceUpdate()
-    }
-  })
-  activity.start(this, () => {
-    clearInterval(interval)
-  })
-}
+import { styleRect } from '../lib'
 
 export default Vue.extend({
   name: 'LunchDetail',
@@ -45,13 +29,10 @@ export default Vue.extend({
   data () {
     return {
       getViewbox: (container?: HTMLElement) => {
-        if (typeof document === 'undefined') {
-          return null
-        }
         if (!container) {
           return null
         }
-        const id = (document.location.hash ?? '').substr(1)
+        const id = (this.$route.hash ?? '').substr(1)
         const elem = container.querySelector(`.box--${id}`)
         return (elem instanceof HTMLElement)
           ? {
@@ -61,18 +42,6 @@ export default Vue.extend({
           : null
       }
     }
-  },
-  mounted () {
-    start.call(this)
-  },
-  activated () {
-    start.call(this)
-  },
-  deactivated () {
-    activity.stop(this)
-  },
-  destroyed () {
-    activity.stop(this)
   },
   methods: {
     gotoMain () {
