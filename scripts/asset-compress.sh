@@ -9,4 +9,4 @@ done
 
 mkdir -p static/img/favicon
 
-npx icofy static/img/logo_3x.png static/img/favicon --which favicons,android,appleIcon
+npx icofy static/img/favicon_3x.png static/img/favicon --which favicons,android,appleIcon
