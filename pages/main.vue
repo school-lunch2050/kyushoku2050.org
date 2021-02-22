@@ -1,5 +1,5 @@
 <template>
-  <main-menu prev="/scenarios" active />
+  <main-menu prev="/scenarios" active :selected="($route.hash || '').substr(1)" />
 </template>
 <script>
 export default {

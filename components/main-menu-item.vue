@@ -36,7 +36,7 @@ export default Vue.extend({
     link () {
       // @ts-ignore
       const { $props: { active, item }, localePath } = (this as { $props: { active: boolean, item: string }, localePath: (str: string) => string })
-      return active ? localePath(`/main-${item}`) : null
+      return active ? { path: localePath('/main'), hash: item } : null
     }
   }
 })
