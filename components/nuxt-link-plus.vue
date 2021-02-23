@@ -11,7 +11,7 @@ import Vue from 'vue'
 export default Vue.extend({
   props: {
     to: {
-      type: String,
+      type: [String, Object],
       default: null
     },
     append: {
