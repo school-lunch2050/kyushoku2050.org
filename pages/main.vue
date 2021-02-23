@@ -1,5 +1,7 @@
 <template>
-  <main-menu prev="/scenarios" active :selected="($route.hash || '').substr(1)" />
+  <client-only>
+    <main-menu prev="/scenarios" active :selected="($route.hash || '').substr(1)" />
+  </client-only>
 </template>
 <script>
 export default {
