@@ -1,7 +1,7 @@
 <template>
   <td :class="`cb--menu--item font--tex ${selected === item ? 'cb--menu--item--active' : active ? 'cb--menu--item--button' : ''}`">
     <nuxt-link-plus :to="link" replace="true">
-      <text-box :key="text" />
+      <text-box :text="text" />
     </nuxt-link-plus>
   </td>
 </template>
@@ -31,7 +31,7 @@ export default Vue.extend({
     text () {
       // @ts-ignore
       const { active, num, item } = this.$props as { active: boolean, item: string, num: string }
-      return active ? `weblate.${item}.short` : num
+      return active ? this.$i18n.t(`weblate.${item}.short`) : num
     },
     link () {
       // @ts-ignore
