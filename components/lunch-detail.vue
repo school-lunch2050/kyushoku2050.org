@@ -8,7 +8,14 @@
       <div class="lunch-detail--spacer">
         <text-box key="weblate.scenario.actions.more" class="font--tex" />
       </div>
-      <view-box ref="viewbox" :data-hash="$route.hash || ''" width="3157" height="2500" :get-viewbox="getViewbox" :unfocus="gotoMain">
+      <view-box
+        ref="viewbox"
+        :data-hash="$route.hash || ''"
+        width="3157"
+        height="2500"
+        :get-viewbox="getViewbox"
+        :unfocus="gotoMain"
+      >
         <slot />
       </view-box>
     </main>
