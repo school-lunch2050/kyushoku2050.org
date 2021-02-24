@@ -11,7 +11,7 @@
             <chalkboard
               :width="cb"
               :height="cb / 2586 * 1770"
-              style="left: 150px; top: 50px"
+              style="left: 40px; top: 50px"
               :next="next"
               :prev="prev"
             >

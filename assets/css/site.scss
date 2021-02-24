@@ -374,6 +374,11 @@ html[lang="ja-simple"] {
   justify-content: center;
   width: 100%;
 }
+.main-screen .view-box--canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 footer section {
   display: flex;
   justify-content: center;
