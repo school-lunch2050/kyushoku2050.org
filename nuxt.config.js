@@ -11,8 +11,11 @@ export default {
     title: '',
     // eslint-disable-next-line object-shorthand
     titleTemplate: function (chunk) {
+      if (!this) {
+        return ''
+      }
       if (!chunk) {
-        const parts = /^(.*?)__/.exec(this.$route.name)
+        const parts = /^(.*?)__/.exec((this.$route && this.$route.name) || '')
         if (parts) {
           const base = `weblate.pages.${parts[1]}`
           const fullKey = `${base}.full`
