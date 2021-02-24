@@ -75,18 +75,52 @@ export class ActivityMap {
   }
 }
 
-export function head ({ $i18n }: Vue) {
-  const title = $i18n.t('weblate.title')
+function meta (name: string, content: string) {
+  return {
+    hid: name,
+    name,
+    content: removeRuby(content)
+  }
+}
+
+function metas (metas: { [name: string]: string }) {
+  return Object.entries(metas).map(([name, content]) => meta(name, content))
+}
+
+function removeRuby (text: string): string {
+  return text.replace(/<rt>(.*?)<\/rt>|<\/?ruby>|<br>/img, '').split('\n').join('').trim()
+}
+
+export function head ({ $i18n, $route }: Vue) {
+  const siteName = $i18n.t('weblate.title').toString()
+  let title = siteName
+  let description: string | null = null
+  const parts = typeof $route.name === 'string' ? /^(.*?)__/.exec($route.name) : null
+  if (parts) {
+    const id = parts[1]
+    const base = `weblate.pages.${id}`
+    const fullKey = `${base}.full`
+    const shortKey = `${base}.short`
+    if ($i18n.te(shortKey)) {
+      title = $i18n.t(shortKey).toString()
+    } else if ($i18n.te(fullKey)) {
+      title = $i18n.t(fullKey).toString()
+    }
+    const descriptionKey = `${base}.description`
+    if ($i18n.te(descriptionKey)) {
+      description = $i18n.t(descriptionKey).toString()
+    }
+  }
   return {
     htmlAttrs: {
       lang: $i18n.locale
     },
-    meta: [{
-      hid: 'og:title',
-      ogTitle: title,
-      name: 'hello',
-      description: 'world'
-    }]
+    meta: metas({
+      'apple-mobile-web-app-title': siteName,
+      'og:site_name': siteName,
+      'og:title': title,
+      'og:description': description ?? $i18n.t('weblate.description').toString()
+    })
   }
 }
 
