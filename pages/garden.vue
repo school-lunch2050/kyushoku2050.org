@@ -3,7 +3,7 @@
   <div>
     <lunch-detail type="garden">
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/garden.webp">
-      <text-box key="weblate.garden.title" class="illustration--title font--tex" x="680" y="20" width="1915" height="180" font-size="100" align="center" vertical-align="center" />
+      <text-box key="weblate.pages.garden.full" class="illustration--title font--tex" x="680" y="20" width="1915" height="180" font-size="100" align="center" vertical-align="center" />
       <bubble-text
         key="garden.public_food"
         bubble="1474 829 1474 1024 1175 1024 1175 1099.5 1121.164062 1024 820 1024 820 829"

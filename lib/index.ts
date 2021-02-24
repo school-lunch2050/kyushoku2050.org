@@ -2,6 +2,7 @@ import { Context } from '@nuxt/types'
 // Next line is to make sure that the $content declaration is set.
 /* eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars */
 import { IContentOptions } from '@nuxt/content'
+import Vue from 'vue'
 
 export function numberStyle (node: HTMLElement, attr: 'width' | 'height' | 'left' | 'top'): number {
   const value = node.style[attr]
@@ -72,6 +73,25 @@ export class ActivityMap {
       prev()
     }
   }
+}
+
+export function head ({ $i18n }: Vue) {
+  const title = $i18n.t('weblate.title')
+  return {
+    htmlAttrs: {
+      lang: $i18n.locale
+    },
+    meta: [{
+      hid: 'og:title',
+      ogTitle: title,
+      name: 'hello',
+      description: 'world'
+    }]
+  }
+}
+
+export const layoutDefaults = {
+  head
 }
 
 export async function i18nContent (options: string | { name: string, map: { [from: string]: string }}, context: Context): Promise<{ page: { [key: string]: any } }> {

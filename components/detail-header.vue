@@ -3,8 +3,8 @@
     <nuxt-link :to="{ path: localePath('/main'), hash: type }" class="detail-header--back font--tex">
       &lt;
     </nuxt-link>
-    <h1 class="detail-header--title font--tex">
-      <text-box :key="`weblate.${type}.short`" />
+    <h1 class="detail-header--title">
+      <text-box :key="`weblate.pages.${type}.short`" />
     </h1>
     <div class="detail-header--progress">
       <text-box key="weblate.scenario.progress.active" :values="{ percent: percent() }" />

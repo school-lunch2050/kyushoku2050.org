@@ -5,14 +5,9 @@
   </div>
 </template>
 <script>
+import { layoutDefaults } from '../lib'
 export default {
   name: 'DetailLayout',
-  head () {
-    return {
-      htmlAttrs: {
-        lang: this.$i18n.locale
-      }
-    }
-  }
+  ...layoutDefaults
 }
 </script>

@@ -31,7 +31,7 @@ export default Vue.extend({
     text () {
       // @ts-ignore
       const { active, num, item } = this.$props as { active: boolean, item: string, num: string }
-      return active ? this.$i18n.t(`weblate.${item}.short`) : num
+      return active ? this.$i18n.t(`weblate.pages.${item}.short`) : num
     },
     link () {
       // @ts-ignore

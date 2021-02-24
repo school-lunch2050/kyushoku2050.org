@@ -8,7 +8,27 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'kyushoku2050.org',
+    title: '',
+    // eslint-disable-next-line object-shorthand
+    titleTemplate: function (chunk) {
+      if (!chunk) {
+        const parts = /^(.*?)__/.exec(this.$route.name)
+        if (parts) {
+          const base = `weblate.pages.${parts[1]}`
+          const fullKey = `${base}.full`
+          const shortKey = `${base}.short`
+          if (this.$i18n.te(shortKey)) {
+            chunk = this.$i18n.t(shortKey)
+          } else if (this.$i18n.te(fullKey)) {
+            chunk = this.$i18n.t(fullKey)
+          }
+        }
+      }
+
+      const removeRuby = text => text.replace(/<rt>(.*?)<\/rt>|<\/?ruby>/g, '')
+      const base = removeRuby(this.$i18n.t('weblate.title'))
+      return chunk ? `${removeRuby(chunk)} | ${base}` : base
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },

@@ -1,10 +1,40 @@
 weblate:
+  title: 給食 2050年
+  pages:
+    about:
+      full: ページについて
+    cosmopolitan:
+      full: 地球にやさしいはずがまぼろし
+      short: まぼろし
+    desperate:
+      full: 国内だけでなんとか生きていく 
+      short: なんとか生きる
+    gamble:
+      full: 地球を賭けていちかばちか 
+      short: いちかばちか
+    garden:
+      full: 食べものでいっぱいの庭
+      short: 庭
+    index: 
+      full: 初め
+    introduction:
+      full: 紹介
+    location:
+      full: 場所
+    lunch:
+      full: ランチについて
+    main:
+      full: シナリオ選択
+    privacy-policy:
+      full: Privacy Policy
+    scenarios:
+      full: シナリオ紹介
+    weather:
+      full: 温暖化
   menu:
     footer:
       contact: 連絡
-      about: ページについて
       feedback: フィードバック
-      pp: Privacy Policy
       feast: Feast - みんなで作る「いただきます」
       rihn: 大学共同利用機関法人　人間文化研究機構 総合地球環境学研究所
     actions:
@@ -79,8 +109,6 @@ weblate:
         (クリック) 意見
         を教えてくれきませんか？
   cosmopolitan:
-    title: 地球にやさしいはずがまぼろし
-    short: まぼろし
     ingredients:
       milk:
         name: アニマルライツ・ミルク
@@ -139,8 +167,6 @@ weblate:
         text: |
           エシカル消費が広がり、フェアトレードやオーガニックなどの認証を受けた食品の購入が一般的となる。生産者と消費者が、オンライン・SNSなどを通じて直接つながっている。
   desperate:
-    title: 国内だけでなんとか生きていく 
-    short: なんとか生きる
     ingredients:
       banana:
         name: 京バナナ
@@ -196,8 +222,6 @@ weblate:
         text: |
           まだ。
   gamble:
-    title: 地球を賭けていちかばちか 
-    short: いちかばちか
     ingredients:
       gu_gu_bread:
         name: 「ぐーぐーぱん」
@@ -256,8 +280,6 @@ weblate:
         text: |
           腸内環境を整え、痩せた土壌で栽培された野菜に欠乏している微量栄養素を補うためサプリが必須。また、サプリは、災害などにより食料供給ができなくなった際の緊急食料としても用いられる。
   garden:
-    title: 食べものでいっぱいの庭
-    short: 庭
     ingredients:
       potato_porridge:
         name: イモと豆のおかゆ

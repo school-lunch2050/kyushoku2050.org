@@ -3,7 +3,7 @@
   <div>
     <lunch-detail type="desperate">
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/desperate.webp">
-      <text-box key="weblate.desperate.title" class="illustration--title font--tex" x="550" y="40" width="1900" height="200" font-size="100" align="center" vertical-align="center" />
+      <text-box key="weblate.pages.desperate.full" class="illustration--title font--tex" x="550" y="40" width="1900" height="200" font-size="100" align="center" vertical-align="center" />
       <bubble-text
         key="desperate.mass_vegetables"
         bubble="2376 349 2376 523 2042.521 523 2049.28125 589 1951.913 523 1482 523 1482 349"

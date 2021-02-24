@@ -9,10 +9,18 @@
       </a>
     </section>
     <section class="footer--common">
-      <nuxt-link v-t="'weblate.menu.footer.about'" :to="localePath('/about')" />
-      <a v-t="'weblate.menu.footer.contact'" href="mailto:feast@chikyu.ac.jp" target="_blank" />
-      <nuxt-link v-t="'weblate.menu.footer.pp'" :to="localePath('/privacy-policy')" />
-      <nuxt-link v-t="'weblate.menu.footer.feedback'" :to="localePath('/feedback')" />
+      <nuxt-link :to="localePath('/about')">
+        <text-box key="weblate.pages.about.full" />
+      </nuxt-link>
+      <a href="mailto:feast@chikyu.ac.jp" target="_blank">
+        <text-box key="weblate.menu.footer.contact" />
+      </a>
+      <nuxt-link :to="localePath('/privacy-policy')">
+        <text-box key="weblate.pages.privacy-policy.full" />
+      </nuxt-link>
+      <nuxt-link :to="localePath('/feedback')">
+        <text-box key="weblate.menu.footer.feedback" />
+      </nuxt-link>
     </section>
   </footer>
 </template>

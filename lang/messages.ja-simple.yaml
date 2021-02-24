@@ -1,10 +1,43 @@
 weblate:
+  title: きゅうしょく 2050年
+  pages:
+    about:
+      full: ページについて
+    cosmopolitan:
+      full: <ruby>地球<rt>ちきゅう</rt></ruby>にやさしいはずがまぼろし　
+      short: まぼろし
+    desperate:
+      full: <ruby>国内<rt>こくない</rt></ruby>だけでなんとか<ruby>生<rt>い</rt></ruby>きていく
+      short: なんとか<ruby>生<rt>い</rt></ruby>きる
+    gamble:
+      full: |
+        <ruby>地球<rt>ちきゅう</rt></ruby>を<ruby>賭<rt>か</rt></ruby>けていちかばちか
+      short: いちかばちか
+    garden:
+      full: |
+        <ruby>食<rt>た</rt></ruby>べものでいっぱいの<ruby>庭<rt>にわ</rt></ruby>
+      short: |
+        <ruby>庭<rt>にわ</rt></ruby>
+    index: 
+      full: <ruby>初<rt>はじ</rt></ruby>めに
+    introduction:
+      full: <ruby>紹介<rt>しょうかい</rt></ruby>
+    location:
+      full: 場所
+    lunch:
+      full: ランチについて
+    main:
+      full: シナリオ選択
+    privacy-policy:
+      full: Privacy Policy
+    scenarios:
+      full: シナリオ紹介
+    weather:
+      full: 温暖化
   menu:
     footer:
-      contact: 連絡
-      about: ページについて
+      contact: <ruby>連絡<rt>れんらく</rt></ruby>
       feedback: フィードバック
-      pp: Privacy Policy
       feast: Feast - みんなで作る「いただきます」
       rihn: 大学共同利用機関法人　人間文化研究機構 総合地球環境学研究所
     actions:
@@ -79,9 +112,6 @@ weblate:
         (クリック) 意見
         を教えてくれきませんか？
   cosmopolitan:
-    title: |
-      <ruby>地球<rt>ちきゅう</rt></ruby>にやさしいはずがまぼろし　
-    short: まぼろし
     ingredients:
       # Filled by messages.ja.yml, you can override these if you like
     bubbles:
@@ -107,9 +137,6 @@ weblate:
         text: |
           エシカル消費とよばれる「自然や動物のことを考えて買い物をしよう」という運動が広がり、フェアトレードやオーガニックなどのラベルがついている食品を買うのがふつうになっています。作る人と買う人が、SNSで直接つながっています。
   desperate:
-    title: |
-      <ruby>国内<rt>こくない</rt></ruby>だけでなんとか<ruby>生<rt>い</rt></ruby>きていく
-    short: なんとかいきる
     ingredients: 
       # Filled by messages.ja.yml, you can override these if you like
     bubbles:
@@ -138,9 +165,6 @@ weblate:
         text: |
           まだ。
   gamble:
-    title: |
-      <ruby>地球<rt>ちきゅう</rt></ruby>を<ruby>賭<rt>か</rt></ruby>けていちかばちか
-    short: いちかばちか
     ingredients:
       # Filled by messages.ja.yml, you can override these if you like
     bubbles:
@@ -172,10 +196,6 @@ weblate:
         text: |
           やせた土地で作られた野菜には養分が足りないので、サプリのカプセルを飲む人が増えました。サプリは腸内環境を整えたり災害で食べものがないときの緊急食でもあります。
   garden:
-    title: |
-      <ruby>食<rt>た</rt></ruby>べものでいっぱいの<ruby>庭<rt>にわ</rt></ruby>
-    short: |
-      <ruby>庭<rt>にわ</rt></ruby>
     ingredients:
       # Filled by messages.ja.yml, you can override these if you like
     bubbles:

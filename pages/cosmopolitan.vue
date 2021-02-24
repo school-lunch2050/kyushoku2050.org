@@ -3,7 +3,7 @@
   <div>
     <lunch-detail type="cosmopolitan">
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/cosmopolitan.webp">
-      <text-box key="weblate.cosmopolitan.title" class="illustration--title font--tex" x="550" y="70" width="2000" height="180" font-size="100" align="center" vertical-align="center" />
+      <text-box key="weblate.pages.cosmopolitan.full" class="illustration--title font--tex" x="550" y="70" width="2000" height="180" font-size="100" align="center" vertical-align="center" />
       <bubble-text
         key="cosmopolitan.fruit"
         bubble="91 824 91 452 981 452 981 757.5 1087.39844 905.0859379999999 926.640625 809"

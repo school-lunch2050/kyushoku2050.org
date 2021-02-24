@@ -1,10 +1,40 @@
 weblate:
+  title: School Lunch 2050
+  pages:
+    about:
+      full: About
+    cosmopolitan:
+      full: Global Green Illusion
+      short: Illusion
+    desperate:
+      full: Domestic Desperation
+      short: Desperation
+    gamble:
+      full: Global Gamble
+      short: Gamble
+    garden:
+      full: Food Gardens
+      short: Gardens
+    index: 
+      full: Start
+    introduction:
+      full: Introduction
+    location:
+      full: Location
+    lunch:
+      full: Lunch
+    main:
+      full: Scenario Selection
+    privacy-policy:
+      full: Privacy Policy
+    scenarios:
+      full: Scenarios
+    weather:
+      full: Weather
   menu:
     footer:
       contact: Contact
-      about: About
       feedback: Feedback
-      pp: Privacy Policy
       feast: Feast - Enough is as good as a feast
       rihn: Research Institute for Humanity and Nature
     actions:
@@ -78,8 +108,6 @@ weblate:
         (click) Let us know
         what you think!
   cosmopolitan:
-    title: Global Green Illusion
-    short: Illusion
     ingredients:
       milk:
         name: animal rights milk
@@ -161,8 +189,6 @@ weblate:
         text: |
           Ethical consumption grows, leading to the purchase of more certified products (e.g. fair trade, organic, etc.) based on direct online/SNS relations between consumers & producers.
   desperate:
-    title: Domestic Desperation
-    short: Desperation
     ingredients:
       banana:
         name: KyoBanana
@@ -272,8 +298,6 @@ weblate:
           - https://futurefood.network/livinglabs/
           - https://soylent.com/
   gamble:
-    title: Global Gamble
-    short: Gamble
     ingredients:
       gu_gu_bread:
         name: “Gu Gu bread" 
@@ -372,8 +396,6 @@ weblate:
         links:
           - https://www.bbc.com/future/article/20120221-food-pills-a-staple-of-sci-fi
   garden:
-    title: Food Gardens
-    short: Gardens
     ingredients:
       potato_porridge:
         name: Potato & beans porridge
