@@ -1,21 +1,31 @@
 weblate:
   title: School Lunch 2050
+  description: Examining Scenarios for a School Lunch in 2050.
   pages:
     about:
       full: What is School Lunch 2050?
       short: About
+      description: Information about the School Lunch 2050 Project
     cosmopolitan:
       full: Global Green Illusion
       short: Illusion
+      description: |
+        2050 Lunch Scenario: "@:weblate.pages.cosmopolitan.full" (1.5°+, global)
     desperate:
       full: Domestic Desperation
       short: Desperation
+      description: |
+        2050 Lunch Scenario: "@:weblate.pages.desperate.full" (2.5°+, local)
     gamble:
       full: Global Gamble
       short: Gamble
+      description: |
+        2050 Lunch Scenario: "@:weblate.pages.gamble.full" (2.5°+, global)
     garden:
       full: Food Gardens
       short: Gardens
+      description: |
+        2050 Lunch Scenario: "@:weblate.pages.garden.full" (1.5°, local)
     index: 
       full: Start
     introduction:
