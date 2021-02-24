@@ -111,7 +111,25 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      name: '給食 2050 - School Lunch 2050',
+      short_name: 'Lunch 2050',
+      lang: 'en',
+      background_color: '#2b2f36',
+      icons: [
+        { prefix: 'android-chrome', sizes: [36, 48, 72, 96, 144, 192, 256, 384, 512] },
+        { prefix: 'apple-touch-icon', sizes: [57, 60, 72, 76, 114, 152, 167, 180, 1024] }
+      ].reduce((all, { prefix, sizes }) => {
+        const type = 'image/png'
+        for (const size of sizes) {
+          const sizes = `${size}x${size}`
+          all.push({
+            src: `static/img/favicon/${prefix}-${sizes}.png`,
+            sizes,
+            type
+          })
+        }
+        return all
+      }, [])
     }
   },
 
