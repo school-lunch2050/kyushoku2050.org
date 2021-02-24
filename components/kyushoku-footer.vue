@@ -18,9 +18,9 @@
       <nuxt-link :to="localePath('/privacy-policy')">
         <text-box key="weblate.pages.privacy-policy.full" />
       </nuxt-link>
-      <nuxt-link :to="localePath('/feedback')">
+      <a href="#" target="_blank">
         <text-box key="weblate.menu.footer.feedback" />
-      </nuxt-link>
+      </a>
     </section>
     <section class="footer--lang">
       <language-link
