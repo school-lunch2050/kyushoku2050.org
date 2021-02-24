@@ -57,6 +57,10 @@
 <script lang="ts">
 import Vue from 'vue'
 
+function mark (this: Vue) {
+  this.$store.commit('progress/mark', this.$props.selected ? `menu.${this.$props.selected}` : 'menu')
+}
+
 export default Vue.extend({
   props: {
     prev: {
@@ -97,6 +101,8 @@ export default Vue.extend({
         height: height / 2
       }
     }
-  }
+  },
+  mounted: mark,
+  updated: mark
 })
 </script>

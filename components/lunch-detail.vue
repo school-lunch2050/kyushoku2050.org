@@ -23,7 +23,12 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { Store } from 'vuex/types'
 import { styleRect } from '../lib'
+
+function mark (store: Store<any>, type: string) {
+  store.commit('progress/mark', type)
+}
 
 export default Vue.extend({
   name: 'LunchDetail',
@@ -37,16 +42,20 @@ export default Vue.extend({
     return {
       getViewbox: (container?: HTMLElement) => {
         if (!container) {
+          mark(this.$store, this.$props.type)
           return null
         }
         const id = (this.$route.hash ?? '').substr(1)
         const elem = container.querySelector(`.box--${id}`)
-        return (elem instanceof HTMLElement)
-          ? {
-              id,
-              rect: styleRect(elem)
-            }
-          : null
+        if (!(elem instanceof HTMLElement)) {
+          mark(this.$store, this.$props.type)
+          return null
+        }
+        mark(this.$store, `${this.$props.type}.${id}`)
+        return {
+          id,
+          rect: styleRect(elem)
+        }
       }
     }
   },

@@ -27,7 +27,8 @@
       "@nuxt/types",
       "@types/node",
       "nuxt-i18n",
-      "@nuxt/content/types"
+      "@nuxt/content/types",
+      "vuex/types/vue"
     ]
   },
   "exclude": [

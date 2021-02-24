@@ -27,7 +27,7 @@
               y="1850"
               :width="lun"
               :height="lun / 3874 * 1926"
-              :type="lunchType"
+              :type="lunchType || '?'"
             />
           </nuxt-link-plus>
         </view-box>

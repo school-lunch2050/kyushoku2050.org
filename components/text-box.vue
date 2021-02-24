@@ -130,6 +130,10 @@ export default Vue.extend({
     text: {
       type: String,
       default: null
+    },
+    values: {
+      type: Object,
+      default: null
     }
   },
   data () {
@@ -137,7 +141,7 @@ export default Vue.extend({
   },
   computed: {
     html () {
-      const text = sanitize(this.$props.text ?? this.$i18n.t(String(this.$vnode.key)).toString(), {
+      const text = sanitize(this.$props.text ?? this.$i18n.t(String(this.$vnode.key), this.$props.values).toString(), {
         allowedTags: ['ruby', 'rt', 'rtc', 'br']
       })
       return text.replace(/@\[(.*?)\|(.*?)\|(.*?)\]/g, (_, name, src, alt) => {

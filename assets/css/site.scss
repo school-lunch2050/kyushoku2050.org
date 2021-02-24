@@ -225,6 +225,7 @@ html[lang="ja-simple"] {
   background: rgba(255, 255, 255, 0.15);
 }
 .detail-header {
+  color: white;
   width: 100%;
   font-size: 30px;
   font-weight: bold;
@@ -245,11 +246,18 @@ html[lang="ja-simple"] {
   align-items: center;
   align-content: center;
 }
+.detail-header--progress {
+  font-size: 15px;
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  z-index: 1;
+  text-shadow: #000 1px 1px 10px;
+}
 .detail-header--back:hover {
   color: $col-nav-active;
 }
 .detail-header--title {
-  color: white;
   display: flex;
   width: 100%;
   font-size: 1em;
