@@ -47,8 +47,15 @@ export default {
       strategy: 'prefix',
       vueI18nLoader: true
     }],
-    '@nuxt/content'
+    '@nuxt/content',
+    'vue-plausible'
   ],
+
+  plausible: {
+    domain: 'kyushoku2050.org',
+    apiHost: '//stats.kyushoku2050.org',
+    hashMode: true
+  },
 
   content: {
     // https://content.nuxtjs.org/configuration
