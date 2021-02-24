@@ -137,7 +137,7 @@ export async function i18nContent (options: string | { name: string, map: { [fro
     .map(async ({ code }: { code: string }): Promise<{ code: string, data: any }> => {
       const actualCode = map[code] ?? code
       return {
-        code: actualCode,
+        code,
         data: await $content(`${pageName}_${actualCode}`).fetch()
       }
     })
