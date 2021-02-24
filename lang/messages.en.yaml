@@ -2,7 +2,8 @@ weblate:
   title: School Lunch 2050
   pages:
     about:
-      full: About
+      full: What is School Lunch 2050?
+      short: About
     cosmopolitan:
       full: Global Green Illusion
       short: Illusion

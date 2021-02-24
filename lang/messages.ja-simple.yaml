@@ -2,7 +2,8 @@ weblate:
   title: きゅうしょく 2050年
   pages:
     about:
-      full: ページについて
+      full: <ruby>給食<rt>きゅうしょく</rt></ruby> 2050年ってなんですか？
+      short: ページについて
     cosmopolitan:
       full: <ruby>地球<rt>ちきゅう</rt></ruby>にやさしいはずがまぼろし　
       short: まぼろし

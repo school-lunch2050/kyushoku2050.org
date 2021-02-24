@@ -406,8 +406,6 @@ footer section {
   }
 }
 .footer--common {
-  border-top: 1px solid $col-accent-grey;
-  justify-content: center;
   & a {
     padding: 25px 10px;
     color: $col-nav-inactive;
@@ -421,21 +419,32 @@ footer section {
     text-align: center;
   }
 }
-article {
-  background: $col-content-side;
-  display: flex;
-  justify-content: center;
-}
-.nuxt-content {
-  max-width: 960px;
-  width: 100%;
-  background: $col-content-bg;
-  padding: 1em 1.5em 2.5em 4em;
-  h1 {
-    font-weight: normal;
-    font-size: 2em;
-    display: inline-block;
-    break-after: always;
-    border-bottom: 2px solid $col-accent;
+.layout--content {
+  header {
+    img {
+      height: 5em;
+    }
+  }
+  article {
+    background: $col-content-side;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    h1 {
+      font-weight: normal;
+      font-size: 2em;
+      display: inline-block;
+      break-after: always;
+      border-bottom: 2px solid $col-accent;
+    }
+
+    .content--box {
+      max-width: 960px;
+      width: 100%;
+      background: $col-content-bg;
+      padding: 1em 1.5em 2em 4em;
+    }
   }
 }
