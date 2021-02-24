@@ -1,6 +1,5 @@
 <template>
   <div id="layout">
-    <language-header />
     <Nuxt :nuxt-child-key="'default'" />
     <kyushoku-footer />
   </div>

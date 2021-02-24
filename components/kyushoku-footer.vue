@@ -10,7 +10,7 @@
     </section>
     <section class="footer--common">
       <nuxt-link :to="localePath('/about')">
-        <text-box key="weblate.pages.about.full" />
+        <text-box key="weblate.pages.about.short" />
       </nuxt-link>
       <a href="mailto:feast@chikyu.ac.jp" target="_blank">
         <text-box key="weblate.menu.footer.contact" />
@@ -22,5 +22,23 @@
         <text-box key="weblate.menu.footer.feedback" />
       </nuxt-link>
     </section>
+    <section class="footer--lang">
+      <language-link
+        v-for="locale in availableLocales"
+        :key="locale.code"
+        :locale="locale"
+      />
+    </section>
   </footer>
 </template>
+<script type="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  computed: {
+    availableLocales () {
+      return (this.$i18n?.locales ?? []).map(entry => (typeof entry === 'string') ? { code: entry } : entry)
+    }
+  }
+})
+</script>

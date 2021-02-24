@@ -1,6 +1,6 @@
 <template>
-  <div class="detail-header">
-    <nuxt-link :to="{ path: localePath('/main'), hash: type }" class="detail-header--back font--tex">
+  <header class="detail-header font--tex">
+    <nuxt-link :to="{ path: localePath('/main'), hash: type }" class="detail-header--back">
       &lt;
     </nuxt-link>
     <h1 class="detail-header--title">
@@ -9,7 +9,7 @@
     <div class="detail-header--progress">
       <text-box key="weblate.scenario.progress.active" :values="{ percent: percent() }" />
     </div>
-  </div>
+  </header>
 </template>
 <script lang="ts">
 import Vue from 'vue'

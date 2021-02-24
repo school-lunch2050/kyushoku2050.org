@@ -36,39 +36,11 @@ footer, header {
   background: $col-bg;
   width: 100%;
 }
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-main,
 footer {
   border-top: 5px solid $col-accent-grey;
 }
-.lang--link {
-  height: 2em;
-  display: flex;
-  padding: 0 1.2em;
-  justify-content: center;
-  align-items: center;
-  border-width: 1px;
-  border-color: $col-accent-grey;
-  border-left-style: solid;
-}
-.lang--link:last-child {
-  border-right-style: solid;
-}
-.lang--button {
-  text-decoration: none;
-  color: $col-nav-inactive;
-}
-.lang--active,
-.lang--button:hover {
-  color: $col-nav-active;
-  background-color: $col-active-fill;
-}
-.lang--active {
-  cursor: default;
+header {
+  border-bottom: 5px solid $col-accent-grey;
 }
 
 .font--nav, .font--nav--en,
@@ -226,7 +198,6 @@ html[lang="ja-simple"] {
 }
 .detail-header {
   color: white;
-  width: 100%;
   font-size: 30px;
   font-weight: bold;
   background-color: #0C1408;
@@ -418,6 +389,36 @@ footer section {
     flex-direction: column;
     text-align: center;
   }
+}
+.footer--lang,
+.footer--common {
+  justify-content: center;
+  border-top: 1px solid $col-accent-grey;
+}
+.lang--link {
+  height: 2em;
+  display: flex;
+  padding: 0 1.2em;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px;
+  border-color: $col-accent-grey;
+  border-left-style: solid;
+}
+.lang--link:last-child {
+  border-right-style: solid;
+}
+.lang--button {
+  text-decoration: none;
+  color: $col-nav-inactive;
+}
+.lang--active,
+.lang--button:hover {
+  color: $col-nav-active;
+  background-color: $col-active-fill;
+}
+.lang--active {
+  cursor: default;
 }
 .layout--content {
   header {
