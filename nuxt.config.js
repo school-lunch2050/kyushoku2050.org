@@ -113,6 +113,7 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icons: false,
     manifest: {
       name: '給食 2050 - School Lunch 2050',
       short_name: 'Lunch 2050',
@@ -126,7 +127,7 @@ export default {
         for (const size of sizes) {
           const sizes = `${size}x${size}`
           all.push({
-            src: `static/img/favicon/${prefix}-${sizes}.png`,
+            src: `/img/favicon/${prefix}-${sizes}.png`,
             sizes,
             type
           })
