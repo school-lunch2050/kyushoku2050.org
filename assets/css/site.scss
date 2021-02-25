@@ -272,9 +272,9 @@ html[lang="ja-simple"] {
       background-size: 200px 8000px;
       background-position: right;
       background-repeat: no-repeat;
-      transition: 1s all linear;
+      transition: 1s background-size linear;
     }
-    transition: 3s all linear;
+    transition: 3s background-size linear;
     line-height: 1.5em;
     &.bubble-text--seen {
       &, & rt {
