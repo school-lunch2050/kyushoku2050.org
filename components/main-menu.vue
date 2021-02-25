@@ -92,12 +92,6 @@ function mark (store: Store<any>, type: string) {
   store.commit('progress/mark', type)
 }
 
-function onActive (this: Vue) {
-  if (!this.$props.selected) {
-    this.$store.commit('progress/mark', 'menu')
-  }
-}
-
 export default Vue.extend({
   props: {
     prev: {
@@ -156,8 +150,6 @@ export default Vue.extend({
       }
     }
   },
-  mounted: onActive,
-  updated: onActive,
   methods: {
     gotoMain () {
       const { location } = this.$router.resolve({ hash: '#' }, this.$route)

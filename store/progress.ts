@@ -5,7 +5,6 @@ const f11Items = fItems / 11
 const fMenu = 0.5
 
 const factors = {
-  menu: 1,
   cosmopolitan: fMenu,
   'cosmopolitan.fruit': f7Items,
   'cosmopolitan.rice': f7Items,
