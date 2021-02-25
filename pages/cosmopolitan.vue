@@ -64,6 +64,6 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'PageCosmopolitan',
-  key: 'main'
+  key: route => route.fullPath
 })
 </script>

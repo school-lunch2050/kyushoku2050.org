@@ -19,6 +19,6 @@
 <script>
 export default {
   name: 'PageWeather',
-  key: 'main'
+  key: route => route.fullPath
 }
 </script>

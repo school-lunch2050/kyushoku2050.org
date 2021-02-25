@@ -16,6 +16,6 @@
 <script>
 export default {
   name: 'PageLunch',
-  key: 'main'
+  key: route => route.fullPath
 }
 </script>

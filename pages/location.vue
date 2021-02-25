@@ -19,6 +19,6 @@
 <script>
 export default {
   name: 'PageLocation',
-  key: 'main'
+  key: route => route.fullPath
 }
 </script>

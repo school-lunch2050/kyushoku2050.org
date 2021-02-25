@@ -7,7 +7,7 @@ import { i18nContent } from '../lib'
 
 export default Vue.extend({
   name: 'About',
-  key: 'about',
+  key: route => route.fullPath,
   layout: 'content',
   asyncData: i18nContent.bind(null, 'about')
 })

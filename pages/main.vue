@@ -6,6 +6,6 @@
 <script>
 export default {
   name: 'PageMain',
-  key: 'main'
+  key: route => route.fullPath
 }
 </script>

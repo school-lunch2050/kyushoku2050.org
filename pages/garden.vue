@@ -94,6 +94,6 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'PageGarden',
-  key: 'main'
+  key: route => route.fullPath
 })
 </script>

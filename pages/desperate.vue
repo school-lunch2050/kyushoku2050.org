@@ -64,7 +64,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'PageDesperate',
-  key: 'main'
+  key: route => route.fullPath
 })
 </script>
 <style lang="css" scoped>

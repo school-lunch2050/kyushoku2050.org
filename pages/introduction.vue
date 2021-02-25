@@ -14,7 +14,7 @@
 <script>
 export default {
   name: 'PageIntroduction',
-  key: 'main'
+  key: route => route.fullPath
 }
 </script>
 <style lang="scss">
