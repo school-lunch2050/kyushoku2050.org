@@ -1,7 +1,7 @@
 <template>
   <!-- eslint-disable vue/max-attributes-per-line -->
   <div>
-    <lunch-detail type="cosmopolitan">
+    <main-menu prev="/main" active selected="cosmopolitan">
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/cosmopolitan.webp">
       <text-box key="weblate.pages.cosmopolitan.full" class="illustration--title font--tex" x="550" y="70" width="2000" height="180" font-size="100" align="center" vertical-align="center" />
       <bubble-text
@@ -57,13 +57,13 @@
         :font-size="{ en: 29, ja: 24 }"
         padding="12px 15px 10px 27px"
       />
-    </lunch-detail>
+    </main-menu>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
   name: 'PageCosmopolitan',
-  layout: 'detail'
+  key: 'main'
 })
 </script>

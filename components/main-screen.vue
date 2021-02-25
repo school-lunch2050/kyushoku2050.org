@@ -3,7 +3,7 @@
     <main class="main--main-screen">
       <keep-alive>
         <view-box
-          :class="`main-screen ${lunchType === null ? 'main-screen--cb-only' : 'main-screen--cb-lunch'}`"
+          class="main-screen"
           width="2736"
           height="3200"
         >
@@ -15,27 +15,24 @@
               :next="next"
               :prev="prev"
             >
-              <slot />
+              <slot name="chalkboard" />
             </chalkboard>
           </div>
-          <nuxt-link-plus
-            :to="lunchType && lunchType !== '!' ? localePath(`/${lunchType}`) : ''"
-            class="lunch--box"
-          >
-            <lunch
-              x="100"
-              y="1850"
-              :width="lun"
-              :height="lun / 3874 * 1926"
-              :type="lunchType || '?'"
-            />
-          </nuxt-link-plus>
+          <lunch
+            v-if="lunchType"
+            x="100"
+            y="1850"
+            :width="lun"
+            :height="lun / 3874 * 1926"
+            :type="lunchType"
+          />
         </view-box>
       </keep-alive>
+      <slot name="body" />
     </main>
   </keep-alive>
 </template>
-<script type="ts">
+<script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
@@ -51,22 +48,6 @@ export default Vue.extend({
     next: {
       type: String,
       default: null
-    },
-    width: {
-      type: [String, Number],
-      default: '100vmin'
-    },
-    height: {
-      type: [String, Number],
-      default: '100vmin'
-    },
-    x: {
-      type: [String, Number],
-      default: null
-    },
-    y: {
-      type: [String, Number],
-      default: null
     }
   },
   data () {
@@ -81,21 +62,5 @@ export default Vue.extend({
 .cb--box {
   position: relative;
   z-index: 1;
-}
-.lunch--box,
-.cb--box {
-  transition: all 2s;
-}
-.main-screen--cb-only .lunch--box {
-  opacity: 0;
-}
-.main-screen--cb-lunch .lunch--box {
-  opacity: 1;
-}
-.main-screen--cb-only .cb--box {
-  transform: translateY(620px);
-}
-.main-screen--cb-lunch .cb--box {
-  transform: translate(0px);
 }
 </style>

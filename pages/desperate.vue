@@ -1,7 +1,7 @@
 <template>
   <!-- eslint-disable vue/max-attributes-per-line -->
   <div>
-    <lunch-detail type="desperate">
+    <main-menu prev="/main" active selected="desperate">
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/desperate.webp">
       <text-box key="weblate.pages.desperate.full" class="illustration--title font--tex" x="550" y="40" width="1900" height="200" font-size="100" align="center" vertical-align="center" />
       <bubble-text
@@ -57,14 +57,14 @@
         font-size="37px"
         padding="25px"
       />
-    </lunch-detail>
+    </main-menu>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
   name: 'PageDesperate',
-  layout: 'detail'
+  key: 'main'
 })
 </script>
 <style lang="css" scoped>

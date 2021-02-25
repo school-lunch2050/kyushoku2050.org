@@ -1,5 +1,6 @@
 <template>
   <div class="layout layout--content">
+    <sidebar />
     <header>
       <nuxt-link :to="localePath('/')">
         <img src="~/static/img/logo.webp" :alt="$t('weblate.title')">
@@ -13,7 +14,6 @@
         <Nuxt :nuxt-child-key="'detail'" />
       </div>
     </article>
-    <kyushoku-footer />
   </div>
 </template>
 <script>

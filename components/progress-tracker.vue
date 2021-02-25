@@ -1,15 +1,9 @@
 <template>
-  <header class="detail-header font--tex">
-    <nuxt-link :to="{ path: localePath('/main'), hash: type }" class="detail-header--back">
-      &lt;
-    </nuxt-link>
-    <h1 class="detail-header--title">
-      <text-box :key="`weblate.pages.${type}.short`" />
-    </h1>
-    <div class="detail-header--progress">
+  <client-only>
+    <div v-if="percent() > 0" class="progress font--tex">
       <text-box key="weblate.scenario.progress.active" :values="{ percent: percent() }" />
     </div>
-  </header>
+  </client-only>
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -36,12 +30,6 @@ function activate (this: Vue & { percent: () => number }) {
 }
 
 export default Vue.extend({
-  props: {
-    type: {
-      type: String,
-      required: true
-    }
-  },
   mounted: activate,
   activated: activate,
   deactivated () {

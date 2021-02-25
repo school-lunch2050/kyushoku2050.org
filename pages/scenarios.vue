@@ -9,6 +9,6 @@
 <script>
 export default {
   name: 'PageScenarios',
-  key: route => route.fullPath
+  key: 'main'
 }
 </script>

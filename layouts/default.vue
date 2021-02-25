@@ -1,7 +1,8 @@
 <template>
   <div id="layout">
+    <sidebar />
     <Nuxt :nuxt-child-key="'default'" />
-    <kyushoku-footer />
+    <progress-tracker />
   </div>
 </template>
 <script>

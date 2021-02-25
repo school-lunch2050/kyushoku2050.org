@@ -43,6 +43,8 @@ weblate:
     weather:
       full: Weather
   menu:
+    open: Open Menu
+    close: Close Menu
     footer:
       contact: Contact
       feedback: Feedback

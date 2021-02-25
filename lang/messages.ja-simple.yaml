@@ -37,6 +37,8 @@ weblate:
     weather:
       full: <ruby>温暖化<rt>おんだんか</rt></ruby>
   menu:
+    open: メニュー開く
+    close: メニュー閉じる
     footer:
       contact: <ruby>連絡<rt>れんらく</rt></ruby>
       feedback: フィードバック

@@ -1,11 +1,11 @@
 <template>
   <client-only>
-    <main-menu prev="/scenarios" active :selected="($route.hash || '').substr(1)" />
+    <main-menu prev="/scenarios" active />
   </client-only>
 </template>
 <script>
 export default {
   name: 'PageMain',
-  key: route => route.fullPath
+  key: 'main'
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <!-- eslint-disable vue/max-attributes-per-line -->
   <div>
-    <lunch-detail type="garden">
+    <main-menu prev="/main" active selected="garden">
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/garden.webp">
       <text-box key="weblate.pages.garden.full" class="illustration--title font--tex" x="680" y="20" width="1915" height="180" font-size="100" align="center" vertical-align="center" />
       <bubble-text
@@ -87,13 +87,13 @@
         :font-size="{ en: 33, ja: 23, 'ja-simple': 29 }"
         padding="20px 46px"
       />
-    </lunch-detail>
+    </main-menu>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
   name: 'PageGarden',
-  layout: 'detail'
+  key: 'main'
 })
 </script>

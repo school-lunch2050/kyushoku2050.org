@@ -34,6 +34,8 @@ weblate:
     weather:
       full: 温暖化
   menu:
+    open: メニュー開く
+    close: メニュー閉じる
     footer:
       contact: 連絡
       feedback: フィードバック

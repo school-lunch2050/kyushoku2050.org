@@ -8,7 +8,7 @@ import { i18nContent } from '../lib'
 export default Vue.extend({
   name: 'PrivacyPolicy',
   layout: 'content',
-  key: route => route.fullPath,
+  key: 'privacy-policy',
   asyncData: i18nContent.bind(null, {
     name: 'privacy-policy',
     map: { 'ja-simple': 'ja' }

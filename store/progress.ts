@@ -6,10 +6,6 @@ const fMenu = 0.5
 
 const factors = {
   menu: 1,
-  'menu.cosmopolitan': 0.25,
-  'menu.desperate': 0.25,
-  'menu.gamble': 0.25,
-  'menu.garden': 0.25,
   cosmopolitan: fMenu,
   'cosmopolitan.fruit': f7Items,
   'cosmopolitan.rice': f7Items,
