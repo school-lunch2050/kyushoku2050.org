@@ -3,6 +3,7 @@ import { Context } from '@nuxt/types'
 /* eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars */
 import { IContentOptions } from '@nuxt/content'
 import Vue from 'vue'
+import sanitize from 'sanitize-html'
 
 export function numberStyle (node: HTMLElement, attr: 'width' | 'height' | 'left' | 'top'): number {
   const value = node.style[attr]
@@ -87,8 +88,24 @@ function metas (metas: { [name: string]: string }) {
   return Object.entries(metas).map(([name, content]) => meta(name, content))
 }
 
-function removeRuby (text: string): string {
+export function removeRuby (text: string): string {
   return text.replace(/<rt>(.*?)<\/rt>|<\/?ruby>|<br>/img, '').split('\n').join('').trim()
+}
+
+function countChars (str: string): number {
+  return sanitize(removeRuby(str)).length
+}
+
+const countCharsCache: { [key: string]: number } = {}
+export function countCharsCached (stringy: { toString(): string }): number {
+  const str = stringy.toString()
+  const cached = countCharsCache[str]
+  if (cached !== undefined) {
+    return cached
+  }
+  const count = countChars(str)
+  countCharsCache[str] = count
+  return count
 }
 
 export function head ({ $i18n, $route }: Vue) {

@@ -21,6 +21,8 @@ interface Options {
   align: string | null
   verticalAlign: string | null
   padding: string | null
+  margin: string | null,
+  customStyle: Object | null
 }
 
 const i18nLookups: { [key: string]: string[] } = {}
@@ -50,7 +52,7 @@ function getI18nSize (input: { [locale: string]: number }, i18n: IVueI18n): numb
 }
 
 function createStyle (options: Options, i18n: IVueI18n): { isDynamic: boolean, style: string, useDiv: boolean } {
-  const { x, y, width, height, padding } = options
+  const { x, y, width, height, padding, margin, customStyle } = options
   let { align, verticalAlign, fontSize, lineHeight } = options
   if (align && /\w+\s+\w+/.test(align)) {
     const parts = align.split(' ')
@@ -83,8 +85,10 @@ function createStyle (options: Options, i18n: IVueI18n): { isDynamic: boolean, s
       fontSize,
       lineHeight,
       padding,
+      margin,
       width,
-      height
+      height,
+      ...(typeof customStyle === 'object' ? customStyle : {} as any)
     })
   }
 }
@@ -127,11 +131,19 @@ export default Vue.extend({
       type: String,
       default: null
     },
+    margin: {
+      type: String,
+      default: null
+    },
     text: {
       type: String,
       default: null
     },
     values: {
+      type: Object,
+      default: null
+    },
+    customStyle: {
       type: Object,
       default: null
     }
@@ -141,7 +153,7 @@ export default Vue.extend({
   },
   computed: {
     html () {
-      const text = sanitize(this.$props.text ?? this.$i18n.t(String(this.$vnode.key), this.$props.values).toString(), {
+      const text = sanitize(this.$props.text ?? this.$i18n.t(String(this.$vnode.key).replace(/#(.*)/, ''), this.$props.values).toString(), {
         allowedTags: ['ruby', 'rt', 'rtc', 'br']
       })
       return text.replace(/@\[(.*?)\|(.*?)\|(.*?)\]/g, (_, name, src, alt) => {

@@ -272,21 +272,37 @@ html[lang="ja-simple"] {
 .i18n-box--placed {
   display: flex;
 }
-.bubble-text--content span {
-  line-height: 1.5em;
+.bubble-text--content {
+  position: absolute;
+  & span {
+    &, & rt {
+      user-select: none;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2Pg4uL6DwABXgEewyNBSAAAAABJRU5ErkJggg==);
+      background-size: 200px 8000px;
+      background-position: right;
+      background-repeat: no-repeat;
+      transition: 1s all linear;
+    }
+    transition: 3s all linear;
+    line-height: 1.5em;
+    &.bubble-text--seen {
+      &, & rt {
+        user-select: text;
+        background-size: 0px 8000px !important;
+      }
+    }
+  }
+}
+.bubble-text--padding {
+  padding: 0.3em 0.7em;
+}
+.bubble-text--seen {
+  background-size: 0
 }
 html[lang="ja"],
 html[lang="ja-simple"] {
   & .bubble-text--content span {
     line-height: 1.7em;
-  }
-}
-.bubble-text--content {
-  position: absolute;
-  display: flex;
-
-  span {
-    padding: 0.3em 0.7em;
   }
 }
 .bubble-text--link {
