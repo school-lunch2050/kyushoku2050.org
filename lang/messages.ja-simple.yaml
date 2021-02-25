@@ -1,9 +1,9 @@
 weblate:
-  title: きゅうしょく 2050年
+  title: きゅうしょく 2050
   description: 2050年の学校給食のシナリオの検討。
   pages:
     about:
-      full: <ruby>給食<rt>きゅうしょく</rt></ruby> 2050年ってなんですか？
+      full: <ruby>給食<rt>きゅうしょく</rt></ruby> 2050ってなんですか？
       short: ページについて
     cosmopolitan:
       full: <ruby>地球<rt>ちきゅう</rt></ruby>にやさしいはずがまぼろし　
@@ -25,23 +25,23 @@ weblate:
     introduction:
       full: <ruby>紹介<rt>しょうかい</rt></ruby>
     location:
-      full: 場所
+      full: <ruby>場所<rt>ばしょ</rt></ruby>
     lunch:
       full: ランチについて
     main:
-      full: シナリオ選択
+      full: シナリオ<ruby>選択<rt>せんたく</rt></ruby>
     privacy-policy:
       full: Privacy Policy
     scenarios:
-      full: シナリオ紹介
+      full: シナリオ<ruby>紹介<rt>しょうかい</rt></ruby>
     weather:
-      full: 温暖化
+      full: <ruby>温暖化<rt>おんだんか</rt></ruby>
   menu:
     footer:
       contact: <ruby>連絡<rt>れんらく</rt></ruby>
       feedback: フィードバック
       feast: Feast - みんなで作る「いただきます」
-      rihn: 大学共同利用機関法人　人間文化研究機構 総合地球環境学研究所
+      rihn: <ruby>大学共同利用機関法人<rt>だいがくきょうどうりようきかんほうじん</rt></ruby>　<ruby>人間文化研究機構<rt>にんげんぶんかけんきゅうきこう</rt></ruby> <ruby>総合地球環境学研究所<rt>そうごうちきゅうかんきょうがくけんきゅうしょ</rt></ruby>
     actions:
       skip: スキップ >
       next: 次へ >
@@ -50,23 +50,23 @@ weblate:
     start:
       text: |
         ３０<ruby>年<rt>ねん</rt>後<rt>ご</rt></ruby>に<br/>
-        地球は<br/>
-        変わります。<br/>
+        <ruby>地球<rt>ちきゅう</rt></ruby>は<br/>
+        <ruby>変<rt>か</rt></ruby>わります。<br/>
     lunch:
       text: |
         …<br/>
-        結果的にランチも<br/>
+         <ruby>結果的<rt>けっかてき</rt></ruby>にランチも<br/>
         変わります。
     introduction:
       text: |
-        私たち「@[logo|/img/logo_feast_ja.webp|Feast]」チーム。<br/>
-        データを見て<br/>
-        ②つの要因を特定<br/>
-        ランチに影響を与える
+        <ruby>私<rt>わたし</rt></ruby>たち「@[logo|/img/logo_feast_ja.webp|Feast]」チームは<br/>
+        データを<ruby>元<rt>もと</rt></ruby>に<br/>
+        ランチに<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>える
+        ②つの<ruby>要因<rt>よういん</rt></ruby>を<ruby>特定<rt>とくてい</rt></ruby>しました。<br/>
     weather:
       title: |
         要因 ①<br/>
-        地球温暖化を制限できるのか？
+        地球温暖化を<ruby>制限<rt>せいげん</rt></ruby>できるのか？
       less:
         text: 1.5°?
         links:
@@ -78,25 +78,25 @@ weblate:
     location:
       title: |
         要因 ②<br/>
-        私たちの食べ物はどこから来るのか？
+        私たちの食べものはどこから来るのか？
       near:
-        text: 国内?
+        text: <ruby>国内<rt>こくない</rt></ruby>?
       far:
-        text: 海外?
+        text: <ruby>海外<rt>かいがい</rt></ruby>?
     scenario:
       title: |
-        これは、4つのシナリオがあることを意味します
+        これは、4つのシナリオがあることを<ruby>意味<rt>いみ</rt></ruby>します
   main:
     title: |
-      各シナリオをクリックすると詳細が表示されます
+      <ruby>各<rt>かく</rt></ruby>シナリオをクリックすると<ruby>詳細<rt>しょうさい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます
     hint: |
-      クリックすると<br/>
-      もっと学ぶ
+      クリックして<br/>
+      もっと<ruby>学<rt>まな</rt></ruby>ぶ
     grid:
       near: 国内
-      far: 国外
-      warm: 暑い
-      hot: あ〜つい
+      far: 海外
+      warm: <ruby>暖<rt>あたた</rt></ruby>かい
+      hot: <ruby>暑<rt>あつ</rt></ruby>い
   scenario:
     actions:
       notes: ノート
@@ -104,22 +104,22 @@ weblate:
       more: もっと学ぶ
     progress:
       active: |
-        {percent}% を読み
-        終わった
+        {percent}% を<ruby>読<rt>よ</rt></ruby>み
+        <ruby>終<rt>お</rt></ruby>えました
       finished: |
-        素晴らしい！
-        全てを読み
-        終わった
+        <ruby>素晴<rt>すば</rt></ruby>らしい！
+        <ruby>全<rt>すべ</rt></ruby>て読み
+        終わりました
       click:
-        (クリック) 意見
-        を教えてくれきませんか？
+        (クリック) ご<ruby>意見<rt>いけん</rt></ruby>を
+        お<ruby>聞<rt>き</rt></ruby>かせください
   cosmopolitan:
     ingredients:
       # Filled by messages.ja.yml, you can override these if you like
     bubbles:
       fruit: 
         text: |
-          日本はアジアやアフリカのお金持ちのために三角形メロンや巨大イチゴを作っています。農家に種を選ぶ権利はなく、政府が決めています。生物多様性や地域の食文化は、失われました。
+          <ruby>日本<rt>にほん</rt></ruby>はアジアやアフリカのお<ruby>金持<rt>かねも</rt></ruby>ちのために<ruby>三角形<rt>さんかっけい</rt></ruby>メロンや<ruby>巨大<rt>きょだい</rt></ruby>イチゴを作っています。<ruby>農家<rt>のうか</rt></ruby>に<ruby>種<rt>たね</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ<ruby>権利<rt>けんり</rt></ruby>はなく、<ruby>政府<rt>せいふ</rt></ruby>が<ruby>決<rt>き</rt></ruby>めています。<ruby>生物多様性<rt>せいぶつたようせい</rt></ruby>や<ruby>地域<rt>ちいき</rt></ruby>の<ruby>食文化<rt>しょくぶんか</rt></ruby>は、<ruby>失<rt>うしな</rt></ruby>われました。
       agreements:
         text: |
           国民の栄養量から逆算して貿易のルールを決めています。人々は環境負荷が大きい牛や豚のかわりに大豆や菌類、藻類由来の「疑似肉」や「疑似チーズ」を食べています。
