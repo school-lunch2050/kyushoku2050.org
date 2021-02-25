@@ -363,7 +363,7 @@ html[lang="ja-simple"] {
   background: $col-bg;
   position: absolute;
   left: -40vmax;
-  left: calc(-20vmax - 5);
+  left: calc(-20em - 5px);
   top: 0;
   z-index: 2;
   overflow-x: none;
