@@ -314,11 +314,12 @@ html[lang="ja-simple"] {
   flex-direction: column;
   align-items: center;
 }
-.sidebar--partner {
+.sidebar .sidebar--partner {
   padding-bottom: 2em;
   & a {
+    padding: 0;
     flex: 1;
-    max-width: 450px;
+    width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
@@ -367,7 +368,7 @@ html[lang="ja-simple"] {
   z-index: 2;
   overflow-x: none;
   overflow-y: scroll;
-  width: 35vmax;
+  width: 20em;
   height: 100%;
   height: -webkit-fill-available;
   border-right: 5px solid $col-accent-grey;
