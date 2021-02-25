@@ -211,7 +211,6 @@ html[lang="ja-simple"] {
   background: $col-gradient-end;
 }
 .lunch-detail--lunch {
-  @extend %gradient;
   display: flex;
   justify-content: center;
   svg {
@@ -313,9 +312,6 @@ html[lang="ja-simple"] {
   flex-direction: column;
   width: 100%;
   min-height: 100%;
-}
-.main-screen {
-  @extend %gradient;
 }
 .main-screen .view-box--canvas {
   display: flex;
@@ -428,17 +424,16 @@ html[lang="ja-simple"] {
     left: 0;
   }
 }
-.layout--content {
+.layout {
+  @extend %gradient;
   width: 100%;
+  min-height: 100vh;
   article {
-    @extend %gradient;
-    min-height: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: stretch;
     flex-direction: column;
-    min-height: 100vh;
 
     header {
       margin: 0 0.5em;
