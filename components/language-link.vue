@@ -1,12 +1,8 @@
 <template>
   <fragment>
-    <div v-if="active" :class="`active lang--link font--nav--${locale.code}`">
-      {{ name }}
-    </div>
     <nuxt-link
-      v-else
       :to="switchLocalePath(locale.code)"
-      :class="`lang--link font--nav--${locale.code}`"
+      :class="{ 'lang--link': true, [`font--nav--${locale.code}`]: true, 'nuxt-link-exact-active': active }"
     >
       {{ name }}
     </nuxt-link>

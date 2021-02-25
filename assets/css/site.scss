@@ -404,19 +404,24 @@ html[lang="ja-simple"] {
 .sidebar--entries {
   border-bottom: 1px solid $col-accent-grey;
 }
-.sidebar a,
-.sidebar .lang--link {
+%sidebar-focussed {
+  outline: none;
+  color: $col-nav-active;
+  background-color: $col-active-fill;
+}
+.sidebar a {
   padding: 0.5em 1.2em;
   text-decoration: none;
   color: $col-nav-inactive;
-  &.active,
   &:hover,
   &:focus {
-    outline: none;
-    color: $col-nav-active;
-    background-color: $col-active-fill;
+    @extend %sidebar-focussed;
   }
-  &.active:before {
+}
+.sidebar a.nuxt-link-exact-active,
+.sidebar--entries--indent a.nuxt-link-active {
+  @extend %sidebar-focussed;
+  &:before {
     content: '►';
     position: absolute;
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
