@@ -106,10 +106,10 @@ weblate:
       more: もっと学ぶ
     progress:
       active: |
-        {percent}% を<ruby>読<rt>よ</rt></ruby>み
+        {percent}% を<ruby>読<rt>よ</rt></ruby>み<br/>
         <ruby>終<rt>お</rt></ruby>えました
       finished: |
-        <ruby>素晴<rt>すば</rt></ruby>らしい！
+        <ruby>素晴<rt>すば</rt></ruby>らしい！<br/>
         <ruby>全<rt>すべ</rt></ruby>て読み
         終わりました
       click:

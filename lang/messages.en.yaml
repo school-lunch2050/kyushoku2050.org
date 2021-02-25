@@ -111,14 +111,14 @@ weblate:
       more: Learn more
     progress:
       active: |
-        {percent}% finished
+        {percent}% finished<br/>
         reading
       finished: |
-        Awesome!
-        You looked at
+        Awesome!<br/>
+        You looked at<br/>
         everything!
       click:
-        (click) Let us know
+        (click) Let us know<br/>
         what you think!
   cosmopolitan:
     ingredients:
