@@ -21,7 +21,7 @@
       <bubble-text
         key="garden.seed_banks"
         bubble="3044 248 3044 593 2339 593 2339 248"
-        :view-rect="{ x: 2313, y: 223, width: 844, height: 755 }"
+        :view-rect="{ x: 1580, y: 223, width: 1550, height: 755 }"
         :rect="{ x: 2339, y: 248, width: 705, height: 345 }"
         :font-size="{ en: 36, ja: 28, 'ja-simple': 29 }"
         padding="37px"
