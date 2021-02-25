@@ -442,17 +442,13 @@ html[lang="ja-simple"] {
 
     header {
       margin: 0 0.5em;
-      background: lighten(#333C2F, 5%);
     }
     .content--home-link {
       display: flex;
       img {
+        margin: 1em;
         width: 95px;
       }
-      color: white;
-      text-decoration: none;
-      font-size: 2.2em;
-      flex-direction: row;
       span {
         margin-left: 0.3em;
       }
