@@ -47,6 +47,9 @@ function getViewbox (vue: Vue): Viewbox | null {
 
 function start (this: Vue) {
   const { container, canvas } = this.$refs
+  if (updateMap.get(this)) {
+    return
+  }
   if (!(container instanceof HTMLElement)) {
     console.warn('container is missing!')
     return
