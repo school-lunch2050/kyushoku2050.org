@@ -1,10 +1,10 @@
 weblate:
-  title: きゅうしょく 2050
-  description: 2050年の学校給食のシナリオの検討。
+  title: 給食 2050
+  description: 2050年の学校給食のシナリオを考えよう。
   pages:
     about:
       full: <ruby>給食<rt>きゅうしょく</rt></ruby> 2050ってなんですか？
-      short: ページについて
+      short: このサイトについて
     cosmopolitan:
       full: <ruby>地球<rt>ちきゅう</rt></ruby>にやさしいはずがまぼろし　
       short: まぼろし
@@ -21,28 +21,28 @@ weblate:
       short: |
         <ruby>庭<rt>にわ</rt></ruby>
     index: 
-      full: <ruby>初<rt>はじ</rt></ruby>めに
+      full: サイトマップ
     introduction:
-      full: <ruby>紹介<rt>しょうかい</rt></ruby>
+      full: はじめに
     location:
       full: <ruby>場所<rt>ばしょ</rt></ruby>
     lunch:
-      full: ランチについて
+      full: <ruby>給食<rt>きゅうしょく</rt></ruby> について
     main:
-      full: シナリオ<ruby>選択<rt>せんたく</rt></ruby>
+      full: シナリオを<ruby>選<rt>えら</rt></ruby>ぶ
     privacy-policy:
-      full: Privacy Policy
+      full: プライバシーポリシー
     scenarios:
       full: シナリオ<ruby>紹介<rt>しょうかい</rt></ruby>
     weather:
       full: <ruby>温暖化<rt>おんだんか</rt></ruby>
   menu:
-    open: メニュー開く
-    close: メニュー閉じる
+    open: メニューを<ruby>開<rt>ひら</rt></ruby>く
+    close: メニューを<ruby>閉<rt>と</rt></ruby>じる
     footer:
-      contact: <ruby>連絡<rt>れんらく</rt></ruby>
-      feedback: フィードバック
-      feast: Feast - みんなで作る「いただきます」
+      contact: <ruby>連絡先<rt>れんらくさき</rt></ruby>
+      feedback: ご意見
+      feast: FEAST - みんなで作<ruby><rt>つく</rt></ruby>る「いただきます」
       rihn: <ruby>大学共同利用機関法人<rt>だいがくきょうどうりようきかんほうじん</rt></ruby>　<ruby>人間文化研究機構<rt>にんげんぶんかけんきゅうきこう</rt></ruby> <ruby>総合地球環境学研究所<rt>そうごうちきゅうかんきょうがくけんきゅうしょ</rt></ruby>
     actions:
       skip: スキップ >
@@ -63,12 +63,12 @@ weblate:
       text: |
         <ruby>私<rt>わたし</rt></ruby>たち「@[logo|/img/logo_feast_ja.webp|Feast]」チームは<br/>
         データを<ruby>元<rt>もと</rt></ruby>に<br/>
-        ランチに<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>える
-        ②つの<ruby>要因<rt>よういん</rt></ruby>を<ruby>特定<rt>とくてい</rt></ruby>しました。<br/>
+        <ruby>給食<rt>きゅうしょく</rt></ruby> に<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えうる
+        ②つの<ruby>要素<rt>ようそ</rt></ruby>を<ruby>特定<rt>とくてい</rt></ruby>しました。<br/>
     weather:
       title: |
-        要因 ①<br/>
-        地球温暖化を<ruby>制限<rt>せいげん</rt></ruby>できるのか？
+        要素<rt>ようそ</rt></ruby> ①<br/>
+        <ruby>地球温暖化<rt>ちきゅうおんだんか</rt></ruby>を<ruby>制限<rt>せいげん</rt></ruby>できるのか？
       less:
         text: 1.5°?
         links:
@@ -79,39 +79,39 @@ weblate:
           - https://google.com
     location:
       title: |
-        要因 ②<br/>
-        私たちの食べものはどこから来るのか？
+        要素 ②<br/>
+        <ruby>私<rt>わたし</rt></ruby>たちの<ruby>食<rt>た</rt></ruby>べものがどこから来るか？
       near:
         text: <ruby>国内<rt>こくない</rt></ruby>?
       far:
         text: <ruby>海外<rt>かいがい</rt></ruby>?
     scenario:
       title: |
-        これは、4つのシナリオがあることを<ruby>意味<rt>いみ</rt></ruby>します
+        ここから、4つのシナリオを<ruby>考<rt>かんが</rt></ruby>えることができます。
   main:
     title: |
-      <ruby>各<rt>かく</rt></ruby>シナリオをクリックすると<ruby>詳細<rt>しょうさい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます
+      シナリオをクリックすると<ruby>詳細<rt>しょうさい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます。
     hint: |
       クリックして<br/>
-      もっと<ruby>学<rt>まな</rt></ruby>ぶ
+      <ruby>詳<rt>くわ</rt></ruby>しく<ruby>見<rt>み</rt></ruby>る
     grid:
-      near: 国内
-      far: 海外
-      warm: <ruby>暖<rt>あたた</rt></ruby>かい
-      hot: <ruby>暑<rt>あつ</rt></ruby>い
+      near: <ruby>国内<rt>こくない</rt></ruby>
+      far: <ruby>海外<rt>かいがい</rt></ruby>
+      warm: <ruby>暖<rt>あたた</rt></ruby>かくなる
+      hot: <ruby>暑<rt>あつ</rt></ruby>くなる
   scenario:
     actions:
       notes: ノート
       pdf: PDF
-      more: もっと学ぶ
+      more: <ruby>詳<rt>くわ</rt></ruby>しく<ruby>見<rt>み</rt></ruby>る
     progress:
       active: |
         {percent}% を<ruby>読<rt>よ</rt></ruby>み<br/>
-        <ruby>終<rt>お</rt></ruby>えました
+        <ruby>終<rt>お</rt></ruby>わりました
       finished: |
-        <ruby>素晴<rt>すば</rt></ruby>らしい！<br/>
+        おつかれさまです！
         <ruby>全<rt>すべ</rt></ruby>て読み
-        終わりました
+         <ruby>終<rt>お</rt></ruby>わりました
       click:
         (クリック) ご<ruby>意見<rt>いけん</rt></ruby>を
         お<ruby>聞<rt>き</rt></ruby>かせください
@@ -124,13 +124,13 @@ weblate:
           <ruby>日本<rt>にほん</rt></ruby>はアジアやアフリカのお<ruby>金持<rt>かねも</rt></ruby>ちのために<ruby>三角形<rt>さんかっけい</rt></ruby>メロンや<ruby>巨大<rt>きょだい</rt></ruby>イチゴを作っています。<ruby>農家<rt>のうか</rt></ruby>に<ruby>種<rt>たね</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ<ruby>権利<rt>けんり</rt></ruby>はなく、<ruby>政府<rt>せいふ</rt></ruby>が<ruby>決<rt>き</rt></ruby>めています。<ruby>生物多様性<rt>せいぶつたようせい</rt></ruby>や<ruby>地域<rt>ちいき</rt></ruby>の<ruby>食文化<rt>しょくぶんか</rt></ruby>は、<ruby>失<rt>うしな</rt></ruby>われました。
       agreements:
         text: |
-          国民の栄養量から逆算して貿易のルールを決めています。人々は環境負荷が大きい牛や豚のかわりに大豆や菌類、藻類由来の「疑似肉」や「疑似チーズ」を食べています。
+          <ruby>国民<rt>こくみん</rt></ruby>の<ruby>栄養量<rt>えいようりょう</rt></ruby>から<ruby>逆算<rt>ぎゃくさん</rt></ruby>して<ruby>貿易<rt>ぼうえき</rt></ruby>のルールを<ruby>決<rt>き</rt></ruby>めています。<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>環境負荷<rt>かんきょうふか</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きい<ruby>牛<rt>うし</rt></ruby>や<ruby>豚<rt>ぶた</rt></ruby>のかわりに<ruby>大豆<rt>だいず</rt></ruby>や<ruby>菌類<rt>きんるい</rt></ruby>、<ruby>藻類由来<rt>そうるいゆらい</rt></ruby>の「<ruby>疑似肉<rt>ぎじにく</rt></ruby>」や「<ruby>疑似<rt>ぎじ</rt></ruby>チーズ」を<ruby>食<rt>た</rt></ruby>べています。
       influencers:
         text: |
-          「インフルエンサー」がめずらしい外国の食べ物を流行らせ旬はなくなっています。
+          「インフルエンサー」がめずらしい<ruby>外国<rt>がいこく</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものを<ruby>流行<rt>はや</rt></ruby>らせ、<ruby>旬<rt>しゅん</rt></ruby>はなくなっています。
       fisheries:
         text: |
-          沿岸漁業がなくなり、漁業もハイテク化、養殖と遠洋漁業だけになりました。生の魚は今やめったに見ない贅沢品。ほとんどの魚が採ってすぐ洋上で冷凍されます。
+          <ruby>沿岸漁業<rt>えんがんぎょぎょう</rt></ruby>がなくなり、<ruby>漁業<rt>ぎょぎょう</rt></ruby>もハイテク化、<ruby>養殖<rt>ようしょく</rt></ruby>と<ruby>遠洋漁業<rt>えんようぎょぎょう</rt></ruby>だけになりました。生の魚は今やめったに見ない贅沢品。ほとんどの魚が採ってすぐ洋上で冷凍されます。
       social_businesses:
         text: |
           家族経営の農家はつぶれ、農業はドローンやAI、人工衛星を駆使する社会起業家たちが担っています。ハイテク技術をつかって資源を節約し、また味や形も一般向けに規格化されています。
