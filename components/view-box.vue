@@ -23,9 +23,8 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { ActivityMap, styleRect, toStyle, toPx, Rect } from '../lib'
+import { activeLifecycle, styleRect, toStyle, toPx, Rect } from '../lib'
 
-const activity = new ActivityMap()
 const updateMap = new WeakMap<any, Function>()
 interface Viewbox {
   id: string | null
@@ -43,60 +42,6 @@ function getViewbox (vue: Vue): Viewbox | null {
     return null
   }
   return getViewbox(container)
-}
-
-function start (this: Vue) {
-  const { container, canvas } = this.$refs
-  if (updateMap.get(this)) {
-    return
-  }
-  if (!(container instanceof HTMLElement)) {
-    console.warn('container is missing!')
-    return
-  }
-  if (!(canvas instanceof HTMLElement)) {
-    console.warn('canvas is missing!')
-    return
-  }
-  const full = {
-    id: null,
-    rect: styleRect(canvas)
-  }
-  const updateTarget = (smooth: boolean) => {
-    const { id, rect: target } = getViewbox(this) ?? full
-    const viewPort = {
-      x: 0,
-      y: 0,
-      height: container.offsetHeight,
-      width: container.offsetWidth
-    }
-    const vRatio = viewPort.width / viewPort.height
-    const scale = vRatio < target.ratio
-      ? full.rect.width / target.width * viewPort.width / full.rect.width
-      : full.rect.height / target.height * viewPort.height / full.rect.height
-
-    if ((canvas.dataset.id ?? null) !== id) {
-      if (!id) {
-        delete canvas.dataset.id
-      } else {
-        canvas.dataset.id = id
-      }
-      this.$forceUpdate()
-    }
-    canvas.style.transition = smooth ? this.$props.transition : ''
-    const transform = `scale(${scale}) translate(${-target.x - target.width / 2 + viewPort.width / (2 * scale)}px, ${-target.y - target.height / 2 + viewPort.height / (2 * scale)}px)`
-    canvas.style.transform = transform
-  }
-  const onresize = () => {
-    updateTarget(false)
-  }
-  window.addEventListener('resize', onresize)
-  updateMap.set(this, updateTarget)
-  activity.start(this, () => {
-    updateMap.delete(this)
-    window.removeEventListener('resize', onresize)
-  })
-  updateTarget(false)
 }
 
 export default Vue.extend({
@@ -131,23 +76,64 @@ export default Vue.extend({
       })
     }
   },
-  mounted () {
-    start.call(this as Vue)
-  },
-  activated () {
-    start.call(this as Vue)
-  },
+  ...activeLifecycle<Vue>(function (this: Vue): (() => void) | undefined {
+    const { container, canvas } = this.$refs
+    if (updateMap.get(this)) {
+      return
+    }
+    if (!(container instanceof HTMLElement)) {
+      console.warn('container is missing!')
+      return
+    }
+    if (!(canvas instanceof HTMLElement)) {
+      console.warn('canvas is missing!')
+      return
+    }
+    const full = {
+      id: null,
+      rect: styleRect(canvas)
+    }
+    const updateTarget = (smooth: boolean) => {
+      const { id, rect: target } = getViewbox(this) ?? full
+      const viewPort = {
+        x: 0,
+        y: 0,
+        height: container.offsetHeight,
+        width: container.offsetWidth
+      }
+      const vRatio = viewPort.width / viewPort.height
+      const scale = vRatio < target.ratio
+        ? full.rect.width / target.width * viewPort.width / full.rect.width
+        : full.rect.height / target.height * viewPort.height / full.rect.height
+
+      if ((canvas.dataset.id ?? null) !== id) {
+        if (!id) {
+          delete canvas.dataset.id
+        } else {
+          canvas.dataset.id = id
+        }
+        this.$forceUpdate()
+      }
+      canvas.style.transition = smooth ? this.$props.transition : ''
+      const transform = `scale(${scale}) translate(${-target.x - target.width / 2 + viewPort.width / (2 * scale)}px, ${-target.y - target.height / 2 + viewPort.height / (2 * scale)}px)`
+      canvas.style.transform = transform
+    }
+    const onresize = () => {
+      updateTarget(false)
+    }
+    window.addEventListener('resize', onresize)
+    updateMap.set(this, updateTarget)
+    updateTarget(false)
+    return () => {
+      updateMap.delete(this)
+      window.removeEventListener('resize', onresize)
+    }
+  }),
   updated () {
     const updateTarget = updateMap.get(this)
     if (updateTarget) {
       updateTarget(true)
     }
-  },
-  deactivated () {
-    activity.stop(this)
-  },
-  destroyed () {
-    activity.stop(this)
   }
 })
 </script>

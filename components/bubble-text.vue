@@ -12,26 +12,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { toStyle, ActivityMap, countCharsCached } from '../lib'
-
-const activity = new ActivityMap()
-
-// ↓ This is an ugly workaround to react to store changes.
-function activate (this: Vue & { seen: () => boolean }) {
-  activity.stop(this)
-  let current = this.seen()
-  const unwatch = this.$store.subscribe(
-    (mutation) => {
-      if (mutation.type.startsWith('progress/')) {
-        const seen = this.seen()
-        if (current !== seen) {
-          current = seen
-          this.$forceUpdate()
-        }
-      }
-    })
-  activity.start(this, unwatch)
-}
+import { toStyle, activeLifecycle, countCharsCached } from '../lib'
 
 export default Vue.extend({
   props: {
@@ -85,11 +66,20 @@ export default Vue.extend({
       i18nkey
     }
   },
-  mounted: activate,
-  activated: activate,
-  deactivated () {
-    activity.stop(this)
-  },
+  // eslint-disable-next-line no-extra-parens
+  ...activeLifecycle<Vue & { seen(): boolean }>(function () {
+    let current = this.seen()
+    return this.$store.subscribe(
+      (mutation) => {
+        if (mutation.type.startsWith('progress/')) {
+          const seen = this.seen()
+          if (current !== seen) {
+            current = seen
+            this.$forceUpdate()
+          }
+        }
+      })
+  }),
   methods: {
     spanStyle () {
       const width = countCharsCached(this.$i18n.t(this.i18nkey)) * (this.$i18n.locale === 'ja' || this.$i18n.locale === 'ja-simple' ? 48 : 25)

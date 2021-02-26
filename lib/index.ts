@@ -60,19 +60,40 @@ export function toStyle (style: { [key: string]: number | string | null | undefi
     .join('; ')
 }
 
-export class ActivityMap {
-  map = new WeakMap<any, Function>()
-
-  start (obj: any, close: Function): void {
-    this.stop(obj)
-    this.map.set(obj, close)
-  }
-
-  stop (obj: any): void {
-    const prev = this.map.get(obj)
-    if (prev) {
-      prev()
+const activeLifecycleMap = new WeakMap<any, Function>()
+const activeLifecycleLock = () => {}
+export function activeLifecycle <TThis = any> (start: (this: TThis, obj: TThis) => (() => void) | undefined): {
+  mounted (): void
+  activated (): void
+  deactivated (): void
+  destroyed (): void
+} {
+  function activated (this: any) {
+    if (activeLifecycleMap.has(this)) {
+      return
     }
+    // Preventing recursive loops
+    activeLifecycleMap.set(this, activeLifecycleLock)
+    const cb = start.call(this, this)
+    if (cb === undefined || cb === null) {
+      activeLifecycleMap.delete(this)
+      return
+    }
+    activeLifecycleMap.set(this, cb)
+  }
+  function deactivated (this: any) {
+    const stop = activeLifecycleMap.get(this)
+    if (stop === undefined) {
+      return
+    }
+    activeLifecycleMap.delete(this)
+    stop()
+  }
+  return {
+    activated,
+    deactivated,
+    mounted: activated,
+    destroyed: deactivated
   }
 }
 
