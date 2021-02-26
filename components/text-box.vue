@@ -93,6 +93,70 @@ function createStyle (options: Options, i18n: IVueI18n): { isDynamic: boolean, s
   }
 }
 
+function exists (i18n: IVueI18n, key: string, locale?: string): boolean {
+  try {
+    return i18n.te(key, locale)
+  } catch (err) {
+    return false
+  }
+}
+
+function findKeyWithFallback (i18n: IVueI18n, key: string | null): { key: string, locale: string } | null {
+  if (key === null) {
+    return null
+  }
+  if (exists(i18n, key)) {
+    return { key, locale: i18n.locale }
+  }
+  let { fallbackLocale: fbLocales } = i18n
+  if (fbLocales === false || fbLocales === null || fbLocales === undefined) {
+    return null
+  }
+  if (typeof fbLocales === 'string') {
+    fbLocales = [fbLocales]
+  } else if (!Array.isArray(fbLocales)) {
+    fbLocales = fbLocales[i18n.locale]
+    if (!fbLocales) {
+      return null
+    }
+  }
+  for (const locale of fbLocales) {
+    if (exists(i18n, key, locale)) {
+      return { key, locale }
+    }
+  }
+  return null
+}
+
+function getKey (vue: Vue): string | null {
+  const { key } = vue.$vnode
+  if (key === null || key === undefined) {
+    return null
+  }
+  return typeof key === 'number'
+    ? String(key)
+    : key.replace(/#(.*)/, '')
+}
+
+const validHTMLCache: { [translated: string]: string } = {}
+function cachedValidHTML (translated: string): string {
+  let valid = validHTMLCache[translated]
+  if (valid === undefined) {
+    valid = sanitize(
+      translated,
+      {
+        allowedTags: ['ruby', 'rt', 'rtc', 'br']
+      }
+    ).replace(
+      /@\[(.*?)\|(.*?)\|(.*?)\]/g,
+      (_, name, src, alt) =>
+        `<span class="i18n-img i18n-img--${name}"><img src="${src}" alt="${encodeURIComponent(alt)}" /></span>`
+    )
+    validHTMLCache[translated] = valid
+  }
+  return valid
+}
+
 export default Vue.extend({
   props: {
     align: {
@@ -149,16 +213,18 @@ export default Vue.extend({
     }
   },
   data () {
-    return createStyle(this.$props as Options, this.$i18n)
+    return {
+      i18nKey: getKey(this as any),
+      ...createStyle(this.$props as Options, this.$i18n)
+    }
   },
   computed: {
     html () {
-      const text = sanitize(this.$props.text ?? this.$i18n.t(String(this.$vnode.key).replace(/#(.*)/, ''), this.$props.values).toString(), {
-        allowedTags: ['ruby', 'rt', 'rtc', 'br']
-      })
-      return text.replace(/@\[(.*?)\|(.*?)\|(.*?)\]/g, (_, name, src, alt) => {
-        return `<span class="i18n-img i18n-img--${name}"><img src="${src}" alt="${encodeURIComponent(alt)}" /></span>`
-      })
+      const { i18nKey: key } = this as { i18nKey: string }
+      const keySet = findKeyWithFallback(this.$i18n as any, key)
+      const { text, values } = this.$props as any
+      const base = text ?? (keySet ? this.$t(keySet.key, keySet.locale, values) : null)
+      return base ? cachedValidHTML(base) : key
     }
   },
   methods: {
