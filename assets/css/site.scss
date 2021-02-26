@@ -95,9 +95,6 @@ html[lang="ja-simple"] {
 }
 .cb {
   color: white;
-  width: 2586px;
-  height: 1770px;
-  position: relative;
 }
 .cb--content {
   position: absolute;
@@ -313,10 +310,26 @@ html[lang="ja-simple"] {
   width: 100%;
   min-height: 100%;
 }
-.main-screen .view-box--canvas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.main-screen {
+  .view-box--canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cb {
+    top: 50px;
+    left: 40px;
+    width: 2586px;
+    height: 1770px;
+    position: relative;
+  }
+  .lunch {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 2636px;
+    height: (2636px / 3874 * 1926);
+  }
 }
 .sidebar .sidebar--partner {
   padding-bottom: 2em;
@@ -472,4 +485,7 @@ html[lang="ja-simple"] {
       padding: 0 1.5em;
     }
   }
+}
+.lunch--image {
+  width: 100%;
 }

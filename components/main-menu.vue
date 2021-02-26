@@ -1,86 +1,90 @@
 <template>
-  <keep-alive>
-    <main-screen
-      :key="`main-menu-${selected}`"
-      :data-hash="$route.hash || ''"
-      :prev="prev"
-      :next="next"
-      :lunch-type="selected ? selected : '!'"
-    >
-      <template #chalkboard>
-        <div class="cb--menu">
-          <text-box
-            :key="title ? null : 'weblate.main.title'"
-            :text="title ? title : null"
-            class="font--tex cb--menu--title"
-            align="center center"
-            width="2235"
-            height="300"
-            :y="padding"
-          />
-          <table class="cb--menu--table">
-            <tbody>
-              <tr>
-                <th class="cb--menu--weather">
-                  <img src="/img/weather_15.webp">
-                </th>
-                <main-menu-item
-                  num="1"
-                  item="garden"
-                  :active="active"
-                  :selected="selected"
-                />
-                <main-menu-item
-                  num="2"
-                  item="cosmopolitan"
-                  :active="active"
-                  :selected="selected"
-                />
-              </tr>
-              <tr>
-                <th class="cb--menu--weather">
-                  <img src="/img/weather_2p.webp">
-                </th>
-                <main-menu-item
-                  num="3"
-                  item="gamble"
-                  :active="active"
-                  :selected="selected"
-                />
-                <main-menu-item
-                  num="4"
-                  item="desperate"
-                  :active="active"
-                  :selected="selected"
-                />
-              </tr>
-              <tr class="cb--menu--place">
-                <td />
-                <th><img src="/img/place_local.webp"></th>
-                <th><img src="/img/place_global.webp"></th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </template>
-      <template v-if="selected" #body>
-        <div class="lunch-detail--spacer">
-          <text-box key="weblate.scenario.actions.more" class="font--tex" />
-        </div>
-        <view-box
-          :key="`illustration-${selected}`"
-          class="view-box--illustration"
-          :data-hash="$route.hash || ''"
-          :get-viewbox="getViewbox"
-          :unfocus="gotoMain"
-          width="3157"
-          height="2500"
-        >
-          <slot />
-        </view-box>
-      </template>
-    </main-screen>
-  </keep-alive>
+  <main-screen
+    :data-hash="$route.hash || ''"
+    :prev="prev"
+    :next="next"
+    :lunch-type="selected ? selected : '!'"
+  >
+    <template #chalkboard>
+      <div class="cb--menu">
+        <text-box
+          :key="title ? 'title' : 'weblate.main.title'"
+          :text="title ? title : null"
+          class="font--tex cb--menu--title"
+          align="center center"
+          width="2235"
+          height="300"
+          :y="padding"
+        />
+        <table key="menu-table" class="cb--menu--table">
+          <tbody>
+            <tr>
+              <th class="cb--menu--weather">
+                <img src="/img/weather_15.webp">
+              </th>
+              <main-menu-item
+                key="item-1"
+                num="1"
+                item="garden"
+                :active="active"
+                :selected="selected"
+              />
+              <main-menu-item
+                key="item-2"
+                num="2"
+                item="cosmopolitan"
+                :active="active"
+                :selected="selected"
+              />
+            </tr>
+            <tr>
+              <th class="cb--menu--weather">
+                <img src="/img/weather_2p.webp">
+              </th>
+              <main-menu-item
+                key="item-3"
+                num="3"
+                item="gamble"
+                :active="active"
+                :selected="selected"
+              />
+              <main-menu-item
+                key="item-4"
+                num="4"
+                item="desperate"
+                :active="active"
+                :selected="selected"
+              />
+            </tr>
+            <tr class="cb--menu--place">
+              <td />
+              <th><img src="/img/place_local.webp"></th>
+              <th><img src="/img/place_global.webp"></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </template>
+    <template #lunch>
+      <slot name="lunch" />
+    </template>
+    <template v-if="selected" #body>
+      <div class="lunch-detail--spacer">
+        <text-box key="weblate.scenario.actions.more" class="font--tex" />
+      </div>
+      <view-box
+        :key="`illustration-${selected}`"
+        class="view-box--illustration"
+        :data-hash="$route.hash || ''"
+        :get-viewbox="getViewbox"
+        :unfocus="gotoMain"
+        width="3157"
+        height="2500"
+      >
+        <slot name="illustration" />
+      </view-box>
+    </template>
+  </main-screen>
 </template>
 <script lang="ts">
 import Vue from 'vue'

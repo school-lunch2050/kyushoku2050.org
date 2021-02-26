@@ -1,36 +1,15 @@
 <template>
-  <keep-alive>
-    <main class="main--main-screen">
-      <keep-alive>
-        <view-box
-          class="main-screen"
-          width="2736"
-          height="3200"
-        >
-          <div class="cb--box">
-            <chalkboard
-              :width="cb"
-              :height="cb / 2586 * 1770"
-              style="left: 40px; top: 50px"
-              :next="next"
-              :prev="prev"
-            >
-              <slot name="chalkboard" />
-            </chalkboard>
-          </div>
-          <lunch
-            v-if="lunchType"
-            x="100"
-            y="1850"
-            :width="lun"
-            :height="lun / 3874 * 1926"
-            :type="lunchType"
-          />
-        </view-box>
-      </keep-alive>
-      <slot name="body" />
-    </main>
-  </keep-alive>
+  <main class="main--main-screen">
+    <view-box key="main-view-box" class="main-screen" width="2736" height="3200">
+      <chalkboard key="chalkboard" :next="next" :prev="prev">
+        <slot name="chalkboard" />
+      </chalkboard>
+      <lunch v-if="lunchType" key="lunch" :type="lunchType">
+        <slot name="lunch" />
+      </lunch>
+    </view-box>
+    <slot name="body" />
+  </main>
 </template>
 <script lang="ts">
 import Vue from 'vue'
@@ -49,18 +28,6 @@ export default Vue.extend({
       type: String,
       default: null
     }
-  },
-  data () {
-    return {
-      cb: 2586,
-      lun: 2636
-    }
   }
 })
 </script>
-<style scoped>
-.cb--box {
-  position: relative;
-  z-index: 1;
-}
-</style>
