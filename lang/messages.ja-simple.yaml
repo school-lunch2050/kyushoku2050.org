@@ -117,6 +117,9 @@ weblate:
         お<ruby>聞<rt>き</rt></ruby>かせください
   ingredients: 
     # Filled by messages.ja.yml, you can override these if you like
+    sprouts:
+      source: |
+        クラスで色々なスプラウトを育て、インスタント食品に足りない、栄養素、いろどり、味をそえています。
   cosmopolitan:
     bubbles:
       fruit: 

@@ -206,6 +206,10 @@ weblate:
       name: Soylent
       source: |
         Milk replacement with all the necessary nutrients
+    sprouts:
+      name: Broccoli sprouts
+      source: |
+        In class grown sprouts from various seeds add color, micro-nutrients and taste to the common ready meals with long shelf-life.
     gu_gu_bread:
       name: “Gu Gu bread" 
       source: |

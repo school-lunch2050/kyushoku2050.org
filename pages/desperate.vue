@@ -37,6 +37,11 @@
         x="1714"
         y="127"
       />
+      <lunch-item
+        key="sprouts"
+        x="1625"
+        y="861"
+      />
     </template>
     <template #illustration>
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/desperate.webp">
