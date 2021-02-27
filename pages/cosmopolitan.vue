@@ -1,6 +1,48 @@
 <template>
   <!-- eslint-disable vue/max-attributes-per-line -->
   <main-menu prev="/main" active selected="cosmopolitan">
+    <template #lunch>
+      <lunch-item
+        key="milk"
+        x="828"
+        y="111"
+      />
+      <lunch-item
+        key="chicken"
+        x="1336"
+        y="627"
+      />
+      <lunch-item
+        key="chicken_veggies"
+        x="1259"
+        y="468"
+      />
+      <lunch-item
+        key="fish_soup"
+        x="813"
+        y="692"
+      />
+      <lunch-item
+        key="fish_soup_tofu"
+        x="813"
+        y="723"
+      />
+      <lunch-item
+        key="fish_soup_onion"
+        x="869"
+        y="660"
+      />
+      <lunch-item
+        key="rice"
+        x="1853"
+        y="566"
+      />
+      <lunch-item
+        key="coffee_jelly"
+        x="1745"
+        y="301"
+      />
+    </template>
     <template #illustration>
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/cosmopolitan.webp">
       <text-box key="weblate.pages.cosmopolitan.full" class="illustration--title font--tex" x="550" y="70" width="2000" height="180" font-size="100" align="center" vertical-align="center" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="lunch">
+  <div ref="lunch" class="lunch">
     <svg class="lunch--image" viewBox="0 0 3874 1926" version="1.1">
       <defs>
         <clipPath id="lunchMask">
@@ -14,6 +14,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { activeLifecycle } from '~/lib'
 
 export default Vue.extend({
   props: {
@@ -37,6 +38,77 @@ export default Vue.extend({
       type: [String, Number],
       default: null
     }
-  }
+  },
+  computed: {
+    entries () {
+      const { lunch } = this.$refs
+      if (!(lunch instanceof HTMLElement)) {
+        return []
+      }
+      const entries = []
+      for (const elem of Array.from(lunch.querySelectorAll('.lunch-item--marker')) as HTMLDivElement[]) {
+        entries.push({
+          x: parseFloat(elem.style.left),
+          y: parseFloat(elem.style.top),
+          elem
+        })
+      }
+      return entries
+    }
+  },
+  ...activeLifecycle<Vue & { entries: Array<any> }>(function () {
+    let previous: any = null
+    const { lunch } = this.$refs
+    if (!(lunch instanceof HTMLElement)) {
+      return
+    }
+    const update = (e?: MouseEvent | TouchEvent) => {
+      let closest = null
+      let max = Number.POSITIVE_INFINITY
+      if (e && e.type !== 'mouseout') {
+        const rect = lunch.getBoundingClientRect()
+        const scale = 2636 / rect.width
+        const root = (e instanceof MouseEvent) ? e : e.touches[0]
+        const pos = {
+          x: (root.pageX - rect.x - window.scrollX) * scale,
+          y: (root.pageY - rect.y - window.scrollY) * scale
+        }
+        for (const entry of this.entries) {
+          const xDiff = Math.abs(entry.x - pos.x)
+          const yDiff = Math.abs(entry.y - pos.y)
+          const xS = xDiff * xDiff
+          const yS = yDiff * yDiff
+          const dist = Math.sqrt(xS + yS)
+          if (closest === null || max > dist) {
+            closest = entry.elem
+            max = dist
+          }
+        }
+      }
+      if (closest === previous) {
+        return
+      }
+      if (previous !== null) {
+        previous.style.display = 'none'
+      }
+      if (closest !== null) {
+        closest.style.display = 'block'
+      }
+      previous = closest
+    }
+    update()
+    lunch.addEventListener('mousemove', update)
+    lunch.addEventListener('mouseout', update)
+    window.addEventListener('touchstart', update)
+    window.addEventListener('touchend', update)
+    window.addEventListener('touchmove', update)
+    return () => {
+      lunch.removeEventListener('mousemove', update)
+      lunch.removeEventListener('mouseout', update)
+      window.removeEventListener('touchstart', update)
+      window.removeEventListener('touchend', update)
+      window.removeEventListener('touchmove', update)
+    }
+  })
 })
 </script>

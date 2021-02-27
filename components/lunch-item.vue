@@ -1,0 +1,55 @@
+<template>
+  <div class="lunch-item--marker font--tex" :style="markerStyle">
+    <svg class="lunch-item--line" viewBox="0 0 20 110" version="1.1">
+      <circle fill="#00000088" cx="10" cy="100" r="9.5" />
+      <line
+        stroke-width="5"
+        stroke="#00000088"
+        x1="10"
+        y1="0"
+        x2="10"
+        y2="100"
+      />
+      <circle fill="#fff" cx="10" cy="100" r="7.5" />
+      <line
+        stroke-width="3"
+        stroke="#fff"
+        x1="10"
+        y1="0"
+        x2="10"
+        y2="100"
+      />
+    </svg>
+    <div class="lunch-item--marker--info">
+      <div class="lunch-item--marker--box">
+        <text-box :key="`weblate.ingredients.${$vnode.key}.name`" class="lunch-item--marker--name" />
+        <text-box :key="`weblate.ingredients.${$vnode.key}.source`" class="lunch-item--marker--source" />
+      </div>
+    </div>
+  </div>
+</template>
+<script lang="ts">
+import Vue from 'vue'
+import { toStyle } from '../lib'
+
+export default Vue.extend({
+  props: {
+    x: {
+      type: [Number, String],
+      required: true
+    },
+    y: {
+      type: [Number, String],
+      required: true
+    }
+  },
+  data () {
+    return {
+      markerStyle: toStyle({
+        left: this.$props.x,
+        top: this.$props.y
+      })
+    }
+  }
+})
+</script>

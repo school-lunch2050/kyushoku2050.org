@@ -112,40 +112,120 @@ weblate:
       click:
         (クリック) 意見
         を教えてくれきませんか？
-  cosmopolitan:
-    ingredients:
-      milk:
-        name: アニマルライツ・ミルク
-        source: |
-          ニュージーランド産牛乳不使用粉ミルク（本日の味：フィリピンのむらさきイモ）
-      chicken:
-        name: バリ風チキンサテー
-        source: |
-          ココナッツのソース\nカリフォルニアの提携工場産の植物性疑似チキンとフィジーのココナッツソース
-      chicken_veggies:
-        name: みんな大好きアイドルのおやさい
-        source: |
-          中国ドラマスターおススメの冷凍ブロッコリー、にんじん、サヤインゲン。
-      fish_soup:
-        name: おさかなの韓国風ピリ辛スープ
-        source: |
-          エシカル養殖されたブラジル産ティラピア。
-      fish_soup_tofu:
-        name: カナダのスマートとうふ
-        source: |
-           カナダの労働不要な提携スマート農家で作った大豆
-      fish_soup_onion:
-        name: ロシア産のネギ
-        source: |
+  ingredients:
+    milk:
+      name: アニマルライツ・ミルク
+      source: |
+        ニュージーランド産牛乳不使用粉ミルク（本日の味：フィリピンのむらさきイモ）
+    chicken:
+      name: バリ風チキンサテー
+      source: |
+        ココナッツのソース\nカリフォルニアの提携工場産の植物性疑似チキンとフィジーのココナッツソース
+    chicken_veggies:
+      name: みんな大好きアイドルのおやさい
+      source: |
+        中国ドラマスターおススメの冷凍ブロッコリー、にんじん、サヤインゲン。
+    fish_soup:
+      name: おさかなの韓国風ピリ辛スープ
+      source: |
+        エシカル養殖されたブラジル産ティラピア。
+    fish_soup_tofu:
+      name: カナダのスマートとうふ
+      source: |
           カナダの労働不要な提携スマート農家で作った大豆
-      rice:
-        name: タイ米ごはん
-        source: |
-          学区がタイの提携米農家からカーボンクレジット制度にて直接輸入。
-      coffee_jelly:
-        name: コーヒーゼリー
-        source: |
-          コンゴのオーガニック＆フェアトレードコーヒー豆。
+    fish_soup_onion:
+      name: ロシア産のネギ
+      source: |
+        カナダの労働不要な提携スマート農家で作った大豆
+    rice:
+      name: タイ米ごはん
+      source: |
+        学区がタイの提携米農家からカーボンクレジット制度にて直接輸入。
+    coffee_jelly:
+      name: コーヒーゼリー
+      source: |
+        コンゴのオーガニック＆フェアトレードコーヒー豆。
+    banana:
+      name: 京バナナ
+      source: |
+        京都府産。
+    glaberrima_rice:
+      name: スーパーグラべリマごはん
+      source: |
+        アフリカ原産おかぼ（長粒米）の改良品種。
+    fruit_dumplings:
+      name: フルーツだんごブルーベリー風味ソース
+      source: |
+        受粉不要なフルーツ
+    autonoma_soup:
+      name: ソラマメ、トマト、魚の「オートノマスープ」
+      source: |
+        自動化された水耕栽培の工場産。
+    cricket_tofu:
+      name: 遺伝子工学上最高のイナゴとうふステーキ
+      source: |
+        CRISPERイナゴの粉末と遺伝子組み換えのとうふ。
+    burdock_chips:
+      name: ごぼうのチップス
+      source: |
+        データをアップして、プリントしましょう。
+    soylent:
+      name: ソイレント
+      source: |
+        必要な栄養素がすべてはいった飲み物
+    gu_gu_bread:
+      name: 「ぐーぐーぱん」
+      source: |
+        夏限定色。風味も増強中！
+    instant_soup:
+      name: ベーコン味CRISPERムシ・ビッツ即席スー
+      source: |
+        CRISPERムシ・ビッツ即席スープは、「コーンスープ味」、「トマト味」、「コンソメ味」から選びましょう。
+    nutrition_noodle:
+      name: 「くまさん＆うしさん」えいよう麺
+      source: |
+        最高の栄養分ブレンド
+    pudding:
+      name: はんたいプリンとイチゴ
+      source: |
+        イチゴは特別にひとりひとつぶです!
+    fish_sausage:
+      name: 遺伝子組み換え魚肉ソーセージ 「さるもちゃん」 
+      source: |
+        遺伝子組み換えサーモン「さるもちゃん」 使用。
+    milk_cube:
+      name: 豆乳味お薬キューブ
+      source: |
+        水に溶かしてのみましょう。
+    supplements:
+      name: サプリメント
+      source: |
+        腸内環境を整え、マイクロプラスチックと放射性物質対策のため、きちんとサプリをのみましょう。
+    potato_porridge:
+      name: イモと豆のおかゆ
+      source: |
+        学校菜園で育てたサツマイモと豆。
+    proteins:
+      name: みんなのプロテイン
+      source: |
+        アユ・シカ肉の塩焼き、ベジタリアン：お豆のファラフェル/ハンバーグ（ベジタリアン）
+    fresh_salad:
+      name: フレッシュ・サラダ
+      source: |
+        学校菜園でし尿汚泥の堆肥をつかって育てた野菜を、「自然のめぐみと保存食」のクラスで集めた木の実とつくったピクルスをのせて、バイキングでたくさんたべましょう。
+    satoyama_soup:
+      name: 里山スープ
+      source: |
+        地元でとれたきのこと山菜がのすまし汁
+    chestnut:
+      name: やきぐり
+      source: |
+        アグロフォレストリー（森林農業）で育てたくり
+    milk_bubble:
+      name: 食べるヤギ乳
+      source: |
+        食用膜につつまれたヤギ乳
+  cosmopolitan:
     bubbles:
       fruit:
         text: |
@@ -171,35 +251,6 @@ weblate:
         text: |
           エシカル消費が広がり、フェアトレードやオーガニックなどの認証を受けた食品の購入が一般的となる。生産者と消費者が、オンライン・SNSなどを通じて直接つながっている。
   desperate:
-    ingredients:
-      banana:
-        name: 京バナナ
-        source: |
-          京都府産。
-      glaberrima_rice:
-        name: スーパーグラべリマごはん
-        source: |
-          アフリカ原産おかぼ（長粒米）の改良品種。
-      fruit_dumplings:
-        name: フルーツだんごブルーベリー風味ソース
-        source: |
-          受粉不要なフルーツ
-      autonoma_soup:
-        name: ソラマメ、トマト、魚の「オートノマスープ」
-        source: |
-          自動化された水耕栽培の工場産。
-      cricket_tofu:
-        name: 遺伝子工学上最高のイナゴとうふステーキ
-        source: |
-          CRISPERイナゴの粉末と遺伝子組み換えのとうふ。
-      burdock_chips:
-        name: ごぼうのチップス
-        source: |
-          データをアップして、プリントしましょう。
-      soylent:
-        name: ソイレント
-        source: |
-          必要な栄養素がすべてはいった飲み物
     bubbles:
       climate_change:
         text: |
@@ -224,37 +275,8 @@ weblate:
           各家庭では、さまざまな種から芽を育て、長期保存インスタント食品に不足している、微量栄養素を補填しているほか、彩りや味を添えている。
       home_sprouts:
         text: |
-          まだ。
+          各家庭でさまざまなスプラウトを育て、インスタント食品に足りない、栄養素、いろどり、味をそえています。
   gamble:
-    ingredients:
-      gu_gu_bread:
-        name: 「ぐーぐーぱん」
-        source: |
-          夏限定色。風味も増強中！
-      instant_soup:
-        name: ベーコン味CRISPERムシ・ビッツ即席スー
-        source: |
-          CRISPERムシ・ビッツ即席スープは、「コーンスープ味」、「トマト味」、「コンソメ味」から選びましょう。
-      nutrition_noodle:
-        name: 「くまさん＆うしさん」えいよう麺
-        source: |
-          最高の栄養分ブレンド
-      pudding:
-        name: はんたいプリンとイチゴ
-        source: |
-          イチゴは特別にひとりひとつぶです!
-      fish_sausage:
-        name: 遺伝子組み換え魚肉ソーセージ 「さるもちゃん」 
-        source: |
-          遺伝子組み換えサーモン「さるもちゃん」 使用。
-      milk_cube:
-        name: 豆乳味お薬キューブ
-        source: |
-          水に溶かしてのみましょう。
-      supplements:
-        name: サプリメント
-        source: |
-          腸内環境を整え、マイクロプラスチックと放射性物質対策のため、きちんとサプリをのみましょう。
     bubbles:
       food_marketers:
         text: |
@@ -284,31 +306,6 @@ weblate:
         text: |
           腸内環境を整え、痩せた土壌で栽培された野菜に欠乏している微量栄養素を補うためサプリが必須。また、サプリは、災害などにより食料供給ができなくなった際の緊急食料としても用いられる。
   garden:
-    ingredients:
-      potato_porridge:
-        name: イモと豆のおかゆ
-        source: |
-          学校菜園で育てたサツマイモと豆。
-      proteins:
-        name: みんなのプロテイン
-        source: |
-          アユ・シカ肉の塩焼き、ベジタリアン：お豆のファラフェル/ハンバーグ（ベジタリアン）
-      fresh_salad:
-        name: フレッシュ・サラダ
-        source: |
-          学校菜園でし尿汚泥の堆肥をつかって育てた野菜を、「自然のめぐみと保存食」のクラスで集めた木の実とつくったピクルスをのせて、バイキングでたくさんたべましょう。
-      satoyama_soup:
-        name: 里山スープ
-        source: |
-          地元でとれたきのこと山菜がのすまし汁
-      chestnut:
-        name: やきぐり
-        source: |
-          アグロフォレストリー（森林農業）で育てたくり
-      milk_bubble:
-        name: 食べるヤギ乳
-        source: |
-          食用膜につつまれたヤギ乳
     bubbles:
       domestic_soveirnty:
         text: |

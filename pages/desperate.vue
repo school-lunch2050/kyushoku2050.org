@@ -1,6 +1,43 @@
 <template>
   <!-- eslint-disable vue/max-attributes-per-line -->
   <main-menu prev="/main" active selected="desperate">
+    <template #lunch>
+      <lunch-item
+        key="banana"
+        x="908"
+        y="700"
+      />
+      <lunch-item
+        key="glaberrima_rice"
+        x="911"
+        y="162"
+      />
+      <lunch-item
+        key="fruit_dumplings"
+        x="1136"
+        y="581"
+      />
+      <lunch-item
+        key="autonoma_soup"
+        x="1351"
+        y="156"
+      />
+      <lunch-item
+        key="cricket_tofu"
+        x="1523"
+        y="497"
+      />
+      <lunch-item
+        key="burdock_chips"
+        x="1330"
+        y="867"
+      />
+      <lunch-item
+        key="soylent"
+        x="1714"
+        y="127"
+      />
+    </template>
     <template #illustration>
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/desperate.webp">
       <text-box key="weblate.pages.desperate.full" class="illustration--title font--tex" x="550" y="40" width="1900" height="200" font-size="100" align="center" vertical-align="center" />

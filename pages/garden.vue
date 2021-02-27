@@ -1,6 +1,53 @@
 <template>
   <!-- eslint-disable vue/max-attributes-per-line -->
   <main-menu prev="/main" active selected="garden">
+    <template #lunch>
+      <lunch-item
+        key="potato_porridge"
+        x="792"
+        y="274"
+      />
+      <!--
+      <lunch-item
+        key="proteins"
+        data-type="fish"
+        x="1192"
+        y="467"
+      />
+      <lunch-item
+        key="proteins"
+        data-type="meat"
+        x="1253"
+        y="763"
+      />
+      -->
+      <lunch-item
+        key="proteins"
+        data-type="falafel"
+        x="732"
+        y="703"
+      />
+      <lunch-item
+        key="fresh_salad"
+        x="1784"
+        y="670"
+      />
+      <lunch-item
+        key="satoyama_soup"
+        x="1750"
+        y="278"
+      />
+      <lunch-item
+        key="chestnut"
+        x="1164"
+        y="271"
+      />
+      <lunch-item
+        key="milk_bubble"
+        x="1406"
+        y="293"
+      />
+    </template>
     <template #illustration>
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/garden.webp">
       <text-box key="weblate.pages.garden.full" class="illustration--title font--tex" x="680" y="20" width="1915" height="180" font-size="100" align="center" vertical-align="center" />

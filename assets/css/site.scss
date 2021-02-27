@@ -489,3 +489,47 @@ html[lang="ja-simple"] {
 .lunch--image {
   width: 100%;
 }
+.lunch-item--marker {
+  position: absolute;
+  display: none;
+  &.debug:before {
+    content: ' ';
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border-radius: 20px;
+    background: red;
+    position: absolute;
+    z-index: 1;
+  }
+}
+.lunch-item--marker--info {
+  position: absolute;
+  bottom: 200px;
+}
+.lunch-item--marker--box {
+  position: relative;
+  background: white;
+  padding: 1em;
+  font-size: 58px;
+  margin-left: -50%;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+}
+.lunch-item--marker--name {
+  font-size: 72px;
+  margin-bottom: 0.5em;
+  white-space: nowrap;
+  clear: both;
+}
+.lunch-item--marker--source {
+  min-width: 700px;
+}
+.lunch-item--line {
+  position: absolute;
+  width: 40px;
+  left: -20px;
+  top: -210px;
+}

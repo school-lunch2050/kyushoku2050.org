@@ -120,40 +120,121 @@ weblate:
       click:
         (click) Let us know<br/>
         what you think!
+  ingredients:
+    potato_porridge:
+      name: Potato & beans porridge
+      source: |
+        School garden sweet potatos and beans.
+    proteins:
+      name: communal proteins 
+      source: |
+        Grilled ayu fish or wild venison or bean mix falafel/ paddy (vegetarian)
+    fresh_salad:
+      name: Fresh salad (buffet)
+      source: |
+        fine edible school yard vegetables grown with school's own humanure-/ night soil-compost and topped with nuts and pickels made during 'forage & ferment' class
+    satoyama_soup:
+      name: Satoyama soup
+      source: |
+        Locally harvested mushroom and wild vegetables in clear broth
+    chestnut:
+      name: Roasted chestnut
+      source: |
+        chestnut grown in an agro-forestry 
+    milk_bubble:
+      name: milk bubble
+      source: |
+        goat milk in agar-based, edible wrapping
+    milk:
+      name: animal rights milk
+      source: |
+        from New Zealand cow-free milk powder. Today’s flavor: Filipino Purple Yam
+    chicken:
+      name: Bali style satay chicken
+      source: |
+        plant-based meat made at a partner factory in California and sautéed in Fiji coconut sauce
+    chicken_veggies:
+      name: favorite idol vegetables
+      source: |
+        Frozen broccoli, carrot and string beans from chinese drama stars
+    fish_soup:
+      name: Spicy Korean fish soup
+      source: |
+        Tilapia from an ethical aquaculture farm in Brazil.
+    fish_soup_tofu:
+      name: Canadian smart Tofu
+      source: |
+        produced on human labor-free smart partner farms
+    fish_soup_onion:
+      name: Russian Green Onion
+      source: |
+        produced on human labor-free smart partner farms
+    rice:
+      name: Thai rice
+      source: |
+        School District directly imports rice from a partner farm in Thailand through Carbon Credit Scheme
+    coffee_jelly:
+      name: Coffee Jelly
+      source: |
+        Organic Fair Trade Coffee Beans from Congo
+    banana:
+      name: KyoBanana
+      source: |
+        Locally produced in Kyoto.
+    glaberrima_rice:
+      name: Glaberrima-Plus Rice
+      source: |
+        Africa's upland rice modified.
+    fruit_dumplings:
+      name: fruit mash dumplings with blueberry flavored sauce
+      source: |
+        from pollination-free fruits & berries
+    autonoma_soup:
+      name: |
+        "autonoma_soup" Fava beans, Tomato and fish filet
+      source: |
+        all ingredients from one automated hydroponic factory
+    cricket_tofu:
+      name: Engineering's finest Cricket-Tofu-Steak
+      source: |
+        produced with CRSPR cricket powder and GMO soybeans 
+    burdock_chips:
+      name: Burdock Chips
+      source: |
+        upload your data and start printing
+    soylent:
+      name: Soylent
+      source: |
+        Milk replacement with all the necessary nutrients
+    gu_gu_bread:
+      name: “Gu Gu bread" 
+      source: |
+        Special summer colors now with extra much flavor.
+    instant_soup:
+      name: Bacon-flavored CRISPR Bug Bits instant soup
+      source: |
+        CRISPR bug bits are also available with “Corn soup”, “Tomato” and “Consommé” flavor!
+    nutrition_noodle:
+      name: “Bear & Bull” Nutrition noodles
+      source: |
+        Made with the best blend of nutrients available on the market.
+    pudding:
+      name: Upside down pudding with one whole strawberry
+      source: |
+        ONE WHOLE strawberry today!
+    fish_sausage:
+      name: “Salmo-chan” fish sausage
+      source: |
+        Lab grown with the clean proteins.
+    milk_cube:
+      name: Soybean milk flavored medical cube
+      source: |
+        Dissolve the cube to dissolve the microplastics.
+    supplements:
+      name: Supplements
+      source: |
+        Don’t forget to take supplements to rebuild your microbiome.
   cosmopolitan:
-    ingredients:
-      milk:
-        name: animal rights milk
-        source: |
-          from New Zealand cow-free milk powder. Today’s flavor: Filipino Purple Yam
-      chicken:
-        name: Bali style satay chicken
-        source: |
-          plant-based meat made at a partner factory in California and sautéed in Fiji coconut sauce
-      chicken_veggies:
-        name: favorite idol vegetables
-        source: |
-          Frozen broccoli, carrot and string beans from chinese drama stars
-      fish_soup:
-        name: Spicy Korean fish soup
-        source: |
-          Tilapia from an ethical aquaculture farm in Brazil.
-      fish_soup_tofu:
-        name: Canadian smart Tofu
-        source: |
-          produced on human labor-free smart partner farms
-      fish_soup_onion:
-        name: Russian Green Onion
-        source: |
-          produced on human labor-free smart partner farms
-      rice:
-        name: Thai rice
-        source: |
-          School District directly imports rice from a partner farm in Thailand through Carbon Credit Scheme
-      coffee_jelly:
-        name: Coffee Jelly
-        source: |
-          Organic Fair Trade Coffee Beans from Congo
     bubbles:
       fruit:
         text: |
@@ -202,36 +283,6 @@ weblate:
         text: |
           Ethical consumption grows, leading to the purchase of more certified products (e.g. fair trade, organic, etc.) based on direct online/SNS relations between consumers & producers.
   desperate:
-    ingredients:
-      banana:
-        name: KyoBanana
-        source: |
-          Locally produced in Kyoto.
-      glaberrima_rice:
-        name: Glaberrima-Plus Rice
-        source: |
-          Africa's upland rice modified.
-      fruit_dumplings:
-        name: fruit mash dumplings with blueberry flavored sauce
-        source: |
-          from pollination-free fruits & berries
-      autonoma_soup:
-        name: |
-          "autonoma_soup" Fava beans, Tomato and fish filet
-        source: |
-          all ingredients from one automated hydroponic factory
-      cricket_tofu:
-        name: Engineering's finest Cricket-Tofu-Steak
-        source: |
-          produced with CRSPR cricket powder and GMO soybeans 
-      burdock_chips:
-        name: Burdock Chips
-        source: |
-          upload your data and start printing
-      soylent:
-        name: Soylent
-        source: |
-          Milk replacement with all the necessary nutrients
     bubbles:
       climate_change:
         text: |
@@ -311,35 +362,6 @@ weblate:
           - https://futurefood.network/livinglabs/
           - https://soylent.com/
   gamble:
-    ingredients:
-      gu_gu_bread:
-        name: “Gu Gu bread" 
-        source: |
-          Special summer colors now with extra much flavor.
-      instant_soup:
-        name: Bacon-flavored CRISPR Bug Bits instant soup
-        source: |
-          CRISPR bug bits are also available with “Corn soup”, “Tomato” and “Consommé” flavor!
-      nutrition_noodle:
-        name: “Bear & Bull” Nutrition noodles
-        source: |
-          Made with the best blend of nutrients available on the market.
-      pudding:
-        name: Upside down pudding with one whole strawberry
-        source: |
-          ONE WHOLE strawberry today!
-      fish_sausage:
-        name: “Salmo-chan” fish sausage
-        source: |
-          Lab grown with the clean proteins.
-      milk_cube:
-        name: Soybean milk flavored medical cube
-        source: |
-          Dissolve the cube to dissolve the microplastics.
-      supplements:
-        name: Supplements
-        source: |
-          Don’t forget to take supplements to rebuild your microbiome.
     bubbles:
       food_marketers:
         text: |
@@ -409,31 +431,6 @@ weblate:
         links:
           - https://www.bbc.com/future/article/20120221-food-pills-a-staple-of-sci-fi
   garden:
-    ingredients:
-      potato_porridge:
-        name: Potato & beans porridge
-        source: |
-          School garden sweet potatos and beans.
-      proteins:
-        name: communal proteins 
-        source: |
-          Grilled ayu fish or wild venison or bean mix falafel/ paddy (vegetarian)
-      fresh_salad:
-        name: Fresh salad (buffet)
-        source: |
-          fine edible school yard vegetables grown with school's own humanure-/ night soil-compost and topped with nuts and pickels made during 'forage & ferment' class
-      satoyama_soup:
-        name: Satoyama soup
-        source: |
-          Locally harvested mushroom and wild vegetables in clear broth
-      chestnut:
-        name: Roasted chestnut
-        source: |
-          chestnut grown in an agro-forestry 
-      milk_bubble:
-        name: milk bubble
-        source: |
-          goat milk in agar-based, edible wrapping
     bubbles:
       domestic_soveirnty:
         text: |

@@ -1,6 +1,43 @@
 <template>
   <!-- eslint-disable vue/max-attributes-per-line -->
   <main-menu prev="/main" active selected="gamble">
+    <template #lunch>
+      <lunch-item
+        key="gu_gu_bread"
+        x="1341"
+        y="707"
+      />
+      <lunch-item
+        key="instant_soup"
+        x="913"
+        y="225"
+      />
+      <lunch-item
+        key="nutrition_noodle"
+        x="1762"
+        y="258"
+      />
+      <lunch-item
+        key="pudding"
+        x="1305"
+        y="300"
+      />
+      <lunch-item
+        key="fish_sausage"
+        x="873"
+        y="491"
+      />
+      <lunch-item
+        key="milk_cube"
+        x="799"
+        y="867"
+      />
+      <lunch-item
+        key="supplements"
+        x="759"
+        y="749"
+      />
+    </template>
     <template #illustration>
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/gamble.webp">
       <text-box key="weblate.pages.gamble.full" class="illustration--title font--tex" x="680" y="20" width="1915" height="180" font-size="100" align="center" vertical-align="center" />
