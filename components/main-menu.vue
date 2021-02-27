@@ -44,14 +44,14 @@
               <main-menu-item
                 key="item-3"
                 num="3"
-                item="gamble"
+                item="desperate"
                 :active="active"
                 :selected="selected"
               />
               <main-menu-item
                 key="item-4"
                 num="4"
-                item="desperate"
+                item="gamble"
                 :active="active"
                 :selected="selected"
               />
