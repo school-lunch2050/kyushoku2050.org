@@ -175,22 +175,22 @@ weblate:
     bubbles:
       food_marketers:
         text: |
-          人気商品や流行が作られ、過激な味や、形、色の食べものが増えました。加工度が高く中毒性もあり、あらゆる世代で糖尿病や肥満が増えました。
+          <ruby>人気商品<rt>にんきしょうひん</rt></ruby>や<ruby>流行<rt>りゅうこう</rt></ruby>が<ruby>作<rt>つく</rt></ruby>られ、<ruby>過激<rt>かげき</rt></ruby>な<ruby>味<rt>あじ</rt></ruby>や、<ruby>形<rt>かたち</rt></ruby>、<ruby>色<rt>いろ</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものが<ruby>増<rt>ふ</rt></ruby>えました。<ruby>加工度<rt>かこうど</rt></ruby>が<ruby>高<rt>たか</rt></ruby>く<ruby>中毒性<rt>ちゅうどくせい</rt></ruby>もあり、あらゆる<ruby>世代<rt>せだい</rt></ruby>で<ruby>糖尿病<rt>とうにょうびょう</rt></ruby>や<ruby>肥満<rt>ひまん</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えました。
       stressed_conditions:
         text: |
-          環境は悪くなり続けていて、土地はやせています。そこで、きびしい環境でも育ち、栄養豊富なCRISPR (クリスパー) というゲノム編集の人造植物を作って食べています。食べものには、腐りにくい加工がしてあります。
+          <ruby>環境<rt>かんきょう</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>くなり<ruby>続<rt>つづ</rt></ruby>けていて、<ruby>土地<rt>とち</rt></ruby>はやせています。そこで、きびしい<ruby>環境<rt>かんきょう</rt></ruby>でも<ruby>育<rt>そだ</rt></ruby>、<ruby>栄養豊富<rt>えいようほうふ</rt></ruby>なCRISPR (クリスパー) というゲノム<ruby>編集<rt>へんしゅう</rt></ruby>の<ruby>人造植物<rt>じんぞうしょくぶつ</rt></ruby>を<ruby>作<rt>つく</rt></ruby>って<ruby>食<rt>た</rt></ruby>べています。<ruby>食<rt>た</rt></ruby>べものには、<ruby>腐<rt>くさ</rt></ruby>りにくい<ruby>加工<rt>かこう</rt></ruby>がしてあります。
       controlled_market:
         text: |
-          大手企業が生産と供給を自由に決めるので、食べものの値段が上がりました。食べものが賭け事、オークションや投機でも取り引きされています。主食となる食べものも気候変動で生産量が減り、船や飛行機で外国から運んでくるのも危険、また安い時に買って高いときに売る転売や投機も繰り返され、値段がとても高くなりました。
+          <ruby>大手企業<rt>おおてきぎょう</rt></ruby>が<ruby>生産<rt>せいさん</rt></ruby>と<ruby>供給<rt>きょうきゅう</rt></ruby>を<ruby>自由<rt>じゆう</rt></ruby>に<ruby>決<rt>き</rt></ruby>めるので、<ruby>食<rt>た</rt></ruby>べものの<ruby>値段<rt>ねだん</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がりました。<ruby>食<rt>た</rt></ruby>べものが<ruby>賭<rt>か</rt></ruby>け<ruby>事<rt>こと</rt></ruby>、オークションや<ruby>投機<rt>とうき</rt></ruby>でも<ruby>取<rt>と</rt></ruby>り<ruby>引<rt>ひ</rt></ruby>きされています。<ruby>主食<rt>しゅしょく</rt></ruby>となる<ruby>食<rt>た</rt></ruby>べものも<ruby>気候変動<rt>きこうへんどう</rt></ruby>で<ruby>生産量<rt>せいさんりょう</rt></ruby>が<ruby>減<rt>へ</rt></ruby>り、<ruby>船<rt>ふね</rt></ruby>や<ruby>飛行機<rt>ひこうき</rt></ruby>で<ruby>外国<rt>がいこく</rt></ruby>から<ruby>運<rt>はこ</rt></ruby>んでくるのも<ruby>危険<rt>きけん</rt></ruby>、また<ruby>安<rt>やす</rt></ruby>い<ruby>時<rt>とき</rt></ruby>に<ruby>買<rt>か</rt></ruby>って<ruby>高<rt>たか</rt></ruby>いときに<ruby>売<rt>う</rt></ruby>る<ruby>転売<rt>てんばい</rt></ruby>や<ruby>投機<rt>とうき</rt></ruby>も<ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>され、<ruby>値段<rt>ねだん</rt></ruby>がとても<ruby>高<rt>たか</rt></ruby>くなりました。
       plantation_farms:
         text: |
-          垂直統合された多国籍企業が、世界各地でプランテーション農園を運営し、環境難民たちが低賃金で働いている。
+          <ruby>垂直統合<rt>すいちょくとうごう</rt></ruby>された<ruby>多国籍企業<rt>たこくせききぎょう</rt></ruby>が、<ruby>世界各地<rt>せかいかくち</rt></ruby>でプランテーション<ruby>農園<rt>のうえん</rt></ruby>を<ruby>運営<rt>うんえい</rt></ruby>し、<ruby>環境難民<rt>かんきょうなんみん</rt></ruby>たちが<ruby>低賃金<rt>ていちんぎん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>いています。
       rare_fresh_fruit:
         text: |
-          生の果物は手に届かない高級品。一般市民は加工品を食べています。
+          <ruby>生<rt>なま</rt></ruby>の<ruby>果物<rt>くだもの</rt></ruby>は<ruby>手<rt>て</rt></ruby>に<ruby>届<rt>とど</rt></ruby>かない<ruby>高級品<rt>こうきゅうひん</rt></ruby>。<ruby>一般市民<rt>いっぱんしみん</rt></ruby>は<ruby>加工品<rt>かこうひん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べています。
       lab_meat:
         text: |
-          主なタンパク源は、「培養肉」や「培養魚介類」です。
+          <ruby>主<rt>おも</rt></ruby>なタンパク<ruby>源<rt>げん</rt></ruby>は、「<ruby>培養肉<rt>ばいようにく</rt></ruby>」や「<ruby>培養魚介類<rt>ばいようぎょかいるい</rt></ruby>」です。
       pesticide_regulations:
         text: |
           食べものに残る残留農薬や放射能汚染やマイクロプラスチックなどの規制は取られてなくなり、企業にとって都合よく貿易できるようになりました。人々のとるカロリーは充分で、「食のカロリー安全保障」は達成されています。
