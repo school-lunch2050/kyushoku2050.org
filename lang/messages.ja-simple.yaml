@@ -147,28 +147,28 @@ weblate:
     bubbles:
       climate_change:
         text: |
-          気候変動での食料生産はどんどん北へと移動。京都ではアボカド、バナナ、コーヒーなど熱帯産のものが栽培され、東京では熱帯魚がつかまるようになりました。
+          <ruby>気候変動<rt>きこうへんどう</rt></ruby>により<ruby>食料生産地<rt>しょくりょうせいさんち</rt></ruby>がどんどん<ruby>北<rt>きた</rt></ruby>へと<ruby>移動<rt>いどう</rt></ruby>。<ruby>京都<rt>きょうと</rt></ruby>ではアボカド、バナナ、コーヒーなど<ruby>熱帯産<rt>ねったいさん</rt></ruby>のものが<ruby>栽培<rt>さいばい</rt></ruby>され、<ruby>東京<rt>とうきょう</rt></ruby>では<ruby>熱帯魚<rt>ねったいぎょ</rt></ruby>がつれるようになりました。
       weather_patterns:
         text: |
-          天気が予測できなくなったので、成長が早く、乾いた土地、湿った土地のどちらでも育つ穀物がよく作られるようになりました。
+          <ruby>天気<rt>てんき</rt></ruby>が<ruby>予測<rt>よそく</rt></ruby>できなくなったので、<ruby>成長<rt>せいちょう</rt></ruby>が<ruby>早<rt>はや</rt></ruby>く、<ruby>乾<rt>かわ</rt></ruby>いた<ruby>土地<rt>とち</rt></ruby>、<ruby>湿<rt>しめ</rt></ruby>った<ruby>土地<rt>とち</rt></ruby>のどちらでも<ruby>育<rt>そだ</rt></ruby>つ<ruby>穀物<rt>こくもつ</rt></ruby>がよく<ruby>作<rt>つく</rt></ruby>られるようになりました。
       insect_pollination:
         text: |
-          受粉してくれていたミツバチが農薬で絶滅。気候変動で生物多様性は失われ、野菜や果物の栽培が難しくなりました。ロボットで受粉したり、ゲノム編集で受粉しなくても実がなるように改良された作物が作られています。
+          <ruby>受粉<rt>じゅふん</rt></ruby>してくれていたミツバチが<ruby>農薬<rt>のうやく</rt></ruby>で<ruby>絶滅<rt>ぜつめつ</rt></ruby>。<ruby>気候変動<rt>きこうへんどう</rt></ruby>で<ruby>生物多様性<rt>せいぶつたようせい</rt></ruby>は<ruby>失<rt>うしな</rt></ruby>われ、<ruby>野菜<rt>やさい</rt></ruby>や<ruby>果物<rt>くだもの</rt></ruby>の<ruby>栽培<rt>さいばい</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくなりました。ロボットで<ruby>受粉<rt>じゅふん</rt></ruby>したり、ゲノム<ruby>編集<rt>へんしゅう</rt></ruby>で<ruby>受粉<rt>じゅふん</rt></ruby>しなくても<ruby>実<rt>み</rt></ruby>がなるように<ruby>改良<rt>かいりょう</rt></ruby>された<ruby>作物<rt>さくもつ</rt></ruby>が<ruby>作<rt>つく</rt></ruby>られています。
       mass_vegetables:
         text: |
-          市町村が、土もなく害虫もいない、完全にAIで自動化、衛星管理された魚と野菜の大量生産工場を運営しています。
+          <ruby>市町村<rt>しちょうそん</rt></ruby>が、<ruby>土<rt>つち</rt></ruby>もなく<ruby>害虫<rt>がいちゅう</rt></ruby>もいない、<ruby>完全<rt>かんぜん</rt></ruby>にAIで<ruby>自動化<rt>じどうか</rt></ruby>、<ruby>衛生管理<rt>えいせいかんり</rt></ruby>された<ruby>魚<rt>さかな</rt></ruby>と<ruby>野菜<rt>やさい</rt></ruby>の<ruby>大量生産工場<rt>たいりょうせいさんこうじょう</rt></ruby>を<ruby>運営<rt>うんえい</rt></ruby>しています。
       ocean_acidification:
         text: |
-          海水の温度があがり、サンゴ礁がなくなり、そこに住む生物もいなくなってしまいました。
+          <ruby>海水<rt>かいすい</rt></ruby>の<ruby>温度<rt>おんど</rt></ruby>があがり、サンゴ<ruby>礁<rt>しょう</rt></ruby>がなくなり、そこに<ruby>住<rt>す</rt></ruby>む<ruby>生物<rt>いきもの</rt></ruby>もいなくなってしまいました。
       pesticide_resistant:
         text: |
-          人のタンパク源はゲノム編集をした昆虫です。わずかな家庭菜園が、インスタント食品に栄養、いろどり、味わいを添えています。
+          <ruby>人<rt>ひと</rt></ruby>のタンパク<ruby>源<rt>げん</rt></ruby>はゲノム<ruby>編集<rt>へんしゅう</rt></ruby>をした<ruby>昆虫<rt>こんちゅう</rt></ruby>です。わずかな<ruby>家庭菜園<rt>かていさいえん</rt></ruby>が、インスタント<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>栄養<rt>えいよう</rt></ruby>、いろどり、<ruby>味<rt>あじ</rt></ruby>わいを<ruby>添<rt>そ</rt></ruby>えています。
       printed_product:
         text: |
-          いろいろな食べものを粉にして、それを「3Dプリンター」にかけることで、ひとりひとりの好みや健康にあった食べものが作られています。台風が多く、外出できない日には、おうちで3Dプリントでごはんを作ってパーティーが開かれています。
+          いろいろな<ruby>食<rt>た</rt></ruby>べものを<ruby>粉<rt>こな</rt></ruby>にして、それを「3Dプリンター」にかけることで、ひとりひとりの<ruby>好<rt>この</rt></ruby>みや<ruby>健康<rt>けんこう</rt></ruby>にあった<ruby>食<rt>た</rt></ruby>べものが<ruby>作<rt>つく</rt></ruby>られています。<ruby>台風<rt>たいふう</rt></ruby>が<ruby>多<rt>おお</rt></ruby>く、<ruby>外出<rt>がいしゅつ</rt></ruby>できない<ruby>日<rt>ひ</rt></ruby>には、おうちで3Dプリントでごはんを<ruby>作<rt>つく</rt></ruby>ってパーティーが<ruby>開<rt>ひら</rt></ruby>かれています。
       home_sprouts:
         text: |
-          おうちで色々なスプラウトを育て、インスタント食品に足りない、栄養素、いろどり、味をそえています。
+          おうちで<ruby>色々<rt>いろいろ</rt></ruby>なスプラウトを<ruby>育<rt>そだ</rt></ruby>て、インスタント<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>足<rt>た</rt></ruby>りない、<ruby>栄養素<rt>えいようそ</rt></ruby>、いろどり、<ruby>味<rt>あじ</rt></ruby>をそえています。
   gamble:
     ingredients:
       # Filled by messages.ja.yml, you can override these if you like
