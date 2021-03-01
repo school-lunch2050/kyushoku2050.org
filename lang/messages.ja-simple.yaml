@@ -133,16 +133,16 @@ weblate:
           「インフルエンサー」がめずらしい<ruby>外国<rt>がいこく</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものを<ruby>流行<rt>はや</rt></ruby>らせ、<ruby>旬<rt>しゅん</rt></ruby>はなくなっています。
       fisheries:
         text: |
-          <ruby>沿岸漁業<rt>えんがんぎょぎょう</rt></ruby>がなくなり、<ruby>漁業<rt>ぎょぎょう</rt></ruby>もハイテク化、<ruby>養殖<rt>ようしょく</rt></ruby>と<ruby>遠洋漁業<rt>えんようぎょぎょう</rt></ruby>だけになりました。生の魚は今やめったに見ない贅沢品。ほとんどの魚が採ってすぐ洋上で冷凍されます。
+          <ruby>沿岸漁業<rt>えんがんぎょぎょう</rt></ruby>がなくなり、<ruby>漁業<rt>ぎょぎょう</rt></ruby>もハイテク化、<ruby>養殖<rt>ようしょく</rt></ruby>と<ruby>遠洋漁業<rt>えんようぎょぎょう</rt></ruby>だけになりました。<ruby>生<rt>なま</rt></ruby>の<ruby>魚<rt>さかな</rt></ruby>は<ruby>今<rt>いま</rt></ruby>やめったに<ruby>見<rt>み</rt></ruby>ない<ruby>贅沢品<rt>ぜいたくひん</rt></ruby>。ほとんどの<ruby>魚<rt>さかな</rt></ruby>が<ruby>採<rt>と</rt></ruby>ってすぐ<ruby>洋上<rt>ようじょう</rt></ruby>で<ruby>冷凍<rt>れいとう</rt></ruby>されます。
       social_businesses:
         text: |
-          家族経営の農家はつぶれ、農業はドローンやAI、人工衛星を駆使する社会起業家たちが担っています。ハイテク技術をつかって資源を節約し、また味や形も一般向けに規格化されています。
+          <ruby>家族経営<rt>かぞくけいえい</rt></ruby>の<ruby>農家<rt>のうか</rt></ruby>はつぶれ、<ruby>農業<rt>のうぎょう</rt></ruby>はドローンやAI、<ruby>人工衛星<rt>じんこうえいせい</rt></ruby>を<ruby>駆使<rt>くし</rt></ruby>する<ruby>社会起業家<rt>しゃかいきぎょうか</rt></ruby>たちが<ruby>担<rt>にな</rt></ruby>っています。ハイテク<ruby>技術<rt>ぎじゅつ</rt></ruby>をつかって<ruby>資源<rt>しげん</rt></ruby>を<ruby>節約<rt>せつやく</rt></ruby>し、また<ruby>味<rt>あじ</rt></ruby>や<ruby>形<rt>かたち</rt></ruby>も<ruby>一般向<rt>いっぱんむ</rt></ruby>けに<ruby>規格化<rt>きかくか</rt></ruby>されています。
       rice:
         text: |
-          温室効果ガスを出していい量が国ごとに決められています。日本はハイテク分野に特化し、お米はアジア諸国からはお米やとうもろこしなどを生産しているため、アジアからお米を輸入しています。
+          <ruby>温室効果<rt>おんしつこうか</rt></ruby>ガスを<ruby>出<rt>だ</rt></ruby>していい<ruby>量<rt>りょう</rt></ruby>が<ruby>国<rt>くに</rt></ruby>ごとに<ruby>決<rt>き</rt></ruby>められています。<ruby>日本<rt>にほん</rt></ruby>はハイテク<ruby>分野<rt>ぶんや</rt></ruby>に<ruby>特化<rt>とっか</rt></ruby>し、アジア<ruby>諸国<rt>しょこく</rt></ruby>でお<ruby>米<rt>こめ</rt></ruby>やとうもろこしなどを<ruby>生産<rt>せいさん</rt></ruby>しているため、アジアからお<ruby>米<rt>こめ</rt></ruby>を<ruby>輸入<rt>ゆにゅう</rt></ruby>しています。
       ethical_consumption:
         text: |
-          エシカル消費とよばれる「自然や動物のことを考えて買い物をしよう」という運動が広がり、フェアトレードやオーガニックなどのラベルがついている食品を買うのがふつうになっています。作る人と買う人が、SNSで直接つながっています。
+          エシカル<ruby>消費<rt>しょうひ</rt></ruby>とよばれる「<ruby>自然<rt>しぜん</rt></ruby>や<ruby>動物<rt>どうぶつ</rt></ruby>のことを<ruby>考<rt>かんが</rt></ruby>えて<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>をしよう」という<ruby>運動<rt>うんどう</rt></ruby>が<ruby>広<rt>ひろ/rt></ruby>がり、フェアトレードやオーガニックなどのラベルがついている<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>買<rt>か</rt></ruby>うのがふつうになっています。<ruby>作<rt>つく</rt></ruby>る<ruby>人<rt>ひと</rt></ruby>と<ruby>買<rt>か</rt></ruby>う<ruby>人<rt>ひと</rt></ruby>が、SNSで<ruby>直接<rt>ちょくせつ</rt></ruby>つながっています。
   desperate:
     bubbles:
       climate_change:
