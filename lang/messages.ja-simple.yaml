@@ -193,47 +193,47 @@ weblate:
           <ruby>主<rt>おも</rt></ruby>なタンパク<ruby>源<rt>げん</rt></ruby>は、「<ruby>培養肉<rt>ばいようにく</rt></ruby>」や「<ruby>培養魚介類<rt>ばいようぎょかいるい</rt></ruby>」です。
       pesticide_regulations:
         text: |
-          食べものに残る残留農薬や放射能汚染やマイクロプラスチックなどの規制は取られてなくなり、企業にとって都合よく貿易できるようになりました。人々のとるカロリーは充分で、「食のカロリー安全保障」は達成されています。
+          <ruby>食<rt>た</rt></ruby>べものに<ruby>残<rt>のこ</rt></ruby>る<ruby>残留農薬<rt>ざんりゅうのうやく</rt></ruby>や<ruby>放射能汚染<rt>ほうしゃのうおせん</rt></ruby>やマイクロプラスチックなどの<ruby>規制<rt>きせい</rt></ruby>は<ruby>廃止<rt>はいし</rt></ruby>されてなくなり、<ruby>企業<rt>きぎょう</rt></ruby>にとって<ruby>都合<rt>つごう</rt></ruby>よく<ruby>貿易<rt>ぼうえき</rt></ruby>できるようになりました。<ruby>人々<rt>ひとびと</rt></ruby>のとるカロリーは<ruby>充分<rt>じゅうぶん</rt></ruby>で、「<ruby>食<rt>しょく</rt></ruby>のカロリー<ruby>安全保障<rt>あんぜんほしょう</rt></ruby>」は<ruby>達成<rt>たっせい</rt></ruby>されています。
       daily_medication:
         text: |
-          マイクロプラスチックや残留農薬から身を守り、病気にならない様に、人は毎日薬を飲んでいます。
+          マイクロプラスチックや<ruby>残留農薬<rt>ざんりゅうのうやく</rt></ruby>から<ruby>身<rt>み</rt></ruby>を<ruby>守<rt>まも</rt></ruby>り、<ruby>病気<rt>びょうき</rt></ruby>にならないように、<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んでいます。
       daily_supplements:
         text: |
-          やせた土地で作られた野菜には養分が足りないので、サプリのカプセルを飲む人が増えました。サプリは腸内環境を整えたり災害で食べものがないときの緊急食でもあります。
+          やせた<ruby>土地<rt>とち</rt></ruby>で<ruby>作<rt>つく</rt></ruby>られた<ruby>野菜<rt>やさい</rt></ruby>には<ruby>養分<rt>ようぶん</rt></ruby>が<ruby>足<rt>た</rt></ruby>りないので、サプリのカプセルを<ruby>飲<rt>の</rt></ruby>む<ruby>人<rt>ひと</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えました。サプリは<ruby>腸内環境<rt>ちょうないかんきょう</rt></ruby>を<ruby>整<rt>ととの</rt></ruby>えたり<ruby>災害<rt>さいがい</rt></ruby>で<ruby>食<rt>た</rt></ruby>べものがないときの<ruby>非常食<rt>ひじょうしょく</rt></ruby>でもあります。
   garden:
     ingredients:
       # Filled by messages.ja.yml, you can override these if you like
     bubbles:
       domestic_soveirnty:
         text: |
-          世界はそれぞれ、自分の国の食べものは自分の国で守っています。仕事も、農業や料理や家事など食べ物関連が多くなり、「半食半X」の人も増えました。
+          <ruby>世界<rt>せかい</rt></ruby>はそれぞれ、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>国<rt>くに</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものは<ruby>自分<rt>じぶん</rt></ruby>の<ruby>国<rt>くに</rt></ruby>で<ruby>守<rt>まも</rt></ruby>っています。<ruby>仕事<rt>しごと</rt></ruby>も、<ruby>農業<rt>のうぎょう</rt></ruby>や<ruby>料理<rt>りょうり</rt></ruby>や<ruby>家事<rt>かじ</rt></ruby>など<ruby>食<rt>た</rt></ruby>べもの<ruby>関連<rt>かんれん</rt></ruby>が<ruby>多<rt>おお</rt></ruby>くなり、「<ruby>半農半X<rt>はんのうはんえっくす</rt></ruby>」の<ruby>人<rt>ひと</rt></ruby>も<ruby>増<rt>ふ</rt></ruby>えました。
       regionally_diverse:
         text: |
-          米作りから出る温室効果のメタンガスを減らすため、お米のかわりに山芋、里芋、ジャガイモ、サツマイモなどを食べることが多くなりました。
+          <ruby>米作<rt>こめづく</rt></ruby>りから<ruby>出<rt>で</rt></ruby>る<ruby>温室効果<rt>おんしつこうか</rt></ruby>のメタンガスを<ruby>減<rt>へ</rt></ruby>らすため、お<ruby>米<rt>こめ</rt></ruby>のかわりに<ruby>山芋<rt>やまいも</rt></ruby>、<ruby>里芋<rt>さといも</rt></ruby>、ジャガイモ、サツマイモなどを<ruby>食<rt>た</rt></ruby>べることが<ruby>多<rt>おお</rt></ruby>くなりました。
       seed_banks:
         text: |
-          地域ごとの森、海、川の利用ルールにのっとっていれば、シカやイノシシ、魚、山菜などを採って食べていいことになっています。地域のためのボランティアをする時間が決まっていて、タネの交換のイベントやファーマーズマーケットもよく開かれます。
+          <ruby>地域<rt>ちいき</rt></ruby>ごとの<ruby>森<rt>もり</rt></ruby>、<ruby>海<rt>うみ</rt></ruby>、<ruby>川<rt>かわ</rt></ruby>の<ruby>利用<rt>りよう</rt></ruby>ルールにのっとっていれば、シカやイノシシ、<ruby>魚<rt>さかな</rt></ruby>、<ruby>山菜<rt>さんさい</rt></ruby>などを<ruby>採<rt>と</rt></ruby>って<ruby>食<rt>た</rt></ruby>べていいことになっています。<ruby>地域<rt>ちいき</rt></ruby>のためのボランティアをする<ruby>時間<rt>じかん</rt></ruby>が<ruby>決<rt>き</rt></ruby>まっていて、タネの<ruby>交換<rt>こうかん</rt></ruby>のイベントやファーマーズマーケットもよく<ruby>開<rt>ひら</rt></ruby>かれます。
       vegan_diets:
         text: |
-          ベジタリアン（肉・魚類は食べず、野菜を中心に卵や乳製品も食べる人）やビーガン（植物性のものしか食べない人）がふえ、タンパク質も、肉・魚・乳製品ではなく、豆類、雑穀、そば、ナッツなどの植物からとるようになっています。
+          ベジタリアン（<ruby>肉<rt>にく</rt></ruby>・<ruby>魚類<rt>ぎょるい</rt></ruby>は<ruby>食<rt>た</rt></ruby>べず、<ruby>野菜<rt>やさい</rt></ruby>を<ruby>中心<rt>ちゅうしん</rt></ruby>に<ruby>卵<rt>たまご</rt></ruby>や<ruby>乳製品<rt>にゅうせいひん</rt></ruby>も<ruby>食<rt>た</rt></ruby>べる人）やビーガン（<ruby>植物性<rt>しょくぶつせい</rt></ruby>のものしか<ruby>食<rt>た</rt></ruby>べない人）がふえ、タンパク<ruby>質<rt>しつ</rt></ruby>も、<ruby>肉<rt>にく</rt></ruby>・<ruby>魚<rt>さかな</rt></ruby>・<ruby>乳製品<rt>にゅうせいひん</rt></ruby>ではなく、<ruby>豆類<rt>まめるい</rt></ruby>、<ruby>雑穀<rt>ざっこく</rt></ruby>、そば、ナッツなどの<ruby>植物<rt>しょくぶつ</rt></ruby>からとるようになっています。
       public_food:
         text: |
-          公園や土手や河川敷には、誰でも自由にとって食べてもいい実のなる木を植えています。街や校庭に畑を作り野菜を作っています。
+          <ruby>公園<rt>こうえん</rt></ruby>や<ruby>土手<rt>どて</rt></ruby>や<ruby>河川敷<rt>かせんじき</rt></ruby>には、<ruby>誰<rt>だれ</rt></ruby>でも<ruby>自由<rt>じゆう</rt></ruby>にとって<ruby>食<rt>た</rt></ruby>べてもいい<ruby>実<rt>み</rt></ruby>のなる<ruby>木<rt>き</rt></ruby>を<ruby>植<rt>う</rt></ruby>えています。<ruby>街<rt>まち</rt></ruby>や<ruby>校庭<rt>こうてい</rt></ruby>に<ruby>畑<rt>はたけ</rt></ruby>を<ruby>作<rt>つく</rt></ruby>り<ruby>野菜<rt>やさい</rt></ruby>を<ruby>作<rt>つく</rt></ruby>っています。
       wasting_food:
         text: |
-          食べ残しや売れ残りは捨てずコンポストで肥料にします。
+          <ruby>食<rt>た</rt></ruby>べ<ruby>残<rt>のこ</rt></ruby>しや<ruby>売<rt>う</rt></ruby>れ<ruby>残<rt>のこ</rt></ruby>りは<ruby>捨<rt>す</rt></ruby>てずコンポストで<ruby>肥料<rt>ひりょう</rt></ruby>にします。
       preserving:
         text: |
-          冷蔵庫や長い距離の配送は二酸化炭素をたくさん出すのでつつしまれ、かわりに漬け物、干物、くん製として保存します。
+          <ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>や<ruby>長<rt>なが</rt></ruby>い<ruby>距離<rt>きょり</rt></ruby>の<ruby>配送<rt>はいそう</rt></ruby>は<ruby>二酸化炭素<rt>にさんかたんそ</rt></ruby>をたくさん<ruby>出<rt>だ</rt></ruby>すのでつつしまれ、かわりに<ruby>漬<rt>つ</rt></ruby>け<ruby>物<rt>もの</rt></ruby>、<ruby>干物<rt>ひもの</rt></ruby>、くん<ruby>製<rt>せい</rt></ruby>として<ruby>保存<rt>ほぞん</rt></ruby>します。
       food_literacy:
         text: |
-          99%の子どもが、地元の旬の食べものを知っています。野山で食べられる物を見つけ、見分け、料理して食べられます。
+          99%の<ruby>子<rt>こ</rt></ruby>どもが、<ruby>地元<rt>じもと</rt></ruby>の<ruby>旬<rt>しゅん</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものを<ruby>知<rt>し</rt></ruby>っています。<ruby>野山<rt>のやま</rt></ruby>で<ruby>食<rt>た</rt></ruby>べられる<ruby>物<rt>もの</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけ、<ruby>見分<rt>みわ</rt></ruby>け、<ruby>料理<rt>りょうり</rt></ruby>して<ruby>食<rt>た</rt></ruby>べられます。
       permaculture:
         text: |
-          環境負荷が少ない「パーマカルチャー」「アグロエコロジー」「アグロフォレストリー」と呼ばれる農法が主流です。ニワトリは虫を食べてくれるペットとして飼われフンは肥料にしています。
+          <ruby>環境負荷<rt>かんきょうふか</rt></ruby>が<ruby>少<rt>すく</rt></ruby>ない「パーマカルチャー」「アグロエコロジー」「アグロフォレストリー」と<ruby>呼<rt>よ</rt></ruby>ばれる<ruby>農法<rt>のうほう</rt></ruby>が<ruby>主流<rt>しゅりゅう</rt></ruby>です。ニワトリは<ruby>虫<rt>むし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べてくれるペットとして<ruby>飼<rt>か</rt></ruby>われフンは<ruby>肥料<rt>ひりょう</rt></ruby>にしています。
       limited_trade:
         text: |
-          石油から作る燃料や化学肥料はほぼ禁止。貿易も本当に必要なものだけになりました。
+          <ruby>石油<rt>せきゆ</rt></ruby>から<ruby>作<rt>つく</rt></ruby>る<ruby>燃料<rt>ねんりょう</rt></ruby>や<ruby>化学肥料<rt>かがくひりょう</rt></ruby>はほぼ<ruby>禁止<rt>きんし</rt></ruby>。<ruby>貿易<rt>ぼうえき</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>必要<rt>ひつよう</rt></ruby>なものだけになりました。
       no_pesticides:
         text: |
-          農薬は天然の成分だけが使えます。遺伝子くみかえ作物は生産してはいけません
+          <ruby>農薬<rt>のうやく</rt></ruby>は<ruby>天然<rt>てんねん</rt></ruby>の<ruby>成分<rt>せいぶん</rt></ruby>だけが<ruby>使<rt>つか</rt></ruby>えます。<ruby>遺伝子<rt>いでんし</rt></ruby>くみかえ<ruby>作物<rt>さくもつ</rt></ruby>は<ruby>生産<rt>せいさん</rt></ruby>してはいけません
