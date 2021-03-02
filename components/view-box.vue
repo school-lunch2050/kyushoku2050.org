@@ -138,6 +138,7 @@ export default Vue.extend({
     }
     window.addEventListener('resize', onresize)
     updateMap.set(this, updateTarget)
+    container.classList.toggle('ready', true)
     updateTarget(false)
     return () => {
       updateMap.delete(this)

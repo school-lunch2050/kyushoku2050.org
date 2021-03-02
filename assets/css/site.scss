@@ -203,6 +203,10 @@ html[lang="ja-simple"] {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: none;
+}
+.view-box.ready {
+  display: block;
 }
 .lunch-detail .view-box {
   background: $col-gradient-end;

@@ -38,7 +38,15 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon/favicon.ico' },
+      { rel: 'preload', as: 'font', href: '/font/caveat/CaveatBrush-Regular.woff2' },
+      { rel: 'preload', as: 'font', href: '/font/honya/HonyaJi-Re.woff2' },
+      ...['cosmopolitan', 'desperate', 'gamble', 'garden'].reduce((list, entry) => {
+        list.push({ rel: 'prefetch', as: 'image', href: `/img/illustration/${entry}.webp` })
+        list.push({ rel: 'prefetch', as: 'image', href: `/img/lunch/${entry}.webp` })
+        return list
+      }, []),
+      { rel: 'prefetch', as: 'image', href: '/img/lunch/empty.webp' }
     ]
   },
 
