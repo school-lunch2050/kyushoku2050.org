@@ -57,8 +57,8 @@ weblate:
     lunch:
       text: |
         …<br/>
-         <ruby>結果的<rt>けっかてき</rt></ruby>にランチも<br/>
-        変わります。
+         その<ruby>結果<rt>けっか</rt></ruby>、<ruby>給食<rt>きゅうしょく</rt></ruby>も<br/>
+        <ruby>変<rt>か</rt></ruby>わります。
     introduction:
       text: |
         <ruby>私<rt>わたし</rt></ruby>たち「@[logo|/img/logo_feast_ja.webp|Feast]」チームは<br/>
@@ -79,8 +79,8 @@ weblate:
           - https://google.com
     location:
       title: |
-        要素 ②<br/>
-        <ruby>私<rt>わたし</rt></ruby>たちの<ruby>食<rt>た</rt></ruby>べものがどこから来るか？
+        <ruby>要素<rt>ようそ</rt></ruby> ②<br/>
+        <ruby>私<rt>わたし</rt></ruby>たちの<ruby>食<rt>た</rt></ruby>べものがどこから<ruby>来<rt>く</rt></ruby>るのか？
       near:
         text: <ruby>国内<rt>こくない</rt></ruby>?
       far:
@@ -119,7 +119,7 @@ weblate:
     # Filled by messages.ja.yml, you can override these if you like
     sprouts:
       source: |
-        クラスで色々なスプラウトを育て、インスタント食品に足りない、栄養素、いろどり、味をそえています。
+        クラスで<ruby>色々<rt>いろいろ</rt></ruby>なスプラウトを<ruby>育<rt>そだ</rt></ruby>て、インスタント<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>足<rt>た</rt></ruby>りない、<ruby>栄養素<rt>えいようそ</rt></ruby>、いろどり、<ruby>味<rt>あじ</rt></ruby>をそえています。
   cosmopolitan:
     bubbles:
       fruit: 
@@ -133,7 +133,7 @@ weblate:
           「インフルエンサー」がめずらしい<ruby>外国<rt>がいこく</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものを<ruby>流行<rt>はや</rt></ruby>らせ、<ruby>旬<rt>しゅん</rt></ruby>はなくなっています。
       fisheries:
         text: |
-          <ruby>沿岸漁業<rt>えんがんぎょぎょう</rt></ruby>がなくなり、<ruby>漁業<rt>ぎょぎょう</rt></ruby>もハイテク化、<ruby>養殖<rt>ようしょく</rt></ruby>と<ruby>遠洋漁業<rt>えんようぎょぎょう</rt></ruby>だけになりました。<ruby>生<rt>なま</rt></ruby>の<ruby>魚<rt>さかな</rt></ruby>は<ruby>今<rt>いま</rt></ruby>やめったに<ruby>見<rt>み</rt></ruby>ない<ruby>贅沢品<rt>ぜいたくひん</rt></ruby>。ほとんどの<ruby>魚<rt>さかな</rt></ruby>が<ruby>採<rt>と</rt></ruby>ってすぐ<ruby>洋上<rt>ようじょう</rt></ruby>で<ruby>冷凍<rt>れいとう</rt></ruby>されます。
+          <ruby>沿岸漁業<rt>えんがんぎょぎょう</rt></ruby>がなくなり、<ruby>漁業<rt>ぎょぎょう</rt></ruby>もハイテク<ruby>化<rt>か</rt></ruby>、<ruby>養殖<rt>ようしょく</rt></ruby>と<ruby>遠洋漁業<rt>えんようぎょぎょう</rt></ruby>だけになりました。<ruby>生<rt>なま</rt></ruby>の<ruby>魚<rt>さかな</rt></ruby>は<ruby>今<rt>いま</rt></ruby>やめったに<ruby>見<rt>み</rt></ruby>ない<ruby>贅沢品<rt>ぜいたくひん</rt></ruby>。ほとんどの<ruby>魚<rt>さかな</rt></ruby>が<ruby>採<rt>と</rt></ruby>ってすぐ<ruby>洋上<rt>ようじょう</rt></ruby>で<ruby>冷凍<rt>れいとう</rt></ruby>されます。
       social_businesses:
         text: |
           <ruby>家族経営<rt>かぞくけいえい</rt></ruby>の<ruby>農家<rt>のうか</rt></ruby>はつぶれ、<ruby>農業<rt>のうぎょう</rt></ruby>はドローンやAI、<ruby>人工衛星<rt>じんこうえいせい</rt></ruby>を<ruby>駆使<rt>くし</rt></ruby>する<ruby>社会起業家<rt>しゃかいきぎょうか</rt></ruby>たちが<ruby>担<rt>にな</rt></ruby>っています。ハイテク<ruby>技術<rt>ぎじゅつ</rt></ruby>をつかって<ruby>資源<rt>しげん</rt></ruby>を<ruby>節約<rt>せつやく</rt></ruby>し、また<ruby>味<rt>あじ</rt></ruby>や<ruby>形<rt>かたち</rt></ruby>も<ruby>一般向<rt>いっぱんむ</rt></ruby>けに<ruby>規格化<rt>きかくか</rt></ruby>されています。
