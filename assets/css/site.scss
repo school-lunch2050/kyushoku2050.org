@@ -253,8 +253,8 @@ html[lang="ja-simple"] {
 .view-box--canvas--focussed {
   cursor: pointer;
 
-  & .bubble-text--link {
-    display: none;
+  .bubble-text--link {
+    pointer-events: none;
   }
 }
 .i18n-box--placed {
@@ -532,4 +532,30 @@ html[lang="ja-simple"] {
   width: 40px;
   left: -20px;
   top: -210px;
+}
+.bubble-text--shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.9s;
+}
+.bubble-text--rounded-rect {
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: all 0.2s;
+}
+.bubble-text--link:hover {
+  .bubble-text--rounded-rect {
+    border-color: rgba(0, 0, 0, 0.78);
+  }
+}
+.bubble-text--active {
+  .bubble-text--rounded-rect {
+    border-color: #000;
+  }
+  .bubble-text--shadow {
+    display: block;
+    opacity: 0.78;
+  }
 }

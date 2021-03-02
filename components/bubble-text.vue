@@ -5,14 +5,36 @@
         <text-box :key="i18nkey" :line-height="lineHeight" :class="{ 'bubble-text--seen': seen() }" :font-size="fontSize" :custom-style="spanStyle()" />
       </div>
     </div>
+    <svg viewBox="0 0 3157 2500" class="bubble-text--shadow">
+      <path fill="#000" :d="focusPath" fill-rule="even-odd" />
+    </svg>
     <nuxt-link :to="{ hash }" :style="boxStyle" :class="`bubble-text--link box--${hash}`">
-      &nbsp;
+      <div class="bubble-text--rounded-rect" :style="roundedRectStyle">
+        &nbsp;
+      </div>
     </nuxt-link>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { toStyle, activeLifecycle, countCharsCached } from '../lib'
+import { toStyle, activeLifecycle, countCharsCached, Rect } from '../lib'
+
+function scaleRect (source: any, f: number = 0.98) {
+  const width = source.width * f
+  const height = source.height * f
+  return {
+    x: source.x + (source.width - width) / 2,
+    y: source.y + (source.height - height) / 2,
+    width,
+    height
+  }
+}
+
+function roundedRectPath (source: Rect & { r: number }): string {
+  const { x, y, width: w, height: h, r } = source
+  const a = (x: number, y: number) => `A ${r} ${r} 90 0 0 ${x},${y}`
+  return `M ${x} ${y + r} L ${x} ${y + h - r} ${a(x + r, y + h)} L ${x + w - r} ${y + h} ${a(x + w, y + h - r)} L ${x + w} ${y + r} ${a(x + w - r, y)} L ${x + r}  ${y} ${a(x, y + r)} Z`
+}
 
 export default Vue.extend({
   props: {
@@ -46,6 +68,11 @@ export default Vue.extend({
     const path = String(this.$vnode.key).split('.')
     path.splice(1, 0, 'bubbles')
     const i18nkey = `weblate.${path.join('.')}.text`
+    const width = 3157
+    const height = 2500
+    const roundedRect: Rect & { r: number } = scaleRect(viewRect) as any
+    roundedRect.r = Math.max(roundedRect.width, roundedRect.height) * 0.02
+    const borderWidth = 1
     return {
       textStyle: toStyle({
         left: rect.x,
@@ -62,6 +89,16 @@ export default Vue.extend({
       paddingStyle: toStyle({
         padding
       }),
+      roundedRectStyle: toStyle({
+        left: roundedRect.x - viewRect.x - borderWidth,
+        top: roundedRect.y - viewRect.y - borderWidth,
+        width: roundedRect.width,
+        height: roundedRect.height,
+        borderRadius: roundedRect.r + borderWidth,
+        position: 'absolute',
+        borderWidth
+      }),
+      focusPath: `M 0 0 L ${width} 0 L ${width} ${height} L 0 ${height} Z ${roundedRectPath(roundedRect)}`,
       hash: path[2],
       i18nkey
     }

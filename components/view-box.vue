@@ -23,7 +23,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { activeLifecycle, styleRect, toStyle, toPx, Rect } from '../lib'
+import { activeLifecycle, styleRect, toStyle, Rect } from '../lib'
 
 const updateMap = new WeakMap<any, Function>()
 interface Viewbox {
@@ -42,6 +42,16 @@ function getViewbox (vue: Vue): Viewbox | null {
     return null
   }
   return getViewbox(container)
+}
+
+function getShadow (vue: Vue, width: number, height: number): string | null {
+  const viewbox = getViewbox(vue)
+  if (viewbox === null) {
+    return null
+  }
+  const { rect } = viewbox
+  return `M 0 0 L ${width} 0 L ${width} ${height} L 0 ${height} Z ` +
+    `M ${rect.x} ${rect.y} L ${rect.x + rect.width} ${rect.y} L ${rect.x + rect.width} ${rect.y + rect.height} L ${rect.x} ${rect.y + rect.height} Z`
 }
 
 export default Vue.extend({
@@ -68,11 +78,14 @@ export default Vue.extend({
     }
   },
   data () {
+    const width = parseFloat(this.$props.width)
+    const height = parseFloat(this.$props.height)
     return {
+      shadow: getShadow.bind(null, this, width, height),
       viewbox: getViewbox.bind(null, this),
       size: toStyle({
-        width: toPx(this.$props.width),
-        height: toPx(this.$props.height)
+        width,
+        height
       })
     }
   },
@@ -107,11 +120,13 @@ export default Vue.extend({
         : full.rect.height / target.height * viewPort.height / full.rect.height
 
       if ((canvas.dataset.id ?? null) !== id) {
+        container.querySelector(`.box--${canvas.dataset.id}`)?.parentElement?.classList.toggle('bubble-text--active', false)
         if (!id) {
           delete canvas.dataset.id
         } else {
           canvas.dataset.id = id
         }
+        container.querySelector(`.box--${id}`)?.parentElement?.classList.toggle('bubble-text--active', true)
         this.$forceUpdate()
       }
       canvas.style.transition = smooth ? this.$props.transition : ''
