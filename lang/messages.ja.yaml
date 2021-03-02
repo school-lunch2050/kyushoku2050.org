@@ -106,11 +106,11 @@ weblate:
         {percent}% を読み<br/>
         終わった
       finished: |
-        素晴らしい！
-        全てを読み
+        素晴らしい！<br/>
+        全てを読み<br/>
         終わった
       click:
-        (クリック) 意見
+        (クリック) 意見<br/>
         を教えてくれきませんか？
   ingredients:
     milk:

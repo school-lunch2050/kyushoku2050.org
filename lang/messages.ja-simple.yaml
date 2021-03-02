@@ -109,11 +109,11 @@ weblate:
         {percent}% を<ruby>読<rt>よ</rt></ruby>み<br/>
         <ruby>終<rt>お</rt></ruby>わりました
       finished: |
-        おつかれさまです！
-        <ruby>全<rt>すべ</rt></ruby>て読み
+        おつかれさまです！<br/>
+        <ruby>全<rt>すべ</rt></ruby>て読み<br/>
          <ruby>終<rt>お</rt></ruby>わりました
       click:
-        (クリック) ご<ruby>意見<rt>いけん</rt></ruby>を
+        (クリック) ご<ruby>意見<rt>いけん</rt></ruby>を<br/>
         お<ruby>聞<rt>き</rt></ruby>かせください
   ingredients: 
     # Filled by messages.ja.yml, you can override these if you like
