@@ -79,7 +79,12 @@ export default {
       vueI18nLoader: true
     }],
     '@nuxt/content',
-    'vue-plausible'
+    'vue-plausible',
+    ['nuxt-webfontloader', {
+      custom: {
+        families: ['CaveatBrush', 'HonyaJi']
+      }
+    }]
   ],
 
   plausible: {
