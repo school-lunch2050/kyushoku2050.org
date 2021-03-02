@@ -100,10 +100,10 @@ weblate:
     hint: |
       Click to learn more!
     grid:
-      near: local
-      far: global
-      warm: warm
-      hot: hot
+      near: Local
+      far: Global
+      warm: Warm
+      hot: Hot!
   scenario:
     actions:
       notes: Notes

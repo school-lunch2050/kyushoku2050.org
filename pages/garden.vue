@@ -50,6 +50,8 @@
     </template>
     <template #illustration>
       <img class="illustration--image" width="3157" height="2500" src="/img/illustration/garden.webp">
+      <text-box key="weblate.main.grid.warm" align="center center" class="illustration--weather--warm font--tex" />
+      <text-box key="weblate.main.grid.near" align="center center" class="illustration--location font--tex" x="2900" y="6" font-size="40" />
       <text-box key="weblate.pages.garden.full" class="illustration--title font--tex" x="680" y="20" width="1915" height="180" font-size="100" align="center" vertical-align="center" />
       <bubble-text
         key="garden.public_food"

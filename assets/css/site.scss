@@ -239,6 +239,38 @@ html[lang="ja-simple"] {
 .view-box--illustration {
   background: $col-gradient-end;
 }
+.illustration--weather--hot,
+.illustration--weather--warm,
+.illustration--location {
+  font-size: 50px;
+  color: white;
+  position: absolute;
+}
+.illustration--weather--hot {
+  left: 90px;
+  top: 40px;
+  width: 332px;
+  height: 96px;
+}
+.illustration--weather--warm {
+  left: 115px;
+  width: 170px;
+  top: 29px;
+  height: 67px;
+}
+html[lang="ja-simple"] {
+  .illustration--weather--warm,
+  .illustration--weather--hot,
+  .illustration--location {
+    font-size: 30px;
+  }
+}
+.illustration--location {
+  left: 2850px;
+  top: 20px;
+  width: 250px;
+  height: 90px;
+}
 .view-box--unfocus {
   position: absolute;
   left: 0;
