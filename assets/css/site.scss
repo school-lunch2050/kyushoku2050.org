@@ -435,10 +435,16 @@ html[lang="ja-simple"] {
 .sidebar--entries--indent a.nuxt-link-active {
   @extend %sidebar-focussed;
   &:before {
-    content: '►';
+    $size: 12px;
+    content: ' ';
     position: absolute;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    margin-top: 2px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    overflow: hidden;
+    border-width: $size/2 0 $size/2 $size*.866;
+    border-color: transparent transparent transparent #fff;
+    margin-top: 4px;
     left: 0;
   }
 }
