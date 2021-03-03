@@ -20,7 +20,8 @@ Cookieとは、サイトにアクセスした際にブラウザに保存され�
 当サイトで利用しているアクセス解析サービスは以下のとおりです。  
 **plausible.io**
 
-~~## 第三者配信の広告サービスとCookie~~  The site won't use any advertisement service, right?
+~~## 第三者配信の広告サービスとCookie~~  
+The site won't use any advertisement service, right?
 
 ## プライバシーポリシーの変更について
 当サイトは、個人情報に関して適用される日本の法令を遵守するとともに、本ポリシーの内容を適宜見直しその改善に努めます。
