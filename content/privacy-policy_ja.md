@@ -21,7 +21,7 @@ Cookieとは、サイトにアクセスした際にブラウザに保存され�
 
 **plausible.io**
 
-~~第三者配信の広告サービスとCookie~~
+~~## 第三者配信の広告サービスとCookie~~
 
 The site won't use any advertisement service, right?
 
