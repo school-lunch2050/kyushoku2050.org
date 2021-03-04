@@ -28,7 +28,7 @@ weblate:
     main:
       full: シナリオ選択
     privacy-policy:
-      full: Privacy Policy
+      full: プライバシーポリシー
     scenarios:
       full: シナリオ紹介
     weather:

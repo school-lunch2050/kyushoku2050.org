@@ -1,5 +1,3 @@
-# Privacy Policy
-
 ## About the collection of personal information
 This site does not collect personal information such as the names and e-mail addresses of visitors.
 

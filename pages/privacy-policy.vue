@@ -1,7 +1,5 @@
 <template>
-  <kyushoku-content>
-    <nuxt-content :document="page[$i18n.locale]" />
-  </kyushoku-content>
+  <kyushoku-content :document="page[$i18n.locale]" />
 </template>
 <script lang="ts">
 import Vue from 'vue'
