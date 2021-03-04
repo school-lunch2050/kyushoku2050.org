@@ -1,23 +1,26 @@
 # Privacy Policy
 
-## Acquisition of personal information
-This site does not collect personal information such as the name and email address of the viewer.
+## About the collection of personal information
+This site does not collect personal information such as the names and e-mail addresses of visitors.
 
-## Cookie
-This site uses cookies for some contents.
-Cookies are information that is stored in your browser when you access the site, but do not include personal information such as your name and email address.
-We use the information in this cookie only to display the contents quickly, but it is possible to prevent the use of cookies by setting your browser.
-Access analysis service used on this site is as follows.
-** plausible.io **
+## Cookies
+This site uses cookies for some of its contents.  
+Cookies are pieces of information that are stored in your browser when you access the site, but they do not contain personal information such as your name or email address.  
+We use this cookie information only for the purpose of quickly displaying the contents of this site, but you can disable the use of cookies by setting your browser.  
+The access analysis services used on this site are as follows.  
+**plausible.io**.
 
-## Changes to privacy policy
-This site will comply with Japanese laws and regulations applicable to personal information, and will review the contents of this policy as appropriate and strive to improve it.
-The latest amended privacy policy will always be disclosed on this page.
+## Changes to our Privacy Policy
+In addition to complying with the Japanese laws and regulations applicable to personal information, this site will review and improve the contents of this policy from time to time.
+The revised and updated privacy policy will always be disclosed on this page.
 
 ## Disclaimer
-We strive to post as accurate information as possible regarding the content and information on this site, but incorrect information may be included or the information may be out of date.
-Please note that we are not responsible for any damages caused by the contents posted on this site.
+While we strive to ensure that the content and information on this website is as accurate as possible, there may be times when erroneous information is introduced or information is out of date.
+Please note that we cannot be held responsible for any damages caused by the content on this site.
 
-## Operator information
+## Operator Information
 FEAST Project
 https://www.feastproject.org/
+
+
+Translated with www.DeepL.com/Translator (free version)
