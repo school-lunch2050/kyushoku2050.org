@@ -1,3 +1,8 @@
+const gradient = {
+  start: '#29364B',
+  end: '#05070A'
+}
+
 export default {
   server: {
     host: '0' // default: localhost
@@ -49,7 +54,7 @@ export default {
       { rel: 'prefetch', as: 'image', href: '/img/lunch/empty.webp' }
     ],
     bodyAttrs: {
-      style: 'background-color: #05070A; background: linear-gradient(#29364B, #05070A 100vh);'
+      style: `background: ${gradient.end} linear-gradient(${gradient.start}, ${gradient.end} 100vh);`
     }
   },
 
