@@ -1,7 +1,5 @@
 $col-bg: #424852;
 $col-bg-dark: darken($col-bg, 10%);
-$col-gradient-start: #29364B;
-$col-gradient-end: #05070A;
 $col-accent-grey: #B5B5B5;
 $col-nav-active: #fff;
 $col-nav-inactive: rgba(255, 255, 255, 0.6);
@@ -24,9 +22,6 @@ $col-accent: lighten(#1E281A, 60%);
        url("/font/honya/HonyaJi-Re.ttf") format("ttf");
 }
 
-body {
-  background: $col-gradient-start;
-}
 body, html {
   padding: 0;
   margin: 0;
@@ -208,9 +203,6 @@ html[lang="ja-simple"] {
 .view-box.ready {
   display: block;
 }
-.lunch-detail .view-box {
-  background: $col-gradient-end;
-}
 .lunch-detail--lunch {
   display: flex;
   justify-content: center;
@@ -239,9 +231,6 @@ html[lang="ja-simple"] {
     top: 0;
     font-size: 20px;
   }
-}
-.view-box--illustration {
-  background: $col-gradient-end;
 }
 .illustration--weather--hot,
 .illustration--weather--warm,
@@ -334,10 +323,6 @@ html[lang="ja-simple"] {
   background: rgba(0, 0, 0, 0);
   text-decoration: none;
   user-select: none;
-}
-%gradient {
-  background-color: $col-gradient-start;
-  background: linear-gradient($col-gradient-start, $col-gradient-end 100vh);
 }
 .main--main-screen {
   display: flex;
@@ -485,7 +470,6 @@ html[lang="ja-simple"] {
   }
 }
 .layout {
-  @extend %gradient;
   width: 100%;
   min-height: 100vh;
   article {
@@ -527,6 +511,10 @@ html[lang="ja-simple"] {
       padding: 0 1.5em;
     }
   }
+  display: none;
+}
+.wf-active .layout {
+  display: block;
 }
 .lunch--image {
   width: 100%;

@@ -107,6 +107,11 @@ export default Vue.extend({
       rect: styleRect(canvas)
     }
     const updateTarget = (smooth: boolean) => {
+      if (!document.body.parentElement?.classList.contains('wf-active')) {
+        setTimeout(() => updateTarget(smooth), 20)
+        return
+      }
+      container.classList.toggle('ready', true)
       const { id, rect: target } = getViewbox(this) ?? full
       const viewPort = {
         x: 0,
@@ -138,7 +143,6 @@ export default Vue.extend({
     }
     window.addEventListener('resize', onresize)
     updateMap.set(this, updateTarget)
-    container.classList.toggle('ready', true)
     updateTarget(false)
     return () => {
       updateMap.delete(this)
