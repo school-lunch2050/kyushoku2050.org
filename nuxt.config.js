@@ -84,7 +84,10 @@ export default {
     '@nuxtjs/pwa',
     ['nuxt-i18n', {
       strategy: 'prefix',
-      vueI18nLoader: true
+      vueI18nLoader: true,
+      defaultLocale: 'ja',
+      detectBrowserLanguage: false,
+      rootRedirect: 'ja'
     }],
     '@nuxt/content',
     'vue-plausible',
