@@ -589,3 +589,13 @@ html[lang="ja-simple"] {
     opacity: 0.78;
   }
 }
+#outdated-browser {
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #000;
+  background: white;
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
