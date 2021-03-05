@@ -1,6 +1,5 @@
 <template>
   <div class="layout layout--default">
-    <browser-test />
     <sidebar />
     <Nuxt :nuxt-child-key="'default'" />
     <progress-tracker />

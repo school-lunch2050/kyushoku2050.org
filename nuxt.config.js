@@ -42,6 +42,34 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
       { hid: 'description', name: 'description', content: '' }
     ],
+    script: [
+      {
+        hid: 'browser-test',
+        type: 'text/javascript',
+        pbody: true,
+        innerHTML: `
+var err = false
+try {
+  if ((new Function ('return {...{ok:1}}'))().ok !== 1) err = true
+} catch (e) {
+  err = true
+}
+if (err) {
+  var node = document.getElementById('outdated-browser')
+  if (!node) {
+    node = document.createElement('div')
+    node.id = 'outdated-browser'
+    node.innerHTML =
+      '<p lang="en">This website does not support your browser. Please install a modern browser!</p>' +
+      '<p lang="ja">このサイトは利用しているブラウザーを不対応です。モダンばブラウザーをインストールして使ってください！</p>'
+    document.body.appendChild(node)
+  }
+}`
+      }
+    ],
+    __dangerouslyDisableSanitizersByTagID: {
+      'browser-test': ['innerHTML']
+    },
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/img/favicon/favicon.ico' },
       { rel: 'preload', as: 'font', href: '/font/caveat/CaveatBrush-Regular.woff2' },
