@@ -9,7 +9,7 @@ _Homepage Design & Code:_ [Martin Heidegger][mh]<br/>
 
 More information can be found at the [FEAST homepage](https://feastproject.org/school-lunch-2050).
 
-_The School Lunch 2050 homepage has been funded by the NIHU Interactive Communication Initiative._
+_The School Lunch 2050 homepage has been funded by the [NIHU Interactive Communication Initiative][nihu]._
 
 ### License Information
 
@@ -33,4 +33,5 @@ This website is hosted using [Netlify](https://netlify.com) and [Cloudflare](htt
 [feast]: https://www.feastproject.org/headquarter/
 [sustena]: http://www.sustena.org/
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+[nihu]: https://www.chikyu.ac.jp/activities/visualization/
 [mh]: https://github.com/sponsors/martinheidegger
