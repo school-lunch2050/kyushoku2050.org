@@ -3,8 +3,8 @@ weblate:
   description: 2050年の学校給食のシナリオの検討。
   pages:
     about:
-      full: 休職 2050年ってなんですか？
-      short: ページについて
+      full: 給食 2050年って？
+      short: このページについて
     cosmopolitan:
       full: 地球にやさしいはずがまぼろし
       short: まぼろし
@@ -18,24 +18,24 @@ weblate:
       full: 食べものでいっぱいの庭
       short: 庭
     index: 
-      full: 初め
+      full: はじめに
     introduction:
-      full: 紹介
+      full: このサイトについて
     location:
       full: 場所
     lunch:
-      full: ランチについて
+      full: 給食について
     main:
-      full: シナリオ選択
+      full: シナリオを選ぶ
     privacy-policy:
       full: プライバシーポリシー
     scenarios:
       full: シナリオ紹介
     weather:
-      full: 温暖化
+      full: 温暖化について
   menu:
-    open: メニュー開く
-    close: メニュー閉じる
+    open: メニューを開く
+    close: メニューを閉じる
     footer:
       contact: 連絡
       feedback: フィードバック
@@ -50,21 +50,21 @@ weblate:
       text: |
         ３０年後に<br/>
         地球は<br/>
-        変わります。
+        変わります
     lunch:
       text: |
         …<br/>
-        結果的にランチも<br/>
-        変わります。
+        その結果、給食も<br/>
+        変わります
     introduction:
       text: |
-        私たち「@[logo|/img/logo_feast_ja.webp|Feast]」チーム。<br/>
-        データを見て<br/>
-        ②つの要因を特定<br/>
-        ランチに影響を与える
+        私たち「@[logo|/img/logo_feast_ja.webp|Feast]」チームは、<br/>
+        データを元に<br/>
+        給食に影響を与えうる<br/>
+        ②つの要素を特定しました
     weather:
       title: |
-        要因 ①<br/>
+        要素 ①<br/>
         地球温暖化を制限できるのか？
       less:
         text: 1.5°?
@@ -76,26 +76,26 @@ weblate:
           - https://google.com
     location:
       title: |
-        要因 ②<br/>
-        私たちの食べ物はどこから来るのか？
+        要素 ②<br/>
+        私たちの食べ物がどこから来るのか？
       near:
         text: 国内?
       far:
         text: 海外?
     scenario:
       title: |
-        これは、4つのシナリオがあることを意味します
+        これらの要素から、4つのシナリオを考えることができます
   main:
     title: |
-      各シナリオをクリックすると詳細が表示されます
+      シナリオをクリックすると詳細が表示されます
     hint: |
-      クリックすると<br/>
-      もっと学ぶ
+      クリックして<br/>
+      詳細を見る
     grid:
       near: 国内
-      far: 国外
-      warm: 暑い
-      hot: あ〜つい
+      far: 海外
+      warm: 暖かい
+      hot: 暑い
   scenario:
     actions:
       notes: ノート
@@ -104,14 +104,14 @@ weblate:
     progress:
       active: |
         {percent}% を読み<br/>
-        終わった
+        終わりました
       finished: |
-        素晴らしい！<br/>
+        おつかれさまです！<br/>
         全てを読み<br/>
-        終わった
+        終わりました
       click:
-        (クリック) 意見<br/>
-        を教えてくれきませんか？
+        (クリック) ご感想を<br/>
+        お聞かせください。
   ingredients:
     milk:
       name: アニマルライツ・ミルク
