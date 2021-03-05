@@ -1,7 +1,7 @@
 <template>
   <picture>
     <source :srcset="`/img/${src}.webp`" type="image/webp" :alt="alt">
-    <img :src="`/img/${src}.png`" :width="width" :height="height" :alt="alt">
+    <img :src="`/img/${src}.${fallback}`" :width="width" :height="height" :alt="alt">
   </picture>
 </template>
 <script lang="ts">
@@ -23,6 +23,10 @@ export default Vue.extend({
     alt: {
       type: String,
       default: null
+    },
+    fallback: {
+      type: String,
+      default: 'png'
     }
   }
 })

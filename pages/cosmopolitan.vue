@@ -44,7 +44,7 @@
       />
     </template>
     <template #illustration>
-      <kyushoku-img class="illustration--image" width="3157" height="2500" src="illustration/cosmopolitan" />
+      <kyushoku-img class="illustration--image" width="3157" height="2500" src="illustration/cosmopolitan" fallback="jpg" />
       <text-box key="weblate.main.grid.warm" align="center center" class="illustration--weather--warm font--tex" y="20" x="120" width="200" />
       <text-box key="weblate.main.grid.far" align="center center" class="illustration--location font--tex" />
       <text-box key="weblate.pages.cosmopolitan.full" class="illustration--title font--tex" x="550" y="70" width="2000" height="180" font-size="100" align="center" vertical-align="center" />

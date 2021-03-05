@@ -44,7 +44,7 @@
       />
     </template>
     <template #illustration>
-      <kyushoku-img class="illustration--image" width="3157" height="2500" src="illustration/desperate" />
+      <kyushoku-img class="illustration--image" width="3157" height="2500" src="illustration/desperate" fallback="jpg" />
       <text-box key="weblate.main.grid.hot" align="center center" class="illustration--weather--hot font--tex" />
       <text-box key="weblate.main.grid.near" align="center center" class="illustration--location font--tex" width="355" x="2760" y="45" />
       <text-box key="weblate.pages.desperate.full" class="illustration--title font--tex" x="550" y="40" width="1900" height="200" font-size="100" align="center center" />
