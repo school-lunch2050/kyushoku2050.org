@@ -1,6 +1,6 @@
 <template>
   <picture>
-    <source :srcset="`/img/${src}.webp`" type="image/webp" :alt="alt">
+    <source :srcset="`/img/${src}.webp`" type="image/webp">
     <img :src="`/img/${src}.${fallback}`" :width="width" :height="height" :alt="alt">
   </picture>
 </template>
