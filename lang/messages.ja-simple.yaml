@@ -90,7 +90,7 @@ weblate:
         ここから、4つのシナリオを<ruby>考<rt>かんが</rt></ruby>えることができます。
   main:
     title: |
-      シナリオをクリックすると<ruby>詳細<rt>しょうさい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます。
+      シナリオをクリックすると<ruby>詳細<rt>しょうさい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます
     hint: |
       クリックして<br/>
       <ruby>詳<rt>くわ</rt></ruby>しく<ruby>見<rt>み</rt></ruby>る
@@ -103,7 +103,7 @@ weblate:
     actions:
       notes: ノート
       pdf: PDF
-      more: <ruby>黒<rt>くろ</rt></ruby>いところをクリックして<ruby>詳<rt>くわ</rt></ruby>しく<ruby>見<rt>み</rt></ruby>る
+      more: <ruby>黒<rt>くろ</rt></ruby>いところをクリックすると<ruby>説明<rt>せつめい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます
     progress:
       active: |
         {percent}% を<ruby>読<rt>よ</rt></ruby>み<br/>
