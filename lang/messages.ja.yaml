@@ -1,6 +1,6 @@
 weblate:
   title: 給食 2050年
-  description: 2050年の学校給食のシナリオの検討。
+  description: 2050年の学校給食のシナリオを見てみよう。
   pages:
     about:
       full: 給食 2050年って？
@@ -100,7 +100,7 @@ weblate:
     actions:
       notes: ノート
       pdf: PDF
-      more: もっと学ぶ
+      more: 塗りつぶし部分をクリックすると、説明が表示されます。
     progress:
       active: |
         {percent}% を読み<br/>
