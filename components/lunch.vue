@@ -39,15 +39,13 @@ export default Vue.extend({
       default: null
     }
   },
-  data () {
-    const { type } = this.$props
-    const userAgent = typeof window !== 'undefined' ? window.navigator.userAgent : ''
-    const isMobileSafari = userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)
-    return {
-      image: `/img/lunch/${type === '?' || type === '!' ? 'empty' : type}.${isMobileSafari ? 'png' : 'webp'}`
-    }
-  },
   computed: {
+    image () {
+      const { type } = this.$props
+      const userAgent = typeof window !== 'undefined' ? window.navigator.userAgent : ''
+      const isMobileSafari = userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)
+      return `/img/lunch/${type === '?' || type === '!' ? 'empty' : type}.${isMobileSafari ? 'png' : 'webp'}`
+    },
     entries () {
       const { lunch } = this.$refs
       if (!(lunch instanceof HTMLElement)) {
