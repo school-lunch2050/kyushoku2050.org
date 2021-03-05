@@ -67,7 +67,7 @@ weblate:
         ②つの<ruby>要素<rt>ようそ</rt></ruby>を<ruby>特定<rt>とくてい</rt></ruby>しました。<br/>
     weather:
       title: |
-        要素<rt>ようそ</rt></ruby> ①<br/>
+        <ruby>要素<rt>ようそ</rt></ruby> ①<br/>
         <ruby>地球温暖化<rt>ちきゅうおんだんか</rt></ruby>を<ruby>制限<rt>せいげん</rt></ruby>できるのか？
       less:
         text: 1.5°?
@@ -93,7 +93,7 @@ weblate:
       シナリオをクリックすると<ruby>詳細<rt>しょうさい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます。
     hint: |
       クリックして<br/>
-      <ruby>詳<rt>くわ</rt></ruby>しく<ruby>見<rt>み</rt></ruby>る
+      <ruby>黒<rt>くろ</rt></ruby>いところをクリックして<ruby>詳<rt>くわ</rt></ruby>しく<ruby>見<rt>み</rt></ruby>る
     grid:
       near: <ruby>国内<rt>こくない</rt></ruby>
       far: <ruby>海外<rt>かいがい</rt></ruby>
