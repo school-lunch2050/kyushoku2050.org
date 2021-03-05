@@ -67,7 +67,7 @@ weblate:
         school lunch!
     introduction:
       text: |
-        We, the @[logo|/img/logo_feast_en.webp|Feast] team,<br/>
+        We, the @[logo|logo_feast_en|Feast] team,<br/>
         looked at the DATA and<br/>
         identified ② factors<br/>
         that will impact our lunch

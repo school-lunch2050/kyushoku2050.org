@@ -10,8 +10,8 @@
         height="300"
       />
       <div class="cb-options">
-        <cb-option title="weblate.introduction.weather.less.text" image="/img/weather_15.webp" />
-        <cb-option title="weblate.introduction.weather.more.text" image="/img/weather_2p.webp" />
+        <cb-option title="weblate.introduction.weather.less.text" image="weather_15" />
+        <cb-option title="weblate.introduction.weather.more.text" image="weather_2p" />
       </div>
     </template>
   </main-screen>

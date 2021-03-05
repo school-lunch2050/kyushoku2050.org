@@ -34,10 +34,10 @@
       </section>
       <section class="sidebar--partner">
         <a :href="$i18n.locale === 'ja' || $i18n.locale === 'ja-simple' ? 'https://feastproject.org' : 'https://www.feastproject.org/en/'" target="_blank">
-          <img :src="`/img/logo_feast_${$i18n.locale === 'ja' || $i18n.locale === 'ja-simple' ? 'ja' : 'en'}.webp`" :alt="$t('weblate.menu.footer.feast')">
+          <kyushoku-img :src="`logo_feast_${$i18n.locale === 'ja' || $i18n.locale === 'ja-simple' ? 'ja' : 'en'}`" :alt="$t('weblate.menu.footer.feast')" />
         </a>
         <a :href="$i18n.locale === 'ja' || $i18n.locale === 'ja-simple' ? 'https://www.chikyu.ac.jp/' : 'https://www.chikyu.ac.jp/rihn_e/'" target="_blank">
-          <img :src="`/img/logo_rihn_${$i18n.locale === 'ja' || $i18n.locale === 'ja-simple' ? 'ja' : 'en'}.webp`" :alt="$t('weblate.menu.footer.rihn')">
+          <kyushoku-img :src="`logo_rihn_${$i18n.locale === 'ja' || $i18n.locale === 'ja-simple' ? 'ja' : 'en'}`" :alt="$t('weblate.menu.footer.rihn')" />
         </a>
       </section>
     </div>

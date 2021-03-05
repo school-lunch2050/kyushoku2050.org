@@ -150,7 +150,7 @@ function cachedValidHTML (translated: string): string {
     ).replace(
       /@\[(.*?)\|(.*?)\|(.*?)\]/g,
       (_, name, src, alt) =>
-        `<span class="i18n-img i18n-img--${name}"><img src="${src}" alt="${encodeURIComponent(alt)}" /></span>`
+        `<span class="i18n-img i18n-img--${name}"><img src="/img/${src}.webp" alt="${encodeURIComponent(alt)}" /></span>`
     )
     validHTMLCache[translated] = valid
   }

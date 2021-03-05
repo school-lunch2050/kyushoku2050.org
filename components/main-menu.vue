@@ -20,7 +20,7 @@
           <tbody>
             <tr>
               <th class="cb--menu--weather">
-                <img src="/img/weather_15.webp">
+                <kyushoku-img src="weather_15" />
               </th>
               <main-menu-item
                 key="item-1"
@@ -39,7 +39,7 @@
             </tr>
             <tr>
               <th class="cb--menu--weather">
-                <img src="/img/weather_2p.webp">
+                <kyushoku-img src="weather_2p" />
               </th>
               <main-menu-item
                 key="item-3"
@@ -58,8 +58,8 @@
             </tr>
             <tr class="cb--menu--place">
               <td />
-              <th><img src="/img/place_local.webp"></th>
-              <th><img src="/img/place_global.webp"></th>
+              <th><kyushoku-img src="place_local" /></th>
+              <th><kyushoku-img src="place_global" /></th>
             </tr>
           </tbody>
         </table>

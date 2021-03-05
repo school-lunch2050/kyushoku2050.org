@@ -58,7 +58,7 @@ weblate:
         変わります
     introduction:
       text: |
-        私たち「@[logo|/img/logo_feast_ja.webp|Feast]」チームは、<br/>
+        私たち「@[logo|logo_feast_ja|Feast]」チームは、<br/>
         データを元に<br/>
         給食に影響を与えうる<br/>
         ②つの要素を特定しました

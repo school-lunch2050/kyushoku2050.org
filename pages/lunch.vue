@@ -1,7 +1,7 @@
 <template>
   <main-screen key="main" prev="/" next="/introduction" lunch-type="?">
     <template #chalkboard>
-      <img width="500" height="500" src="/img/logo.webp">
+      <kyushoku-img width="500" height="500" src="logo" />
       <text-box
         key="weblate.introduction.lunch.text"
         class="font--tex"

@@ -10,8 +10,8 @@
         height="300"
       />
       <div class="cb-options">
-        <cb-option title="weblate.introduction.location.near.text" image="/img/place_local.webp" />
-        <cb-option title="weblate.introduction.location.far.text" image="/img/place_global.webp" />
+        <cb-option title="weblate.introduction.location.near.text" image="place_local" />
+        <cb-option title="weblate.introduction.location.far.text" image="place_global" />
       </div>
     </template>
   </main-screen>

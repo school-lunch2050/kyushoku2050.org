@@ -1,7 +1,7 @@
 <template>
   <div class="cb-option">
     <text-box :key="title" class="cb-option--title font--tex" />
-    <img :src="image" class="cb-option--image">
+    <kyushoku-img :src="image" class="cb-option--image" />
   </div>
 </template>
 <script lang="ts">
