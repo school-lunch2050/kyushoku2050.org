@@ -1,6 +1,6 @@
 <template>
   <div class="cb">
-    <img width="2586" height="1770" src="/img/chalkboard.webp">
+    <kyushoku-img width="2586" height="1770" src="chalkboard" />
     <div class="cb--content">
       <slot />
     </div>
