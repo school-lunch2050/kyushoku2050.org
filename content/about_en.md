@@ -3,8 +3,11 @@
 School Lunch 2050 was established by the **FEAST Project**.
 
 _Direction:_ Maximilian Spiegelberg ([FEAST Project][feast])<br/>
+_Scenarios (Content):_ [FEAST Project][feast] team<br/>
 _Future lunch sets:_ Yuko Kobayashi & Yuko Matsuoka ([FEAST Project][feast]) <br/>
+_Research Assistance:_ Leo Porte & Haruka Tonegawa<br />
 _Scenario illustrations:_ Elie Tanabe (田辺エリ, [Sustena Inc.][sustena])<br/>
+_Translations:_ Yuko Kobayashi  ([FEAST Project][feast])<br/>
 _Homepage Design & Code:_ [Martin Heidegger][mh]<br/>
 
 More information can be found at the [FEAST homepage](https://feastproject.org/school-lunch-2050).
