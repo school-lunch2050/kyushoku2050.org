@@ -26,6 +26,9 @@ body, html {
   padding: 0;
   margin: 0;
 }
+img {
+  user-select: none;
+}
 
 .font--nav, .font--nav--en,
 .font--article, .font--article--en {
@@ -60,6 +63,9 @@ html[lang="ja-simple"] {
   @extend %font_ja_fallback;
 }
 
+%cbfocus {
+  outline: 3px dashed rgba(255, 255, 255, 0.5);
+}
 .button--next,
 .button--prev {
   text-decoration: none;
@@ -69,8 +75,12 @@ html[lang="ja-simple"] {
   color: $col-nav-inactive;
   top: 0px;
   position: absolute;
-  &:hover {
+  outline: none;
+  &:hover, &:focus {
     color: $col-nav-active;
+  }
+  &:focus {
+    @extend %cbfocus;
   }
   & span {
     padding: 20px;
@@ -139,6 +149,12 @@ html[lang="ja-simple"] {
 }
 .cb--menu--title {
   font-size: 90px;
+  width: 2235px;
+  height: 300px;
+  top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cb--menu--item {
   font-size: 110px;
@@ -173,9 +189,22 @@ html[lang="ja-simple"] {
 }
 .cb--menu--item--active {
   background: rgba(255, 255, 255, 0.4);
+  &:focus-within {
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
-.cb--menu--item--button:hover {
-  background: rgba(255, 255, 255, 0.15);
+.cb--menu--item {
+  a {
+    outline: none;
+  }
+  &:focus-within {
+    @extend %cbfocus
+  }
+}
+.cb--menu--item--button {
+  &:hover, &:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+  }
 }
 .progress {
   font-size: 15px;
@@ -270,16 +299,29 @@ html[lang="ja-simple"] {
   top: 0;
   width: 100%;
   height: 100%;
+  text-decoration: none;
+  display: none;
 }
 .view-box--canvas {
   position: relative;
   transform-origin: top left;
 }
-.view-box--canvas--focussed {
-  cursor: pointer;
-
-  .bubble-text--link {
+.view-box--focussed {
+  .view-box--unfocus {
+    display: block;
+  }
+  .view-box--canvas {
+    user-select: none;
     pointer-events: none;
+
+    .bubble-text--link {
+      pointer-events: none;
+      display: none;
+    }
+    .bubble-text--active .bubble-text--content {
+      user-select: text;
+      pointer-events: all;
+    }
   }
 }
 .i18n-box--placed {
@@ -420,7 +462,8 @@ html[lang="ja-simple"] {
     content: '− '
   }
 }
-.sidebar--content--active {
+.sidebar--content--active,
+.sidebar--content:focus-within {
   left: 0;
 }
 .sidebar--entries,
@@ -447,9 +490,17 @@ html[lang="ja-simple"] {
   padding: 0.5em 1.2em;
   text-decoration: none;
   color: $col-nav-inactive;
+  border: 1px solid rgba(255, 255, 255, 0);
   &:hover,
   &:focus {
     @extend %sidebar-focussed;
+  }
+  &:focus {
+    border: 1px dashed rgba(255, 255, 255, 0.35);
+  }
+  &, &:focus {
+    border-left: none;
+    border-right: none;
   }
 }
 .sidebar a.nuxt-link-exact-active,
@@ -521,7 +572,9 @@ html[lang="ja-simple"] {
 }
 .lunch-item--marker {
   position: absolute;
-  display: none;
+  display: block;
+  width: 10px;
+  height: 10px;
   &.debug:before {
     content: ' ';
     overflow: hidden;
@@ -537,6 +590,7 @@ html[lang="ja-simple"] {
 .lunch-item--marker--info {
   position: absolute;
   bottom: 200px;
+  display: none;
 }
 .lunch-item--marker--box {
   position: relative;
@@ -558,10 +612,17 @@ html[lang="ja-simple"] {
   min-width: 700px;
 }
 .lunch-item--line {
+  display: none;
   position: absolute;
   width: 40px;
   left: -20px;
   top: -210px;
+}
+.lunch-item--marker:focus {
+  .lunch-item--line,
+  .lunch-item--marker--info {
+    display: block;
+  }
 }
 .bubble-text--shadow {
   position: absolute;
@@ -572,12 +633,22 @@ html[lang="ja-simple"] {
   transition: opacity 0.9s;
 }
 .bubble-text--rounded-rect {
-  border: 1px solid rgba(0, 0, 0, 0);
-  transition: all 0.2s;
+  &, &::content {
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: all 0.2s;
+  }
 }
-.bubble-text--link:hover {
-  .bubble-text--rounded-rect {
-    border-color: rgba(0, 0, 0, 0.78);
+.bubble-text--link {
+  &:focus {
+    outline: none;
+    .bubble-text--rounded-rect {
+      border: 10px solid #000;
+    }
+  }
+  &:hover {
+    .bubble-text--rounded-rect {
+      border-color: rgba(0, 0, 0, 0.60);
+    }
   }
 }
 .bubble-text--active {

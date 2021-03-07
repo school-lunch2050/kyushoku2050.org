@@ -7,20 +7,14 @@
   >
     <template #chalkboard>
       <div class="cb--menu">
-        <text-box
-          :key="title ? 'title' : 'weblate.main.title'"
-          :text="title ? title : null"
-          class="font--tex cb--menu--title"
-          align="center center"
-          width="2235"
-          height="300"
-          :y="padding"
-        />
-        <table key="menu-table" class="cb--menu--table">
+        <h1 class="cb--menu--title font--tex">
+          <text-box :key="title" />
+        </h1>
+        <table key="menu-table" class="cb--menu--table" aria-label="Choices">
           <tbody>
             <tr>
               <th class="cb--menu--weather">
-                <kyushoku-img src="weather_15" />
+                <kyushoku-img src="weather_15" :alt="$t('weblate.main.row', { row: $t('weblate.main.grid.warm') })" />
               </th>
               <main-menu-item
                 key="item-1"
@@ -39,7 +33,7 @@
             </tr>
             <tr>
               <th class="cb--menu--weather">
-                <kyushoku-img src="weather_2p" />
+                <kyushoku-img src="weather_2p" :alt="$t('weblate.main.row', { row: $t('weblate.main.grid.hot') })" />
               </th>
               <main-menu-item
                 key="item-3"
@@ -57,9 +51,9 @@
               />
             </tr>
             <tr class="cb--menu--place">
-              <td />
-              <th><kyushoku-img src="place_local" /></th>
-              <th><kyushoku-img src="place_global" /></th>
+              <td aria-label="hidden" />
+              <th><kyushoku-img src="place_local" :alt="$t('weblate.main.column', { column: $t('weblate.main.grid.near') })" /></th>
+              <th><kyushoku-img src="place_global" :alt="$t('weblate.main.column', { column: $t('weblate.main.grid.far') })" /></th>
             </tr>
           </tbody>
         </table>
@@ -108,7 +102,7 @@ export default Vue.extend({
     },
     title: {
       type: String,
-      default: null
+      default: 'weblate.main.title'
     },
     selected: {
       type: String,

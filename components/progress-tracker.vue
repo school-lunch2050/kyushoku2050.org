@@ -1,6 +1,6 @@
 <template>
   <client-only>
-    <div v-if="percent() > 0" class="progress font--tex">
+    <div v-if="percent() > 0" class="progress font--tex" role="status">
       <text-box :key="percent() === 100 ? 'weblate.scenario.progress.finished' : 'weblate.scenario.progress.active'" :values="{ percent: percent() }" />
     </div>
     <div v-else />

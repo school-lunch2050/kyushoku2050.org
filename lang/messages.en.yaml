@@ -42,7 +42,13 @@ weblate:
       full: Scenarios
     weather:
       full: Weather
+  lunch:
+    label: |
+      Lunch Table: {name}
+    question: Empty with question mark.
+    alert: Empty with exclamation mark.
   menu:
+    chalkboard: Chalkboard
     open: Open Menu
     close: Close Menu
     footer:
@@ -51,9 +57,15 @@ weblate:
       feast: Feast - Enough is as good as a feast
       rihn: Research Institute for Humanity and Nature
     actions:
-      skip: skip >
-      next: next >
-      prev: <
+      skip: 
+        label: skip >
+        title: Skip to main menu
+      next:
+        label: next >
+        title: Go to next page
+      prev: 
+        label: <
+        title: Go to previous page
   introduction:
     start:
       text: |
@@ -99,16 +111,23 @@ weblate:
       Click on each scenario to find out more!
     hint: |
       Click to learn more!
+    row: |
+      Warming: {row}
+    column: |
+      Source: {column}
     grid:
       near: Local
       far: Global
-      warm: Warm
-      hot: Hot!
+      warm: 1.5° Celsius
+      hot: more than 2° Celsius
   scenario:
     actions:
       notes: Notes
       pdf: PDF
       more: Learn more
+      unfocus: Return to Overview
+      focus: |
+        Focus on Text Box #{nr}
     progress:
       active: |
         {percent}% finished<br/>

@@ -186,3 +186,20 @@ export async function i18nContent (options: string | { name: string, map: { [fro
     page
   }
 }
+
+export function clearTextSelection () {
+  if (typeof window === 'undefined') {
+    return
+  }
+  if (window.getSelection) {
+    const selection = window.getSelection()
+    if (selection === null) {
+      return
+    }
+    if (typeof selection.empty === 'function') { // Chrome
+      selection.empty()
+    } else if (typeof selection.removeAllRanges === 'function') { // Firefox
+      selection.removeAllRanges()
+    }
+  }
+}

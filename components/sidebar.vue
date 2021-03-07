@@ -1,10 +1,10 @@
 <template>
   <nav class="font--nav sidebar">
-    <button class="sidebar--toggle sidebar--toggle--open" @click="toggleMenu">
+    <button class="sidebar--toggle sidebar--toggle--open" tabindex="-1" aria-hidden="true" @click="toggleMenu">
       <img src="~/static/img/icon_menu.svg" :alt="$t('weblate.menu.open')">
     </button>
     <div ref="sidebar" class="sidebar--content">
-      <button class="sidebar--toggle sidebar--toggle--close" @click="toggleMenu">
+      <button class="sidebar--toggle sidebar--toggle--close" tabindex="-1" aria-hidden="true" @click="toggleMenu">
         <img src="~/static/img/icon_close.svg" :alt="$t('weblate.menu.close')">
       </button>
       <section class="sidebar--lang">

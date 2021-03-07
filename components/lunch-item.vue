@@ -1,5 +1,5 @@
 <template>
-  <div class="lunch-item--marker font--tex" :style="markerStyle">
+  <div class="lunch-item--marker font--tex" :style="markerStyle" tabindex="0">
     <svg class="lunch-item--line" viewBox="0 0 20 110" version="1.1">
       <circle fill="#00000088" cx="10" cy="100" r="9.5" />
       <line

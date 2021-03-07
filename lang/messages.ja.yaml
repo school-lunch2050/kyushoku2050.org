@@ -34,6 +34,7 @@ weblate:
     weather:
       full: 温暖化について
   menu:
+    chalkboard: 黒板
     open: メニューを開く
     close: メニューを閉じる
     footer:
@@ -42,9 +43,15 @@ weblate:
       feast: Feast - みんなで作る「いただきます」
       rihn: 大学共同利用機関法人　人間文化研究機構 総合地球環境学研究所
     actions:
-      skip: スキップ >
-      next: 次へ >
-      prev: <
+      skip: 
+        label: スキップ >
+        title: メニューへスキップ
+      next:
+        label: 次へ >
+        title: 次のページへ
+      prev: 
+        label: <
+        title: 前のページへ
   introduction:
     start:
       text: |
@@ -91,16 +98,21 @@ weblate:
     hint: |
       クリックして<br/>
       詳細を見る
+    row: 地球温暖化：{row}
+    column: 源：{column}
     grid:
       near: 国内
       far: 海外
-      warm: 暖かい
-      hot: 暑い
+      warm: 1.5℃
+      hot: 2℃ 以上
   scenario:
     actions:
       notes: ノート
       pdf: PDF
       more: 塗りつぶし部分をクリックすると、説明が表示されます。
+      unfocus: 全面に戻る
+      focus: |
+        テキスト #{nr} にフォーカス
     progress:
       active: |
         {percent}% を読み<br/>

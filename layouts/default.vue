@@ -1,8 +1,8 @@
 <template>
   <div class="layout layout--default">
-    <sidebar />
     <Nuxt :nuxt-child-key="'default'" />
     <progress-tracker />
+    <sidebar />
   </div>
 </template>
 <script>

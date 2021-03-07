@@ -8,7 +8,7 @@
     <svg viewBox="0 0 3157 2500" class="bubble-text--shadow">
       <path fill="#000" :d="focusPath" fill-rule="even-odd" />
     </svg>
-    <nuxt-link :to="{ hash }" :style="boxStyle" :class="`bubble-text--link box--${hash}`">
+    <nuxt-link :to="{ hash }" :style="boxStyle" :class="`bubble-text--link box--${hash}`" :title="$t('weblate.scenario.actions.focus', { nr })">
       <div class="bubble-text--rounded-rect" :style="roundedRectStyle">
         &nbsp;
       </div>
@@ -38,6 +38,10 @@ function roundedRectPath (source: Rect & { r: number }): string {
 
 export default Vue.extend({
   props: {
+    nr: {
+      type: String,
+      required: true
+    },
     bubble: {
       type: [String, Object],
       required: true

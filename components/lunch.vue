@@ -1,5 +1,5 @@
 <template>
-  <div ref="lunch" class="lunch">
+  <div ref="lunch" class="lunch" :aria-label="$t('weblate.lunch.label', { name: type == '?' ? $t('weblate.lunch.question') : type === '!' ? $t('weblate.lunch.alert') : $t(`weblate.pages.${type}.full`) })">
     <svg class="lunch--image" viewBox="0 0 3874 1926" version="1.1">
       <defs>
         <clipPath id="lunchMask">
@@ -7,9 +7,9 @@
         </clipPath>
       </defs>
       <client-only>
-        <image :href="image" clip-path="url(#lunchMask)" width="3874" height="1926" />
+        <image :href="image" clip-path="url(#lunchMask)" width="3874" height="1926" aria-hidden="true"/>
       </client-only>
-      <text :class="{ 'lunch--alert': true, 'lunch--alert--visible': type === '?' || type === '!' }" x="1850" y="600">{{ type === '?' || type === '!' ? type : '' }}</text>
+      <text :class="{ 'lunch--alert': true, 'lunch--alert--visible': type === '?' || type === '!' }" x="1850" y="600" aria-hidden="true">{{ type === '?' || type === '!' ? type : '' }}</text>
     </svg>
     <slot />
   </div>
@@ -102,11 +102,10 @@ export default Vue.extend({
       if (closest === previous) {
         return
       }
-      if (previous !== null) {
-        previous.style.display = 'none'
-      }
       if (closest !== null) {
-        closest.style.display = 'block'
+        closest.focus()
+      } else if (previous !== null) {
+        previous.blur()
       }
       previous = closest
     }

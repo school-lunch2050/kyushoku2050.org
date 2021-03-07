@@ -3,7 +3,7 @@
     key="main"
     prev="/location"
     next="/main"
-    :title="$t('weblate.introduction.scenario.title')"
+    title="weblate.introduction.scenario.title"
   />
 </template>
 <script>

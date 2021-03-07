@@ -1,29 +1,34 @@
 <template>
-  <div ref="container" class="view-box">
-    <div
-      ref="canvas"
-      :style="size"
-      :class="{
-        'view-box--canvas': true,
-        'view-box--canvas--focussed': viewbox() !== null,
-        'view-box--canvas--full': viewbox() === null
-      }"
-    >
-      <slot />
-    </div>
+  <div
+    ref="container"
+    :class="{
+      'view-box': true,
+      'view-box--focussed': viewbox() !== null,
+      'view-box--full': viewbox() === null
+    }"
+  >
     <nuxt-link
-      v-if="unfocus && viewbox()"
+      ref="unfocus"
       class="view-box--unfocus"
-      :to="typeof unfocus !== 'function' ? unfocus : '#'"
+      :to="typeof unfocus !== 'function' && unfocus !== null ? unfocus : '#'"
+      tabindex="1"
+      :title="$t('weblate.scenario.actions.unfocus')"
       @click="typeof unfocus === 'function' ? unfocus : null"
     >
       &nbsp;
     </nuxt-link>
+    <div
+      ref="canvas"
+      :style="size"
+      class="view-box--canvas"
+    >
+      <slot />
+    </div>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { activeLifecycle, styleRect, toStyle, Rect } from '../lib'
+import { activeLifecycle, styleRect, toStyle, Rect, clearTextSelection } from '../lib'
 
 const updateMap = new WeakMap<any, Function>()
 interface Viewbox {
@@ -95,17 +100,16 @@ export default Vue.extend({
       return
     }
     if (!(container instanceof HTMLElement)) {
-      console.warn('container is missing!')
       return
     }
     if (!(canvas instanceof HTMLElement)) {
-      console.warn('canvas is missing!')
       return
     }
     const full = {
       id: null,
       rect: styleRect(canvas)
     }
+    let first = true
     const updateTarget = (smooth: boolean) => {
       if (!document.body.parentElement?.classList.contains('wf-active')) {
         setTimeout(() => updateTarget(smooth), 20)
@@ -125,15 +129,27 @@ export default Vue.extend({
         : full.rect.height / target.height * viewPort.height / full.rect.height
 
       if ((canvas.dataset.id ?? null) !== id) {
-        container.querySelector(`.box--${canvas.dataset.id}`)?.parentElement?.classList.toggle('bubble-text--active', false)
+        clearTextSelection()
+        const unfocus = container.querySelector('.view-box--unfocus')
+        const previous = container.querySelector(`.box--${canvas.dataset.id}`)
+        if (previous) {
+          previous.parentElement?.classList.toggle('bubble-text--active', false)
+        }
         if (!id) {
           delete canvas.dataset.id
+          if (!first && previous instanceof HTMLElement) {
+            previous.focus()
+          }
         } else {
           canvas.dataset.id = id
+          if (!first && unfocus instanceof HTMLElement) {
+            unfocus.focus()
+          }
         }
         container.querySelector(`.box--${id}`)?.parentElement?.classList.toggle('bubble-text--active', true)
         this.$forceUpdate()
       }
+      first = false
       canvas.style.transition = smooth ? this.$props.transition : ''
       const transform = `scale(${scale}) translate(${-target.x - target.width / 2 + viewPort.width / (2 * scale)}px, ${-target.y - target.height / 2 + viewPort.height / (2 * scale)}px)`
       canvas.style.transform = transform
