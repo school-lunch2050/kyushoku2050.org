@@ -55,6 +55,7 @@ export default Vue.extend({
   methods: {
     toggleMenu () {
       this.$refs.sidebar.classList.toggle('sidebar--content--active')
+      document.querySelector(':focus')?.blur()
     }
   }
 })
