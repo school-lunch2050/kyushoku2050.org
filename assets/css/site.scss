@@ -424,6 +424,7 @@ html[lang="ja-simple"] {
   top: 0;
   z-index: 1;
   height: 100%;
+  user-select: none;
 }
 .sidebar--toggle {
   position: absolute;
