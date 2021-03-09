@@ -132,6 +132,7 @@ async function compileCharacters (font) {
   const allChars = {}
   const patterns = font.chars.filter(rule => !rule.startsWith('!'))
   const ignore = font.chars.filter(rule => rule.startsWith('!'))
+  addToDict(allChars, '0123456789.,!%?') // For the percentage display
   for (const charFile of await globby(patterns, { ignore })) {
     if (/\.ya?ml$/i.test(charFile)) {
       addToDict(allChars, yaml.load(await readFile(charFile, 'utf-8')))
