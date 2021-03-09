@@ -6,7 +6,8 @@ $col-nav-inactive: rgba(255, 255, 255, 0.6);
 $col-active-fill: rgba(255, 255, 255, 0.1);
 $col-content-side: #f0f0f0;
 $col-content-bg: #fff;
-$col-accent: lighten(#1E281A, 60%);
+$col-content-link: #1E281A;
+$col-content-accent: lighten(#1E281A, 60%);
 
 @font-face {
   font-family: "CaveatBrush";
@@ -557,7 +558,7 @@ html[lang="ja-simple"] {
       font-size: 2em;
       display: inline-block;
       break-after: always;
-      border-bottom: 2px solid $col-accent;
+      border-bottom: 2px solid $col-content-accent;
       margin-left: 0.7em;
     }
     .content--box {
@@ -565,9 +566,34 @@ html[lang="ja-simple"] {
       max-width: 960px;
       min-height: 100vh;
       background: $col-content-bg;
+      padding-bottom: 2em;
+    }
+    a {
+      color: $col-content-link;
+    }
+    a:focus {
+      outline: none;
+      background: $col-accent-grey;
+    }
+    dl {
+      margin: 1.5em 0;
+    }
+    dt {
+      font-style: italic;
+      padding-right: 0.3em;
+      color: #666;
+    }
+    dd {
+      margin: 0;
+      flex-grow: 1;
+      white-space: nowrap;
+      margin-left: 0.5em;
     }
     .nuxt-content {
       padding: 0 1.5em;
+    }
+    dt, dd {
+      margin-bottom: 0.3em;
     }
   }
   display: none;
