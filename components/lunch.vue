@@ -7,7 +7,7 @@
         </clipPath>
       </defs>
       <client-only>
-        <image :href="image" clip-path="url(#lunchMask)" width="3874" height="1926" aria-hidden="true"/>
+        <image :href="image" clip-path="url(#lunchMask)" width="3874" height="1926" aria-hidden="true" />
       </client-only>
       <text :class="{ 'lunch--alert': true, 'lunch--alert--visible': type === '?' || type === '!' }" x="1850" y="600" aria-hidden="true">{{ type === '?' || type === '!' ? type : '' }}</text>
     </svg>
