@@ -40,7 +40,7 @@ This website uses following additional assets:
   <dd><a href="https://thenounproject.com/term/earth/2225388/" target="_blank">Earth</a> by <a href="https://thenounproject.com/valeriy25/" target="_blank">Valeriy</a></dd>
   <dd><a href="https://thenounproject.com/term/arrow/593917/" target="_blank">Arrow<a/> and <a href="https://thenounproject.com/term/heat/689788/" target="_blank">Heat</a> by <a href="https://thenounproject.com/indygo/" target="_blank">kiddo</a></dd>
   <dd><a href="https://thenounproject.com/term/heat-lines/1224531/" target="_blank">Heat Lines</a> by <a href="https://thenounproject.com/madeleine.bennett" target="_blank">Madleine Bennett</a></dd>
-  <dd>Mountain scale and Container boat by <a href="" target="_blank">Martin Heidegger</a></dd>
+  <dd>Mountain scale and Container boat by <a href="" target="_blank">Martin Heidegger</a>, licensed under the Creative Commons BY SA license.</dd>
   <dt>Photos:</dt>
   <dd><a href="https://unsplash.com/photos/cGNCepznaV8" target="_blank">"Photo"</a> by <a href="https://unsplash.com/@grndezyns" target="_blank">Peter Gargiulo</a></dd>
   <dt>Fonts:</dt>
