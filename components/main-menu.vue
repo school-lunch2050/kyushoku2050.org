@@ -122,7 +122,7 @@ export default Vue.extend({
     const lunch = lunches[this.$props.selected as Lunch]
     const getBubble = () => {
       const bubbleKey = (this.$route.hash ?? '').substr(1) as Bubble
-      return bubbles[bubbleKey] 
+      return bubbles[bubbleKey]
     }
     return {
       lunch,

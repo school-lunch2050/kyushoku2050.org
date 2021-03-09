@@ -1,6 +1,6 @@
 <template>
   <div class="bubble-info">
-    <nuxt-link v-for="ingredient in bubble.ingredients" :to="`#ingredient-${ingredient.key}`" :key="ingredient.key">
+    <nuxt-link v-for="ingredient in bubble.ingredients" :key="ingredient.key" :to="`#ingredient-${ingredient.key}`">
       <div :style="ingredient.iconStyle" :class="`bubble-info--ingredient bubble-info--ingredient-${lunch.id}`">
         <text-box :key="`weblate.ingredients.${ingredient.key}.name`" />
       </div>

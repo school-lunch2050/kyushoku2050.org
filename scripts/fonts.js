@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const { createHash } = require('crypto')
 const { createWriteStream, promises: { readFile, writeFile, mkdir, stat, unlink, access }, createReadStream } = require('fs')
 const { promisify } = require('util')

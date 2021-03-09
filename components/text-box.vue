@@ -1,9 +1,9 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
-  <div v-if="useDiv" :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--placed">
+  <div v-if="useDiv" :key="$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--placed">
     <span v-html="html" />
   </div>
-  <span v-else :key="this.$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--span" v-html="html" />
+  <span v-else :key="$i18n.locale" :style="isDynamic ? dynamicStyle() : style" class="i18n-box i18n-box--span" v-html="html" />
 </template>
 <script lang="ts">
 import Vue from 'vue'
