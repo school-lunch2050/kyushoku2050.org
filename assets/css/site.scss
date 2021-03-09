@@ -207,7 +207,8 @@ html[lang="ja-simple"] {
     background: rgba(255, 255, 255, 0.15);
   }
 }
-.progress {
+.progress--feedback--link,
+.progress--active {
   font-size: 15px;
   position: fixed;
   right: 0;
@@ -216,6 +217,72 @@ html[lang="ja-simple"] {
   z-index: 1;
   color: white;
   text-shadow: #000 1px 1px 5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.progress--percent,
+.progress--feedback-star {
+  width: 35px;
+  height: 35px;
+}
+.progress--text {
+  width: 5.5em;
+  padding: 0.2em 0.8em;
+  user-select:none;
+}
+.progress--text {
+  width: max-content;
+}
+.progress--feedback {
+  position: absolute;
+  display: flex;
+  top: 56px;
+  width: max-content;
+  height: max-content;
+  z-index: 2;
+  text-align: center;
+  transform-origin: 0 0;
+  transform: rotate(8deg) translate(-3px, -10px);
+  transition: 0.5s transform;
+}
+.progress--feedback--link {
+  &:hover, &:focus {
+    outline: none;
+    .progress--feedback--star-bg,
+    .progress--feedback--bg-shadow {
+      fill: black;
+    }
+    .progress--feedback {
+      transform: rotate(12deg) translate(-3px, -10px);
+    }
+  }
+}
+.progress--feedback--bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.progress--feedback--button {
+  z-index: 1;
+  padding: 1.5em 0.6em 0.5em 0.6em;
+}
+.progress--feedback--bg,
+.progress--feedback--button {
+  margin-left: calc(-50% + 18px);
+}
+.progress--reset {
+  cursor: pointer;
+  width: 30px;
+  position: fixed;
+  opacity: 0.6;
+  right: 10px;
+  top: 10px;
+  outline: none;
+  z-index: 1;
+  &:focus, &:hover {
+    opacity: 1;
+  }
 }
 .lunch--alert {
   color: #000;

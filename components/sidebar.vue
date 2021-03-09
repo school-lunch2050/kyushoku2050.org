@@ -28,7 +28,7 @@
           <text-box key="weblate.menu.footer.contact" />
         </a>
         <sidebar-link key="privacy-policy" />
-        <a href="#" target="_blank">
+        <a :href="$t('weblate.links.feedback')" target="_blank">
           <text-box key="weblate.menu.footer.feedback" />
         </a>
       </section>

@@ -36,6 +36,13 @@ weblate:
       full: シナリオ<ruby>紹介<rt>しょうかい</rt></ruby>
     weather:
       full: <ruby>温暖化<rt>おんだんか</rt></ruby>
+  lunch:
+    label: |
+      ランチテーブル: {name}
+    question: 空っぽ、はてな付き
+    alert: 空っぽ、感嘆符付き
+  links:
+    feedback: https://google.co.jp
   menu:
     chalkboard: 黒板
     open: メニューを<ruby>開<rt>ひら</rt></ruby>く
@@ -118,15 +125,17 @@ weblate:
         テキスト #{nr} にフォーカス
     progress:
       active: |
-        {percent}% を<ruby>読<rt>よ</rt></ruby>み<br/>
-        <ruby>終<rt>お</rt></ruby>わりました
+        {percent}% を<ruby>読<rt>よ</rt></ruby>み<ruby>終<rt>お</rt></ruby>わりました
       finished: |
         おつかれさまです！<br/>
-        <ruby>全<rt>すべ</rt></ruby>て読み<br/>
-         <ruby>終<rt>お</rt></ruby>わりました
+        <ruby>全<rt>すべ</rt></ruby>て読み<ruby>終<rt>お</rt></ruby>わりました
       click:
-        (クリック) ご<ruby>意見<rt>いけん</rt></ruby>を<br/>
-        お<ruby>聞<rt>き</rt></ruby>かせください
+        (クリック)<br/>
+        ご<ruby>意見<rt>いけん</rt></ruby>をお<ruby>聞<rt>き</rt></ruby>かせください
+      clear:
+        しんちょくのリセット
+      ask_clear:
+        本当（ほんとう）に進捗（しんちょく）をリセットしますか？
   ingredients: 
     # Filled by messages.ja.yml, you can override these if you like
     sprouts:

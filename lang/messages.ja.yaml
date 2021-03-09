@@ -33,6 +33,13 @@ weblate:
       full: シナリオ紹介
     weather:
       full: 温暖化について
+  lunch:
+    label: |
+      ランチテーブル: {name}
+    question: 空っぽ、はてな付き
+    alert: 空っぽ、感嘆符付き
+  links:
+    feedback: https://google.co.jp
   menu:
     chalkboard: 黒板
     open: メニューを開く
@@ -115,15 +122,17 @@ weblate:
         テキスト #{nr} にフォーカス
     progress:
       active: |
-        {percent}% を読み<br/>
-        終わりました
+        {percent}% を読み終わりました
       finished: |
         おつかれさまです！<br/>
-        全てを読み<br/>
-        終わりました
+        全てを読み終わりました
       click:
-        (クリック) ご感想を<br/>
-        お聞かせください。
+        (クリック)<br/>
+        ご感想をお聞かせください。
+      clear: |
+        進捗のリセット
+      ask_clear: |
+        本当に進捗をリセットしますか？
   ingredients:
     milk:
       name: アニマルライツ・ミルク

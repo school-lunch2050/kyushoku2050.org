@@ -47,6 +47,8 @@ weblate:
       Lunch Table: {name}
     question: Empty with question mark.
     alert: Empty with exclamation mark.
+  links:
+    feedback: https://google.com
   menu:
     chalkboard: Chalkboard
     open: Open Menu
@@ -130,15 +132,16 @@ weblate:
         Focus on Text Box #{nr}
     progress:
       active: |
-        {percent}% finished<br/>
-        reading
+        {percent}% finished reading
       finished: |
         Awesome!<br/>
-        You looked at<br/>
-        everything!
-      click:
-        (click) Let us know<br/>
-        what you think!
+        You looked at everything!
+      click: |
+        (click) Let us know what you think!
+      clear: |
+        Reset progress.
+      ask_clear: |
+        Do you really want to reset your progress?
   ingredients:
     potato_porridge:
       name: Potato & beans porridge
@@ -527,11 +530,3 @@ weblate:
       no_pesticides:
         text: |
           Only natural pesticides are allowed, GMOs are banned.
-  about: |
-    The illustrations use following references:
-      - Based on https://unsplash.com/photos/cGNCepznaV8 by Peter Gargiulo on Unsplash 
-      - Based on https://thenounproject.com/search/?q=arrow&i=593917
-      - Based on https://thenounproject.com/term/earth/2225388/ by Valeriy on the Noun Project
-      - Based on https://thenounproject.com/term/heat/689788/ "Heat" by kiddo from the Noun Project
-      - Based on https://thenounproject.com/term/heat/772882/ "Heat" by Kayla Valencia from the Noun Project
-      - Based on https://thenounproject.com/search/?q=heat&i=1224531 "Heat Lines" by Madeleine Bennett from the Noun Project
