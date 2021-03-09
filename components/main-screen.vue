@@ -1,5 +1,5 @@
 <template>
-  <main class="main--main-screen">
+  <main :class="`main--main-screen main--main-screen--${lunchType}`">
     <view-box key="main-view-box" class="main-screen" width="2736" height="3200">
       <chalkboard key="chalkboard" :next="next" :prev="prev">
         <slot name="chalkboard" />

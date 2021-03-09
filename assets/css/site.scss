@@ -261,6 +261,12 @@ html[lang="ja-simple"] {
     font-size: 20px;
   }
 }
+.main--main-screen--desperate,
+.main--main-screen--gamble {
+  .illustration--title {
+    color: white;
+  }
+}
 .illustration--weather--hot,
 .illustration--weather--warm,
 .illustration--location {
@@ -329,7 +335,7 @@ html[lang="ja-simple"] {
 }
 .bubble-text--content {
   position: absolute;
-  & span {
+  .bubble-text--padding span {
     &, & rt {
       user-select: none;
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2Pg4uL6DwABXgEewyNBSAAAAABJRU5ErkJggg==);
@@ -367,6 +373,7 @@ html[lang="ja-simple"] {
   user-select: none;
 }
 .main--main-screen {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -660,6 +667,35 @@ html[lang="ja-simple"] {
     display: block;
     opacity: 0.78;
   }
+}
+.bubble-info {
+  position: absolute;
+  width: 100%;
+  background: grey;
+  bottom: 0;
+  height: 100px;
+}
+.bubble-info--ingredient {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 50px;
+  border: 3px solid white;
+  span {
+    display: none;
+  }
+}
+.bubble-info--ingredient-cosmopolitan {
+  background: $col-bg url('/img/lunch/cosmopolitan.jpg');
+}
+.bubble-info--ingredient-desperate {
+  background: $col-bg url('/img/lunch/desperate.jpg');
+}
+.bubble-info--ingredient-gamble {
+  background: $col-bg url('/img/lunch/gamble.jpg');
+}
+.bubble-info--ingredient-garden {
+  background: $col-bg url('/img/lunch/garden.jpg');
 }
 #outdated-browser {
   padding: 15px 30px;

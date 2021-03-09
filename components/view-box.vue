@@ -33,20 +33,16 @@ import { activeLifecycle, styleRect, toStyle, Rect, clearTextSelection } from '.
 const updateMap = new WeakMap<any, Function>()
 interface Viewbox {
   id: string | null
-  rect: Rect
+  viewRect: Rect & { padding?: Rect }
 }
-type ViewboxFN = (elem: HTMLElement) => Viewbox | null
+type ViewboxFN = () => Viewbox | null
 
 function getViewbox (vue: Vue): Viewbox | null {
   const { getViewbox } = vue.$props as { getViewbox?: ViewboxFN }
   if (!getViewbox) {
     return null
   }
-  const { container } = vue.$refs as { container: HTMLElement }
-  if (!container) {
-    return null
-  }
-  return getViewbox(container)
+  return getViewbox()
 }
 
 function getShadow (vue: Vue, width: number, height: number): string | null {
@@ -54,7 +50,7 @@ function getShadow (vue: Vue, width: number, height: number): string | null {
   if (viewbox === null) {
     return null
   }
-  const { rect } = viewbox
+  const { viewRect: rect } = viewbox
   return `M 0 0 L ${width} 0 L ${width} ${height} L 0 ${height} Z ` +
     `M ${rect.x} ${rect.y} L ${rect.x + rect.width} ${rect.y} L ${rect.x + rect.width} ${rect.y + rect.height} L ${rect.x} ${rect.y + rect.height} Z`
 }
@@ -105,9 +101,9 @@ export default Vue.extend({
     if (!(canvas instanceof HTMLElement)) {
       return
     }
-    const full = {
+    const full: Viewbox = {
       id: null,
-      rect: styleRect(canvas)
+      viewRect: styleRect(canvas)
     }
     let first = true
     const updateTarget = (smooth: boolean) => {
@@ -116,17 +112,25 @@ export default Vue.extend({
         return
       }
       container.classList.toggle('ready', true)
-      const { id, rect: target } = getViewbox(this) ?? full
+      const { id, viewRect: target } = getViewbox(this) ?? full
+      const actualPadding = {
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        ...(target.padding ?? {})
+      }
       const viewPort = {
-        x: 0,
-        y: 0,
-        height: container.offsetHeight,
-        width: container.offsetWidth
+        x: actualPadding.left,
+        y: actualPadding.top,
+        height: container.offsetHeight - actualPadding.top - actualPadding.bottom,
+        width: container.offsetWidth - actualPadding.left - actualPadding.right
       }
       const vRatio = viewPort.width / viewPort.height
-      const scale = vRatio < target.ratio
-        ? full.rect.width / target.width * viewPort.width / full.rect.width
-        : full.rect.height / target.height * viewPort.height / full.rect.height
+      const tRatio = target.width / target.height
+      const scale = vRatio < tRatio
+        ? full.viewRect.width / target.width * viewPort.width / full.viewRect.width
+        : full.viewRect.height / target.height * viewPort.height / full.viewRect.height
 
       if ((canvas.dataset.id ?? null) !== id) {
         clearTextSelection()

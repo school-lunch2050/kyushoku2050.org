@@ -59,15 +59,15 @@
         </table>
       </div>
     </template>
-    <template #lunch>
-      <slot name="lunch" />
+    <template v-if="lunch" #lunch>
+      <lunch-item v-for="ingredient in lunch.ingredients" :key="ingredient.key" />
     </template>
-    <template v-if="selected" #body>
+    <template v-if="lunch" #body>
       <div class="lunch-detail--spacer">
         <text-box key="weblate.scenario.actions.more" class="font--tex" />
       </div>
       <view-box
-        :key="`illustration-${selected}`"
+        :key="`illustration-${lunch.id}`"
         class="view-box--illustration"
         :data-hash="$route.hash || ''"
         :get-viewbox="getViewbox"
@@ -75,16 +75,21 @@
         width="3157"
         height="2500"
       >
-        <slot name="illustration" />
+        <kyushoku-img class="illustration--image" width="3157" height="2500" :src="`illustration/${lunch.id}`" fallback="jpg" />
+        <text-box :key="`weblate.main.grid.${lunch.weather.type}`" align="center center" :class="`illustration--weather--${lunch.weather.type} font--tex`" :custom-style="lunch.weather.style" />
+        <text-box :key="`weblate.main.grid.${lunch.location.type}`" align="center center" class="illustration--location font--tex" :custom-style="lunch.location.style" />
+        <text-box :key="`weblate.pages.${lunch.id}.full`" class="illustration--title font--tex" :custom-style="lunch.title" font-size="100" align="center center" />
+        <bubble-text v-for="(bubble, index) in lunch.bubbles" :key="bubble.id" :nr="index + 1" />
       </view-box>
+      <!--<bubble-info v-if="getBubble()" :key="getBubble().id" />-->
     </template>
   </main-screen>
 </template>
 <script lang="ts">
 import Vue from 'vue'
-
 import { Store } from 'vuex/types'
-import { styleRect } from '../lib'
+import { Bubble, bubbles } from '../assets/bubbles'
+import { Lunch, lunches } from '../assets/lunches'
 
 function mark (store: Store<any>, type: string) {
   store.commit('progress/mark', type)
@@ -114,37 +119,22 @@ export default Vue.extend({
     }
   },
   data () {
-    const x = 300
-    const y = 350
-    const width = 1850
-    const height = 600
+    const lunch = lunches[this.$props.selected as Lunch]
+    const getBubble = () => {
+      const bubbleKey = (this.$route.hash ?? '').substr(1) as Bubble
+      return bubbles[bubbleKey] 
+    }
     return {
-      x,
-      y,
-      width,
-      height,
-      iconWidth: 275,
-      padding: 18,
-      item: {
-        width: width / 2,
-        height: height / 2
-      },
-      getViewbox: (container?: HTMLElement) => {
-        if (!container) {
+      lunch,
+      getBubble,
+      getViewbox: () => {
+        const bubbleData = getBubble()
+        if (!bubbleData) {
           mark(this.$store, this.$props.selected)
           return null
         }
-        const id = (this.$route.hash ?? '').substr(1)
-        const elem = container.querySelector(`.box--${id}`)
-        if (!(elem instanceof HTMLElement)) {
-          mark(this.$store, this.$props.selected)
-          return null
-        }
-        mark(this.$store, `${this.$props.selected}.${id}`)
-        return {
-          id,
-          rect: styleRect(elem)
-        }
+        mark(this.$store, `bubble.${bubbleData.id}`)
+        return bubbleData
       }
     }
   },

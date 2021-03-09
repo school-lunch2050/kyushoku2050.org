@@ -2,13 +2,13 @@
   <div class="bubble-text">
     <div class="bubble-text--content font--tex" :style="textStyle">
       <div class="bubble-text--padding" :style="paddingStyle">
-        <text-box :key="i18nkey" :line-height="lineHeight" :class="{ 'bubble-text--seen': seen() }" :font-size="fontSize" :custom-style="spanStyle()" />
+        <text-box :key="i18nkey" :class="{ 'bubble-text--seen': seen() }" :font-size="fontSize" :custom-style="spanStyle()" />
       </div>
     </div>
     <svg viewBox="0 0 3157 2500" class="bubble-text--shadow">
       <path fill="#000" :d="focusPath" fill-rule="even-odd" />
     </svg>
-    <nuxt-link :to="{ hash }" :style="boxStyle" :class="`bubble-text--link box--${hash}`" :title="$t('weblate.scenario.actions.focus', { nr })">
+    <nuxt-link :to="{ hash: $vnode.key }" :style="boxStyle" :class="`bubble-text--link box--${$vnode.key}`" :title="$t('weblate.scenario.actions.focus', { nr })">
       <div class="bubble-text--rounded-rect" :style="roundedRectStyle">
         &nbsp;
       </div>
@@ -17,6 +17,8 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { bubbles, Bubble } from '../assets/bubbles'
+import { lunchForBubble } from '../assets/lunches'
 import { toStyle, activeLifecycle, countCharsCached, Rect } from '../lib'
 
 function scaleRect (source: any, f: number = 0.98) {
@@ -39,45 +41,29 @@ function roundedRectPath (source: Rect & { r: number }): string {
 export default Vue.extend({
   props: {
     nr: {
-      type: String,
+      type: [String, Number],
       required: true
-    },
-    bubble: {
-      type: [String, Object],
-      required: true
-    },
-    viewRect: {
-      type: Object,
-      required: true
-    },
-    rect: {
-      type: Object,
-      required: true
-    },
-    fontSize: {
-      type: [String, Number, Object],
-      default: null
-    },
-    lineHeight: {
-      type: [String, Number, Object],
-      default: null
-    },
-    padding: {
-      type: String,
-      default: null
     }
   },
   data () {
-    const { viewRect, rect, padding } = this.$props
-    const path = String(this.$vnode.key).split('.')
-    path.splice(1, 0, 'bubbles')
-    const i18nkey = `weblate.${path.join('.')}.text`
+    const bubble = this.$vnode.key as Bubble
+    const data = bubbles[bubble]
+    if (!data) {
+      return {}
+    }
+    const lunch = lunchForBubble(bubble)
+    if (!lunch) {
+      return {}
+    }
+    const { viewRect, rect, padding, fontSize } = data
+    const i18nkey = `weblate.${lunch.id}.bubbles.${bubble}.text`
     const width = 3157
     const height = 2500
     const roundedRect: Rect & { r: number } = scaleRect(viewRect) as any
     roundedRect.r = Math.max(roundedRect.width, roundedRect.height) * 0.02
     const borderWidth = 1
     return {
+      fontSize,
       textStyle: toStyle({
         left: rect.x,
         top: rect.y,
@@ -90,9 +76,7 @@ export default Vue.extend({
         width: viewRect.width,
         height: viewRect.height
       }),
-      paddingStyle: toStyle({
-        padding
-      }),
+      paddingStyle: toStyle({ padding }),
       roundedRectStyle: toStyle({
         left: roundedRect.x - viewRect.x - borderWidth,
         top: roundedRect.y - viewRect.y - borderWidth,
@@ -103,7 +87,6 @@ export default Vue.extend({
         borderWidth
       }),
       focusPath: `M 0 0 L ${width} 0 L ${width} ${height} L 0 ${height} Z ${roundedRectPath(roundedRect)}`,
-      hash: path[2],
       i18nkey
     }
   },
@@ -123,13 +106,13 @@ export default Vue.extend({
   }),
   methods: {
     spanStyle () {
-      const width = countCharsCached(this.$i18n.t(this.i18nkey)) * (this.$i18n.locale === 'ja' || this.$i18n.locale === 'ja-simple' ? 48 : 25)
+      const width = countCharsCached(this.$i18n.t(String(this.i18nkey))) * (this.$i18n.locale === 'ja' || this.$i18n.locale === 'ja-simple' ? 48 : 25)
       return {
         'background-size': `${width}px 8000px`
       }
     },
     seen () {
-      return this.$store.state.progress[String(this.$vnode.key)] === 1
+      return this.$store.state.progress[`bubble.${String(this.$vnode.key)}`] === 1
     }
   }
 })

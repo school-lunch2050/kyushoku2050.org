@@ -22,7 +22,6 @@ export interface Rect {
   y: number
   width: number
   height: number
-  ratio: number
 }
 
 export function styleRect (node: HTMLElement): Rect {
@@ -32,9 +31,18 @@ export function styleRect (node: HTMLElement): Rect {
     x: numberStyle(node, 'left'),
     y: numberStyle(node, 'top'),
     width,
-    height,
-    ratio: width / height
+    height
   }
+}
+
+export function toNum (input: string | number | null | undefined): number {
+  if (input === null || input === undefined) {
+    return 0
+  }
+  if (typeof input === 'number') {
+    return input
+  }
+  return parseFloat(input)
 }
 
 export function toPx (input: string | number | null | undefined): string | undefined {

@@ -30,26 +30,11 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { toStyle } from '../lib'
+import { Ingredient, ingredients } from '../assets/ingredients'
 
 export default Vue.extend({
-  props: {
-    x: {
-      type: [Number, String],
-      required: true
-    },
-    y: {
-      type: [Number, String],
-      required: true
-    }
-  },
   data () {
-    return {
-      markerStyle: toStyle({
-        left: this.$props.x,
-        top: this.$props.y
-      })
-    }
+    return ingredients[this.$vnode.key as Ingredient]
   }
 })
 </script>
