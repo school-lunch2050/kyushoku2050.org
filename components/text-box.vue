@@ -9,20 +9,20 @@
 import Vue from 'vue'
 import sanitize from 'sanitize-html'
 import IVueI18n from 'vue-i18n/types'
-import { toStyle, toPx } from '../lib'
+import { toStyle } from '../lib'
 
 interface Options {
-  x: number | string | null
-  y: number | string | null
-  width: number | string | null
-  height: number | string | null
+  x?: number | string | null
+  y?: number | string | null
+  width?: number | string | null
+  height?: number | string | null
   fontSize: any | null
-  lineHeight: any | null
-  align: string | null
-  verticalAlign: string | null
-  padding: string | null
-  margin: string | null,
-  customStyle: Object | null
+  lineHeight?: any | null
+  align?: string | null
+  verticalAlign?: string | null
+  padding?: string | null
+  margin?: string | null,
+  customStyle?: Object | null
 }
 
 const i18nLookups: { [key: string]: string[] } = {}
@@ -51,8 +51,39 @@ function getI18nSize (input: { [locale: string]: number }, i18n: IVueI18n): numb
   return null
 }
 
+function removeNulls <T> (obj: T): T {
+  for (const key in obj) {
+    if (obj[key] === null) {
+      delete obj[key]
+    }
+  }
+  return obj
+}
+
 function createStyle (options: Options, i18n: IVueI18n): { isDynamic: boolean, style: string, useDiv: boolean } {
-  const { x, y, width, height, padding, margin, customStyle } = options
+  const { customStyle } = options
+  let additionalStyle = {}
+  if (customStyle) {
+    options = {
+      ...customStyle,
+      ...removeNulls(options)
+    }
+    additionalStyle = removeNulls({
+      ...customStyle,
+      // removing all the used properties
+      x: null,
+      y: null,
+      width: null,
+      height: null,
+      padding: null,
+      margin: null,
+      align: null,
+      verticalAlign: null,
+      fontSize: null,
+      lineHeight: null
+    })
+  }
+  const { x, y, width, height, padding, margin } = options
   let { align, verticalAlign, fontSize, lineHeight } = options
   if (align && /\w+\s+\w+/.test(align)) {
     const parts = align.split(' ')
@@ -80,15 +111,15 @@ function createStyle (options: Options, i18n: IVueI18n): { isDynamic: boolean, s
       textAlign,
       justifyContent,
       position: absolute ? 'absolute' : null,
-      left: toPx(x),
-      top: toPx(y),
+      left: x,
+      top: y,
       fontSize,
       lineHeight,
       padding,
       margin,
       width,
       height,
-      ...(typeof customStyle === 'object' ? customStyle : {} as any)
+      ...additionalStyle
     })
   }
 }
