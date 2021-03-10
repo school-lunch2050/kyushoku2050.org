@@ -4,13 +4,13 @@ School Lunch 2050 was established by the **FEAST Project**.
 
 <dl>
   <dt>Direction:</dt>
-  <dd>Maximilian Spiegelberg (<a href="https://www.feastproject.org/headquarter/" target="_blank">FEAST Project</a>)</dd>
+  <dd>Maximilian Spiegelberg (<a href="https://www.feastproject.org/en/headquarter/" target="_blank">FEAST Project</a>)</dd>
   <dt>Scenarios (Content):</dt>
-  <dd><a href="https://www.feastproject.org/headquarter/" target="_blank">FEAST Project</a> team</dd>
+  <dd><a href="https://feastproject.org/school-lunch-2050" target="_blank">FEAST Project</a> team</dd>
   <dt>Future lunch sets:</dt>
-  <dd>Yuko Kobayashi & Yuko Matsuoka (<a href="https://www.feastproject.org/headquarter/" target="_blank">FEAST Project</a>)</dd>
+  <dd>Yuko Matsuoka & Yuko Kobayashi (<a href="https://www.feastproject.org/en/headquarter/" target="_blank">FEAST Project</a>)</dd>
   <dt>Translations:</dt>
-  <dd>Yuko Kobayashi (<a href="https://www.feastproject.org/headquarter/" target="_blank">FEAST Project</a>)</dd>
+  <dd>Yuko Kobayashi (<a href="https://www.feastproject.org/en/headquarter/" target="_blank">FEAST Project</a>)</dd>
   <dt>Research Assistance:</dt>
   <dd>Leo Porte & Haruka Tonegawa</dd>
   <dt>Scenario illustrations:</dt>
@@ -19,9 +19,9 @@ School Lunch 2050 was established by the **FEAST Project**.
   <dd><a href="https://github.com/sponsors/martinheidegger" target="_blank">Martin Heidegger</a></dd>
 </dl>
 
-More information can be found at the [FEAST homepage](https://feastproject.org/school-lunch-2050).
+More information can be found at the <a href="https://www.feastproject.org/en/blog_future-school-lunch-installation/?fbclid=IwAR11CYmO_0o1p2-xj2AiRdRu0cdITSE4YrZm8T4WmpFsDwr1jStEQIGAbIg" target="_blank">FEAST Page.</a></dd>
 
-_The School Lunch 2050 homepage has been funded by the [NIHU Interactive Communication Initiative][nihu]._
+_The School Lunch 2050 homepage has been funded by the <a href="https://www.chikyu.ac.jp/rihn_e/index.html">Research Institute for Humanity and Nature.</a></dd>._
 
 ### License Information
 
@@ -51,8 +51,8 @@ This website uses following additional assets:
 The code for the website can be found on [github](https://github.com/school-lunch2050/kyushoku2050.org/).
 This website is hosted using [Netlify](https://netlify.com) and [Cloudflare](https://cloudflare.com).
 
-[feast]: https://www.feastproject.org/headquarter/
+[feast]: https://www.feastproject.org/en/
 [sustena]: http://www.sustena.org/
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/legalcode
-[nihu]: https://www.chikyu.ac.jp/activities/visualization/
+[RIHN]: https://www.chikyu.ac.jp/rihn_e/index.html
 [mh]: https://github.com/sponsors/martinheidegger
