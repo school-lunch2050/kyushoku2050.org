@@ -81,14 +81,14 @@
         <text-box :key="`weblate.pages.${lunch.id}.full`" class="illustration--title font--tex" :custom-style="lunch.title" font-size="100" align="center center" />
         <bubble-text v-for="(bubble, index) in lunch.bubbles" :key="bubble.id" :nr="index + 1" />
       </view-box>
-      <!--<bubble-info v-if="getBubble()" :key="getBubble().id" />-->
+      <bubble-info :key="getBubble() ? getBubble().id : 'no-bubble'" :class="{ 'bubble-info--hidden': getViewbox() === null }" />
     </template>
   </main-screen>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 import { Store } from 'vuex/types'
-import { Bubble, bubbles } from '../assets/bubbles'
+import { Bubble, BubbleData, bubbles } from '../assets/bubbles'
 import { Lunch, lunches } from '../assets/lunches'
 
 function mark (store: Store<any>, type: string) {
@@ -120,15 +120,24 @@ export default Vue.extend({
   },
   data () {
     const lunch = lunches[this.$props.selected as Lunch]
-    const getBubble = () => {
+    let lastBubble: BubbleData
+    const getCurrentBubble = () => {
       const bubbleKey = (this.$route.hash ?? '').substr(1) as Bubble
       return bubbles[bubbleKey]
+    }
+    const getBubble = () => {
+      const bubbleData = getCurrentBubble()
+      if (!bubbleData) {
+        return lastBubble
+      }
+      lastBubble = bubbleData
+      return lastBubble
     }
     return {
       lunch,
       getBubble,
       getViewbox: () => {
-        const bubbleData = getBubble()
+        const bubbleData = getCurrentBubble()
         if (!bubbleData) {
           mark(this.$store, this.$props.selected)
           return null

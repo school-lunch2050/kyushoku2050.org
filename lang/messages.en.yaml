@@ -123,6 +123,8 @@ weblate:
       warm: 1.5° Celsius
       hot: more than 2° Celsius
   scenario:
+    related_ingredients: |
+      Related menu items:
     actions:
       notes: Notes
       pdf: PDF

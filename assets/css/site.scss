@@ -761,21 +761,56 @@ html[lang="ja-simple"] {
     opacity: 0.78;
   }
 }
-.bubble-info {
+.bubble-info,
+.bubble-info--content {
   position: absolute;
   width: 100%;
-  background: grey;
+  // Changing the height also requires an update of ../bubbles.ts!
+  height: 120px;
   bottom: 0;
-  height: 100px;
+}
+.bubble-info {
+  overflow: hidden;
+}
+.bubble-info--content {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  transition: bottom 0.2s 0.8s;
+}
+.bubble-info--hidden
+.bubble-info--content {
+  bottom: -120px;
+  transition: bottom 0.2s;
+}
+.bubble-info--ingredients {
+  color: white;
+  font-size: 28px;
+  margin-right: 20px;
 }
 .bubble-info--ingredient {
-  width: 60px;
-  height: 60px;
+  // Changing the size also requires an update of ../ingredients.ts!
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  margin-left: 50px;
+  position: relative;
   border: 3px solid white;
   span {
     display: none;
+  }
+  &:hover, &:focus {
+    span {
+      display: block;
+      position: absolute;
+      background: white;
+      color: black;
+      padding: 0.2em;
+      font-size: 20px;
+      width: max-contents;
+      margin-left: calc(-50% + 45px);
+      margin-top: -20px;
+    }
   }
 }
 .bubble-info--ingredient-cosmopolitan {

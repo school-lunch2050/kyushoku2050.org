@@ -113,6 +113,8 @@ weblate:
       warm: 1.5℃
       hot: 2℃ 以上
   scenario:
+    related_ingredients: |
+      メニューアイテム：
     actions:
       notes: ノート
       pdf: PDF

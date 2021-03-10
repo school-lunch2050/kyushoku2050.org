@@ -232,7 +232,7 @@ export const ingredients = Object.entries(baseData).reduce((mapped, [ingredientK
     width: 2636, /* found in the stylesheet for the lunch display, used for placing the lunch items */
     height: (2636 / 3874 * 1926)
   }
-  const imageSize = 60 /* found in the stylesheet for the ingredient-icon! */
+  const imageSize = 90 /* found in the stylesheet for the ingredient-icon! */
   const scale = imageSize / (place.r * 2)
   const markerStyle =
     `left: ${toPx(place.x)};` +

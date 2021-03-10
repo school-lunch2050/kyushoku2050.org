@@ -1,11 +1,15 @@
 <template>
-  <div class="bubble-info">
-    <nuxt-link v-for="ingredient in bubble.ingredients" :key="ingredient.key" :to="`#ingredient-${ingredient.key}`">
-      <div :style="ingredient.iconStyle" :class="`bubble-info--ingredient bubble-info--ingredient-${lunch.id}`">
-        <text-box :key="`weblate.ingredients.${ingredient.key}.name`" />
+  <div v-if="bubble" class="bubble-info font--tex">
+    <div class="bubble-info--content">
+      <text-box v-if="bubble.ingredients.length > 0" key="weblate.scenario.related_ingredients" class="bubble-info--ingredients" />
+      <div v-for="ingredient in bubble.ingredients" :key="ingredient.key">
+        <div :style="ingredient.iconStyle" :class="`bubble-info--ingredient bubble-info--ingredient-${lunch.id}`">
+          <text-box :key="`weblate.ingredients.${ingredient.key}.name`" />
+        </div>
       </div>
-    </nuxt-link>
+    </div>
   </div>
+  <div v-else />
 </template>
 <script lang="ts">
 import Vue from 'vue'

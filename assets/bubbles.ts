@@ -326,7 +326,7 @@ export const bubbles = Object.entries({
     }
   }
   const bubbleIngredients = baseData.ingredients.map(ingredient => ingredients[ingredient])
-  let padding = {} // { bottom: 100 /* height of css class .bubble-info */ }
+  const padding = { bottom: 120 /* height of css class .bubble-info */ }
   mapped[bubbleKey as Bubble] = {
     ...baseData,
     viewRect: {
