@@ -143,120 +143,75 @@ weblate:
     sprouts:
       source: |
         クラスで<ruby>色々<rt>いろいろ</rt></ruby>なスプラウトを<ruby>育<rt>そだ</rt></ruby>て、インスタント<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>足<rt>た</rt></ruby>りない、<ruby>栄養素<rt>えいようそ</rt></ruby>、いろどり、<ruby>味<rt>あじ</rt></ruby>をそえています。
-  cosmopolitan:
-    bubbles:
-      fruit: 
-        text: |
-          <ruby>日本<rt>にほん</rt></ruby>はアジアやアフリカのお<ruby>金持<rt>かねも</rt></ruby>ちのために<ruby>三角形<rt>さんかっけい</rt></ruby>メロンや<ruby>巨大<rt>きょだい</rt></ruby>イチゴを作っています。<ruby>農家<rt>のうか</rt></ruby>に<ruby>種<rt>たね</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ<ruby>権利<rt>けんり</rt></ruby>はなく、<ruby>政府<rt>せいふ</rt></ruby>が<ruby>決<rt>き</rt></ruby>めています。<ruby>生物多様性<rt>せいぶつたようせい</rt></ruby>や<ruby>地域<rt>ちいき</rt></ruby>の<ruby>食文化<rt>しょくぶんか</rt></ruby>は、<ruby>失<rt>うしな</rt></ruby>われました。
-      agreements:
-        text: |
-          <ruby>国民<rt>こくみん</rt></ruby>の<ruby>栄養量<rt>えいようりょう</rt></ruby>から<ruby>逆算<rt>ぎゃくさん</rt></ruby>して<ruby>貿易<rt>ぼうえき</rt></ruby>のルールを<ruby>決<rt>き</rt></ruby>めています。<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>環境負荷<rt>かんきょうふか</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きい<ruby>牛<rt>うし</rt></ruby>や<ruby>豚<rt>ぶた</rt></ruby>のかわりに<ruby>大豆<rt>だいず</rt></ruby>や<ruby>菌類<rt>きんるい</rt></ruby>、<ruby>藻類由来<rt>そうるいゆらい</rt></ruby>の「<ruby>疑似肉<rt>ぎじにく</rt></ruby>」や「<ruby>疑似<rt>ぎじ</rt></ruby>チーズ」を<ruby>食<rt>た</rt></ruby>べています。
-      influencers:
-        text: |
-          「インフルエンサー」がめずらしい<ruby>外国<rt>がいこく</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものを<ruby>流行<rt>はや</rt></ruby>らせ、<ruby>旬<rt>しゅん</rt></ruby>はなくなっています。
-      fisheries:
-        text: |
-          <ruby>沿岸漁業<rt>えんがんぎょぎょう</rt></ruby>がなくなり、<ruby>漁業<rt>ぎょぎょう</rt></ruby>もハイテク<ruby>化<rt>か</rt></ruby>、<ruby>養殖<rt>ようしょく</rt></ruby>と<ruby>遠洋漁業<rt>えんようぎょぎょう</rt></ruby>だけになりました。<ruby>生<rt>なま</rt></ruby>の<ruby>魚<rt>さかな</rt></ruby>は<ruby>今<rt>いま</rt></ruby>やめったに<ruby>見<rt>み</rt></ruby>ない<ruby>贅沢品<rt>ぜいたくひん</rt></ruby>。ほとんどの<ruby>魚<rt>さかな</rt></ruby>が<ruby>採<rt>と</rt></ruby>ってすぐ<ruby>洋上<rt>ようじょう</rt></ruby>で<ruby>冷凍<rt>れいとう</rt></ruby>されます。
-      social_businesses:
-        text: |
-          <ruby>家族経営<rt>かぞくけいえい</rt></ruby>の<ruby>農家<rt>のうか</rt></ruby>はつぶれ、<ruby>農業<rt>のうぎょう</rt></ruby>はドローンやAI、<ruby>人工衛星<rt>じんこうえいせい</rt></ruby>を<ruby>駆使<rt>くし</rt></ruby>する<ruby>社会起業家<rt>しゃかいきぎょうか</rt></ruby>たちが<ruby>担<rt>にな</rt></ruby>っています。ハイテク<ruby>技術<rt>ぎじゅつ</rt></ruby>をつかって<ruby>資源<rt>しげん</rt></ruby>を<ruby>節約<rt>せつやく</rt></ruby>し、また<ruby>味<rt>あじ</rt></ruby>や<ruby>形<rt>かたち</rt></ruby>も<ruby>一般向<rt>いっぱんむ</rt></ruby>けに<ruby>規格化<rt>きかくか</rt></ruby>されています。
-      rice:
-        text: |
-          <ruby>温室効果<rt>おんしつこうか</rt></ruby>ガスを<ruby>出<rt>だ</rt></ruby>していい<ruby>量<rt>りょう</rt></ruby>が<ruby>国<rt>くに</rt></ruby>ごとに<ruby>決<rt>き</rt></ruby>められています。<ruby>日本<rt>にほん</rt></ruby>はハイテク<ruby>分野<rt>ぶんや</rt></ruby>に<ruby>特化<rt>とっか</rt></ruby>し、アジア<ruby>諸国<rt>しょこく</rt></ruby>でお<ruby>米<rt>こめ</rt></ruby>やとうもろこしなどを<ruby>生産<rt>せいさん</rt></ruby>しているため、アジアからお<ruby>米<rt>こめ</rt></ruby>を<ruby>輸入<rt>ゆにゅう</rt></ruby>しています。
-      ethical_consumption:
-        text: |
-          エシカル<ruby>消費<rt>しょうひ</rt></ruby>とよばれる「<ruby>自然<rt>しぜん</rt></ruby>や<ruby>動物<rt>どうぶつ</rt></ruby>のことを<ruby>考<rt>かんが</rt></ruby>えて<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>をしよう」という<ruby>運動<rt>うんどう</rt></ruby>が<ruby>広<rt>ひろ/rt></ruby>がり、フェアトレードやオーガニックなどのラベルがついている<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>買<rt>か</rt></ruby>うのがふつうになっています。<ruby>作<rt>つく</rt></ruby>る<ruby>人<rt>ひと</rt></ruby>と<ruby>買<rt>か</rt></ruby>う<ruby>人<rt>ひと</rt></ruby>が、SNSで<ruby>直接<rt>ちょくせつ</rt></ruby>つながっています。
-  desperate:
-    bubbles:
-      climate_change:
-        text: |
-          <ruby>気候変動<rt>きこうへんどう</rt></ruby>により<ruby>食料生産地<rt>しょくりょうせいさんち</rt></ruby>がどんどん<ruby>北<rt>きた</rt></ruby>へと<ruby>移動<rt>いどう</rt></ruby>。<ruby>京都<rt>きょうと</rt></ruby>ではアボカド、バナナ、コーヒーなど<ruby>熱帯産<rt>ねったいさん</rt></ruby>のものが<ruby>栽培<rt>さいばい</rt></ruby>され、<ruby>東京<rt>とうきょう</rt></ruby>では<ruby>熱帯魚<rt>ねったいぎょ</rt></ruby>がつれるようになりました。
-      weather_patterns:
-        text: |
-          <ruby>天気<rt>てんき</rt></ruby>が<ruby>予測<rt>よそく</rt></ruby>できなくなったので、<ruby>成長<rt>せいちょう</rt></ruby>が<ruby>早<rt>はや</rt></ruby>く、<ruby>乾<rt>かわ</rt></ruby>いた<ruby>土地<rt>とち</rt></ruby>、<ruby>湿<rt>しめ</rt></ruby>った<ruby>土地<rt>とち</rt></ruby>のどちらでも<ruby>育<rt>そだ</rt></ruby>つ<ruby>穀物<rt>こくもつ</rt></ruby>がよく<ruby>作<rt>つく</rt></ruby>られるようになりました。
-      insect_pollination:
-        text: |
-          <ruby>受粉<rt>じゅふん</rt></ruby>してくれていたミツバチが<ruby>農薬<rt>のうやく</rt></ruby>で<ruby>絶滅<rt>ぜつめつ</rt></ruby>。<ruby>気候変動<rt>きこうへんどう</rt></ruby>で<ruby>生物多様性<rt>せいぶつたようせい</rt></ruby>は<ruby>失<rt>うしな</rt></ruby>われ、<ruby>野菜<rt>やさい</rt></ruby>や<ruby>果物<rt>くだもの</rt></ruby>の<ruby>栽培<rt>さいばい</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくなりました。ロボットで<ruby>受粉<rt>じゅふん</rt></ruby>したり、ゲノム<ruby>編集<rt>へんしゅう</rt></ruby>で<ruby>受粉<rt>じゅふん</rt></ruby>しなくても<ruby>実<rt>み</rt></ruby>がなるように<ruby>改良<rt>かいりょう</rt></ruby>された<ruby>作物<rt>さくもつ</rt></ruby>が<ruby>作<rt>つく</rt></ruby>られています。
-      mass_vegetables:
-        text: |
-          <ruby>市町村<rt>しちょうそん</rt></ruby>が、<ruby>土<rt>つち</rt></ruby>もなく<ruby>害虫<rt>がいちゅう</rt></ruby>もいない、<ruby>完全<rt>かんぜん</rt></ruby>にAIで<ruby>自動化<rt>じどうか</rt></ruby>、<ruby>衛生管理<rt>えいせいかんり</rt></ruby>された<ruby>魚<rt>さかな</rt></ruby>と<ruby>野菜<rt>やさい</rt></ruby>の<ruby>大量生産工場<rt>たいりょうせいさんこうじょう</rt></ruby>を<ruby>運営<rt>うんえい</rt></ruby>しています。
-      ocean_acidification:
-        text: |
-          <ruby>海水<rt>かいすい</rt></ruby>の<ruby>温度<rt>おんど</rt></ruby>があがり、サンゴ<ruby>礁<rt>しょう</rt></ruby>がなくなり、そこに<ruby>住<rt>す</rt></ruby>む<ruby>生物<rt>いきもの</rt></ruby>もいなくなってしまいました。
-      pesticide_resistant:
-        text: |
-          <ruby>人<rt>ひと</rt></ruby>のタンパク<ruby>源<rt>げん</rt></ruby>はゲノム<ruby>編集<rt>へんしゅう</rt></ruby>をした<ruby>昆虫<rt>こんちゅう</rt></ruby>です。わずかな<ruby>家庭菜園<rt>かていさいえん</rt></ruby>が、インスタント<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>栄養<rt>えいよう</rt></ruby>、いろどり、<ruby>味<rt>あじ</rt></ruby>わいを<ruby>添<rt>そ</rt></ruby>えています。
-      printed_product:
-        text: |
-          いろいろな<ruby>食<rt>た</rt></ruby>べものを<ruby>粉<rt>こな</rt></ruby>にして、それを「3Dプリンター」にかけることで、ひとりひとりの<ruby>好<rt>この</rt></ruby>みや<ruby>健康<rt>けんこう</rt></ruby>にあった<ruby>食<rt>た</rt></ruby>べものが<ruby>作<rt>つく</rt></ruby>られています。<ruby>台風<rt>たいふう</rt></ruby>が<ruby>多<rt>おお</rt></ruby>く、<ruby>外出<rt>がいしゅつ</rt></ruby>できない<ruby>日<rt>ひ</rt></ruby>には、おうちで3Dプリントでごはんを<ruby>作<rt>つく</rt></ruby>ってパーティーが<ruby>開<rt>ひら</rt></ruby>かれています。
-      home_sprouts:
-        text: |
-          おうちで<ruby>色々<rt>いろいろ</rt></ruby>なスプラウトを<ruby>育<rt>そだ</rt></ruby>て、インスタント<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>足<rt>た</rt></ruby>りない、<ruby>栄養素<rt>えいようそ</rt></ruby>、いろどり、<ruby>味<rt>あじ</rt></ruby>をそえています。
-  gamble:
-    ingredients:
-      # Filled by messages.ja.yml, you can override these if you like
-    bubbles:
-      food_marketers:
-        text: |
-          <ruby>人気商品<rt>にんきしょうひん</rt></ruby>や<ruby>流行<rt>りゅうこう</rt></ruby>が<ruby>作<rt>つく</rt></ruby>られ、<ruby>過激<rt>かげき</rt></ruby>な<ruby>味<rt>あじ</rt></ruby>や、<ruby>形<rt>かたち</rt></ruby>、<ruby>色<rt>いろ</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものが<ruby>増<rt>ふ</rt></ruby>えました。<ruby>加工度<rt>かこうど</rt></ruby>が<ruby>高<rt>たか</rt></ruby>く<ruby>中毒性<rt>ちゅうどくせい</rt></ruby>もあり、あらゆる<ruby>世代<rt>せだい</rt></ruby>で<ruby>糖尿病<rt>とうにょうびょう</rt></ruby>や<ruby>肥満<rt>ひまん</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えました。
-      stressed_conditions:
-        text: |
-          <ruby>環境<rt>かんきょう</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>くなり<ruby>続<rt>つづ</rt></ruby>けていて、<ruby>土地<rt>とち</rt></ruby>はやせています。そこで、きびしい<ruby>環境<rt>かんきょう</rt></ruby>でも<ruby>育<rt>そだ</rt></ruby>、<ruby>栄養豊富<rt>えいようほうふ</rt></ruby>なCRISPR (クリスパー) というゲノム<ruby>編集<rt>へんしゅう</rt></ruby>の<ruby>人造植物<rt>じんぞうしょくぶつ</rt></ruby>を<ruby>作<rt>つく</rt></ruby>って<ruby>食<rt>た</rt></ruby>べています。<ruby>食<rt>た</rt></ruby>べものには、<ruby>腐<rt>くさ</rt></ruby>りにくい<ruby>加工<rt>かこう</rt></ruby>がしてあります。
-      controlled_market:
-        text: |
-          <ruby>大手企業<rt>おおてきぎょう</rt></ruby>が<ruby>生産<rt>せいさん</rt></ruby>と<ruby>供給<rt>きょうきゅう</rt></ruby>を<ruby>自由<rt>じゆう</rt></ruby>に<ruby>決<rt>き</rt></ruby>めるので、<ruby>食<rt>た</rt></ruby>べものの<ruby>値段<rt>ねだん</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がりました。<ruby>食<rt>た</rt></ruby>べものが<ruby>賭<rt>か</rt></ruby>け<ruby>事<rt>こと</rt></ruby>、オークションや<ruby>投機<rt>とうき</rt></ruby>でも<ruby>取<rt>と</rt></ruby>り<ruby>引<rt>ひ</rt></ruby>きされています。<ruby>主食<rt>しゅしょく</rt></ruby>となる<ruby>食<rt>た</rt></ruby>べものも<ruby>気候変動<rt>きこうへんどう</rt></ruby>で<ruby>生産量<rt>せいさんりょう</rt></ruby>が<ruby>減<rt>へ</rt></ruby>り、<ruby>船<rt>ふね</rt></ruby>や<ruby>飛行機<rt>ひこうき</rt></ruby>で<ruby>外国<rt>がいこく</rt></ruby>から<ruby>運<rt>はこ</rt></ruby>んでくるのも<ruby>危険<rt>きけん</rt></ruby>、また<ruby>安<rt>やす</rt></ruby>い<ruby>時<rt>とき</rt></ruby>に<ruby>買<rt>か</rt></ruby>って<ruby>高<rt>たか</rt></ruby>いときに<ruby>売<rt>う</rt></ruby>る<ruby>転売<rt>てんばい</rt></ruby>や<ruby>投機<rt>とうき</rt></ruby>も<ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>され、<ruby>値段<rt>ねだん</rt></ruby>がとても<ruby>高<rt>たか</rt></ruby>くなりました。
-      plantation_farms:
-        text: |
-          <ruby>垂直統合<rt>すいちょくとうごう</rt></ruby>された<ruby>多国籍企業<rt>たこくせききぎょう</rt></ruby>が、<ruby>世界各地<rt>せかいかくち</rt></ruby>でプランテーション<ruby>農園<rt>のうえん</rt></ruby>を<ruby>運営<rt>うんえい</rt></ruby>し、<ruby>環境難民<rt>かんきょうなんみん</rt></ruby>たちが<ruby>低賃金<rt>ていちんぎん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>いています。
-      rare_fresh_fruit:
-        text: |
-          <ruby>生<rt>なま</rt></ruby>の<ruby>果物<rt>くだもの</rt></ruby>は<ruby>手<rt>て</rt></ruby>に<ruby>届<rt>とど</rt></ruby>かない<ruby>高級品<rt>こうきゅうひん</rt></ruby>。<ruby>一般市民<rt>いっぱんしみん</rt></ruby>は<ruby>加工品<rt>かこうひん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べています。
-      lab_meat:
-        text: |
-          <ruby>主<rt>おも</rt></ruby>なタンパク<ruby>源<rt>げん</rt></ruby>は、「<ruby>培養肉<rt>ばいようにく</rt></ruby>」や「<ruby>培養魚介類<rt>ばいようぎょかいるい</rt></ruby>」です。
-      pesticide_regulations:
-        text: |
-          <ruby>食<rt>た</rt></ruby>べものに<ruby>残<rt>のこ</rt></ruby>る<ruby>残留農薬<rt>ざんりゅうのうやく</rt></ruby>や<ruby>放射能汚染<rt>ほうしゃのうおせん</rt></ruby>やマイクロプラスチックなどの<ruby>規制<rt>きせい</rt></ruby>は<ruby>廃止<rt>はいし</rt></ruby>されてなくなり、<ruby>企業<rt>きぎょう</rt></ruby>にとって<ruby>都合<rt>つごう</rt></ruby>よく<ruby>貿易<rt>ぼうえき</rt></ruby>できるようになりました。<ruby>人々<rt>ひとびと</rt></ruby>のとるカロリーは<ruby>充分<rt>じゅうぶん</rt></ruby>で、「<ruby>食<rt>しょく</rt></ruby>のカロリー<ruby>安全保障<rt>あんぜんほしょう</rt></ruby>」は<ruby>達成<rt>たっせい</rt></ruby>されています。
-      daily_medication:
-        text: |
-          マイクロプラスチックや<ruby>残留農薬<rt>ざんりゅうのうやく</rt></ruby>から<ruby>身<rt>み</rt></ruby>を<ruby>守<rt>まも</rt></ruby>り、<ruby>病気<rt>びょうき</rt></ruby>にならないように、<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んでいます。
-      daily_supplements:
-        text: |
-          やせた<ruby>土地<rt>とち</rt></ruby>で<ruby>作<rt>つく</rt></ruby>られた<ruby>野菜<rt>やさい</rt></ruby>には<ruby>養分<rt>ようぶん</rt></ruby>が<ruby>足<rt>た</rt></ruby>りないので、サプリのカプセルを<ruby>飲<rt>の</rt></ruby>む<ruby>人<rt>ひと</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えました。サプリは<ruby>腸内環境<rt>ちょうないかんきょう</rt></ruby>を<ruby>整<rt>ととの</rt></ruby>えたり<ruby>災害<rt>さいがい</rt></ruby>で<ruby>食<rt>た</rt></ruby>べものがないときの<ruby>非常食<rt>ひじょうしょく</rt></ruby>でもあります。
-  garden:
-    ingredients:
-      # Filled by messages.ja.yml, you can override these if you like
-    bubbles:
-      domestic_soveirnty:
-        text: |
-          <ruby>世界<rt>せかい</rt></ruby>はそれぞれ、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>国<rt>くに</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものは<ruby>自分<rt>じぶん</rt></ruby>の<ruby>国<rt>くに</rt></ruby>で<ruby>守<rt>まも</rt></ruby>っています。<ruby>仕事<rt>しごと</rt></ruby>も、<ruby>農業<rt>のうぎょう</rt></ruby>や<ruby>料理<rt>りょうり</rt></ruby>や<ruby>家事<rt>かじ</rt></ruby>など<ruby>食<rt>た</rt></ruby>べもの<ruby>関連<rt>かんれん</rt></ruby>が<ruby>多<rt>おお</rt></ruby>くなり、「<ruby>半農半X<rt>はんのうはんえっくす</rt></ruby>」の<ruby>人<rt>ひと</rt></ruby>も<ruby>増<rt>ふ</rt></ruby>えました。
-      regionally_diverse:
-        text: |
-          <ruby>米作<rt>こめづく</rt></ruby>りから<ruby>出<rt>で</rt></ruby>る<ruby>温室効果<rt>おんしつこうか</rt></ruby>のメタンガスを<ruby>減<rt>へ</rt></ruby>らすため、お<ruby>米<rt>こめ</rt></ruby>のかわりに<ruby>山芋<rt>やまいも</rt></ruby>、<ruby>里芋<rt>さといも</rt></ruby>、ジャガイモ、サツマイモなどを<ruby>食<rt>た</rt></ruby>べることが<ruby>多<rt>おお</rt></ruby>くなりました。
-      seed_banks:
-        text: |
-          <ruby>地域<rt>ちいき</rt></ruby>ごとの<ruby>森<rt>もり</rt></ruby>、<ruby>海<rt>うみ</rt></ruby>、<ruby>川<rt>かわ</rt></ruby>の<ruby>利用<rt>りよう</rt></ruby>ルールにのっとっていれば、シカやイノシシ、<ruby>魚<rt>さかな</rt></ruby>、<ruby>山菜<rt>さんさい</rt></ruby>などを<ruby>採<rt>と</rt></ruby>って<ruby>食<rt>た</rt></ruby>べていいことになっています。<ruby>地域<rt>ちいき</rt></ruby>のためのボランティアをする<ruby>時間<rt>じかん</rt></ruby>が<ruby>決<rt>き</rt></ruby>まっていて、タネの<ruby>交換<rt>こうかん</rt></ruby>のイベントやファーマーズマーケットもよく<ruby>開<rt>ひら</rt></ruby>かれます。
-      vegan_diets:
-        text: |
-          ベジタリアン（<ruby>肉<rt>にく</rt></ruby>・<ruby>魚類<rt>ぎょるい</rt></ruby>は<ruby>食<rt>た</rt></ruby>べず、<ruby>野菜<rt>やさい</rt></ruby>を<ruby>中心<rt>ちゅうしん</rt></ruby>に<ruby>卵<rt>たまご</rt></ruby>や<ruby>乳製品<rt>にゅうせいひん</rt></ruby>も<ruby>食<rt>た</rt></ruby>べる人）やビーガン（<ruby>植物性<rt>しょくぶつせい</rt></ruby>のものしか<ruby>食<rt>た</rt></ruby>べない人）がふえ、タンパク<ruby>質<rt>しつ</rt></ruby>も、<ruby>肉<rt>にく</rt></ruby>・<ruby>魚<rt>さかな</rt></ruby>・<ruby>乳製品<rt>にゅうせいひん</rt></ruby>ではなく、<ruby>豆類<rt>まめるい</rt></ruby>、<ruby>雑穀<rt>ざっこく</rt></ruby>、そば、ナッツなどの<ruby>植物<rt>しょくぶつ</rt></ruby>からとるようになっています。
-      public_food:
-        text: |
-          <ruby>公園<rt>こうえん</rt></ruby>や<ruby>土手<rt>どて</rt></ruby>や<ruby>河川敷<rt>かせんじき</rt></ruby>には、<ruby>誰<rt>だれ</rt></ruby>でも<ruby>自由<rt>じゆう</rt></ruby>にとって<ruby>食<rt>た</rt></ruby>べてもいい<ruby>実<rt>み</rt></ruby>のなる<ruby>木<rt>き</rt></ruby>を<ruby>植<rt>う</rt></ruby>えています。<ruby>街<rt>まち</rt></ruby>や<ruby>校庭<rt>こうてい</rt></ruby>に<ruby>畑<rt>はたけ</rt></ruby>を<ruby>作<rt>つく</rt></ruby>り<ruby>野菜<rt>やさい</rt></ruby>を<ruby>作<rt>つく</rt></ruby>っています。
-      wasting_food:
-        text: |
-          <ruby>食<rt>た</rt></ruby>べ<ruby>残<rt>のこ</rt></ruby>しや<ruby>売<rt>う</rt></ruby>れ<ruby>残<rt>のこ</rt></ruby>りは<ruby>捨<rt>す</rt></ruby>てずコンポストで<ruby>肥料<rt>ひりょう</rt></ruby>にします。
-      preserving:
-        text: |
-          <ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>や<ruby>長<rt>なが</rt></ruby>い<ruby>距離<rt>きょり</rt></ruby>の<ruby>配送<rt>はいそう</rt></ruby>は<ruby>二酸化炭素<rt>にさんかたんそ</rt></ruby>をたくさん<ruby>出<rt>だ</rt></ruby>すのでつつしまれ、かわりに<ruby>漬<rt>つ</rt></ruby>け<ruby>物<rt>もの</rt></ruby>、<ruby>干物<rt>ひもの</rt></ruby>、くん<ruby>製<rt>せい</rt></ruby>として<ruby>保存<rt>ほぞん</rt></ruby>します。
-      food_literacy:
-        text: |
-          99%の<ruby>子<rt>こ</rt></ruby>どもが、<ruby>地元<rt>じもと</rt></ruby>の<ruby>旬<rt>しゅん</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものを<ruby>知<rt>し</rt></ruby>っています。<ruby>野山<rt>のやま</rt></ruby>で<ruby>食<rt>た</rt></ruby>べられる<ruby>物<rt>もの</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけ、<ruby>見分<rt>みわ</rt></ruby>け、<ruby>料理<rt>りょうり</rt></ruby>して<ruby>食<rt>た</rt></ruby>べられます。
-      permaculture:
-        text: |
-          <ruby>環境負荷<rt>かんきょうふか</rt></ruby>が<ruby>少<rt>すく</rt></ruby>ない「パーマカルチャー」「アグロエコロジー」「アグロフォレストリー」と<ruby>呼<rt>よ</rt></ruby>ばれる<ruby>農法<rt>のうほう</rt></ruby>が<ruby>主流<rt>しゅりゅう</rt></ruby>です。ニワトリは<ruby>虫<rt>むし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べてくれるペットとして<ruby>飼<rt>か</rt></ruby>われフンは<ruby>肥料<rt>ひりょう</rt></ruby>にしています。
-      limited_trade:
-        text: |
-          <ruby>石油<rt>せきゆ</rt></ruby>から<ruby>作<rt>つく</rt></ruby>る<ruby>燃料<rt>ねんりょう</rt></ruby>や<ruby>化学肥料<rt>かがくひりょう</rt></ruby>はほぼ<ruby>禁止<rt>きんし</rt></ruby>。<ruby>貿易<rt>ぼうえき</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>必要<rt>ひつよう</rt></ruby>なものだけになりました。
-      no_pesticides:
-        text: |
-          <ruby>農薬<rt>のうやく</rt></ruby>は<ruby>天然<rt>てんねん</rt></ruby>の<ruby>成分<rt>せいぶん</rt></ruby>だけが<ruby>使<rt>つか</rt></ruby>えます。<ruby>遺伝子<rt>いでんし</rt></ruby>くみかえ<ruby>作物<rt>さくもつ</rt></ruby>は<ruby>生産<rt>せいさん</rt></ruby>してはいけません
+  bubbles:
+    fruit: |
+      <ruby>日本<rt>にほん</rt></ruby>はアジアやアフリカのお<ruby>金持<rt>かねも</rt></ruby>ちのために<ruby>三角形<rt>さんかっけい</rt></ruby>メロンや<ruby>巨大<rt>きょだい</rt></ruby>イチゴを作っています。<ruby>農家<rt>のうか</rt></ruby>に<ruby>種<rt>たね</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ<ruby>権利<rt>けんり</rt></ruby>はなく、<ruby>政府<rt>せいふ</rt></ruby>が<ruby>決<rt>き</rt></ruby>めています。<ruby>生物多様性<rt>せいぶつたようせい</rt></ruby>や<ruby>地域<rt>ちいき</rt></ruby>の<ruby>食文化<rt>しょくぶんか</rt></ruby>は、<ruby>失<rt>うしな</rt></ruby>われました。
+    agreements: |
+      <ruby>国民<rt>こくみん</rt></ruby>の<ruby>栄養量<rt>えいようりょう</rt></ruby>から<ruby>逆算<rt>ぎゃくさん</rt></ruby>して<ruby>貿易<rt>ぼうえき</rt></ruby>のルールを<ruby>決<rt>き</rt></ruby>めています。<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>環境負荷<rt>かんきょうふか</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きい<ruby>牛<rt>うし</rt></ruby>や<ruby>豚<rt>ぶた</rt></ruby>のかわりに<ruby>大豆<rt>だいず</rt></ruby>や<ruby>菌類<rt>きんるい</rt></ruby>、<ruby>藻類由来<rt>そうるいゆらい</rt></ruby>の「<ruby>疑似肉<rt>ぎじにく</rt></ruby>」や「<ruby>疑似<rt>ぎじ</rt></ruby>チーズ」を<ruby>食<rt>た</rt></ruby>べています。
+    influencers: |
+      「インフルエンサー」がめずらしい<ruby>外国<rt>がいこく</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものを<ruby>流行<rt>はや</rt></ruby>らせ、<ruby>旬<rt>しゅん</rt></ruby>はなくなっています。
+    fisheries: |
+      <ruby>沿岸漁業<rt>えんがんぎょぎょう</rt></ruby>がなくなり、<ruby>漁業<rt>ぎょぎょう</rt></ruby>もハイテク<ruby>化<rt>か</rt></ruby>、<ruby>養殖<rt>ようしょく</rt></ruby>と<ruby>遠洋漁業<rt>えんようぎょぎょう</rt></ruby>だけになりました。<ruby>生<rt>なま</rt></ruby>の<ruby>魚<rt>さかな</rt></ruby>は<ruby>今<rt>いま</rt></ruby>やめったに<ruby>見<rt>み</rt></ruby>ない<ruby>贅沢品<rt>ぜいたくひん</rt></ruby>。ほとんどの<ruby>魚<rt>さかな</rt></ruby>が<ruby>採<rt>と</rt></ruby>ってすぐ<ruby>洋上<rt>ようじょう</rt></ruby>で<ruby>冷凍<rt>れいとう</rt></ruby>されます。
+    social_businesses: |
+      <ruby>家族経営<rt>かぞくけいえい</rt></ruby>の<ruby>農家<rt>のうか</rt></ruby>はつぶれ、<ruby>農業<rt>のうぎょう</rt></ruby>はドローンやAI、<ruby>人工衛星<rt>じんこうえいせい</rt></ruby>を<ruby>駆使<rt>くし</rt></ruby>する<ruby>社会起業家<rt>しゃかいきぎょうか</rt></ruby>たちが<ruby>担<rt>にな</rt></ruby>っています。ハイテク<ruby>技術<rt>ぎじゅつ</rt></ruby>をつかって<ruby>資源<rt>しげん</rt></ruby>を<ruby>節約<rt>せつやく</rt></ruby>し、また<ruby>味<rt>あじ</rt></ruby>や<ruby>形<rt>かたち</rt></ruby>も<ruby>一般向<rt>いっぱんむ</rt></ruby>けに<ruby>規格化<rt>きかくか</rt></ruby>されています。
+    rice: |
+      <ruby>温室効果<rt>おんしつこうか</rt></ruby>ガスを<ruby>出<rt>だ</rt></ruby>していい<ruby>量<rt>りょう</rt></ruby>が<ruby>国<rt>くに</rt></ruby>ごとに<ruby>決<rt>き</rt></ruby>められています。<ruby>日本<rt>にほん</rt></ruby>はハイテク<ruby>分野<rt>ぶんや</rt></ruby>に<ruby>特化<rt>とっか</rt></ruby>し、アジア<ruby>諸国<rt>しょこく</rt></ruby>でお<ruby>米<rt>こめ</rt></ruby>やとうもろこしなどを<ruby>生産<rt>せいさん</rt></ruby>しているため、アジアからお<ruby>米<rt>こめ</rt></ruby>を<ruby>輸入<rt>ゆにゅう</rt></ruby>しています。
+    ethical_consumption: |
+      エシカル<ruby>消費<rt>しょうひ</rt></ruby>とよばれる「<ruby>自然<rt>しぜん</rt></ruby>や<ruby>動物<rt>どうぶつ</rt></ruby>のことを<ruby>考<rt>かんが</rt></ruby>えて<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>をしよう」という<ruby>運動<rt>うんどう</rt></ruby>が<ruby>広<rt>ひろ/rt></ruby>がり、フェアトレードやオーガニックなどのラベルがついている<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>買<rt>か</rt></ruby>うのがふつうになっています。<ruby>作<rt>つく</rt></ruby>る<ruby>人<rt>ひと</rt></ruby>と<ruby>買<rt>か</rt></ruby>う<ruby>人<rt>ひと</rt></ruby>が、SNSで<ruby>直接<rt>ちょくせつ</rt></ruby>つながっています。
+    climate_change: |
+      <ruby>気候変動<rt>きこうへんどう</rt></ruby>により<ruby>食料生産地<rt>しょくりょうせいさんち</rt></ruby>がどんどん<ruby>北<rt>きた</rt></ruby>へと<ruby>移動<rt>いどう</rt></ruby>。<ruby>京都<rt>きょうと</rt></ruby>ではアボカド、バナナ、コーヒーなど<ruby>熱帯産<rt>ねったいさん</rt></ruby>のものが<ruby>栽培<rt>さいばい</rt></ruby>され、<ruby>東京<rt>とうきょう</rt></ruby>では<ruby>熱帯魚<rt>ねったいぎょ</rt></ruby>がつれるようになりました。
+    weather_patterns: |
+      <ruby>天気<rt>てんき</rt></ruby>が<ruby>予測<rt>よそく</rt></ruby>できなくなったので、<ruby>成長<rt>せいちょう</rt></ruby>が<ruby>早<rt>はや</rt></ruby>く、<ruby>乾<rt>かわ</rt></ruby>いた<ruby>土地<rt>とち</rt></ruby>、<ruby>湿<rt>しめ</rt></ruby>った<ruby>土地<rt>とち</rt></ruby>のどちらでも<ruby>育<rt>そだ</rt></ruby>つ<ruby>穀物<rt>こくもつ</rt></ruby>がよく<ruby>作<rt>つく</rt></ruby>られるようになりました。
+    insect_pollination: |
+      <ruby>受粉<rt>じゅふん</rt></ruby>してくれていたミツバチが<ruby>農薬<rt>のうやく</rt></ruby>で<ruby>絶滅<rt>ぜつめつ</rt></ruby>。<ruby>気候変動<rt>きこうへんどう</rt></ruby>で<ruby>生物多様性<rt>せいぶつたようせい</rt></ruby>は<ruby>失<rt>うしな</rt></ruby>われ、<ruby>野菜<rt>やさい</rt></ruby>や<ruby>果物<rt>くだもの</rt></ruby>の<ruby>栽培<rt>さいばい</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しくなりました。ロボットで<ruby>受粉<rt>じゅふん</rt></ruby>したり、ゲノム<ruby>編集<rt>へんしゅう</rt></ruby>で<ruby>受粉<rt>じゅふん</rt></ruby>しなくても<ruby>実<rt>み</rt></ruby>がなるように<ruby>改良<rt>かいりょう</rt></ruby>された<ruby>作物<rt>さくもつ</rt></ruby>が<ruby>作<rt>つく</rt></ruby>られています。
+    mass_vegetables: |
+      <ruby>市町村<rt>しちょうそん</rt></ruby>が、<ruby>土<rt>つち</rt></ruby>もなく<ruby>害虫<rt>がいちゅう</rt></ruby>もいない、<ruby>完全<rt>かんぜん</rt></ruby>にAIで<ruby>自動化<rt>じどうか</rt></ruby>、<ruby>衛生管理<rt>えいせいかんり</rt></ruby>された<ruby>魚<rt>さかな</rt></ruby>と<ruby>野菜<rt>やさい</rt></ruby>の<ruby>大量生産工場<rt>たいりょうせいさんこうじょう</rt></ruby>を<ruby>運営<rt>うんえい</rt></ruby>しています。
+    # ocean_acidification:
+    #   text: |
+    #     <ruby>海水<rt>かいすい</rt></ruby>の<ruby>温度<rt>おんど</rt></ruby>があがり、サンゴ<ruby>礁<rt>しょう</rt></ruby>がなくなり、そこに<ruby>住<rt>す</rt></ruby>む<ruby>生物<rt>いきもの</rt></ruby>もいなくなってしまいました。
+    pesticide_resistant: |
+      <ruby>人<rt>ひと</rt></ruby>のタンパク<ruby>源<rt>げん</rt></ruby>はゲノム<ruby>編集<rt>へんしゅう</rt></ruby>をした<ruby>昆虫<rt>こんちゅう</rt></ruby>です。わずかな<ruby>家庭菜園<rt>かていさいえん</rt></ruby>が、インスタント<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>栄養<rt>えいよう</rt></ruby>、いろどり、<ruby>味<rt>あじ</rt></ruby>わいを<ruby>添<rt>そ</rt></ruby>えています。
+    printed_product: |
+      いろいろな<ruby>食<rt>た</rt></ruby>べものを<ruby>粉<rt>こな</rt></ruby>にして、それを「3Dプリンター」にかけることで、ひとりひとりの<ruby>好<rt>この</rt></ruby>みや<ruby>健康<rt>けんこう</rt></ruby>にあった<ruby>食<rt>た</rt></ruby>べものが<ruby>作<rt>つく</rt></ruby>られています。<ruby>台風<rt>たいふう</rt></ruby>が<ruby>多<rt>おお</rt></ruby>く、<ruby>外出<rt>がいしゅつ</rt></ruby>できない<ruby>日<rt>ひ</rt></ruby>には、おうちで3Dプリントでごはんを<ruby>作<rt>つく</rt></ruby>ってパーティーが<ruby>開<rt>ひら</rt></ruby>かれています。
+    home_sprouts: |
+      おうちで<ruby>色々<rt>いろいろ</rt></ruby>なスプラウトを<ruby>育<rt>そだ</rt></ruby>て、インスタント<ruby>食品<rt>しょくひん</rt></ruby>に<ruby>足<rt>た</rt></ruby>りない、<ruby>栄養素<rt>えいようそ</rt></ruby>、いろどり、<ruby>味<rt>あじ</rt></ruby>をそえています。
+    food_marketers: |
+      <ruby>人気商品<rt>にんきしょうひん</rt></ruby>や<ruby>流行<rt>りゅうこう</rt></ruby>が<ruby>作<rt>つく</rt></ruby>られ、<ruby>過激<rt>かげき</rt></ruby>な<ruby>味<rt>あじ</rt></ruby>や、<ruby>形<rt>かたち</rt></ruby>、<ruby>色<rt>いろ</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものが<ruby>増<rt>ふ</rt></ruby>えました。<ruby>加工度<rt>かこうど</rt></ruby>が<ruby>高<rt>たか</rt></ruby>く<ruby>中毒性<rt>ちゅうどくせい</rt></ruby>もあり、あらゆる<ruby>世代<rt>せだい</rt></ruby>で<ruby>糖尿病<rt>とうにょうびょう</rt></ruby>や<ruby>肥満<rt>ひまん</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えました。
+    stressed_conditions: |
+      <ruby>環境<rt>かんきょう</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>くなり<ruby>続<rt>つづ</rt></ruby>けていて、<ruby>土地<rt>とち</rt></ruby>はやせています。そこで、きびしい<ruby>環境<rt>かんきょう</rt></ruby>でも<ruby>育<rt>そだ</rt></ruby>、<ruby>栄養豊富<rt>えいようほうふ</rt></ruby>なCRISPR (クリスパー) というゲノム<ruby>編集<rt>へんしゅう</rt></ruby>の<ruby>人造植物<rt>じんぞうしょくぶつ</rt></ruby>を<ruby>作<rt>つく</rt></ruby>って<ruby>食<rt>た</rt></ruby>べています。<ruby>食<rt>た</rt></ruby>べものには、<ruby>腐<rt>くさ</rt></ruby>りにくい<ruby>加工<rt>かこう</rt></ruby>がしてあります。
+    controlled_market: |
+      <ruby>大手企業<rt>おおてきぎょう</rt></ruby>が<ruby>生産<rt>せいさん</rt></ruby>と<ruby>供給<rt>きょうきゅう</rt></ruby>を<ruby>自由<rt>じゆう</rt></ruby>に<ruby>決<rt>き</rt></ruby>めるので、<ruby>食<rt>た</rt></ruby>べものの<ruby>値段<rt>ねだん</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がりました。<ruby>食<rt>た</rt></ruby>べものが<ruby>賭<rt>か</rt></ruby>け<ruby>事<rt>こと</rt></ruby>、オークションや<ruby>投機<rt>とうき</rt></ruby>でも<ruby>取<rt>と</rt></ruby>り<ruby>引<rt>ひ</rt></ruby>きされています。<ruby>主食<rt>しゅしょく</rt></ruby>となる<ruby>食<rt>た</rt></ruby>べものも<ruby>気候変動<rt>きこうへんどう</rt></ruby>で<ruby>生産量<rt>せいさんりょう</rt></ruby>が<ruby>減<rt>へ</rt></ruby>り、<ruby>船<rt>ふね</rt></ruby>や<ruby>飛行機<rt>ひこうき</rt></ruby>で<ruby>外国<rt>がいこく</rt></ruby>から<ruby>運<rt>はこ</rt></ruby>んでくるのも<ruby>危険<rt>きけん</rt></ruby>、また<ruby>安<rt>やす</rt></ruby>い<ruby>時<rt>とき</rt></ruby>に<ruby>買<rt>か</rt></ruby>って<ruby>高<rt>たか</rt></ruby>いときに<ruby>売<rt>う</rt></ruby>る<ruby>転売<rt>てんばい</rt></ruby>や<ruby>投機<rt>とうき</rt></ruby>も<ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>され、<ruby>値段<rt>ねだん</rt></ruby>がとても<ruby>高<rt>たか</rt></ruby>くなりました。
+    plantation_farms: |
+      <ruby>垂直統合<rt>すいちょくとうごう</rt></ruby>された<ruby>多国籍企業<rt>たこくせききぎょう</rt></ruby>が、<ruby>世界各地<rt>せかいかくち</rt></ruby>でプランテーション<ruby>農園<rt>のうえん</rt></ruby>を<ruby>運営<rt>うんえい</rt></ruby>し、<ruby>環境難民<rt>かんきょうなんみん</rt></ruby>たちが<ruby>低賃金<rt>ていちんぎん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>いています。
+    rare_fresh_fruit: |
+      <ruby>生<rt>なま</rt></ruby>の<ruby>果物<rt>くだもの</rt></ruby>は<ruby>手<rt>て</rt></ruby>に<ruby>届<rt>とど</rt></ruby>かない<ruby>高級品<rt>こうきゅうひん</rt></ruby>。<ruby>一般市民<rt>いっぱんしみん</rt></ruby>は<ruby>加工品<rt>かこうひん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べています。
+    lab_meat: |
+      <ruby>主<rt>おも</rt></ruby>なタンパク<ruby>源<rt>げん</rt></ruby>は、「<ruby>培養肉<rt>ばいようにく</rt></ruby>」や「<ruby>培養魚介類<rt>ばいようぎょかいるい</rt></ruby>」です。
+    pesticide_regulations: |
+      <ruby>食<rt>た</rt></ruby>べものに<ruby>残<rt>のこ</rt></ruby>る<ruby>残留農薬<rt>ざんりゅうのうやく</rt></ruby>や<ruby>放射能汚染<rt>ほうしゃのうおせん</rt></ruby>やマイクロプラスチックなどの<ruby>規制<rt>きせい</rt></ruby>は<ruby>廃止<rt>はいし</rt></ruby>されてなくなり、<ruby>企業<rt>きぎょう</rt></ruby>にとって<ruby>都合<rt>つごう</rt></ruby>よく<ruby>貿易<rt>ぼうえき</rt></ruby>できるようになりました。<ruby>人々<rt>ひとびと</rt></ruby>のとるカロリーは<ruby>充分<rt>じゅうぶん</rt></ruby>で、「<ruby>食<rt>しょく</rt></ruby>のカロリー<ruby>安全保障<rt>あんぜんほしょう</rt></ruby>」は<ruby>達成<rt>たっせい</rt></ruby>されています。
+    daily_medication: |
+      マイクロプラスチックや<ruby>残留農薬<rt>ざんりゅうのうやく</rt></ruby>から<ruby>身<rt>み</rt></ruby>を<ruby>守<rt>まも</rt></ruby>り、<ruby>病気<rt>びょうき</rt></ruby>にならないように、<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んでいます。
+    daily_supplements: |
+      やせた<ruby>土地<rt>とち</rt></ruby>で<ruby>作<rt>つく</rt></ruby>られた<ruby>野菜<rt>やさい</rt></ruby>には<ruby>養分<rt>ようぶん</rt></ruby>が<ruby>足<rt>た</rt></ruby>りないので、サプリのカプセルを<ruby>飲<rt>の</rt></ruby>む<ruby>人<rt>ひと</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えました。サプリは<ruby>腸内環境<rt>ちょうないかんきょう</rt></ruby>を<ruby>整<rt>ととの</rt></ruby>えたり<ruby>災害<rt>さいがい</rt></ruby>で<ruby>食<rt>た</rt></ruby>べものがないときの<ruby>非常食<rt>ひじょうしょく</rt></ruby>でもあります。
+    domestic_soveirnty: |
+      <ruby>世界<rt>せかい</rt></ruby>はそれぞれ、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>国<rt>くに</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものは<ruby>自分<rt>じぶん</rt></ruby>の<ruby>国<rt>くに</rt></ruby>で<ruby>守<rt>まも</rt></ruby>っています。<ruby>仕事<rt>しごと</rt></ruby>も、<ruby>農業<rt>のうぎょう</rt></ruby>や<ruby>料理<rt>りょうり</rt></ruby>や<ruby>家事<rt>かじ</rt></ruby>など<ruby>食<rt>た</rt></ruby>べもの<ruby>関連<rt>かんれん</rt></ruby>が<ruby>多<rt>おお</rt></ruby>くなり、「<ruby>半農半X<rt>はんのうはんえっくす</rt></ruby>」の<ruby>人<rt>ひと</rt></ruby>も<ruby>増<rt>ふ</rt></ruby>えました。
+    regionally_diverse: |
+      <ruby>米作<rt>こめづく</rt></ruby>りから<ruby>出<rt>で</rt></ruby>る<ruby>温室効果<rt>おんしつこうか</rt></ruby>のメタンガスを<ruby>減<rt>へ</rt></ruby>らすため、お<ruby>米<rt>こめ</rt></ruby>のかわりに<ruby>山芋<rt>やまいも</rt></ruby>、<ruby>里芋<rt>さといも</rt></ruby>、ジャガイモ、サツマイモなどを<ruby>食<rt>た</rt></ruby>べることが<ruby>多<rt>おお</rt></ruby>くなりました。
+    seed_banks: |
+      <ruby>地域<rt>ちいき</rt></ruby>ごとの<ruby>森<rt>もり</rt></ruby>、<ruby>海<rt>うみ</rt></ruby>、<ruby>川<rt>かわ</rt></ruby>の<ruby>利用<rt>りよう</rt></ruby>ルールにのっとっていれば、シカやイノシシ、<ruby>魚<rt>さかな</rt></ruby>、<ruby>山菜<rt>さんさい</rt></ruby>などを<ruby>採<rt>と</rt></ruby>って<ruby>食<rt>た</rt></ruby>べていいことになっています。<ruby>地域<rt>ちいき</rt></ruby>のためのボランティアをする<ruby>時間<rt>じかん</rt></ruby>が<ruby>決<rt>き</rt></ruby>まっていて、タネの<ruby>交換<rt>こうかん</rt></ruby>のイベントやファーマーズマーケットもよく<ruby>開<rt>ひら</rt></ruby>かれます。
+    vegan_diets: |
+      ベジタリアン（<ruby>肉<rt>にく</rt></ruby>・<ruby>魚類<rt>ぎょるい</rt></ruby>は<ruby>食<rt>た</rt></ruby>べず、<ruby>野菜<rt>やさい</rt></ruby>を<ruby>中心<rt>ちゅうしん</rt></ruby>に<ruby>卵<rt>たまご</rt></ruby>や<ruby>乳製品<rt>にゅうせいひん</rt></ruby>も<ruby>食<rt>た</rt></ruby>べる人）やビーガン（<ruby>植物性<rt>しょくぶつせい</rt></ruby>のものしか<ruby>食<rt>た</rt></ruby>べない人）がふえ、タンパク<ruby>質<rt>しつ</rt></ruby>も、<ruby>肉<rt>にく</rt></ruby>・<ruby>魚<rt>さかな</rt></ruby>・<ruby>乳製品<rt>にゅうせいひん</rt></ruby>ではなく、<ruby>豆類<rt>まめるい</rt></ruby>、<ruby>雑穀<rt>ざっこく</rt></ruby>、そば、ナッツなどの<ruby>植物<rt>しょくぶつ</rt></ruby>からとるようになっています。
+    public_food: |
+      <ruby>公園<rt>こうえん</rt></ruby>や<ruby>土手<rt>どて</rt></ruby>や<ruby>河川敷<rt>かせんじき</rt></ruby>には、<ruby>誰<rt>だれ</rt></ruby>でも<ruby>自由<rt>じゆう</rt></ruby>にとって<ruby>食<rt>た</rt></ruby>べてもいい<ruby>実<rt>み</rt></ruby>のなる<ruby>木<rt>き</rt></ruby>を<ruby>植<rt>う</rt></ruby>えています。<ruby>街<rt>まち</rt></ruby>や<ruby>校庭<rt>こうてい</rt></ruby>に<ruby>畑<rt>はたけ</rt></ruby>を<ruby>作<rt>つく</rt></ruby>り<ruby>野菜<rt>やさい</rt></ruby>を<ruby>作<rt>つく</rt></ruby>っています。
+    wasting_food: |
+      <ruby>食<rt>た</rt></ruby>べ<ruby>残<rt>のこ</rt></ruby>しや<ruby>売<rt>う</rt></ruby>れ<ruby>残<rt>のこ</rt></ruby>りは<ruby>捨<rt>す</rt></ruby>てずコンポストで<ruby>肥料<rt>ひりょう</rt></ruby>にします。
+    preserving: |
+      <ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>や<ruby>長<rt>なが</rt></ruby>い<ruby>距離<rt>きょり</rt></ruby>の<ruby>配送<rt>はいそう</rt></ruby>は<ruby>二酸化炭素<rt>にさんかたんそ</rt></ruby>をたくさん<ruby>出<rt>だ</rt></ruby>すのでつつしまれ、かわりに<ruby>漬<rt>つ</rt></ruby>け<ruby>物<rt>もの</rt></ruby>、<ruby>干物<rt>ひもの</rt></ruby>、くん<ruby>製<rt>せい</rt></ruby>として<ruby>保存<rt>ほぞん</rt></ruby>します。
+    food_literacy: |
+      99%の<ruby>子<rt>こ</rt></ruby>どもが、<ruby>地元<rt>じもと</rt></ruby>の<ruby>旬<rt>しゅん</rt></ruby>の<ruby>食<rt>た</rt></ruby>べものを<ruby>知<rt>し</rt></ruby>っています。<ruby>野山<rt>のやま</rt></ruby>で<ruby>食<rt>た</rt></ruby>べられる<ruby>物<rt>もの</rt></ruby>を<ruby>見<rt>み</rt></ruby>つけ、<ruby>見分<rt>みわ</rt></ruby>け、<ruby>料理<rt>りょうり</rt></ruby>して<ruby>食<rt>た</rt></ruby>べられます。
+    permaculture: |
+      <ruby>環境負荷<rt>かんきょうふか</rt></ruby>が<ruby>少<rt>すく</rt></ruby>ない「パーマカルチャー」「アグロエコロジー」「アグロフォレストリー」と<ruby>呼<rt>よ</rt></ruby>ばれる<ruby>農法<rt>のうほう</rt></ruby>が<ruby>主流<rt>しゅりゅう</rt></ruby>です。ニワトリは<ruby>虫<rt>むし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べてくれるペットとして<ruby>飼<rt>か</rt></ruby>われフンは<ruby>肥料<rt>ひりょう</rt></ruby>にしています。
+    limited_trade: |
+      <ruby>石油<rt>せきゆ</rt></ruby>から<ruby>作<rt>つく</rt></ruby>る<ruby>燃料<rt>ねんりょう</rt></ruby>や<ruby>化学肥料<rt>かがくひりょう</rt></ruby>はほぼ<ruby>禁止<rt>きんし</rt></ruby>。<ruby>貿易<rt>ぼうえき</rt></ruby>も<ruby>本当<rt>ほんとう</rt></ruby>に<ruby>必要<rt>ひつよう</rt></ruby>なものだけになりました。
+    no_pesticides: |
+      <ruby>農薬<rt>のうやく</rt></ruby>は<ruby>天然<rt>てんねん</rt></ruby>の<ruby>成分<rt>せいぶん</rt></ruby>だけが<ruby>使<rt>つか</rt></ruby>えます。<ruby>遺伝子<rt>いでんし</rt></ruby>くみかえ<ruby>作物<rt>さくもつ</rt></ruby>は<ruby>生産<rt>せいさん</rt></ruby>してはいけません

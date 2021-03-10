@@ -18,7 +18,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import { bubbles, Bubble } from '../assets/bubbles'
-import { lunchForBubble } from '../assets/lunches'
 import { toStyle, activeLifecycle, countCharsCached, Rect } from '../lib'
 
 function scaleRect (source: any, f: number = 0.98) {
@@ -51,12 +50,8 @@ export default Vue.extend({
     if (!data) {
       return {}
     }
-    const lunch = lunchForBubble(bubble)
-    if (!lunch) {
-      return {}
-    }
     const { viewRect, rect, padding, fontSize } = data
-    const i18nkey = `weblate.${lunch.id}.bubbles.${bubble}.text`
+    const i18nkey = `weblate.bubbles.${bubble}`
     const width = 3157
     const height = 2500
     const roundedRect: Rect & { r: number } = scaleRect(viewRect) as any
