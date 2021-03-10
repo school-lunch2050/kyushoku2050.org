@@ -6,7 +6,7 @@ School Lunch 2050 was established by the **FEAST Project**.
   <dt>Direction:</dt>
   <dd>Maximilian Spiegelberg (<a href="https://www.feastproject.org/en/headquarter/" target="_blank">FEAST Project</a>)</dd>
   <dt>Scenarios (Content):</dt>
-  <dd><a href="https://feastproject.org/school-lunch-2050" target="_blank">FEAST Project</a> team</dd>
+  <dd><a href="https://feastproject.org/en/" target="_blank">FEAST Project</a> team</dd>
   <dt>Future lunch sets:</dt>
   <dd>Yuko Matsuoka & Yuko Kobayashi (<a href="https://www.feastproject.org/en/headquarter/" target="_blank">FEAST Project</a>)</dd>
   <dt>Translations:</dt>
@@ -21,13 +21,13 @@ School Lunch 2050 was established by the **FEAST Project**.
 
 More information can be found at the <a href="https://www.feastproject.org/en/blog_future-school-lunch-installation/?fbclid=IwAR11CYmO_0o1p2-xj2AiRdRu0cdITSE4YrZm8T4WmpFsDwr1jStEQIGAbIg" target="_blank">FEAST Page.</a></dd>
 
-_The School Lunch 2050 homepage has been funded by the <a href="https://www.chikyu.ac.jp/rihn_e/index.html">Research Institute for Humanity and Nature.</a></dd>._
+_The School Lunch 2050 homepage has been funded by [National Institutes for Humanities][nihu] and the [Research Institute for Humanity and Nature][rihn]._
 
 ### License Information
 
 The photos of the lunch sets are licensed under the [Creative Commons BY SA license][cc-by-sa] by the [FEAST Project][feast].
 
-The scenario illustrations are specifically licensed for the _kyushoku2050.org_ website, _Copyright by:_
+The scenario illustrations are specifically licensed for the_school-lunch2050.org_website and the _kyushoku2050.org_ website, _Copyright by:_
 
 > [Sustena Inc.][sustena]<br/>
 > 〒151-0063 Tokyo, Shibuya City, Tomigaya, 1-chōme−46−7<br/>
@@ -54,5 +54,6 @@ This website is hosted using [Netlify](https://netlify.com) and [Cloudflare](htt
 [feast]: https://www.feastproject.org/en/
 [sustena]: http://www.sustena.org/
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/legalcode
-[RIHN]: https://www.chikyu.ac.jp/rihn_e/index.html
+[rihn]: https://www.chikyu.ac.jp/rihn_e/index.html
+[nihu]:http://www.nihu.jp/en
 [mh]: https://github.com/sponsors/martinheidegger
