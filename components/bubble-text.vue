@@ -116,8 +116,12 @@ export default Vue.extend({
     const ratioFontSizeEffect = bRatio < 1
       ? 1 - (1 - bRatio) * 0.3
       : (bRatio - 1) * 0.4 + 1
+    let explanationKey: string | null = `weblate.explanations.${bubbleKey}`
+    if (!this.$i18n.te(explanationKey)) {
+      explanationKey = null
+    }
     return {
-      explanationKey: null,
+      explanationKey,
       lunch,
       bubble,
       textStyle: toStyle({

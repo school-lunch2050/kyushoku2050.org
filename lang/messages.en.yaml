@@ -484,3 +484,11 @@ weblate:
       Use of fossil fuels is highly restricted, limiting international trade to a minimum. Synthetic fertilizer production is banned and biodegradable, algae-based food packaging, if not edible, becomes organic fertilizer for the agricultural production. 
     no_pesticides: |
       Only natural pesticides are allowed, GMOs are banned.
+  explanations:
+    # example ↓ Remove the comment mark "#" to show an actual explanation for the
+    #           bubbles, shown in the info boxes!
+    # fruit: |
+    #   During our research we found that the fruit will get more expensive
+    #   with global warming. These fruit prices will have an impact on the
+    #   lunch menus in all cases and unless produced locally will become even
+    #   more of a luxury item, that may find its way on the menu just ocassionally.
