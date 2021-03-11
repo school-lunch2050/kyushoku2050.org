@@ -33,7 +33,7 @@ export default Vue.extend({
       }
     }
     const href = link[locale]
-    const hrefInfos = this.$i18n.t('weblate.links', locale) as { [key: string]: { title: string, source: string }}
+    const hrefInfos = this.$i18n.t('weblate.links') as { [key: string]: { title: string, source: string }}
     const info = hrefInfos[href]
     let text = info ? `${info.title} (${info.source})` : href
     if (locale !== preferred) {
