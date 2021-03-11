@@ -39,8 +39,8 @@ weblate:
   lunch:
     label: |
       ランチテーブル: {name}
-    question: 空っぽ、はてな付き
-    alert: 空っぽ、感嘆符付き
+    question: 空、はてな付き
+    alert: 空、感嘆符付き
   links:
     feedback: https://google.co.jp
     "https://agri.mynavi.jp/agriplus/vol_02/chapter01_02":
@@ -150,7 +150,7 @@ weblate:
       クリックして<br/>
       詳細を見る
     row: 地球温暖化：{row}
-    column: 源：{column}
+    column: 清算値：{column}
     grid:
       near: 国内
       far: 海外
@@ -161,20 +161,20 @@ weblate:
       title: |
         この情報について
       explanation: |
-        考え
+        詳細
       ingredients: |
-        関係あるメニューアイテム
+        関係しているメニューアイテム
       links: |
-        リサーチ リンク
+        関連研究リンク
       lunch: |
-        ランチプレートの部分。フォーカスは「{name}」。
+        ランチプレート。「{name}」を拡大。
     actions:
       notes: ノート
       pdf: PDF
       more: 塗りつぶし部分をクリックすると、説明が表示されます。
-      unfocus: 全面に戻る
+      unfocus: 前の画面に戻る
       focus: |
-        テキスト #{nr} にフォーカス
+        テキスト #{nr} を拡大
     progress:
       active: |
         {percent}% を読み終わりました
@@ -185,9 +185,9 @@ weblate:
         (クリック)<br/>
         ご感想をお聞かせください。
       clear: |
-        進捗のリセット
+        閲覧履歴のリセット
       ask_clear: |
-        本当に進捗をリセットしますか？
+        本当に閲覧状況をリセットしますか？
   ingredients:
     milk:
       name: アニマルライツ・ミルク
