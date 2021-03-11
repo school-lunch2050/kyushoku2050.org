@@ -48,9 +48,14 @@ interface BaseData {
   bubble: string | Rect,
   viewRect: Rect & { padding?: { left?: number, top?: number, bottom?: number, right?: number }},
   rect: Rect,
+  infoButton?: 'right' | 'left',
   fontSize: number | Record<Language, number>,
   padding?: number | string,
-  ingredients: Ingredient[]
+  ingredients: Ingredient[],
+  links: Array<{
+    en?: string
+    ja?: string
+  }>
 }
 
 export interface BubbleData extends Omit<BaseData, 'ingredients'> {
@@ -106,6 +111,7 @@ export const bubbles = Object.entries({
     viewRect: { x: 889, y: 1955, width: 1870, height: 545 },
     rect: { x: 963, y: 2081, width: 710, height: 311 },
     fontSize: { en: 30, ja: 27, 'ja-simple': 35 },
+    infoButton: 'right',
     padding: '25px 14px 8px 37px',
     ingredients: ['milk', 'chicken'],
     links: [
@@ -194,6 +200,7 @@ export const bubbles = Object.entries({
     rect: { x: 36, y: 1574, width: 680, height: 354 },
     fontSize: { en: 55, ja: 29, 'ja-simple': 42 },
     padding: '40px 30px',
+    infoButton: 'right',
     ingredients: ['cricket_tofu'],
     links: [
       { en: 'https://www.researchgate.net/figure/Prediction-of-sales-of-insects-as-food-and-feed-from-open-data_fig1_319351283' },
@@ -273,6 +280,7 @@ export const bubbles = Object.entries({
     rect: { x: 1349.429688, y: 2114.3125005, width: 617, height: 219 },
     fontSize: 37,
     padding: 25,
+    infoButton: 'right',
     ingredients: ['soylent'],
     links: [
       { en: 'https://sproutpeople.org/seeds/sprout-mixes/' },
@@ -455,7 +463,7 @@ export const bubbles = Object.entries({
     rect: { x: 2339, y: 248, width: 705, height: 345 },
     fontSize: { en: 36, ja: 28, 'ja-simple': 29 },
     padding: 37,
-    ingredients: ['proteins', 'proteins_meat', 'proteins_fish'],
+    ingredients: ['proteins'/* , 'proteins_meat', 'proteins_fish' */],
     links: [
       { en: 'https://www.oxfamamerica.org/static/media/files/GCA_REPORT_EN_FINAL.pdf' },
       // old
@@ -501,6 +509,7 @@ export const bubbles = Object.entries({
     rect: { x: 713, y: 1552.5, width: 641, height: 292 },
     fontSize: { en: 44, ja: 45, 'ja-simple': 29 },
     ingredients: ['proteins'],
+    infoButton: 'right',
     links: [
       { en: 'https://news.globallandscapesforum.org/43337/12-alternative-proteins-for-climate-friendly-diets/' },
       // old
@@ -528,6 +537,7 @@ export const bubbles = Object.entries({
     viewRect: { x: 23, y: 1852, width: 1245, height: 618 },
     rect: { x: 49.5, y: 2063.488281, width: 658, height: 382 },
     fontSize: { en: 45, ja: 39, 'ja-simple': 41 },
+    infoButton: 'right',
     ingredients: ['potato_porridge'],
     links: [
       { en: 'https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(18)31788-4.pdf' }
@@ -580,13 +590,8 @@ export const bubbles = Object.entries({
     }
   }
   const bubbleIngredients = baseData.ingredients.map(ingredient => ingredients[ingredient])
-  const padding = { bottom: 120 /* height of css class .bubble-info */ }
   mapped[bubbleKey as Bubble] = {
     ...baseData,
-    viewRect: {
-      ...baseData.viewRect,
-      padding
-    },
     id: bubbleKey as Bubble,
     fontSize,
     ingredients: bubbleIngredients

@@ -81,14 +81,13 @@
         <text-box :key="`weblate.pages.${lunch.id}.full`" class="illustration--title font--tex" :custom-style="lunch.title" font-size="100" align="center center" />
         <bubble-text v-for="(bubble, index) in lunch.bubbles" :key="bubble.id" :nr="index + 1" />
       </view-box>
-      <bubble-info :key="getBubble() ? getBubble().id : 'no-bubble'" :class="{ 'bubble-info--hidden': getViewbox() === null }" />
     </template>
   </main-screen>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 import { Store } from 'vuex/types'
-import { Bubble, BubbleData, bubbles } from '../assets/bubbles'
+import { Bubble, bubbles } from '../assets/bubbles'
 import { Lunch, lunches } from '../assets/lunches'
 
 function mark (store: Store<any>, type: string) {
@@ -120,22 +119,12 @@ export default Vue.extend({
   },
   data () {
     const lunch = lunches[this.$props.selected as Lunch]
-    let lastBubble: BubbleData
     const getCurrentBubble = () => {
       const bubbleKey = (this.$route.hash ?? '').substr(1) as Bubble
       return bubbles[bubbleKey]
     }
-    const getBubble = () => {
-      const bubbleData = getCurrentBubble()
-      if (!bubbleData) {
-        return lastBubble
-      }
-      lastBubble = bubbleData
-      return lastBubble
-    }
     return {
       lunch,
-      getBubble,
       getViewbox: () => {
         const bubbleData = getCurrentBubble()
         if (!bubbleData) {
@@ -148,9 +137,12 @@ export default Vue.extend({
     }
   },
   methods: {
-    gotoMain () {
+    gotoMain (e: Event) {
       const { location } = this.$router.resolve({ hash: '#' }, this.$route)
       this.$router.push(location)
+      if (e) {
+        e.preventDefault()
+      }
     }
   }
 })

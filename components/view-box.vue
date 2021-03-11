@@ -9,13 +9,12 @@
   >
     <nuxt-link
       ref="unfocus"
-      class="view-box--unfocus"
+      class="view-box--unfocus font--tex"
+      :tabindex="viewbox() === null ? '-1' : '0'"
       :to="typeof unfocus !== 'function' && unfocus !== null ? unfocus : '#'"
-      tabindex="1"
-      :title="$t('weblate.scenario.actions.unfocus')"
       @click="typeof unfocus === 'function' ? unfocus : null"
     >
-      &nbsp;
+      <text-box key="weblate.scenario.actions.unfocus" />
     </nuxt-link>
     <div
       ref="canvas"
@@ -29,6 +28,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { activeLifecycle, styleRect, toStyle, Rect, clearTextSelection } from '../lib'
+import textBox from './text-box.vue'
 
 const updateMap = new WeakMap<any, Function>()
 interface Viewbox {
@@ -56,6 +56,7 @@ function getShadow (vue: Vue, width: number, height: number): string | null {
 }
 
 export default Vue.extend({
+  components: { textBox },
   props: {
     width: {
       type: [String, Number],
@@ -112,13 +113,17 @@ export default Vue.extend({
         return
       }
       container.classList.toggle('ready', true)
-      const { id, viewRect: target } = getViewbox(this) ?? full
+      const viewbox = getViewbox(this)
+      const { id, viewRect: target } = viewbox ?? full
       const actualPadding = {
         left: 0,
         right: 0,
         top: 0,
         bottom: 0,
         ...(target.padding ?? {})
+      }
+      if (viewbox !== null) {
+        actualPadding.bottom += 40 // unfocus text!
       }
       const viewPort = {
         x: actualPadding.left,
@@ -137,7 +142,7 @@ export default Vue.extend({
         const unfocus = container.querySelector('.view-box--unfocus')
         const previous = container.querySelector(`.box--${canvas.dataset.id}`)
         if (previous) {
-          previous.parentElement?.classList.toggle('bubble-text--active', false)
+          previous.parentElement?.parentElement?.classList.toggle('bubble-text--active', false)
         }
         if (!id) {
           delete canvas.dataset.id
@@ -150,7 +155,7 @@ export default Vue.extend({
             unfocus.focus()
           }
         }
-        container.querySelector(`.box--${id}`)?.parentElement?.classList.toggle('bubble-text--active', true)
+        container.querySelector(`.box--${id}`)?.parentElement?.parentElement?.classList.toggle('bubble-text--active', true)
         this.$forceUpdate()
       }
       first = false

@@ -1,4 +1,7 @@
 weblate:
+  other_locales:
+    ja: Japanese
+    ja-simple: Simple Japanese
   title: School Lunch 2050
   description: Examining Scenarios for a School Lunch in 2050.
   pages:
@@ -251,8 +254,17 @@ weblate:
       warm: 1.5° Celsius
       hot: more than 2° Celsius
   scenario:
-    related_ingredients: |
-      Related menu items:
+    info:
+      title: |
+        More Information
+      explanation: |
+        Our thinking
+      ingredients: |
+        Related Lunch Items
+      links: |
+        Research Links
+      lunch: |
+        Part of the lunch display, showing "{name}".
     actions:
       notes: Notes
       pdf: PDF

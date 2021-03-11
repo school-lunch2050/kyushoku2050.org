@@ -238,8 +238,8 @@ export const ingredients = Object.entries(baseData).reduce((mapped, [ingredientK
     `left: ${toPx(place.x)};` +
     `top: ${toPx(place.y)}`
   const iconStyle =
-    `background-position: ${-(place.x + place.rx - place.r) * scale}px ${-(place.y + place.ry - place.r) * scale}px; ` +
-    `background-size: ${webpSize.width * scale}px ${webpSize.height * scale}px`
+    `background-position: ${-(place.x + place.rx - place.r) * scale}em ${-(place.y + place.ry - place.r) * scale}em; ` +
+    `background-size: ${webpSize.width * scale}em ${webpSize.height * scale}em`
 
   mapped[ingredientKey as Ingredient] = {
     ...baseData,

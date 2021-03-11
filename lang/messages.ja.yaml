@@ -1,4 +1,7 @@
 weblate:
+  other_locales:
+    en: 英語
+    ja: やさしい日本語
   title: 給食 2050年
   description: 2050年の学校給食のシナリオを見てみよう。
   pages:
@@ -154,8 +157,17 @@ weblate:
       warm: 1.5℃
       hot: 2℃ 以上
   scenario:
-    related_ingredients: |
-      メニューアイテム：
+    info:
+      title: |
+        この情報について
+      explanation: |
+        考え
+      ingredients: |
+        関係あるメニューアイテム
+      links: |
+        リサーチ リンク
+      lunch: |
+        ランチプレートの部分。フォーカスは「{name}」。
     actions:
       notes: ノート
       pdf: PDF

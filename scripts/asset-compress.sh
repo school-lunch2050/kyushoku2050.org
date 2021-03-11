@@ -7,7 +7,7 @@ for file in chalkboard logo place_global place_local weather_15 weather_2p heade
   cwebp static/img/${file}_3x.png -o static/img/${file}.webp
 done
 
-for file in icon_menu icon_close; do
+for file in icon_menu icon_close icon_info icon_close_dark; do
   npx svgo static/img/${file}.svg --disable removeViewBox
 done
 

@@ -1,4 +1,7 @@
 weblate:
+  other_locales:
+    en: えいご
+    ja: むずしい にほんご
   title: 給食 2050
   description: 2050年の学校給食のシナリオを考えよう。
   pages:
@@ -116,8 +119,17 @@ weblate:
       warm: 1.5℃
       hot: 2℃ 以上
   scenario:
-    related_ingredients: |
-      メニューアイテム：
+    info:
+      title: |
+        この<ruby>情報<rt>じょうほう</rt></ruby>について
+      explanation: |
+        <ruby>考<rt>かんが</rt></ruby>え
+      ingredients: |
+        <ruby>関係<rt>かんけい</rt></ruby>あるメニューアイテム
+      links: |
+        リサーチ リンク
+      lunch: |
+        ランチプレートの部分。フォーカスは「{name}」。
     actions:
       notes: ノート
       pdf: PDF
