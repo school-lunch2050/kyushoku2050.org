@@ -2,7 +2,7 @@
   <div class="bubble-text">
     <div class="bubble-text--content font--tex" :style="textStyle">
       <div class="bubble-text--padding" :style="paddingStyle">
-        <text-box :key="i18nkey" :class="{ 'bubble-text--seen': seen() }" :font-size="bubble.fontSize" :custom-style="spanStyle()" />
+        <text-box :key="i18nkey" :class="{ 'bubble-text--seen': seen() }" :font-size="bubble && bubble.fontSize" :custom-style="spanStyle()" />
       </div>
     </div>
     <svg viewBox="0 0 3157 2500" class="bubble-text--shadow">
