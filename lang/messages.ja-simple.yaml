@@ -1,7 +1,7 @@
 weblate:
   other_locales:
-    en: えいご
-    ja: むずしい にほんご
+    en: 英語
+    ja: 日本語（ふりがななし）
   title: 給食 2050
   description: 2050年の学校給食のシナリオを考えよう。
   pages:
@@ -42,8 +42,8 @@ weblate:
   lunch:
     label: |
       ランチテーブル: {name}
-    question: 空っぽ、はてな付き
-    alert: 空っぽ、感嘆符付き
+    question: 空、はてな付き
+    alert: 空、感嘆符付き
   links:
     feedback: https://google.co.jp
   menu:
@@ -111,8 +111,8 @@ weblate:
     hint: |
       クリックして<br/>
       <ruby>詳<rt>くわ</rt></ruby>しく<ruby>見<rt>み</rt></ruby>る
-    row: 地球温暖化：{row}
-    column: 源：{column}
+    row: <ruby>地球温暖化<rt>ちきゅうおんだんか</rt></ruby>：{row}
+    column: <ruby>生産地<rt>せいさんち</rt></ruby>：{column}
     grid:
       near: 国内
       far: 海外
@@ -123,20 +123,20 @@ weblate:
       title: |
         この<ruby>情報<rt>じょうほう</rt></ruby>について
       explanation: |
-        <ruby>考<rt>かんが</rt></ruby>え
+        <ruby>詳細<rt>しょうさい</rt></ruby>
       ingredients: |
-        <ruby>関係<rt>かんけい</rt></ruby>あるメニューアイテム
+        <ruby>関係<rt>かんけい</rt></ruby>のあるメニュー
       links: |
-        リサーチ リンク
+        <ruby>関連研究<rt>かんれんけんきゅう</rt></ruby>リンク
       lunch: |
-        ランチプレートの部分。フォーカスは「{name}」。
+        ランチプレート。「{name}」を<ruby>拡大<rt>かくだい</rt></ruby>。
     actions:
       notes: ノート
       pdf: PDF
       more: <ruby>黒<rt>くろ</rt></ruby>いところをクリックすると<ruby>説明<rt>せつめい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます
-      unfocus: 全面に戻る
+      unfocus: <ruby>前<rt>まえ</rt></ruby>の<ruby>画面<rt>がめん</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>る
       focus: |
-        テキスト #{nr} にフォーカス
+        テキスト #{nr} を<ruby>拡大<rt>かくだい</rt></ruby>する
     progress:
       active: |
         {percent}% を<ruby>読<rt>よ</rt></ruby>み<ruby>終<rt>お</rt></ruby>わりました
@@ -147,9 +147,9 @@ weblate:
         (クリック)<br/>
         ご<ruby>意見<rt>いけん</rt></ruby>をお<ruby>聞<rt>き</rt></ruby>かせください
       clear:
-        しんちょくのリセット
+        <ruby>閲覧記録<rt>えつらんきろく</rt></ruby>をリセットする
       ask_clear:
-        本当（ほんとう）に進捗（しんちょく）をリセットしますか？
+        <ruby>本当<rt>ほんとう</rt></ruby>にリセットしますか？
   ingredients: 
     # Filled by messages.ja.yml, you can override these if you like
     sprouts:
