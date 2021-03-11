@@ -61,7 +61,7 @@ if (err) {
     node.id = 'outdated-browser'
     node.innerHTML =
       '<p lang="en">This website does not support your browser. Please install a modern browser!</p>' +
-      '<p lang="ja">このサイトは利用しているブラウザーを不対応です。モダンばブラウザーをインストールして使ってください！</p>'
+      '<p lang="ja">このサイトはご利用中のブラウザに対応していません。Internet Explorerを除く最新版のブラウザをダウンロードしてご利用ください。</p>'
     document.body.appendChild(node)
   }
 }`
