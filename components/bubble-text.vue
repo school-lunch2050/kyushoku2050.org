@@ -117,7 +117,11 @@ export default Vue.extend({
       ? 1 - (1 - bRatio) * 0.3
       : (bRatio - 1) * 0.4 + 1
     let explanationKey: string | null = `weblate.explanations.${bubbleKey}`
-    if (!this.$i18n.te(explanationKey)) {
+    try {
+      if (!this.$i18n.te(explanationKey)) {
+        explanationKey = null
+      }
+    } catch (err) {
       explanationKey = null
     }
     return {
