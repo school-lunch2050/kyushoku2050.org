@@ -39,7 +39,7 @@
                   <div :style="ingredient.iconStyle" :class="`bubble-info--ingredient bubble-info--ingredient-${lunch.id}`">
                     <text-box key="weblate.scenario.info.lunch" :values="{ name: $t(`weblate.ingredients.${ingredient.key}.name`) }" />
                   </div>
-                  <text-box class="bubble-info--ingredient-text" :key="`weblate.ingredients.${ingredient.key}.name`" />
+                  <text-box :key="`weblate.ingredients.${ingredient.key}.name`" class="bubble-info--ingredient-text" />
                 </div>
               </div>
             </div>
