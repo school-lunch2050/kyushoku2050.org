@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/*"
+  from = "/"
   to = "/ja/:splat"
   status = 301
   force = false
