@@ -198,13 +198,6 @@ if (err) {
         test: /\.ya?ml$/,
         use: 'js-yaml-loader'
       })
-      config.module.rules.push({
-        test: /\.vue$/,
-        loader: 'vue-svg-inline-loader',
-        options: {
-          svgo: false
-        }
-      })
     }
   }
 }
