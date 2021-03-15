@@ -10,7 +10,7 @@ const yaml = require('js-yaml')
 const subFont = require('subset-font')
 const globby = require('globby')
 
-// Using node_modules, this way its cached by the CI system
+// Using node_modules folder to cache the font files. This way its cached by the CI system
 const cacheHome = path.join('node_modules', '.font')
 const fonts = [
   {

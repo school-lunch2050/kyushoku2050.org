@@ -9,7 +9,8 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "font": "full-icu scripts/fonts.js",
+    "asset-compress": "scripts/asset-compress.sh",
+    "font": "full-icu scripts/font.js",
     "ci": "npm run font && npm run generate",
     "postinstall": "npm run font"
   },
