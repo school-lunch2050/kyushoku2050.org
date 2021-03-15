@@ -27,8 +27,8 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { activeLifecycle, styleRect, toStyle, Rect, clearTextSelection } from '../lib'
 import textBox from './text-box.vue'
+import { activeLifecycle, styleRect, toStyle, Rect, clearTextSelection } from '~/assets/helpers'
 
 const updateMap = new WeakMap<any, Function>()
 interface Viewbox {

@@ -35,8 +35,8 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { percentage } from '../store/progress'
-import { activeLifecycle } from '~/lib'
+import { percentage } from '~/store/progress'
+import { activeLifecycle } from '~/assets/helpers'
 
 function x (perc: number, radius: number = 1) {
   return Math.cos(perc * Math.PI * 0.02) * radius

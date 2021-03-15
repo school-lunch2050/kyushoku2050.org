@@ -87,8 +87,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Store } from 'vuex/types'
-import { Bubble, bubbles } from '../assets/bubbles'
-import { Lunch, lunches } from '../assets/lunches'
+import { Bubble, bubbles } from '~/assets/bubbles'
+import { Lunch, lunches } from '~/assets/lunches'
 
 function mark (store: Store<any>, type: string) {
   store.commit('progress/mark', type)

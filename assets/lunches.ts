@@ -16,8 +16,8 @@ interface Style {
   width?: number
   height?: number
 }
-export type Weather = 'warm' | 'hot'
-export type Location = 'near' | 'far'
+type Weather = 'warm' | 'hot'
+type Location = 'near' | 'far'
 
 interface BaseData {
   ingredients: Array<Ingredient>
@@ -32,11 +32,7 @@ interface BaseData {
     style?: Style
   }
 }
-export interface LunchData extends Omit<BaseData, 'ingredients' | 'bubbles'> {
-  id: Lunch
-  ingredients: Array<IngredientData>
-  bubbles: Array<BubbleData>
-}
+
 const baseData: Record<Lunch, BaseData> = {
   cosmopolitan: {
     title: { x: 550, y: 70, width: 2000, height: 180 },
@@ -67,15 +63,30 @@ const baseData: Record<Lunch, BaseData> = {
     bubbles: ['public_food', 'food_literacy', 'seed_banks', 'domestic_soveirnty', 'permaculture', 'vegan_diets', 'wasting_food', 'regionally_diverse', 'preserving', 'limited_trade', 'no_pesticides']
   }
 }
-export const lunches = Object.entries(baseData).reduce((mapped, [lunchKey, baseData]) => {
-  mapped[lunchKey as Lunch] = {
+
+export interface LunchData extends Omit<BaseData, 'ingredients' | 'bubbles'> {
+  id: Lunch
+  // Ingredients get looked up
+  ingredients: Array<IngredientData>
+  // Bubbles get looked up
+  bubbles: Array<BubbleData>
+}
+
+function prepareForHTML (lunchKey: string, baseData: BaseData): LunchData {
+  return {
     ...baseData,
     id: lunchKey as Lunch,
     ingredients: baseData.ingredients.map(ingredient => ingredients[ingredient]),
     bubbles: baseData.bubbles.map(bubble => bubbles[bubble])
   }
-  return mapped
-}, {} as Record<Lunch, LunchData>)
+}
+
+export const lunches = Object
+  .entries(baseData)
+  .reduce((mapped, [lunchKey, baseData]) => {
+    mapped[lunchKey as Lunch] = prepareForHTML(lunchKey, baseData)
+    return mapped
+  }, {} as Record<Lunch, LunchData>)
 
 export function lunchForBubble (bubble: Bubble): LunchData | null {
   const bubbleData = bubbles[bubble]

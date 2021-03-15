@@ -16,7 +16,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { activeLifecycle } from '~/lib'
+import { activeLifecycle } from '~/assets/helpers'
 const { platform, appVersion } = typeof window !== 'undefined' ? window.navigator : { platform: '', appVersion: '' }
 let iOS = -1
 if (/iP(hone|od|ad)/.test(platform)) {

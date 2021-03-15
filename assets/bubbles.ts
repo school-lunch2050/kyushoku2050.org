@@ -36,8 +36,8 @@ export type Bubble =
   'limited_trade' |
   'no_pesticides'
 
-export type Language = 'en' | 'ja' | 'ja-simple'
-export interface Rect {
+type Language = 'en' | 'ja' | 'ja-simple'
+interface Rect {
   x: number,
   y: number,
   width: number,
@@ -58,13 +58,7 @@ interface BaseData {
   }>
 }
 
-export interface BubbleData extends Omit<BaseData, 'ingredients'> {
-  id: Bubble,
-  fontSize: Record<Language, number>
-  ingredients: IngredientData[]
-}
-
-export const bubbles = Object.entries({
+const baseData: Record<Bubble, BaseData> = {
   fruit: {
     bubble: '91 824 91 452 981 452 981 757.5 1087.39844 905.0859379999999 926.640625 809',
     viewRect: { x: 0, y: 428, width: 2073, height: 1138 },
@@ -580,7 +574,17 @@ export const bubbles = Object.entries({
       { en: 'https://www.sciencedirect.com/science/article/abs/pii/S1872203218301641' }
     ]
   }
-} as Record<Bubble, BaseData>).reduce((mapped, [bubbleKey, baseData]) => {
+}
+
+export interface BubbleData extends Omit<BaseData, 'ingredients'> {
+  id: Bubble,
+  // fontSize is normalized
+  fontSize: Record<Language, number>
+  // Ingredients are looked up
+  ingredients: IngredientData[]
+}
+
+function prepareForHTML (bubbleKey: string, baseData: BaseData): BubbleData {
   let { fontSize } = baseData
   if (typeof fontSize === 'number') {
     fontSize = {
@@ -590,11 +594,17 @@ export const bubbles = Object.entries({
     }
   }
   const bubbleIngredients = baseData.ingredients.map(ingredient => ingredients[ingredient])
-  mapped[bubbleKey as Bubble] = {
+  return {
     ...baseData,
     id: bubbleKey as Bubble,
     fontSize,
     ingredients: bubbleIngredients
   }
-  return mapped
-}, {} as Record<Bubble, BubbleData>)
+}
+
+export const bubbles = Object
+  .entries(baseData)
+  .reduce((mapped, [bubbleKey, baseData]) => {
+    mapped[bubbleKey as Bubble] = prepareForHTML(bubbleKey, baseData)
+    return mapped
+  }, {} as Record<Bubble, BubbleData>)

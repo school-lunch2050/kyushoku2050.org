@@ -1,5 +1,7 @@
 import { lunches } from '../assets/lunches'
 
+// The api presented in this store-file gets _actually_ (re-)stored in ../plugins/localstorage.client.ts
+
 const factors = Object.entries(lunches)
   .reduce(
     (lunchEntries, [lunch, lunchData]) => {

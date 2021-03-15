@@ -1,3 +1,6 @@
+/**
+ * Helper functions to make life easier with nuxt.
+ */
 import { Context } from '@nuxt/types'
 // Next line is to make sure that the $content declaration is set.
 /* eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars */

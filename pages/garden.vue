@@ -1,10 +1,9 @@
 <template>
   <main-menu prev="/main" active selected="garden" />
 </template>
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+<script>
+export default {
   name: 'PageGarden',
   key: route => route.fullPath
-})
+}
 </script>

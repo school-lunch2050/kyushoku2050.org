@@ -3,7 +3,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { i18nContent } from '../lib'
+import { i18nContent } from '~/assets/helpers'
 
 export default Vue.extend({
   name: 'About',

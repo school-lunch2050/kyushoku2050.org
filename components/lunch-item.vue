@@ -30,7 +30,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { Ingredient, ingredients } from '../assets/ingredients'
+import { Ingredient, ingredients } from '~/assets/ingredients'
 
 export default Vue.extend({
   data () {

@@ -9,7 +9,7 @@
 import Vue from 'vue'
 import sanitize from 'sanitize-html'
 import IVueI18n from 'vue-i18n/types'
-import { toStyle } from '../lib'
+import { toStyle } from '~/assets/helpers'
 
 interface Options {
   x?: number | string | null

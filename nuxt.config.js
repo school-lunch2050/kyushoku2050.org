@@ -43,6 +43,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     script: [
+      // Old browser support
       {
         hid: 'browser-test',
         type: 'text/javascript',
@@ -82,6 +83,8 @@ if (err) {
       { rel: 'prefetch', as: 'image', href: '/img/lunch/empty.webp' }
     ],
     bodyAttrs: {
+      // We set the gradient directly to the body. This way the body is defined before anything else gets loaded.
+      // Giving the user a more responsive impression.
       style: `background: ${gradient.end} linear-gradient(${gradient.start}, ${gradient.end} 100vh);`
     }
   },
@@ -93,8 +96,7 @@ if (err) {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/localstorage.client.ts',
-    '~/plugins/vue-tr.ts'
+    '~/plugins/localstorage.client.ts'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -108,8 +110,9 @@ if (err) {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/pwa
+    // https://go.nuxtjs.dev/pwa - to be able to install the website on a mobile phone nicely
     '@nuxtjs/pwa',
+    // https://i18n.nuxtjs.org/ - for internationalization (en/ja/...)
     ['nuxt-i18n', {
       strategy: 'prefix',
       vueI18nLoader: true,
@@ -117,8 +120,11 @@ if (err) {
       detectBrowserLanguage: false,
       rootRedirect: 'ja'
     }],
+    // https://content.nuxtjs.org/ - for the content/*.md files (more in the ./content folder)
     '@nuxt/content',
+    // https://github.com/moritzsternemann/vue-plausible - for the tracking using plausible
     'vue-plausible',
+    // https://github.com/Developmint/nuxt-webfontloader/ - to preload the webfonts, avoiding fouc
     ['nuxt-webfontloader', {
       custom: {
         families: ['CaveatBrush', 'HonyaJi']
@@ -126,6 +132,7 @@ if (err) {
     }]
   ],
 
+  // https://github.com/moritzsternemann/vue-plausible
   plausible: {
     domain: 'kyushoku2050.org',
     apiHost: '//stats.kyushoku2050.org',
@@ -134,9 +141,10 @@ if (err) {
 
   content: {
     // https://content.nuxtjs.org/configuration
-    liveEdit: false
+    liveEdit: false // We disable live-edit because of problems with the map (and because the computer sweats less.)
   },
 
+  // https://i18n.nuxtjs.org/options-reference
   i18n: {
     locales: [
       {
@@ -167,12 +175,13 @@ if (err) {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
-    icons: false,
+    icon: false,
     manifest: {
       name: '給食 2050 - School Lunch 2050',
       short_name: 'Lunch 2050',
       lang: 'en',
       background_color: '#2b2f36',
+      // The pwa module has automatic icon generation but we are okay to do that by ourselves using iconify, which gives a broader range of sizes. (generated in scripts/asset_compress.sh)
       icons: [
         { prefix: 'android-chrome', sizes: [36, 48, 72, 96, 144, 192, 256, 384, 512] },
         { prefix: 'apple-touch-icon', sizes: [57, 60, 72, 76, 114, 152, 167, 180, 1024] }
@@ -194,6 +203,7 @@ if (err) {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend (config) {
+      // The Yaml loader is required for the yaml language files.
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: 'js-yaml-loader'

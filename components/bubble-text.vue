@@ -59,7 +59,7 @@
 import Vue from 'vue'
 import { lunchForBubble } from '~/assets/lunches'
 import { bubbles, Bubble } from '~/assets/bubbles'
-import { toStyle, activeLifecycle, countCharsCached, Rect } from '~/lib'
+import { toStyle, activeLifecycle, countCharsCached, Rect } from '~/assets/helpers'
 
 function scaleRect (source: any, f: number = 0.98) {
   const width = source.width * f

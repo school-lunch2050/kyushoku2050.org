@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import { layoutDefaults } from '../lib'
+import { layoutDefaults } from '../assets/helpers'
 export default {
   name: 'DefaultLayout',
   ...layoutDefaults

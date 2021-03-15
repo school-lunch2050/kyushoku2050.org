@@ -17,15 +17,3 @@ export default {
   key: route => route.fullPath
 }
 </script>
-<style lang="scss">
-.i18n-img--logo {
-  display: inline-block;
-  position: relative;
-  margin: 0 0.25em;
-  img {
-    position: relative;
-    top: 0.4em;
-    height: 1.2em;
-  }
-}
-</style>

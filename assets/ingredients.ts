@@ -1,4 +1,4 @@
-import { toPx } from '../lib'
+import { toPx } from '~/assets/helpers'
 
 export type Ingredient =
   'milk' |
@@ -40,11 +40,7 @@ interface BaseData {
   rx?: number
   ry?: number
 }
-export interface IngredientData extends BaseData {
-  key: Ingredient
-  iconStyle: string
-  markerStyle: string
-}
+
 const baseData: Record<Ingredient, BaseData> = {
   milk: {
     x: 828,
@@ -222,7 +218,13 @@ const baseData: Record<Ingredient, BaseData> = {
   }
 }
 
-export const ingredients = Object.entries(baseData).reduce((mapped, [ingredientKey, baseData]) => {
+export interface IngredientData extends BaseData {
+  key: Ingredient
+  iconStyle: string // Css style for when to show this ingredient as an icon in the bubble-info
+  markerStyle: string // Css style for the marker to be shown when being near a lunch item
+}
+
+function prepareForHTML (ingredientKey: string, baseData: BaseData): IngredientData {
   const place = {
     rx: 0,
     ry: 0,
@@ -241,11 +243,17 @@ export const ingredients = Object.entries(baseData).reduce((mapped, [ingredientK
     `background-position: ${-(place.x + place.rx - place.r) * scale}em ${-(place.y + place.ry - place.r) * scale}em; ` +
     `background-size: ${webpSize.width * scale}em ${webpSize.height * scale}em`
 
-  mapped[ingredientKey as Ingredient] = {
+  return {
     ...baseData,
     key: ingredientKey as Ingredient,
     iconStyle,
     markerStyle
   }
-  return mapped
-}, {} as Record<Ingredient, IngredientData>)
+}
+
+export const ingredients = Object
+  .entries(baseData)
+  .reduce((mapped, [ingredientKey, baseData]) => {
+    mapped[ingredientKey as Ingredient] = prepareForHTML(ingredientKey, baseData)
+    return mapped
+  }, {} as Record<Ingredient, IngredientData>)
