@@ -133,7 +133,7 @@ weblate:
     actions:
       notes: ノート
       pdf: PDF
-      more: <ruby>黒<rt>くろ</rt></ruby>いところをクリックすると<ruby>説明<rt>せつめい</rt></ruby>が<ruby>表示<rt>ひょうじ</rt></ruby>されます
+      more: <ruby>墨消<rt>すみけ</rt></ruby>しをクリック
       unfocus: <ruby>前<rt>まえ</rt></ruby>の<ruby>画面<rt>がめん</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>る
       focus: |
         テキスト #{nr} を<ruby>拡大<rt>かくだい</rt></ruby>する
