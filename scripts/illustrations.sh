@@ -15,7 +15,7 @@ set_license () {
   exiftool \
     "$1" \
     -overwrite_original \
-    -copyright="$2 ($3), see: $4" \
+    -copyright="$2 ($3), see: $4 $5" \
     -XMP-xmpRights:Owner="$2" \
     -XMP-plus:licensorURL="$3" \
     -XMP-xmpRights:WebStatement="$4"
@@ -27,7 +27,11 @@ if [ ! -d ../Original ]; then
 fi
 
 set_sustena () {
-  set_license "$1" "Sustena Inc." "http://www.sustena.org/" "https://github.com/school-lunch2050/kyushoku2050.org/tree/main/static/img/illustration"
+  set_license "$1" \
+    "Sustena Inc." \
+    "http://www.sustena.org/" \
+    "https://github.com/school-lunch2050/kyushoku2050.org/tree/main/static/img/illustration" \
+    ", please contact info@sustena.org if you are interested in licensing the material."
 }
 
 
