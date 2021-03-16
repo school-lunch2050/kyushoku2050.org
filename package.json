@@ -10,6 +10,7 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "asset-compress": "scripts/asset-compress.sh",
+    "illustrations": "scripts/illustrations.sh",
     "font": "full-icu scripts/font.js",
     "ci": "npm run font && npm run generate",
     "postinstall": "npm run font"
