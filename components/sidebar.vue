@@ -43,7 +43,7 @@
     </div>
   </nav>
 </template>
-<script type="ts">
+<script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
@@ -52,10 +52,23 @@ export default Vue.extend({
       return (this.$i18n?.locales ?? []).map(entry => (typeof entry === 'string') ? { code: entry } : entry)
     }
   },
+  watch: {
+    $route () {
+      this.toggleMenu(false)
+    }
+  },
   methods: {
-    toggleMenu () {
-      this.$refs.sidebar.classList.toggle('sidebar--content--active')
-      document.querySelector(':focus')?.blur()
+    toggleMenu (arg: boolean | Event): void {
+      let toggle: undefined | boolean
+      if (typeof arg === 'boolean') {
+        toggle = arg
+      }
+      const { sidebar } = this.$refs
+      if (!(sidebar instanceof HTMLElement)) {
+        return
+      }
+      sidebar.classList.toggle('sidebar--content--active', toggle)
+      ;(document.querySelector(':focus') as HTMLElement)?.blur()
     }
   }
 })
