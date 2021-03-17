@@ -417,6 +417,15 @@ html[lang="ja-simple"] {
 .i18n-box--placed {
   display: flex;
 }
+.i18n-img--logo {
+  position: relative;
+  display: inline-block;
+  img, source {
+    height: 1.2em;
+    position: relative;
+    top: 0.2em;
+  }
+}
 .bubble-text--content {
   position: absolute;
   user-select: none;
