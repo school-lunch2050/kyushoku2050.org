@@ -1,12 +1,10 @@
 <template>
-  <fragment>
-    <nuxt-link
-      :to="switchLocalePath(locale.code)"
-      :class="{ 'lang--link': true, [`font--nav--${locale.code}`]: true, 'nuxt-link-exact-active': active }"
-    >
-      {{ name }}
-    </nuxt-link>
-  </fragment>
+  <nuxt-link
+    :to="switchLocalePath(locale.code)"
+    :class="{ 'lang--link': true, [`font--nav--${locale.code}`]: true, 'nuxt-link-exact-active': active }"
+  >
+    {{ name }}
+  </nuxt-link>
 </template>
 <script lang="ts">
 import Vue from 'vue'

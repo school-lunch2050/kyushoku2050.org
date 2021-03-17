@@ -2,9 +2,9 @@
   <nuxt-link v-if="to" :to="to" :append="append" :replace="Boolean(replace)">
     <slot />
   </nuxt-link>
-  <fragment v-else>
+  <div v-else>
     <slot />
-  </fragment>
+  </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
