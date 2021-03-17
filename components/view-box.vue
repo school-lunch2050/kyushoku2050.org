@@ -68,7 +68,7 @@ export default Vue.extend({
     },
     transition: {
       type: String,
-      default: 'all cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s'
+      default: 'transform cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s'
     },
     getViewbox: {
       type: [Function],
@@ -161,6 +161,7 @@ export default Vue.extend({
       first = false
       canvas.style.transition = smooth ? this.$props.transition : ''
       const transform = `scale(${scale}) translate(${-target.x - target.width / 2 + viewPort.width / (2 * scale)}px, ${-target.y - target.height / 2 + viewPort.height / (2 * scale)}px)`
+      canvas.style.fontSize = `${40 / scale}px`
       canvas.style.transform = transform
     }
     const onresize = () => {

@@ -797,6 +797,16 @@ html[lang="ja-simple"] {
   height: 100%;
   display: none;
 }
+@media (max-width: 960px) {
+  .bubble-info {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 760px) {
+  .bubble-info {
+    font-size: 0.6em;
+  }
+}
 .bubble-info--open,
 .bubble-info--close {
   pointer-events: all;

@@ -6,6 +6,7 @@ import { Context } from '@nuxt/types'
 /* eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars */
 import { IContentOptions } from '@nuxt/content'
 import Vue from 'vue'
+import IVueI18n from 'vue-i18n/types'
 import sanitize from 'sanitize-html'
 
 export function numberStyle (node: HTMLElement, attr: 'width' | 'height' | 'left' | 'top'): number {
@@ -211,6 +212,64 @@ export function clearTextSelection () {
       selection.empty()
     } else if (typeof selection.removeAllRanges === 'function') { // Firefox
       selection.removeAllRanges()
+    }
+  }
+}
+
+export function getI18nSize (input: { [locale: string]: number }, i18n: IVueI18n): number | null {
+  for (const locale of getI18nLookups(i18n.locale)) {
+    const size = input[locale]
+    if (typeof size === 'number' || typeof size === 'string') {
+      return size
+    }
+  }
+  return null
+}
+
+const i18nLookups: { [key: string]: string[] } = {}
+
+export function getI18nLookups (locale: string): string[] {
+  let lookups: string[] = i18nLookups[locale]
+  if (lookups === undefined) {
+    lookups = []
+    const parts = locale.split('-')
+    while (parts.length > 0) {
+      lookups.push(parts.join('-'))
+      parts.pop()
+    }
+    i18nLookups[locale] = lookups
+  }
+  return lookups
+}
+
+export function i18nStyle (properties: Object, i18n: IVueI18n): { isDynamic: boolean, style: () => string } {
+  const cache: { [key: string]: string } = {}
+  const create = () => {
+    let isDynamic = false
+    const style: { [key: string]: any } = {}
+    for (const [key, value] of Object.entries(properties)) {
+      if (value !== null && typeof value === 'object') {
+        isDynamic = true
+        style[key] = getI18nSize(value, i18n)
+      } else {
+        style[key] = value
+      }
+    }
+    const styleStr = toStyle(style)
+    cache[i18n.locale] = styleStr
+    return {
+      isDynamic,
+      styleStr
+    }
+  }
+  return {
+    isDynamic: create().isDynamic,
+    style: () => {
+      const cached = cache[i18n.locale]
+      if (cached !== undefined) {
+        return cached
+      }
+      return create().styleStr
     }
   }
 }

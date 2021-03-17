@@ -1,8 +1,8 @@
 <template>
   <div class="bubble-text">
-    <div class="bubble-text--content font--tex" :style="textStyle">
-      <div class="bubble-text--padding" :style="paddingStyle">
-        <text-box :key="i18nkey" :class="{ 'bubble-text--seen': seen() }" :font-size="bubble && bubble.fontSize" :custom-style="spanStyle()" />
+    <div class="bubble-text--content font--tex" :style="textStyle()">
+      <div class="bubble-text--padding" :style="paddingStyle()">
+        <text-box :key="i18nkey" :class="{ 'bubble-text--seen': seen() }" :custom-style="spanStyle()" />
       </div>
     </div>
     <svg viewBox="0 0 3157 2500" class="bubble-text--shadow">
@@ -14,7 +14,7 @@
           &nbsp;
         </div>
       </nuxt-link>
-      <div v-if="bubble" ref="bubble" :class="`bubble-info font--nav bubble-info--buttons-${bubble.infoButton === 'right' ? 'right' : 'left'}`" :style="infoStyle">
+      <div v-if="bubble" ref="bubble" :class="`bubble-info font--nav bubble-info--buttons-${bubble.infoButton === 'right' ? 'right' : 'left'}`" :style="roundedRectStyle">
         <img
           class="bubble-info--open"
           src="/img/icon_info.svg"
@@ -59,7 +59,7 @@
 import Vue from 'vue'
 import { lunchForBubble } from '~/assets/lunches'
 import { bubbles, Bubble } from '~/assets/bubbles'
-import { toStyle, activeLifecycle, countCharsCached, Rect } from '~/assets/helpers'
+import { toStyle, activeLifecycle, countCharsCached, Rect, i18nStyle } from '~/assets/helpers'
 
 function scaleRect (source: any, f: number = 0.98) {
   const width = source.width * f
@@ -99,10 +99,8 @@ export default Vue.extend({
     const i18nkey = `weblate.bubbles.${bubbleKey}`
     const width = 3157
     const height = 2500
-    const vRatio = width / height
     const roundedRect: Rect & { r: number } = scaleRect(viewRect) as any
     roundedRect.r = Math.max(roundedRect.width, roundedRect.height) * 0.02
-    const bRatio = roundedRect.width / roundedRect.height
     const borderWidth = 1
     const roundedRectStyle = {
       left: roundedRect.x - viewRect.x - borderWidth,
@@ -113,9 +111,6 @@ export default Vue.extend({
       position: 'absolute',
       borderWidth
     }
-    const ratioFontSizeEffect = bRatio < 1
-      ? 1 - (1 - bRatio) * 0.3
-      : (bRatio - 1) * 0.4 + 1
     let explanationKey: string | null = `weblate.explanations.${bubbleKey}`
     try {
       if (!this.$i18n.te(explanationKey)) {
@@ -128,24 +123,21 @@ export default Vue.extend({
       explanationKey,
       lunch,
       bubble,
-      textStyle: toStyle({
+      textStyle: i18nStyle({
         left: rect.x,
         top: rect.y,
         width: rect.width,
-        height: rect.height
-      }),
+        height: rect.height,
+        fontSize: bubble.fontSize
+      }, this.$i18n).style,
       boxStyle: toStyle({
         left: viewRect.x,
         top: viewRect.y,
         width: viewRect.width,
         height: viewRect.height
       }),
-      paddingStyle: toStyle({ padding }),
+      paddingStyle: i18nStyle({ padding }, this.$i18n).style,
       roundedRectStyle: toStyle(roundedRectStyle),
-      infoStyle: toStyle({
-        ...roundedRectStyle,
-        fontSize: `${180 * (vRatio > bRatio ? roundedRect.width / width : roundedRect.height / height) * ratioFontSizeEffect}px`
-      }),
       focusPath: `M 0 0 L ${width} 0 L ${width} ${height} L 0 ${height} Z ${roundedRectPath(roundedRect)}`,
       i18nkey
     }
