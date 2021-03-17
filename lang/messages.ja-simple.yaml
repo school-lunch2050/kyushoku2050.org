@@ -45,7 +45,7 @@ weblate:
     question: 空、はてな付き
     alert: 空、感嘆符付き
   links:
-    feedback: https://google.co.jp
+    feedback: https://forms.gle/hiYFEu1fPTvNhf5c6
   menu:
     chalkboard: 黒板
     open: メニューを<ruby>開<rt>ひら</rt></ruby>く

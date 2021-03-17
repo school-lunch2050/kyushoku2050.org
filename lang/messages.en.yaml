@@ -51,7 +51,7 @@ weblate:
     question: Empty with question mark.
     alert: Empty with exclamation mark.
   links:
-    feedback: https://google.com
+    feedback: https://forms.gle/kz4DnKuG5T91gCdA9
     "https://www.gfi.org/files/soti/INN-PBMED-SOTIR-2020-0507.pdf":
       title: Plant-Based Meat, Eggs, and Dairy. 2019 U.S. State of the Industry report
       source: The Good Food Institute
