@@ -4,6 +4,7 @@ weblate:
     ja-simple: Simple Japanese
   title: School Lunch 2050
   description: Examining Scenarios for a School Lunch in 2050.
+  image: og_en.png
   pages:
     about:
       full: What is School Lunch 2050?
@@ -12,21 +13,25 @@ weblate:
     cosmopolitan:
       full: Global Green Illusion
       short: Illusion
+      image: og-cosmopolitan_en.png
       description: |
         2050 Lunch Scenario: "@:weblate.pages.cosmopolitan.full" (1.5°+, global)
     desperate:
       full: Domestic Desperation
       short: Desperation
+      image: og-desperate_en.png
       description: |
         2050 Lunch Scenario: "@:weblate.pages.desperate.full" (2.5°+, local)
     gamble:
       full: Global Gamble
       short: Gamble
+      image: og-gamble_en.png
       description: |
         2050 Lunch Scenario: "@:weblate.pages.gamble.full" (2.5°+, global)
     garden:
       full: Food Gardens
       short: Gardens
+      image: og-garden_en.png
       description: |
         2050 Lunch Scenario: "@:weblate.pages.garden.full" (1.5°, local)
     index: 

@@ -4,6 +4,7 @@ weblate:
     ja: 日本語（ふりがななし）
   title: 給食 2050
   description: 2050年の学校給食のシナリオを考えよう。
+  image: og_ja.png
   pages:
     about:
       full: <ruby>給食<rt>きゅうしょく</rt></ruby> 2050ってなんですか？
@@ -11,18 +12,22 @@ weblate:
     cosmopolitan:
       full: <ruby>地球<rt>ちきゅう</rt></ruby>にやさしいはずがまぼろし　
       short: まぼろし
+      image: og-cosmopolitan_ja.png
     desperate:
       full: <ruby>国内<rt>こくない</rt></ruby>だけでなんとか<ruby>生<rt>い</rt></ruby>きていく
       short: なんとか<ruby>生<rt>い</rt></ruby>きる
+      image: og-desperate_ja.png
     gamble:
       full: |
         <ruby>地球<rt>ちきゅう</rt></ruby>を<ruby>賭<rt>か</rt></ruby>けていちかばちか
       short: いちかばちか
+      image: og-gamble_ja.png
     garden:
       full: |
         <ruby>食<rt>た</rt></ruby>べものでいっぱいの<ruby>庭<rt>にわ</rt></ruby>
       short: |
         <ruby>庭<rt>にわ</rt></ruby>
+      image: og-garden_ja.png
     index: 
       full: サイトマップ
     introduction:

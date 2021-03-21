@@ -4,6 +4,7 @@ weblate:
     ja: やさしい日本語
   title: 給食 2050年
   description: 2050年の学校給食のシナリオを見てみよう。
+  image: og_ja.png
   pages:
     about:
       full: 給食 2050年って？
@@ -11,15 +12,19 @@ weblate:
     cosmopolitan:
       full: 地球にやさしいはずがまぼろし
       short: まぼろし
+      image: og-cosmopolitan_ja.png
     desperate:
       full: 国内だけでなんとか生きていく 
       short: なんとか生きる
+      image: og-desperate_ja.png
     gamble:
       full: 地球を賭けていちかばちか 
       short: いちかばちか
+      image: og-gamble_ja.png
     garden:
       full: 食べものでいっぱいの庭
       short: 庭
+      image: og-garden_ja.png
     index: 
       full: はじめに
     introduction:

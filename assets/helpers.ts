@@ -9,6 +9,8 @@ import Vue from 'vue'
 import IVueI18n from 'vue-i18n/types'
 import sanitize from 'sanitize-html'
 
+const DOMAIN = 'https://kyushoku2050.org'
+
 export function numberStyle (node: HTMLElement, attr: 'width' | 'height' | 'left' | 'top'): number {
   const value = node.style[attr]
   if (value === null || value === undefined || value === '') {
@@ -141,9 +143,36 @@ export function countCharsCached (stringy: { toString(): string }): number {
   return count
 }
 
+function te (i18n: IVueI18n, key: string): boolean {
+  if (i18n.te(key)) {
+    return true
+  }
+  const fb = i18n.fallbackLocale
+  if (typeof fb === 'string') {
+    return i18n.te(key, fb)
+  } else if (Array.isArray(fb)) {
+    for (const loc of fb) {
+      if (i18n.te(key, loc)) {
+        return true
+      }
+    }
+  } else if (typeof fb === 'object') {
+    const fallback = fb[i18n.locale]
+    if (fallback) {
+      for (const locale of fallback) {
+        if (i18n.te(key, locale)) {
+          return true
+        }
+      }
+    }
+  }
+  return false
+}
+
 export function head ({ $i18n, $route }: Vue) {
   const siteName = $i18n.t('weblate.title').toString()
   let title = siteName
+  let image = $i18n.t('weblate.image').toString()
   let description: string | null = null
   const parts = typeof $route.name === 'string' ? /^(.*?)__/.exec($route.name) : null
   if (parts) {
@@ -151,13 +180,17 @@ export function head ({ $i18n, $route }: Vue) {
     const base = `weblate.pages.${id}`
     const fullKey = `${base}.full`
     const shortKey = `${base}.short`
-    if ($i18n.te(shortKey)) {
+    if (te($i18n, shortKey)) {
       title = $i18n.t(shortKey).toString()
-    } else if ($i18n.te(fullKey)) {
+    } else if (te($i18n, fullKey)) {
       title = $i18n.t(fullKey).toString()
     }
+    const imgKey = `${base}.image`
+    if (te($i18n, imgKey)) {
+      image = $i18n.t(imgKey).toString()
+    }
     const descriptionKey = `${base}.description`
-    if ($i18n.te(descriptionKey)) {
+    if (te($i18n, descriptionKey)) {
       description = $i18n.t(descriptionKey).toString()
     }
   }
@@ -169,6 +202,8 @@ export function head ({ $i18n, $route }: Vue) {
       'apple-mobile-web-app-title': siteName,
       'og:site_name': siteName,
       'og:title': title,
+      'og:image': `${DOMAIN}/img/${image}`,
+      'og:url': `${DOMAIN}${$route.path}`,
       'og:description': description ?? $i18n.t('weblate.description').toString()
     })
   }
