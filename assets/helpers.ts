@@ -194,6 +194,7 @@ export function head ({ $i18n, $route }: Vue) {
       description = $i18n.t(descriptionKey).toString()
     }
   }
+  const pth = $route.fullPath.substr(`/${$i18n.locale}/`.length)
   return {
     htmlAttrs: {
       lang: $i18n.locale
@@ -205,7 +206,18 @@ export function head ({ $i18n, $route }: Vue) {
       'og:image': `${DOMAIN}/img/${image}`,
       'og:url': `${DOMAIN}${$route.path}`,
       'og:description': description ?? $i18n.t('weblate.description').toString()
-    })
+    }),
+    link: ($i18n.locales ?? [])
+      .map(locale => typeof locale === 'string' ? locale : locale.code)
+      .filter(code => code !== $i18n.locale)
+      .map((code) => {
+        return {
+          hid: `lang-link-${code}`,
+          rel: 'alternate',
+          hreflang: code,
+          href: `/${code}/${pth}`
+        }
+      })
   }
 }
 
