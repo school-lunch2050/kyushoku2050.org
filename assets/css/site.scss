@@ -297,6 +297,9 @@ html[lang="ja-simple"] {
   height: 100vh;
   overflow: hidden;
   display: none;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 .view-box.ready {
   display: block;
@@ -399,7 +402,10 @@ html[lang="ja-simple"] {
 }
 .view-box--canvas {
   position: relative;
+  perspective: 1000;
+  transform-style: preserve-3d;
   transform-origin: top left;
+  backface-visibility: hidden;
 }
 .view-box--focussed {
   .view-box--unfocus {
