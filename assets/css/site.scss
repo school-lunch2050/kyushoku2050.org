@@ -71,8 +71,9 @@ html[lang="ja-simple"] {
 .button--prev {
   text-decoration: none;
   font-size: 90px;
+  padding: 85px;
   display: flex;
-  width: 50%;
+  width: calc(50% - 85px * 2);
   color: $col-nav-inactive;
   top: 0px;
   position: absolute;
@@ -94,10 +95,10 @@ html[lang="ja-simple"] {
 }
 .cb--button-bar {
   position: absolute;
-  left: 150px;
-  right: 200px;
-  bottom: 150px;
-  height: 200px;
+  left: 65px;
+  right: 115px;
+  bottom: 133px;
+  height: 295px;
 }
 .cb {
   color: white;
