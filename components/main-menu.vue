@@ -61,11 +61,11 @@
     </template>
     <template v-if="lunch" #lunch>
       <lunch-item v-for="ingredient in lunch.ingredients" :key="ingredient.key" />
-    </template>
-    <template v-if="lunch" #body>
       <div class="lunch-detail--spacer">
         <text-box key="weblate.scenario.actions.more" class="font--tex" />
       </div>
+    </template>
+    <template v-if="lunch" #body>
       <view-box
         :key="`illustration-${lunch.id}`"
         class="view-box--illustration"
