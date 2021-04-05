@@ -9,3 +9,8 @@
   to = "/ja/:splat"
   status = 301
   force = false
+
+[[headers]]
+  for = "*"
+  [headers-values]
+    Content-Language = "ja, en, ja-simple"
