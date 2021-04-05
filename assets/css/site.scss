@@ -912,6 +912,14 @@ html[lang="ja-simple"] {
     font-size: 0.6em;
   }
 }
+@media (max-width: 400px) {
+  .bubble-info--content {
+    font-size: 0.3em;
+  }
+  .bubble-info--button {
+    font-size: 0.5em;
+  }
+}
 .bubble-info--hidden {
   pointer-events: none;
 }
