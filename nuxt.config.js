@@ -40,7 +40,9 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      // https://stackoverflow.com/questions/4117377/how-do-i-hide-the-address-bar-on-iphone/7487346
+      { name: 'apple-mobile-web-app-capable', content: 'yes' }
     ],
     script: [
       // Old browser support
