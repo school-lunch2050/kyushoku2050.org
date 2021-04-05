@@ -11,6 +11,6 @@
   force = false
 
 [[headers]]
-  for = "*"
-  [headers-values]
+  for = "/*"
+  [headers.values]
     Content-Language = "ja, en, ja-simple"
