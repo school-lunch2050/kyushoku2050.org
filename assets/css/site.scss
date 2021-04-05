@@ -729,17 +729,22 @@ html[lang="ja-simple"] {
   position: relative;
   background: white;
   padding: 1em;
-  font-size: 58px;
+  font-size: 72px;
   margin-left: -50%;
   display: flex;
   flex-direction: column;
   width: min-content;
 }
 .lunch-item--marker--name {
-  font-size: 72px;
+  font-size: 1.25em;
   margin-bottom: 0.5em;
   white-space: nowrap;
   clear: both;
+}
+@media (max-width: 680px) {
+  .lunch-item--marker--box {
+    font-size: 0.47em;
+  }
 }
 .lunch-item--marker--source {
   min-width: 700px;
