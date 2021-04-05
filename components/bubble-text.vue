@@ -15,14 +15,8 @@
         </div>
       </nuxt-link>
       <div v-if="bubble" ref="bubble" :class="`bubble-info font--nav bubble-info--buttons-${bubble.infoButton === 'right' ? 'right' : 'left'}`" :style="roundedRectStyle">
-        <img
-          class="bubble-info--open"
-          src="/img/icon_info.svg"
-          tabindex="0"
-          @click="toggleInfo"
-          @keypress="toggleInfo"
-        >
-        <img class="bubble-info--close" src="/img/icon_close_dark.svg" tabindex="0" @click="toggleInfo" @keypress="toggleInfo">
+        <img class="bubble-info--open bubble-info--button" src="/img/icon_info.svg" tabindex="0" @click="toggleInfo" @keypress="toggleInfo">
+        <img class="bubble-info--close bubble-info--button" src="/img/icon_close_dark.svg" tabindex="0" @click="toggleInfo" @keypress="toggleInfo">
         <div class="bubble-info--container">
           <div class="bubble-info--content">
             <h2><text-box key="weblate.scenario.info.title" /></h2>

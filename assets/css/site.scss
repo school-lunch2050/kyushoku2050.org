@@ -41,7 +41,6 @@ img {
 
 %font_ja {
   font-family: HonyaJi, sans-serif;
-  line-height: 0.55em;
 }
 
 %font_ja_fallback {
@@ -806,58 +805,25 @@ html[lang="ja-simple"] {
     display: none;
   }
   .bubble-info {
-    display: block;
+    display: flex;
   }
-}
-.bubble-info {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.bubble-info--active {
-  background: rgba(255, 255, 255, 0.95);
-}
-@media (max-width: 960px) {
-  .bubble-info {
-    font-size: 0.9em;
-  }
-}
-@media (max-width: 760px) {
-  .bubble-info {
-    font-size: 0.6em;
-  }
-}
-.bubble-info--open,
-.bubble-info--close {
-  pointer-events: all;
-  width: 1.8em;
-  height: 1.8em;
-  bottom: 0.4em;
-  position: absolute;
-  opacity: 0.8;
-  cursor: pointer;
-  z-index: 3;
-  &:hover, &:focus {
-    opacity: 1;
-  }
-}
-.bubble-info--open,
-.bubble-info--container {
-  transition: bottom 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-.bubble-info--open:focus {
-  outline: 1px solid rgba(255, 255, 255, 0.60);
-}
-.bubble-info--close:focus {
-  outline: 1px solid rgba(0, 0, 0, 0.60);
 }
 .bubble-info,
 .bubble-info--container {
   overflow: hidden;
-  position: absolute;
-  width: 100%;
   height: 100%;
+}
+.bubble-info {
+  display: none;
+  width: 100%;
+  position: absolute;
+  flex-direction: row;
+}
+.bubble-info--buttons-right {
+  flex-direction: row-reverse;
+}
+.bubble-info--active {
+  background: rgba(255, 255, 255, 0.95);
 }
 .bubble-info--container {
   overflow: scroll;
@@ -865,9 +831,27 @@ html[lang="ja-simple"] {
   pointer-events: none;
   user-select: none;
   display: none;
-  h2 {
-    font-size: 1.2em;
+  justify-self: stretch;
+  position: relative;
+  width: 100%;
+}
+.bubble-info--button {
+  pointer-events: all;
+  width: 1.8em;
+  height: 1.8em;
+  margin: 0.2em;
+  opacity: 0.8;
+  cursor: pointer;
+  &:hover, &:focus {
+    opacity: 1;
   }
+  align-self: flex-end;
+}
+.bubble-info--open:focus {
+  outline: 1px solid rgba(255, 255, 255, 0.60);
+}
+.bubble-info--close:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.60);
 }
 .bubble-info--active
 .bubble-info--container {
@@ -886,35 +870,41 @@ html[lang="ja-simple"] {
   display: none;
 }
 .bubble-info--content {
+  padding: 0.3em 0.5em;
+  margin: 0 0.5em;
+  font-size: 0.75em;
   h2 {
-    font-size: 1.2em;
-    margin-bottom: 0.4em;
-  }
-  h3 {
-    font-size: 1em;
-    margin-top: 0.1em;
+    font-size: 1.5em;
     margin-bottom: 0.2em;
   }
-  p {
+  h3 {
+    font-size: 1.2em;
+    margin-top: 0.8em;
+    margin-bottom: 0.5em;
+  }
+}
+@media (max-width: 960px) {
+  .bubble-info--content {
+    font-size: 0.60em;
+  }
+  .bubble-info--button {
+    font-size: 0.85em;
+  }
+}
+@media (max-width: 760px) {
+  .bubble-info--content {
+    font-size: 0.47em;
+  }
+  .bubble-info--button {
+    font-size: 0.75em;
+  }
+}
+@media (max-width: 540px) {
+  .bubble-info--content {
+    font-size: 0.4em;
+  }
+  .bubble-info--button {
     font-size: 0.6em;
-  }
-}
-.bubble-info--buttons-right {
-  .bubble-info--close,
-  .bubble-info--open {
-    right: 0.4em;
-  }
-  .bubble-info--content {
-    padding: 0.5em 3em 1.2em 1.2em;
-  }
-}
-.bubble-info--buttons-left {
-  .bubble-info--close,
-  .bubble-info--open {
-    left: 0.4em;
-  }
-  .bubble-info--content {
-    padding: 0.5em 1em 1.2em 3em;
   }
 }
 .bubble-info--hidden {
@@ -937,11 +927,11 @@ html[lang="ja-simple"] {
 .bubble-info--ingredient-box {
   display: flex;
   align-items: center;
+  margin-top: 0.2em;
   margin-bottom: 0.4em;
 }
 .bubble-info--ingredient-text {
   color: black;
-  font-size: 0.6em;
   min-width: 0;
 }
 .bubble-info--ingredient-cosmopolitan {
@@ -962,8 +952,7 @@ html[lang="ja-simple"] {
     margin: 0;
   }
   & li {
-    font-size: 0.6em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.1em;
     a {
       color: black;
       text-decoration: none;
