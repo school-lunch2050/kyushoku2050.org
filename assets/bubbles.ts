@@ -74,7 +74,7 @@ const baseData: Record<Bubble, BaseData> = {
   },
   rice: {
     bubble: '2076 343 2775 343 2775 597 2076 597 2076 577.6992190000001 2017.6933589999999 526.675781 2076 539.521484',
-    viewRect: { x: 1424, y: 312, width: 1381, height: 396 },
+    viewRect: { x: 1424, y: 250, width: 1381, height: 540 },
     rect: { x: 2076, y: 343, width: 699, height: 254 },
     fontSize: { en: 51, ja: 52, 'ja-simple': 31 },
     ingredients: ['rice'],
@@ -102,7 +102,7 @@ const baseData: Record<Bubble, BaseData> = {
   },
   agreements: {
     bubble: { x: 963, y: 2081, width: 710, height: 311 },
-    viewRect: { x: 889, y: 1955, width: 1870, height: 545 },
+    viewRect: { x: 889, y: 1900, width: 1870, height: 600 },
     rect: { x: 963, y: 2081, width: 710, height: 311 },
     fontSize: { en: 30, ja: 27, 'ja-simple': 35 },
     infoButton: 'right',
@@ -438,7 +438,7 @@ const baseData: Record<Bubble, BaseData> = {
   },
   food_literacy: {
     bubble: '698 1200 698 997 115.367188 997 115.367188 913.429688 78 997 41 997 41 1200',
-    viewRect: { x: 0, y: 344, width: 797, height: 1229 },
+    viewRect: { x: -10, y: 344, width: 835, height: 1229 },
     rect: { x: 41, y: 997, width: 657, height: 203 },
     fontSize: { en: 39, ja: 33, 'ja-simple': 33 },
     ingredients: ['satoyama_soup'],
@@ -539,7 +539,7 @@ const baseData: Record<Bubble, BaseData> = {
   },
   preserving: {
     bubble: '1918.49219 2247.5 1918.49219 2071.5 1410.9140630000002 2071.5 1349.320313 2008.78125 1368.085938 2071.5 1259.492187 2071.5 1259.492187 2247.5',
-    viewRect: { x: 869, y: 1924, width: 1071, height: 339 },
+    viewRect: { x: 869, y: 1924, width: 1071, height: 375 },
     rect: { x: 1259.5, y: 2071.5, width: 659, height: 176 },
     fontSize: { en: 33, ja: 31, 'ja-simple': 32 },
     ingredients: ['fresh_salad'],
