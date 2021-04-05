@@ -26,6 +26,9 @@
         <div class="bubble-info--container">
           <div class="bubble-info--content">
             <h2><text-box key="weblate.scenario.info.title" /></h2>
+            <p>
+              <text-box :key="i18nkey" />
+            </p>
             <div v-if="explanationKey">
               <h3><text-box key="weblate.scenario.info.explanation" /></h3>
               <p>
