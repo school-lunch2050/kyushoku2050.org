@@ -806,6 +806,9 @@ html[lang="ja-simple"] {
   height: 100%;
   display: none;
 }
+.bubble-info--active {
+  background: rgba(255, 255, 255, 0.95);
+}
 @media (max-width: 960px) {
   .bubble-info {
     font-size: 0.9em;
@@ -849,7 +852,6 @@ html[lang="ja-simple"] {
 }
 .bubble-info--container {
   overflow: scroll;
-  background: rgba(255, 255, 255, 0.95);
   bottom: -100%;
   pointer-events: none;
   user-select: none;
