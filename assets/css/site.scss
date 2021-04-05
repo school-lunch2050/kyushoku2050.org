@@ -771,7 +771,12 @@ html[lang="ja-simple"] {
   left: 0;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.9s;
+}
+@media (min-width: 640px) {
+  .bubble-text--shadow {
+    // on mobile devices, the transition is too heavy
+    transition: opacity 0.9s;
+  }
 }
 .bubble-text--rounded-rect {
   &, &::content {
