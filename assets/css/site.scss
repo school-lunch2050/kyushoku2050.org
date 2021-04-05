@@ -840,6 +840,7 @@ html[lang="ja-simple"] {
 }
 .bubble-info--container {
   overflow: scroll;
+  overscroll-behavior: contain;
   bottom: -100%;
   pointer-events: none;
   user-select: none;
