@@ -123,14 +123,14 @@ if (err) {
     // https://content.nuxtjs.org/ - for the content/*.md files (more in the ./content folder)
     '@nuxt/content',
     // https://github.com/moritzsternemann/vue-plausible - for the tracking using plausible
-    'vue-plausible',
+    process.env.NODE_ENV === 'production' ? 'vue-plausible' : null,
     // https://github.com/Developmint/nuxt-webfontloader/ - to preload the webfonts, avoiding fouc
     ['nuxt-webfontloader', {
       custom: {
         families: ['CaveatBrush', 'HonyaJi']
       }
     }]
-  ],
+  ].filter(Boolean),
 
   // https://github.com/moritzsternemann/vue-plausible
   plausible: {
