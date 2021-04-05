@@ -751,7 +751,10 @@ html[lang="ja-simple"] {
   left: -20px;
   top: -210px;
 }
-.lunch-item--marker:focus {
+.lunch-item--marker:focus,
+.lunch-item--marker.lunch-item--focussed {
+  outline: none;
+
   .lunch-item--line,
   .lunch-item--marker--info {
     display: block;

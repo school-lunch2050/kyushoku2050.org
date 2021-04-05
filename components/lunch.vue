@@ -26,6 +26,19 @@ if (/iP(hone|od|ad)/.test(platform)) {
   }
 }
 
+function isActiveEvent (e?: MouseEvent | TouchEvent): e is MouseEvent | TouchEvent {
+  if (e === undefined || e === null) {
+    return false
+  }
+  if (e instanceof MouseEvent && e.type !== 'mouseout') {
+    return true
+  }
+  if (e instanceof TouchEvent) {
+    return e.touches.length > 0 && e.currentTarget !== window
+  }
+  return false
+}
+
 export default Vue.extend({
   props: {
     type: {
@@ -76,13 +89,20 @@ export default Vue.extend({
     if (!(lunch instanceof HTMLElement)) {
       return
     }
+    let selectionMethod: 'mouse' | 'touch' | 'focus' | null = null
     const update = (e?: MouseEvent | TouchEvent) => {
       let closest = null
       let max = Number.POSITIVE_INFINITY
-      if (e && e.type !== 'mouseout') {
+      if (isActiveEvent(e)) {
+        if (selectionMethod === 'mouse' && e instanceof TouchEvent) {
+          return
+        }
+        if (selectionMethod === 'touch' && e instanceof MouseEvent) {
+          return
+        }
         const rect = lunch.getBoundingClientRect()
         const scale = 2636 / rect.width
-        const root = (e instanceof MouseEvent) ? e : e.touches[0]
+        const root = (e instanceof TouchEvent) ? e.touches[0] : e
         const pos = {
           x: (root.pageX - rect.x - window.scrollX) * scale,
           y: (root.pageY - rect.y - window.scrollY) * scale
@@ -103,9 +123,17 @@ export default Vue.extend({
         return
       }
       if (closest !== null) {
-        closest.focus()
-      } else if (previous !== null) {
-        previous.blur()
+        closest.classList.add('lunch-item--focussed')
+        selectionMethod = e instanceof TouchEvent ? 'touch' : e instanceof MouseEvent ? 'mouse' : 'focus'
+        const focussed = document.querySelector('*:focus')
+        if (focussed instanceof HTMLElement && focussed !== closest) {
+          focussed.blur()
+        }
+      } else {
+        selectionMethod = null
+      }
+      if (previous !== null) {
+        previous.classList.remove('lunch-item--focussed')
       }
       previous = closest
     }
