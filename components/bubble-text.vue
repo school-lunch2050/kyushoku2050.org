@@ -98,15 +98,13 @@ export default Vue.extend({
     const height = 2500
     const roundedRect: Rect & { r: number } = scaleRect(viewRect) as any
     roundedRect.r = Math.max(roundedRect.width, roundedRect.height) * 0.02
-    const borderWidth = 1
     const roundedRectStyle = {
-      left: roundedRect.x - viewRect.x - borderWidth,
-      top: roundedRect.y - viewRect.y - borderWidth,
+      left: roundedRect.x - viewRect.x,
+      top: roundedRect.y - viewRect.y,
       width: roundedRect.width,
       height: roundedRect.height,
-      borderRadius: roundedRect.r + borderWidth,
-      position: 'absolute',
-      borderWidth
+      borderRadius: roundedRect.r,
+      position: 'absolute'
     }
     let explanationKey: string | null = `weblate.explanations.${bubbleKey}`
     try {

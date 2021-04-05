@@ -775,7 +775,7 @@ html[lang="ja-simple"] {
 }
 .bubble-text--rounded-rect {
   &, &::content {
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 0.01em solid rgba(0, 0, 0, 0);
     transition: all 0.2s;
   }
 }
@@ -783,7 +783,7 @@ html[lang="ja-simple"] {
   &:focus {
     outline: none;
     .bubble-text--rounded-rect {
-      border: 10px solid #000;
+      border: 0.01em solid #000;
     }
   }
   &:hover {
