@@ -23,9 +23,9 @@ More information can be found at the <a href="https://www.feastproject.org/blog_
 
 ### ライセンス情報
 
-給食サンプルの画像は[FEASTプロジェクト][feast]により、[Creative Commons BY SA][cc-by-sa] の条件でライセンスされています。
+給食サンプルの画像は[FEASTプロジェクト][feasthq]により、[Creative Commons BY SA][cc-by-sa] の条件でライセンスされています。
 
-展示ポスター・イラストは、_kyushoku2050.org_及び_school-lunch2050.org_のサイトに対し、以下著作権者より特別にライセンスを受けています。
+展示ポスター・イラストは、 _kyushoku2050.org_ 及び _school-lunch2050.org_ のサイトに対し、以下著作権者より特別にライセンスを受けています。
 
 > [株式会社サステナ][sustena]<br/>
 > 〒151-0063 東京都渋谷区富ヶ谷1-46-7<br/>
@@ -35,12 +35,12 @@ More information can be found at the <a href="https://www.feastproject.org/blog_
 
 <dl>
   <dt>イラスト：</dt>
-  <dd><a href="https://thenounproject.com/valeriy25/" target="_blank">Valeriy</a>による、<a href="https://thenounproject.com/term/earth/2225388/" target="_blank">Earth（地球）</a></dd>
-  <dd><a href="https://thenounproject.com/indygo/" target="_blank">kiddo</a>による、<a href="https://thenounproject.com/term/arrow/593917/" target="_blank">Allow（矢印）<a/>、<a href="https://thenounproject.com/term/heat/689788/" target="_blank">Heat（熱）</a></dd>
-  <dd><a href="https://thenounproject.com/madeleine.bennett" target="_blank">Madleine Bennett</a>氏による、<a href="https://thenounproject.com/term/heat-lines/1224531/" target="_blank">Heat Lines（湯気）</a></dd>
-  <dd>Mountain scale（山のある風景、Container boat（黒板）は<a href="https://github.com/sponsors/martinheidegger" target="_blank">Martin Heidegger</a>により、Creative Commons BY SA の条件でライセンスされています。</dd>
+  <dd><a href="https://thenounproject.com/valeriy25/" target="_blank">Valeriy</a>による、<a href="https://thenounproject.com/term/earth/2225388/" target="_blank">Earth</a></dd>
+  <dd><a href="https://thenounproject.com/indygo/" target="_blank">kiddo</a>による、<a href="https://thenounproject.com/term/arrow/593917/" target="_blank">Arrow<a/>、<a href="https://thenounproject.com/term/heat/689788/" target="_blank">Heat</a></dd>
+  <dd><a href="https://thenounproject.com/madeleine.bennett" target="_blank">Madleine Bennett</a>氏による、<a href="https://thenounproject.com/term/heat-lines/1224531/" target="_blank">Heat Lines</a></dd>
+  <dd>Mountain scale（山のある風景）, Container boat（黒板）は <a href="https://github.com/sponsors/martinheidegger" target="_blank">Martin Heidegger</a> により、Creative Commons BY SA の条件でライセンスされています。</dd>
   <dt>画像：</dt>
-  <dd><a href="https://unsplash.com/@grndezyns" target="_blank">Peter Gargiulo</a></dd>氏による、<a href="https://unsplash.com/photos/cGNCepznaV8" target="_blank">"Photo"（画像素材）</a> by 
+  <dd><a href="https://unsplash.com/@grndezyns" target="_blank">Peter Gargiulo</a>氏による、<a href="https://unsplash.com/photos/cGNCepznaV8" target="_blank">"Photo"</a></dd>
   <dt>フォント</dt>
   <dd><a href="https://fonts.google.com/specimen/Caveat+Brush" target="_blank">Caveat Brush</a></dd>
   <dd><a href="http://honya.nyanta.jp/" target="_blank">ほにゃ字</a></dd>
