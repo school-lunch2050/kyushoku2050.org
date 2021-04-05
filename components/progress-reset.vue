@@ -10,6 +10,8 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { removeRuby } from '../assets/helpers'
+
 export default Vue.extend({
   methods: {
     askReset (e: MouseEvent | KeyboardEvent) {
@@ -18,7 +20,7 @@ export default Vue.extend({
           return
         }
       }
-      if (confirm(this.$i18n.t('weblate.scenario.progress.ask_clear').toString())) {
+      if (confirm(removeRuby(this.$i18n.t('weblate.scenario.progress.ask_clear').toString()))) {
         this.$store.commit('progress/clear')
         this.$forceUpdate()
       }
