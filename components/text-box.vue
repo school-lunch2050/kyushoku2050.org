@@ -128,7 +128,7 @@ function getKey (vue: Vue): string | null {
   if (key === null || key === undefined) {
     return null
   }
-  return typeof key === 'number'
+  return typeof key !== 'string'
     ? String(key)
     : key.replace(/#(.*)/, '')
 }

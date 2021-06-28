@@ -7,7 +7,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   data () {
-    const base = `weblate.pages.${this.$vnode.key}`
+    const base = `weblate.pages.${String(this.$vnode.key)}`
     const shortKey = `${base}.short`
     const fullKey = `${base}.full`
     return {

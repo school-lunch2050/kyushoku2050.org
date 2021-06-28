@@ -49,7 +49,7 @@ import Vue from 'vue'
 export default Vue.extend({
   computed: {
     availableLocales () {
-      return (this.$i18n?.locales ?? []).map(entry => (typeof entry === 'string') ? { code: entry } : entry)
+      return (this.$i18n?.locales ?? []).map((entry: any) => (typeof entry === 'string') ? { code: entry } : entry)
     }
   },
   watch: {

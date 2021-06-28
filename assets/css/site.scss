@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $col-bg: #424852;
 $col-bg-dark: darken($col-bg, 10%);
 $col-accent-grey: #B5B5B5;
@@ -506,7 +508,7 @@ html[lang="ja-simple"] {
     left: 50px;
     top: 50px;
     width: 2636px;
-    height: (2636px / 3874 * 1926);
+    height: (math.div(2636px, 3874) * 1926);
   }
 }
 .sidebar .sidebar--partner {
@@ -630,7 +632,7 @@ html[lang="ja-simple"] {
     height: 0;
     border-style: solid;
     overflow: hidden;
-    border-width: $size/2 0 $size/2 $size*.866;
+    border-width: $size*.5 0 $size*.5 $size*.866;
     border-color: transparent transparent transparent #fff;
     margin-top: 4px;
     left: 0;

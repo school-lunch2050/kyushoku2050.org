@@ -208,7 +208,7 @@ export function head ({ $i18n, $route }: Vue) {
       'og:description': description ?? $i18n.t('weblate.description').toString()
     }),
     link: ($i18n.locales ?? [])
-      .map(locale => typeof locale === 'string' ? locale : locale.code)
+      .map((locale: any) => typeof locale === 'string' ? locale : locale.code)
       .filter(code => code !== $i18n.locale)
       .map((code) => {
         return {
