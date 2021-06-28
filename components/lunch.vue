@@ -26,6 +26,10 @@ if (/iP(hone|od|ad)/.test(platform)) {
   }
 }
 
+function isTouchEvent (e: Event | undefined): e is TouchEvent {
+  return e !== undefined && (e.type === 'touchstart' || e.type === 'touchend' || e.type === 'touchmove' || e.type === 'touchcancel')
+}
+
 function isActiveEvent (e?: MouseEvent | TouchEvent): e is MouseEvent | TouchEvent {
   if (e === undefined || e === null) {
     return false
@@ -33,7 +37,7 @@ function isActiveEvent (e?: MouseEvent | TouchEvent): e is MouseEvent | TouchEve
   if (e instanceof MouseEvent && e.type !== 'mouseout') {
     return true
   }
-  if (e instanceof TouchEvent) {
+  if (isTouchEvent(e)) {
     return e.touches.length > 0 && e.currentTarget !== window
   }
   return false
@@ -94,7 +98,7 @@ export default Vue.extend({
       let closest = null
       let max = Number.POSITIVE_INFINITY
       if (isActiveEvent(e)) {
-        if (selectionMethod === 'mouse' && e instanceof TouchEvent) {
+        if (selectionMethod === 'mouse' && isTouchEvent(e)) {
           return
         }
         if (selectionMethod === 'touch' && e instanceof MouseEvent) {
@@ -102,7 +106,7 @@ export default Vue.extend({
         }
         const rect = lunch.getBoundingClientRect()
         const scale = 2636 / rect.width
-        const root = (e instanceof TouchEvent) ? e.touches[0] : e
+        const root = isTouchEvent(e) ? e.touches[0] : e
         const pos = {
           x: (root.pageX - rect.x - window.scrollX) * scale,
           y: (root.pageY - rect.y - window.scrollY) * scale
@@ -124,7 +128,7 @@ export default Vue.extend({
       }
       if (closest !== null) {
         closest.classList.add('lunch-item--focussed')
-        selectionMethod = e instanceof TouchEvent ? 'touch' : e instanceof MouseEvent ? 'mouse' : 'focus'
+        selectionMethod = isTouchEvent(e) ? 'touch' : e instanceof MouseEvent ? 'mouse' : 'focus'
         const focussed = document.querySelector('*:focus')
         if (focussed instanceof HTMLElement && focussed !== closest) {
           focussed.blur()
