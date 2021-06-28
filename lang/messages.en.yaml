@@ -372,7 +372,7 @@ weblate:
       source: |
         upload your data and start printing
     soylent:
-      name: Soylent
+      name: Kyolent
       source: |
         Milk replacement with all the necessary nutrients
     sprouts:
